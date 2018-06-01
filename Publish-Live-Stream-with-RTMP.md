@@ -1,5 +1,3 @@
-# Publish Live Stream with RTMP
-
 There are many ways to publish Live Stream with RTMP to Ant Media server. Here are the some of the ways
 
 * <a href="./Publish_with_desktop_software_obs.md">Publish with a Desktop Software like OBS, XSplit, Wirecast, etc.</a> 
