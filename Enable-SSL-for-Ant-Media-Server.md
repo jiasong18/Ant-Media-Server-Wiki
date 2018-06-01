@@ -1,4 +1,3 @@
-# Enable SSL for Ant Media Server
 
 HTTPS and WSS(WebSocket Secure) is mandatory for Google Chrome to run WebRTC and WebSocket applications.
 In addition, developers want to serve their content with secure connection as well. The script in this document
