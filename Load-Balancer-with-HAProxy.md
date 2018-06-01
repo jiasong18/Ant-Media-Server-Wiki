@@ -1,0 +1,1 @@
+Load Balancer is the sister of cluster so If you make Ant Media Server instances run in Cluster Mode. Then a load balancer will be required to balance the load to the each instance. For our case, we are going to show how to use HAProxy as RTMP and HLS load balancer.
