@@ -1,4 +1,4 @@
-* ## [User Guide](https://github.com/ant-media/Ant-Media-Server/wiki)
+* ## User Guide
    * [Getting Started](https://github.com/ant-media/Ant-Media-Server/wiki/02_a_Getting-Started)
 
 * ## Developer Guide
