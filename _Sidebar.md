@@ -1,1 +1,2 @@
-Developer Guide
+* User Guide
+* Developer Guide
