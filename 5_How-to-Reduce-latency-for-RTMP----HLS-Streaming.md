@@ -1,7 +1,9 @@
 ### What is RTMP (Real Time Messaging Protocol) ?
 RTMP means Real Time Messaging Protocol. RTMP is mostly depreciated for use as a viewer-facing video streaming protocol. However, RTMP is the most commonly used streaming protocol.
+
 ### What is HLS (HTTP Live Streaming) ?
-The HLS(HTTP Live Streaming) protocol was developed by Apple. 
+The HLS(HTTP Live Streaming) protocol was developed by Apple. The HLS streaming protocol works by chopping MP4 video content into short, 10 second chunks. On an unreliable wireless network, HLS allows the player to use a lower quality video, thus reducing bandwidth usage. HLS videos can be made highly available by providing multiple servers for the same video, allowing the player to swap seamlessly if one of the servers fails.
+
 ## How to Reduce latency for RTMP -> HLS Streaming ?
 To reduce the HLS latency there are some parameters and it can be reduced to 8-10 secs for now.
 
