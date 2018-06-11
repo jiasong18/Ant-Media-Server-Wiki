@@ -16,3 +16,4 @@
 * ### [Load Balancer with HAProxy](https://github.com/ant-media/Ant-Media-Server/wiki/08_Load-Balancer-with-HAProxy)
 
 # FAQ
+  * ### [How to Enable SSL for Ant Media Server ?](https://github.com/ant-media/Ant-Media-Server/wiki/04_Enable-SSL-for-Ant-Media-Server)
