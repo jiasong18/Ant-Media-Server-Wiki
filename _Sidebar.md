@@ -1,5 +1,6 @@
 # User Guide
    * ### [Getting Started](https://github.com/ant-media/Ant-Media-Server/wiki/02_a_Getting-Started)
+   * ### [DevGuide Build and Update Management Web Panel](https://github.com/ant-media/Ant-Media-Server/wiki/02_b_DevGuide---Build-and-Update-Management-Web-Panel)
 
 # Developer Guide
    * ### [Build From Source](https://github.com/ant-media/Ant-Media-Server/wiki/02_a_Getting-Started#build-from-source)
