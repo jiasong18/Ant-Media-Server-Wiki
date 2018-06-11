@@ -1,9 +1,9 @@
 ## User Guide
    * #### [Getting Started](https://github.com/ant-media/Ant-Media-Server/wiki/Getting-Started)
-   * #### Publish Live Stream with RTMP
-     * #### [Publish with a Desktop Software like OBS, XSplit, Wirecast, etc.](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-with-a-Desktop-Software---Open-Broadcaster-Software)
-     * #### [Publish with a Hardware Encoder like Teradek, Tricaster, Gosolo, etc.](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-with-a-Hardware-Encoder---Teradek-Vidiu-Pro)
-     * #### [Publish with a Mobile App - (Android, iOS, etc.)](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-with-a-Mobile-App-Android)
+   * #### [Publish Live Stream with RTMP](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-Live-Stream-with-RTMP)
+     * #### [Publish with a Desktop Software](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-with-a-Desktop-Software---Open-Broadcaster-Software)
+     * #### [Publish with a Hardware Encoder](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-with-a-Hardware-Encoder---Teradek-Vidiu-Pro)
+     * #### [Publish with a Mobile(Android, iOS) App](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-with-a-Mobile-App-Android)
    * #### [WebRTC Live Streaming](https://github.com/ant-media/Ant-Media-Server/wiki/Try-Low-Latency-WebRTC-Live-Streaming)
    * #### [Playing Live and VoD Streams](https://github.com/ant-media/Ant-Media-Server/wiki/Play-Live-and-VoD-Streams)
   * #### [How to Cluster works with Ant Media Server](https://github.com/ant-media/Ant-Media-Server/wiki/Clustering)
