@@ -1,4 +1,4 @@
-### User Guide
+## User Guide
    * #### [Getting Started](https://github.com/ant-media/Ant-Media-Server/wiki/02_a_Getting-Started)
    * #### Publish Live Stream with RTMP
      * #### [Publish with a Desktop Software like OBS, XSplit, Wirecast, etc.](https://github.com/ant-media/Ant-Media-Server/wiki/03_b_Publish-with-a-Desktop-Software---Open-Broadcaster-Software)
@@ -10,7 +10,7 @@
   * #### [How to Cluster works with Ant Media Server](https://github.com/ant-media/Ant-Media-Server/wiki/07_Clustering)
   * #### [Load Balancer with HAProxy](https://github.com/ant-media/Ant-Media-Server/wiki/08_Load-Balancer-with-HAProxy)
 
-### Developer Guide
+## Developer Guide
    * #### [Build From Source](https://github.com/ant-media/Ant-Media-Server/wiki/02_a_Getting-Started#build-from-source)
    * #### [Build and Update Web Management Panel](https://github.com/ant-media/Ant-Media-Server/wiki/02_b_DevGuide---Build-and-Update-Management-Web-Panel)
    * #### WebRTC
