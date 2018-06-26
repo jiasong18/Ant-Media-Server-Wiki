@@ -19,3 +19,4 @@
 
 ### FAQ
   * #### [How to Enable SSL for Ant Media Server ?](https://github.com/ant-media/Ant-Media-Server/wiki/Enable-SSL-for-Ant-Media-Server)
+  * #### [Reduce Latency in RTMP to HLS](https://github.com/ant-media/Ant-Media-Server/wiki/Reduce-Latency-in-RTMP-to-HLS-Streaming)
