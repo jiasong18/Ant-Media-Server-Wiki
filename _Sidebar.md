@@ -6,7 +6,7 @@
      * #### [Publish with a Mobile(Android, iOS) App](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-with-a-Mobile-App-Android)
    * #### [Low Latency WebRTC Live Streaming](https://github.com/ant-media/Ant-Media-Server/wiki/Try-Low-Latency-WebRTC-Live-Streaming)
    * #### [Play Live and VoD Streams](https://github.com/ant-media/Ant-Media-Server/wiki/Play-Live-and-VoD-Streams)
-   * #### [Enable NVIDIA GPU Encoder Support](https://github.com/ant-media/Ant-Media-Server/wiki/Enable-NVIDIA-Hardware-based-Encoder-Support)
+   * #### [Enable NVIDIA GPU Encoder Support](https://github.com/ant-media/Ant-Media-Server/wiki/Enable-NVIDIA-GPU-Encoder-Support)
   * #### [How to Cluster works with Ant Media Server](https://github.com/ant-media/Ant-Media-Server/wiki/Clustering)
   * #### [Load Balancer with HAProxy](https://github.com/ant-media/Ant-Media-Server/wiki/Load-Balancer-with-HAProxy)
 
