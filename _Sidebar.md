@@ -4,8 +4,9 @@
      * #### [Publish with a Desktop Software](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-with-a-Desktop-Software---Open-Broadcaster-Software)
      * #### [Publish with a Hardware Encoder](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-with-a-Hardware-Encoder---Teradek-Vidiu-Pro)
      * #### [Publish with a Mobile(Android, iOS) App](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-with-a-Mobile-App-Android)
-   * #### [WebRTC Live Streaming](https://github.com/ant-media/Ant-Media-Server/wiki/Try-Low-Latency-WebRTC-Live-Streaming)
+   * #### [Low Latency WebRTC Live Streaming](https://github.com/ant-media/Ant-Media-Server/wiki/Try-Low-Latency-WebRTC-Live-Streaming)
    * #### [Play Live and VoD Streams](https://github.com/ant-media/Ant-Media-Server/wiki/Play-Live-and-VoD-Streams)
+   * #### [Enable GPU Encoder Support](https://github.com/ant-media/Ant-Media-Server/wiki/Enable-NVIDIA-Hardware-based-Encoder-Support)
   * #### [How to Cluster works with Ant Media Server](https://github.com/ant-media/Ant-Media-Server/wiki/Clustering)
   * #### [Load Balancer with HAProxy](https://github.com/ant-media/Ant-Media-Server/wiki/Load-Balancer-with-HAProxy)
 
