@@ -5,6 +5,7 @@
      * [Publish with a Hardware Encoder](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-with-a-Hardware-Encoder---Teradek-Vidiu-Pro)
      * [Publish with a Mobile(Android, iOS) App](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-with-a-Mobile-App-Android)
    * [Low Latency WebRTC Live Streaming](https://github.com/ant-media/Ant-Media-Server/wiki/Try-Low-Latency-WebRTC-Live-Streaming)
+   * [Pull IP Camera Streams](https://github.com/ant-media/Ant-Media-Server/wiki/Pull-IP-Camera-Streams)
    * [Play Live and VoD Streams](https://github.com/ant-media/Ant-Media-Server/wiki/Play-Live-and-VoD-Streams)
    * [Enable NVIDIA GPU Encoder Support](https://github.com/ant-media/Ant-Media-Server/wiki/Enable-NVIDIA-GPU-Encoder-Support)
   * [How to Cluster works with Ant Media Server](https://github.com/ant-media/Ant-Media-Server/wiki/Clustering)
