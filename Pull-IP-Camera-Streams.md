@@ -1,4 +1,3 @@
-<h1>Pull IP Camera Streams</h1>
 In addition to developing promising features in Ant Media Server, we have added IP Camera support to it with the 1.3.0+ <a href="https://github.com/ant-media/Ant-Media-Server/releases/tag/ams-v1.3.0-SNAPSHOT">release</a>. With this feature,  users can pull IP Camera streams easily on management panel. In other words, you don't need to write any commands or use terminal.
 
 The main critical point is that the IP Cameras should support ONVIF <a href="https://www.onvif.org/" target="_blank" rel="noopener">standard</a>. In fact, the majority of manufacturers already support this standard because ONVIF make it easy to manage IP Cameras. All CRUD and PTZ operations are based on well-defined SOAP messages.
