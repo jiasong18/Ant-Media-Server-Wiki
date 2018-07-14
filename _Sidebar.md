@@ -12,7 +12,7 @@
   * [Load Balancer with HAProxy](https://github.com/ant-media/Ant-Media-Server/wiki/Load-Balancer-with-HAProxy)
 
 ## Developer Guide
-   * [Build From Source](https://github.com/ant-media/Ant-Media-Server/wiki/Getting-Started#build-from-source)
+   * [Build From Source](https://github.com/ant-media/Ant-Media-Server/wiki/Build-From-Source)
    * [Build and Update Web Management Panel](https://github.com/ant-media/Ant-Media-Server/wiki/DevGuide---Build-and-Update-Management-Web-Panel)
    * WebRTC
      * [WebRTC Publish & Play JavaScript SDK](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-Publish-&-Play-JavaScript-SDK)
