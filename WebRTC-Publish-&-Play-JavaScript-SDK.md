@@ -36,7 +36,7 @@ Let's see how to make it step by step
 	};
 
 	var webRTCAdaptor = new WebRTCAdaptor({
-		websocket_url : "ws://" + location.hostname + ":8081/WebRTCApp4",
+		websocket_url : "ws://" + location.hostname + ":8081/WebRTCAppEE",
 		mediaConstraints : mediaConstraints,
 		peerconnection_config : pc_config,
 		sdp_constraints : sdpConstraints,
@@ -89,7 +89,7 @@ webRTCAdaptor.stop()
 ```
 
 #### Sample
-Please take a look at the WebRTCApp4/index.html file in order to see How JavaScript SDK can be used for publishing a stream
+Please take a look at the WebRTCAppEE/index.html file in order to see How JavaScript SDK can be used for publishing a stream
 
 ## How to Play WebRTC stream with JavaScript SDK
 
@@ -124,7 +124,7 @@ Please take a look at the WebRTCApp4/index.html file in order to see How JavaScr
 	};
 	
 	var webRTCAdaptor = new WebRTCAdaptor({
-		websocket_url : "ws://" + location.hostname + ":8081/WebRTCApp4",
+		websocket_url : "ws://" + location.hostname + ":8081/WebRTCAppEE",
 		mediaConstraints : mediaConstraints,
 		peerconnection_config : pc_config,
 		sdp_constraints : sdpConstraints,
@@ -178,4 +178,4 @@ webRTCAdaptor.stop()
 ```
 
 #### Sample
-Please take a look at the WebRTCApp4/player.html file in order to see How JavaScript SDK can be used for playing a stream
+Please take a look at the WebRTCAppEE/player.html file in order to see How JavaScript SDK can be used for playing a stream
