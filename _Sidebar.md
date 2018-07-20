@@ -23,3 +23,4 @@
 ### FAQ
   * [How to Enable SSL for Ant Media Server ?](https://github.com/ant-media/Ant-Media-Server/wiki/Enable-SSL-for-Ant-Media-Server)
   * [Reduce Latency in RTMP to HLS](https://github.com/ant-media/Ant-Media-Server/wiki/Reduce-Latency-in-RTMP-to-HLS-Streaming)
+  * [Reset Web Manager Password](https://github.com/ant-media/Ant-Media-Server/wiki/Frequently-Ask-Questions#how-can-i-reset-the-password-for-web-manager-of-ant-media-server)
