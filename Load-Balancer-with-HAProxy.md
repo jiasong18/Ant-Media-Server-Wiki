@@ -24,7 +24,7 @@ ENABLED=1
 
 Move the default configuration file
 ```
-mv /etc/haproxy/haproxy.cfg{,.original}
+mv /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.original
 ```
 
 Create and edit new configuration file
