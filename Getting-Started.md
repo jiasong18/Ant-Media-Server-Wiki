@@ -76,21 +76,33 @@ Here are the ports server uses
 * TCP:5443 (HTTPS)
 * TCP:5554 (RTSP)
 * UDP:5000-65000 (RTP in RTSP)
-* TCP: 8081 (WebSocket)
-* TCP: 8082 (WebSocket Secure)
 
-### Forward Default 80 Port to 5080 
+### Forward Default http(80), https(443) Ports to 5080 and 5443 
 
 Generally port forwarding is used to forward default ports to the server's ports in order to have easy of use.
 For instance let's forward 80 to 5080, just type the command below.
 
 ```
 sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 5080
+sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 5443
 ```
 
-After running the command above, the request goes to 80 is being forwarded to 5080
+After running the command above, the request goes to 80, 443 is being forwarded to 5080, 5443 consecutively
 
-**Make Port Forwarding Persistent**
+
+
+### List and Delete Current Port Forwardings
+To List port forwarding run the command below
+``` 
+sudo iptables -t nat --line-numbers -L
+```
+
+To delete a port forwarding run the command below
+```
+iptables -t nat -D PREROUTING [LINE_NUMBER_IN_PREVIOUS_COMMAND]
+```
+
+### Make Port Forwarding Persistent
 
 If you want the server to reload port forwarding after reboot, we need to install iptables-persistent package and 
 save rules like below
