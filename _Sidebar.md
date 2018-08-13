@@ -20,6 +20,7 @@
      * [WebRTC Signalling Server](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-Signalling-Server)
      * [WebRTC iOS SDK](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-iOS-SDK-Documentation)
      * [WebRTC Android SDK](https://github.com/ant-media/Ant-Media-Server/wiki/Step-by-Step-Guide-to-Build-WebRTC-Native-Android-App)
+   * [Amazon (AWS) S3 Integration](https://github.com/ant-media/Ant-Media-Server/wiki/Amazon-(AWS)-S3-Integration) 
 
 ### FAQ
   * [How to Fix "NotSupportedError" in Publishing WebRTC?](https://github.com/ant-media/Ant-Media-Server/wiki/FAQ#how-to-fix-notsupportederror-in-publishing-webrtc-stream-in-ant-media-server)
