@@ -75,7 +75,7 @@ Here are the ports server uses
 * TCP:5080 (HTTP)
 * TCP:5443 (HTTPS)
 * TCP:5554 (RTSP)
-* UDP:5000-65000 (RTP in RTSP)
+* UDP:5000-65000 (WebRTC and RTSP)
 
 ### Forward Default http(80), https(443) Ports to 5080 and 5443 
 
