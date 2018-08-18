@@ -1,6 +1,6 @@
 ## How to resolve "WebRTC Stream stops after a few seconds" issue?
 
-This issue is generally caused by not opening UDP ports. Please open the UDP ports of the server between 5000-65000. 
+This issue is generally caused by not open UDP ports. Please make sure UDP ports of the server between 5000-65000 are opened. If you are still having this issue, please let us know that. 
 
 ## How to fix “NotSupportedError” in publishing WebRTC stream in Ant Media Server?
 Problem is caused from attempting to access media source as discussed in https://stackoverflow.com/questions/34215937/getusermedia-not-supported-in-chrome.
