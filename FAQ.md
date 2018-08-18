@@ -1,4 +1,4 @@
-## WebRTC Stream stops after a few seconds?
+## How to resolve "WebRTC Stream stops after a few seconds" issue?
 
 This issue is generally caused by not opening UDP ports. Please open the UDP ports of the server between 5000-65000. 
 
