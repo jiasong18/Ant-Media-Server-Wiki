@@ -18,7 +18,7 @@ $ cd ..
 ```
 $ git clone https://github.com/ant-media/Ant-Media-Server-Service.git
 $ cd Ant-Media-Server-Service
-$ mvn clean install -Dmaven.javadoc.skip=true -Dmaven.test.skip=true
+$ mvn clean install -Dmaven.javadoc.skip=true -Dmaven.test.skip=true -Dgpg.skip=true
 $ cd ..
 ```
 
@@ -36,7 +36,7 @@ $ cd ../..
 ```
 $ git clone https://github.com/ant-media/Ant-Media-Server.git
 $ cd Ant-Media-Server
-$ mvn clean install -Dmaven.javadoc.skip=true -Dmaven.test.skip=true
+$ mvn clean install -Dmaven.javadoc.skip=true -Dmaven.test.skip=true -Dgpg.skip=true
 $ ./repackage.sh
 ```
 
