@@ -9,7 +9,7 @@ A couple of repos should be clone and build with maven so that git and maven sho
 ```
 $ git clone https://github.com/ant-media/Ant-Media-Server-Common.git
 $ cd Ant-Media-Server-Common
-$ mvn clean install -Dmaven.javadoc.skip=true -Dmaven.test.skip=true
+$ mvn clean install -Dmaven.javadoc.skip=true -Dmaven.test.skip=true -Dgpg.skip=true
 $ cd ..
 ```
 
