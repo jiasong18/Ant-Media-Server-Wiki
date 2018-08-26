@@ -3,7 +3,7 @@
 Ant Media Server 
 ====
 
-Ant Media Server is an Open Source Media Server with features:
+Ant Media Server is an Open Source Media Server run on Mac & Linux platforms with below features:
 
  * Live Stream Publishing with RTMP, RTSP and WebRTC
  * WebRTC to RTMP Adapter
