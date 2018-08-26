@@ -3,20 +3,37 @@
 Ant Media Server 
 ====
 
-Ant Media Server is an Open Source Media Server that supports:
+Ant Media Server is an Open Source Media Server with features:
 
  * Live Stream Publishing with RTMP, RTSP and WebRTC
  * WebRTC to RTMP Adapter
  * IP Camera Support
- * Recording Live Streams (FLV, MP4 and HLS Containers)
- * Restream to Social Media Simultaneously(Facebook and Youtube in in **Enterprise Edition**)
- * Low Latency 1:N WebRTC Live Streaming in **Enterprise Edition**
- * Adaptive Bitrate Conversion for Live Streams (FLV, MP4, HLS) in **Enterprise Edition**
+ * 360 Degree Live & VoD Streams
+ * MP4 and HLS Support
+ * Web Management Dashboard
+ * Re-stream Remote Streams (IPTV) 
+ * Simulcast to Social Media(Facebook and Youtube in **Enterprise Edition**)
+ * Low Latency One-to-Many Adaptive WebRTC Live Streaming in **Enterprise Edition**
+ * Adaptive Bitrate in **Enterprise Edition**
+ * Hardware Encoding (NVIDIA GPU) **Enterprise Edition**
+ * Cluster for Scaling **Enterprise Edition**
+
+
 
 
 [Documentation](https://antmedia.io/documentation) & [Enterprise Edition](https://antmedia.io)
 
 ## Releases 
+
+#### [Ant Media Server Community 1.4.1 (Aug 13, 2018)](https://github.com/ant-media/Ant-Media-Server/releases/download/ams-v1.4.1/ant-media-server-community-1.4.1-180813_1533.zip)
+* Video user experience in WebRTC is improved
+* New websocket endpoint with http ports(5080, 5443), older websocket ports(8081, 8082) are deprecated
+* Replay the same stream in same websocket issue is fixed.
+* WebRTCApp is compatible almost for all browsers
+* Fix the synch issue in some cases in WebRTCApp
+* WebRTC streaming is scalable for Enterprise Edition
+* Better performance for WebRTC streaming
+* Improvements & Compatibility on Web Panel
 
 #### [Ant Media Server Community 1.3.6 (June 21, 2018)](https://github.com/ant-media/Ant-Media-Server/releases/download/ams-v1.3.6.2/ant-media-server-community-1.3.6.2-180621_2202.zip)
 * HLS Viewer Count can be available via web panel and rest service
