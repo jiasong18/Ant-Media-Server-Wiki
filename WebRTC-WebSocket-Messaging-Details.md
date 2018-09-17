@@ -9,7 +9,7 @@ for publishing & playing streams. Let's make it step by step
 ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 ```
 
-2. Client sends publish JSON command to the server with stream name parameter. 
+2. Client sends publish JSON command to the server with stream name parameter. (Remove token parameter if token control is not enabled) 
 
 ```json
 {
