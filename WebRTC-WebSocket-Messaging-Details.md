@@ -15,6 +15,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 {
     command : "publish",
     streamId : "stream1",
+    token : tokenId,
 }
 ```
 
