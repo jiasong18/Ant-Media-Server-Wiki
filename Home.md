@@ -15,8 +15,8 @@ Ant Media Server is an Open Source Media Server run on Mac & Linux platforms wit
  * Simulcast to Social Media(Facebook and Youtube in **Enterprise Edition**)
  * Low Latency One-to-Many Adaptive WebRTC Live Streaming in **Enterprise Edition**
  * Adaptive Bitrate in **Enterprise Edition**
- * Hardware Encoding (NVIDIA GPU) **Enterprise Edition**
- * Cluster for Scaling **Enterprise Edition**
+ * Hardware Encoding (NVIDIA GPU) in **Enterprise Edition**
+ * Cluster for Scaling in **Enterprise Edition**
 
 
 
