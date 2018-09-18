@@ -16,8 +16,17 @@ There should be a `enable_ssl.sh` file in the installation directory.
 Call the enable_ssl.sh with your domain name
 
 ```
-sudo ./enable_ssl.sh  example.com
+sudo ./enable_ssl.sh example.com
 ```
+
+#### v1.5+, `enable_ssl.sh` script supports external fullchain.pem and privkey.pem files. It's usage has been changed to
+```
+Usage:
+sudo ./enable_ssl.sh -d {DOMAIN_NAME}
+sudo ./enable_ssl.sh -f {FULL_CHAIN_FILE} -p {PRIVATE_KEY_FILE} -d {DOMAIN_NAME} 
+```	
+	
+
 
 Make sure that your domain points to your server public IP address in the DNS records 
 
