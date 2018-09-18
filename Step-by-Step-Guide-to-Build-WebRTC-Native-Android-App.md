@@ -62,7 +62,7 @@ Open the AndroidManifest.xml and add below permissions between `application` and
 ```
 
 ### Implement MainActivity `onCreate` function
-Open the MainActivity and implement it as below. You should change `SERVER_URL` according to your Ant Media Server address. Secondly, the third parameters in the last line of the code below is `IWebRTCClient.MODE_PUBLISH` that publishes stream to the server. You can use `IWebRTCClient.MODE_PLAY` for playing stream and `IWebRTCClient.MODE_JOIN` for P2P communication.
+Open the MainActivity and implement it as below. You should change `SERVER_URL` according to your Ant Media Server address. Secondly, the third parameters in the last line of the code below is `IWebRTCClient.MODE_PUBLISH` that publishes stream to the server. You can use `IWebRTCClient.MODE_PLAY` for playing stream and `IWebRTCClient.MODE_JOIN` for P2P communication. If token control is enabled, you should define 'tokenId' parameter
 
 ```java
 public class MainActivity extends AbstractWebRTCActivity {
@@ -92,7 +92,7 @@ public class MainActivity extends AbstractWebRTCActivity {
         webRTCClient = new WebRTCClient( this,this);
 
         String streamId = "stream" + (int)(Math.random() * 999);
-
+        String tokenId = "tokenID";
         callFragment = new CallFragment();
         callFragment.setCallEvents(webRTCClient);
         callFragment.setStreamId(streamId);
@@ -107,7 +107,7 @@ public class MainActivity extends AbstractWebRTCActivity {
         checkPermissions();
      
         //streamId is randomly assigned and it will be shown to the screen to watch it on Ant Media Server
-        webRTCClient.startStream(SERVER_URL, streamId, IWebRTCClient.MODE_PUBLISH);
+        webRTCClient.startStream(SERVER_URL, streamId, IWebRTCClient.MODE_PUBLISH, tokenId);
 
     }
 }
