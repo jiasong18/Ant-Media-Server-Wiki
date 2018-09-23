@@ -32,4 +32,13 @@ The system controls token validity during publishing or playing.
 
 `rtmp://[IP_Address]/<Application_Name>/ 312526128013151313200552?token=tokenId`
 
-**WebRTC Publishing:** Token parameter should be inserted to publish WebSocket message. For details about WebRTC WebSocket messaging please visit [wiki page](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-WebSocket-Messaging-Details).
+**WebRTC Publishing:** Token parameter should be inserted to publish WebSocket message.
+```json
+{
+    command : "publish",
+    streamId : "stream1",
+    token : "tokenId",
+}
+```
+
+ For details about WebRTC WebSocket messaging please visit [wiki page](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-WebSocket-Messaging-Details).
