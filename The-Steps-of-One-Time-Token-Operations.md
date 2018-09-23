@@ -84,6 +84,7 @@ Please have a look at the principles described in the [wiki page](https://github
 ### Step 4. Evaluation of the Token
 
 Ant Media Server evaluates based on its properties to secure your streams. Whether it is valid for the requested stream or not is controlled. Another important control process is checking the type of the token. Because the developer or administrator may give access to a user to play a stream but not publish to this stream even with the same streamId.
+
 <br>
 Once the token is successfully validated by Ant Media Server, then it is removed from the database so that other requests with the same token will be dismissed. Since consecutive requests are sent during playing/accessing streams, the session information saved after the one-time token is consumed.
 ***
