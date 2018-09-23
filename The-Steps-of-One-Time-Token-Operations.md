@@ -30,14 +30,14 @@ Please note that you need to call this rest service either from the local machin
 
 If you want to remove this filtering mechanism please remove the below lines from webapps-> {Application} -> WEBINF -> web.xml
 
-<filter>
-    <filter-name>RestAuthenticationFiler</filter-name>
-    <filter-class>io.antmedia.serverapp.pscp.filter.RestAuthenticationFilter</filter-class>
-</filter>
-<filter-mapping>
-    <filter-name>RestAuthenticationFiler</filter-name>
-    <url-pattern>/rest/*</url-pattern>
-</filter-mapping>
+### <filter>
+###     <filter-name>RestAuthenticationFiler</filter-name>
+###     <filter-class>io.antmedia.serverapp.pscp.filter.RestAuthenticationFilter</filter-class>
+### </filter>
+### <filter-mapping>
+###     <filter-name>RestAuthenticationFiler</filter-name>
+###     <url-pattern>/rest/*</url-pattern>
+### </filter-mapping>
 
 
 
