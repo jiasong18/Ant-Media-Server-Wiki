@@ -46,4 +46,5 @@ The system controls token validity during publishing or playing.
 **b) Playing/Accessing**
 
 **Live Stream/VoD Playing:** Same as publishing, the token parameter is added to URL. Sample URL:
+
 ``http://[IP_Address]/<Application_Name>/streams/250116815996644357614115.mp4?token=tokenId``
