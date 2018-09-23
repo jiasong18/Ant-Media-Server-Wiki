@@ -28,5 +28,7 @@ The system controls token validity during publishing or playing.
 
 **a) Publishing** 
 
-RTMP Publishing: You need to add a token parameter to RTMP URL before publishing. Sample URL:
+**RTMP Publishing:**You need to add a token parameter to RTMP URL before publishing. Sample URL:
+
+`rtmp://[IP_Address]/<Application_Name>/ 312526128013151313200552?token=tokenId`
 
