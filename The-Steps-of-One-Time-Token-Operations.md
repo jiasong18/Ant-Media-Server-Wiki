@@ -42,3 +42,8 @@ The system controls token validity during publishing or playing.
 ```
 
  For details about WebRTC WebSocket messaging please visit [wiki page](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-WebSocket-Messaging-Details).
+
+**b) Playing/Accessing**
+
+**Live Stream/VoD Playing:** Same as publishing, the token parameter is added to URL. Sample URL:
+``http://[IP_Address]/<Application_Name>/streams/250116815996644357614115.mp4?token=tokenId``
