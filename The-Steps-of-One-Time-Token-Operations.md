@@ -28,7 +28,8 @@ The system controls token validity during publishing or playing.
 
 **a) Publishing** 
 
-**RTMP Publishing:**You need to add a token parameter to RTMP URL before publishing. Sample URL:
+**RTMP Publishing:** You need to add a token parameter to RTMP URL before publishing. Sample URL:
 
 `rtmp://[IP_Address]/<Application_Name>/ 312526128013151313200552?token=tokenId`
 
+**WebRTC Publishing:** Token parameter should be inserted to publish WebSocket message. For details about WebRTC WebSocket messaging please visit [wiki page](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-WebSocket-Messaging-Details).
