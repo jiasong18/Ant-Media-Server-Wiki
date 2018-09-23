@@ -18,3 +18,7 @@ Firstly, the setting should be enabled in the management panel.
 
 ![token setting](https://i0.wp.com/antmedia.io/wp-content/uploads/2018/09/Screenshot-from-2018-09-17-20-53-01-1024x441.png)
 
+### Step 2. Create a Token
+
+The Server creates tokens with [https://github.com/ant-media/Ant-Media-Server/blob/14e243dd8f1696fbbc66b582eadbbe301e516e72/src/main/java/io/antmedia/rest/BroadcastRestService.java#L976](getToken) Rest Service getting streamId, expireDate and type parameters. Therefore it is important that streamId and type parameters should be defined properly. Because tokenId needs to match with both streamId and type.
+
