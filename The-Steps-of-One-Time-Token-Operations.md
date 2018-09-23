@@ -29,11 +29,14 @@ The sample token creation service URL for local request:
 Please note that you need to call this rest service either from the local machine which Ant Media Server is running on or from remote after successfully logged in to management panel due to the security reasons.
 
 If you want to remove this filtering mechanism please remove the below lines from webapps-> {Application} -> WEBINF -> web.xml
-<pre>
+
+```xml
+
+```
 
 &lt;filter&gt;
 
-<pre>
+
 
 
 
