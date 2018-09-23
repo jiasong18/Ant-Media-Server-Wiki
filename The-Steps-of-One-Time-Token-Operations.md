@@ -48,3 +48,21 @@ The system controls token validity during publishing or playing.
 **Live Stream/VoD Playing:** Same as publishing, the token parameter is added to URL. Sample URL:
 
 ``http://[IP_Address]/<Application_Name>/streams/250116815996644357614115.mp4?token=tokenId``
+
+**WebRTC Playing:** Again the token parameter should be inserted to play WebSocket message. 
+
+```json
+{
+    command : "play",
+    streamId : "stream1",
+    token : "tokenId",
+
+}
+```
+
+Please have a look at the principles described in the [wiki page](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-WebSocket-Messaging-Details).
+
+### Step 4. Evaluation of the Token
+
+Ant Media Server evaluates based on its properties to secure your streams. Whether it is valid for the requested stream or not is controlled. Another important control process is checking the type of the token. Because the developer or administrator may give access to a user to play a stream but not publish to this stream even with the same streamId.
+Once the token is successfully validated by Ant Media Server, then it is removed from the database so that other requests with the same token will be dismissed. Since consecutive requests are sent during playing/accessing streams, the session information saved after the one-time token is consumed.
