@@ -21,7 +21,7 @@
      * [WebRTC Signalling Server](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-Signalling-Server)
      * [WebRTC iOS SDK](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-iOS-SDK-Documentation)
      * [WebRTC Android SDK](https://github.com/ant-media/Ant-Media-Server/wiki/Step-by-Step-Guide-to-Build-WebRTC-Native-Android-App)
-   *[The Steps of the One-Time Token Operations](https://github.com/ant-media/Ant-Media-Server/wiki/The-Steps-of-One-Time-Token-Operations)
+   * [The Steps of the One-Time Token Operations](https://github.com/ant-media/Ant-Media-Server/wiki/The-Steps-of-One-Time-Token-Operations)
    * [Amazon (AWS) S3 Integration](https://github.com/ant-media/Ant-Media-Server/wiki/Amazon-(AWS)-S3-Integration) 
 
 ### FAQ
