@@ -2,10 +2,10 @@ You have a streaming project or just want to stream personally, however, may hav
 
 ### The Parameters of the Token
 
-**TokenId **Generated a random string from service.
+**TokenId ** Generated a random string from service.
 
-**StreamId: **The Id of the resource that user wants to reach.
+**StreamId: ** The Id of the resource that user wants to reach.
 
-**ExpireDate: **The expiration date of the token.
+**ExpireDate: ** The expiration date of the token.
 
-**Type: **Either publish or play token.
+**Type: ** Either publish or play token.
