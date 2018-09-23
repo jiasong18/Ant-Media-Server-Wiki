@@ -16,3 +16,5 @@ You have a streaming project or just want to stream personally, however, may hav
 
 Firstly, the setting should be enabled in the management panel.
 
+![token setting](https://i0.wp.com/antmedia.io/wp-content/uploads/2018/09/Screenshot-from-2018-09-17-20-53-01-1024x441.png)
+
