@@ -9,3 +9,10 @@ You have a streaming project or just want to stream personally, however, may hav
 **ExpireDate:** The expiration date of the token.
 
 **Type:** Either publish or play token.
+
+## The Steps for Token Control Mechanism
+
+### Step 1. Enable Setting
+
+Firstly, the setting should be enabled in the management panel.
+
