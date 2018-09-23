@@ -22,6 +22,23 @@ Firstly, the setting should be enabled in the management panel.
 
 The Server creates tokens with [getToken](https://github.com/ant-media/Ant-Media-Server/blob/14e243dd8f1696fbbc66b582eadbbe301e516e72/src/main/java/io/antmedia/rest/BroadcastRestService.java#L976) Rest Service getting streamId, expireDate and type parameters with query parameters. Service returns tokenId and other parameters. It is important that streamId and type parameters should be defined properly. Because tokenId needs to match with both streamId and type.
 
+The sample token creation service URL for local request:
+
+`http://localhost:5080/LiveApp/rest/broadcast/getToken?id=541211332342978513714151&expireDate=123232&type=play`
+
+Please note that you need to call this rest service either from the local machine which Ant Media Server is running on or from remote after successfully logged in to management panel due to the security reasons.
+
+If you want to remove this filtering mechanism please remove the below lines from webapps-> {Application} -> WEBINF -> web.xml
+
+```<filter>
+    <filter-name>RestAuthenticationFiler</filter-name>
+    <filter-class>io.antmedia.serverapp.pscp.filter.RestAuthenticationFilter</filter-class>
+</filter>
+<filter-mapping>
+    <filter-name>RestAuthenticationFiler</filter-name>
+    <url-pattern>/rest/*</url-pattern>
+</filter-mapping>```
+
 ### Step 3. Request with Token 
 
 The system controls token validity during publishing or playing.
