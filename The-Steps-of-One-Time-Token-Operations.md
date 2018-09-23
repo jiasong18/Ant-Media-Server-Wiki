@@ -2,7 +2,7 @@ You have a streaming project or just want to stream personally, however, may hav
 
 ### The Parameters of the Token
 
-**TokenId ** Generated a random string from service.
+**TokenId ** Generated a random **string** from service.
 
 **StreamId: ** The Id of the resource that user wants to reach.
 
