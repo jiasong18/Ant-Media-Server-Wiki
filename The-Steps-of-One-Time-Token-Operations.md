@@ -34,7 +34,7 @@ If you want to remove this filtering mechanism please remove the below lines fro
 &lt;filter&gt;
 
 <pre>
-<code>
+</code>
 
 ### Step 3. Request with Token 
 
