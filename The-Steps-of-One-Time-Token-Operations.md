@@ -41,12 +41,6 @@ If you want to remove this filtering mechanism please remove the below lines fro
 </filter-mapping>
 ```
 
-&lt;filter&gt;
-
-
-
-
-
 ### Step 3. Request with Token 
 
 The system controls token validity during publishing or playing.
