@@ -36,9 +36,9 @@ wget https://raw.githubusercontent.com/ant-media/Scripts/master/install_ant-medi
 chmod 755 install_ant-media-server.sh
 ```
 
-Call the download script file by giving ant-media-server zip file. The command below installs Ant Media Server and starts the service
+Call the download script file by giving ant-media-server zip file. The command below installs Ant Media Server and starts the service. Ant Media Server zip files are in format `ant-media-server-<community|enterprise>-<version>-<date>.zip`
 ```
-sudo ./install_ant-media-server.sh ant-media-server-.....zip 
+sudo ./install_ant-media-server.sh <Downloaded Ant Media Server Zip File> 
 ```
 
 
