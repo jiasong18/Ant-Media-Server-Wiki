@@ -20,6 +20,38 @@ This documentation is for developers who need to error and callbacks codes and t
     description : "it is send when iceCandidate is requested",
 }
 ```
+## JS Callbacks
+
+```json
+{
+    message : "AudioAlreadyActive",
+    description : " if there is audio it calls callbackError with "AudioAlreadyActive" ,
+}
+```
+```json
+{
+    error : "Camera or Mic is being used by some other process that does not let read the devices",
+    description : " Error definition it is send when media devices are used by another applications",
+}
+```
+```json
+{
+    message : "VideoAlreadyActive",
+    description : " if there is video it calls callbackError with "VideoAlreadyActive",
+}
+```
+```json
+{
+    error : "NotSupportedError",
+    description : " Error definition it is send when SSL is needed",
+}
+```
+```json
+{
+    error : "NoActiveConnection",
+    description : " Error definition it is send when no active WebSocket connection",
+}
+```
 
 ## Other Callbacks
 
@@ -63,3 +95,8 @@ This documentation is for developers who need to error and callbacks codes and t
 	       It is sent back to the user when there is no peer associated with the stream",
 }
 ```
+
+
+
+
+
