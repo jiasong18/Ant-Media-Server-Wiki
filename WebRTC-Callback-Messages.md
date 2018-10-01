@@ -1,4 +1,4 @@
-This documentation is for developers who need to error and callbacks codes and their descriptions for WebRTC operations.
+This documentation is for developers who need to callbacks and their descriptions for WebRTC operations.
 
 ## Communication Callbacks
 
