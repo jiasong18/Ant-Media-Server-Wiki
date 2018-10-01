@@ -1,8 +1,6 @@
-This documentation is for developers who need to error codes and their descriptions for WebRTC communications.
+This documentation is for developers who need to error codes and their descriptions for WebRTC communication.
 
 ## WebSocket Communications Errors
-
-
 
 ```
 ws://SERVER_NAME:5080/WebRTCAppEE/websocket
