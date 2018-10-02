@@ -10,52 +10,28 @@ This documentation is for developers who need to callbacks and their description
 Description : it is send when local description is not set successfully",
 ## JS Error Callbacks 
 
-**`"WebSocketNotSupported"`** Reason : WebSocket connection is not supproted for environement or connection is not in correct state.
+**`"WebSocketNotSupported"`** Reason: WebSocket connection is not supported for environment or connection is not in the correct state.
 
-**`"AbortError"`** Reason : Although the user and operating system both granted access to the hardware device, and no hardware issues occurred that would cause a NotReadableError, some problem occurred which prevented the device from being used.
+**`"AbortError"`** Reason: Although the user and operating system both granted access to the hardware device, and no hardware issues occurred that would cause a NotReadableError, some problem occurred which prevented the device from being used.
 
-**`"NotAllowedError"`** Reason : The user has specified that the current browsing instance is not permitted access to the device; or the user has denied access for the current session; or the user has denied all access to user media devices globally.
+**`"NotAllowedError"`** Reason: The user has specified that the current browsing instance is not permitted access to the device, or the user has denied access for the current session, or the user has denied all access to user media devices globally.
 
-**`"NotFoundError"`** Reason : No media tracks of the type specified were found that satisfy the given constraints.
+**`"NotFoundError"`** Reason: No media tracks of the type specified were found that satisfy the given constraints.
 
-**`"OverconstrainedError"`** Reason : The specified constraints resulted in no candidate devices which met the criteria requested. The error is an object of type OverconstrainedError, and has a constraint property whose string value is the name of a constraint which was impossible to meet, and a message property containing a human-readable string explaining the problem.
+**`"OverconstrainedError"`** Reason: The specified constraints resulted in no candidate devices which met the criteria requested. The error is an object of type OverconstrainedError and has a constraint property whose string value is the name of a constraint which was impossible to meet, and a message property containing a human-readable string explaining the problem.
 
-**`"SecurityError"`** Reason : User media support is disabled on the Document on which getUserMedia() was called. The mechanism by which user media support is enabled and disabled is left up to the individual user agent.
+**`"SecurityError"`** Reason: User media support is disabled on the Document on which getUserMedia() was called. The mechanism by which user media support is enabled and disabled is left up to the individual user agent.
 
-**`"TypeError"`** Reason : The list of constraints specified is empty, or has all constraints set to false.
+**`"AudioAlreadyActive"`** Reason: If there is audio it calls callbackError with "AudioAlreadyActive.
 
-**`"TypeError"`** Reason : The list of constraints specified is empty, or has all constraints set to false.
-**`"TypeError"`** Reason : The list of constraints specified is empty, or has all constraints set to false.
-```json
-{
-    message : "AudioAlreadyActive",
-    description : " if there is audio it calls callbackError with "AudioAlreadyActive" ,
-}
-```
-```json
-{
-    error : "Camera or Mic is being used by some other process that does not let read the devices",
-    description : " Error definition it is send when media devices are used by another applications",
-}
-```
-```json
-{
-    message : "VideoAlreadyActive",
-    description : " if there is video it calls callbackError with "VideoAlreadyActive",
-}
-```
-```json
-{
-    error : "NotSupportedError",
-    description : " Error definition it is send when SSL is needed",
-}
-```
-```json
-{
-    error : "NoActiveConnection",
-    description : " Error definition it is send when no active WebSocket connection",
-}
-```
+**`"Camera or Mic is being used by some other process that does not let read the devices"`** Reason: Error definition it is sent when media devices are used by another application.
+
+**`"VideoAlreadyActive"`** Reason: If there is video it calls callbackError with "VideoAlreadyActive.
+
+**`"NotSupportedError"`** Reason: Error definition it is sent when SSL is needed.
+
+**`"NoActiveConnection"`** Reason: Error definition it is sent when no active WebSocket connection.
+
 
 ## Other Callbacks
 
