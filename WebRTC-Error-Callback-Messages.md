@@ -11,11 +11,11 @@ This documentation is for developers who need to callbacks and their description
 Description : It is send when local description is not set successfully",
 ## JavaScript Error Callbacks 
 
-**`"WebSocketNotSupported"`** Reason: WebSocket connection is not supported for environment or connection is not in the correct state.
+  * **`WebSocketNotSupported`**: WebSocket connection is not supported for environment or connection is not in the correct state.
 
-**`"AbortError"`** Reason: Although the user and operating system both granted access to the hardware device, and no hardware issues occurred that would cause a NotReadableError, some problem occurred which prevented the device from being used.
+  * **`AbortError`**: Although the user and operating system both granted access to the hardware device, and no hardware issues occurred that would cause a NotReadableError, some problem occurred which prevented the device from being used.
 
-**`"NotAllowedError"`** Reason: The user has specified that the current browsing instance is not permitted access to the device, or the user has denied access for the current session, or the user has denied all access to user media devices globally.
+ * **`NotAllowedError`**: The user has specified that the current browsing instance is not permitted access to the device, or the user has denied access for the current session, or the user has denied all access to user media devices globally.
 
 **`"NotFoundError"`** Reason: No media tracks of the type specified were found that satisfy the given constraints.
 
@@ -34,7 +34,7 @@ Description : It is send when local description is not set successfully",
 **`"NoActiveConnection"`** Reason: Error definition it is sent when no active WebSocket connection.
 
 
-## WebSocket Error Callbacks
+### WebSocket Error Callbacks
 
 ```json
 {
