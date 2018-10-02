@@ -37,42 +37,42 @@ Description : it is send when local description is not set successfully",
 
 ```json
 {
-    error : "noStreamNameSpecified",
+    definition : "noStreamNameSpecified",
 }
 ```
 Description: Error definition it is sent when stream id is not specified in the message.
 
 ```json
 {
-    error: "not_allowed_unregistered_streams",
+    definition: "not_allowed_unregistered_streams",
 }
 ```
 Description: This is sent back to the user if the publisher wants to send a stream with an unregistered id and server is configured not to allow this kind of streams",
 
 ```json
 {
-    error : "no_room_specified",
+    definition : "no_room_specified",
 }
 ```
 Description: This is sent back to the user when there is no room specified in  joining the video conference.
 
 ```json
 {
-    error : "unauthorized_access",
+    definition : "unauthorized_access",
 }
 ```
 Description : This is sent back to the user when the token is not validated",
 
 ```json
 {
-    error : "no_encoder_settings",
+    definition : "no_encoder_settings",
 }
 ```
 Description : This is sent back to the user when there are no encoder settings available in publishing the stream.
 
 ```json
 {
-    error : "no_peer_associated_before",
+    definition : "no_peer_associated_before",
 }
 ```
 Description: This is peer to peer connection error definition.It is sent back to the user when there is no peer associated with the stream",
