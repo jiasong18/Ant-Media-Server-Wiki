@@ -192,13 +192,13 @@ webRTCAdaptor.stop()
 
  * **`AudioAlreadyActive`**: If there is audio it calls callbackError with "AudioAlreadyActive.
 
- * **`Camera or Mic is being used by some other process that does not let read the devices`**: Error definition it is sent when media devices are used by another application.
+ * **`Camera or Mic is being used by some other process that does not let read the devices`**: It is sent when media devices are used by another application.
 
  * **`VideoAlreadyActive`**: If there is video it calls callbackError with "VideoAlreadyActive.
 
- * **`NotSupportedError`**: Error definition it is sent when SSL is needed.
+ * **`NotSupportedError`**: It is sent when SSL is needed.
 
- * **`noStreamNameSpecified`**: Error definition it is sent when stream id is not specified in the message.
+ * **`noStreamNameSpecified`**: It is sent when stream id is not specified in the message.
 
  * **`not_allowed_unregistered_streams`**: This is sent back to the user if the publisher wants to send a stream with an unregistered id and server is configured not to allow this kind of streams.
 
