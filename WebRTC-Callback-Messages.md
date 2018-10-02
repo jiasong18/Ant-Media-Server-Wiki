@@ -7,11 +7,10 @@ This documentation is for developers who need to callbacks and their description
     error : "notSetLocalDescription",
 }
 ```
-description : it is send when local description is not set successfully",
+Description : it is send when local description is not set successfully",
 ## JS Error Callbacks 
 
-`WebSocketNotSupported` -  !("WebSocket" in window)
-WebSocketNotSupported - (wsConn.readyState == 0 || wsConn.readyState == 2 || wsConn.readyState == 3) 
+`WebSocketNotSupported` Reason : WebSocket connection is not supproted for environement or connection is not in correct state.
 
 callbackError - navigator.mediaDevices.getUserMedia(thiz.mediaConstraints)
 callbackError - navigator.mediaDevices.getUserMedia({audio:true, video:false}).then(function(micStream)
