@@ -10,7 +10,7 @@ This documentation is for developers who need to callbacks and their description
 Description : it is send when local description is not set successfully",
 ## JS Error Callbacks 
 
-`WebSocketNotSupported` Reason : WebSocket connection is not supproted for environement or connection is not in correct state.
+**`"WebSocketNotSupported"`** Reason : WebSocket connection is not supproted for environement or connection is not in correct state.
 
 callbackError - navigator.mediaDevices.getUserMedia(thiz.mediaConstraints)
 callbackError - navigator.mediaDevices.getUserMedia({audio:true, video:false}).then(function(micStream)
