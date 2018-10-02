@@ -261,58 +261,57 @@ Client can update/remove the related video views from UI.
 ```
 ## WebSocket Error Callbacks
 
+  * `noStreamNameSpecified`: it is sent when stream id is not specified in the message.
+
 ```json
 {
     command : "error",
     definition : "noStreamNameSpecified",
 }
 ```
-Description: Error definition it is sent when stream id is not specified in the message.
-
+  * `not_allowed_unregistered_streams`: This is sent back to the user if the publisher wants to send a stream with an unregistered id and server is configured not to allow this kind of streams
 ```json
 {
     command : "error",
     definition: "not_allowed_unregistered_streams",
 }
 ```
-Description: This is sent back to the user if the publisher wants to send a stream with an unregistered id and server is configured not to allow this kind of streams",
 
+  * `no_room_specified`: This is sent back to the user when there is no room specified in  joining the video conference.
 ```json
 {
     command : "error",
     definition : "no_room_specified",
 }
 ```
-Description: This is sent back to the user when there is no room specified in  joining the video conference.
 
+  * `unauthorized_access`:This is sent back to the user when the token is not validated
 ```json
 {
     command : "error",
     definition : "unauthorized_access",
 }
 ```
-Description : This is sent back to the user when the token is not validated",
 
+  * `no_encoder_settings`:This is sent back to the user when there are no encoder settings available in publishing the stream.
 ```json
 {
     command : "error",
     definition : "no_encoder_settings",
 }
 ```
-Description : This is sent back to the user when there are no encoder settings available in publishing the stream.
 
+  * `no_peer_associated_before`: This is peer to peer connection error definition.It is sent back to the user when there is no peer associated with the stream.
 ```json
 {
     command : "error",
     definition : "no_peer_associated_before",
 }
 ```
-Description: This is peer to peer connection error definition.It is sent back to the user when there is no peer associated with the stream.
-
+  * `notSetLocalDescription`: It is send when local description is not set successfully
 ```json
 {
     command : "error",
     definition : "notSetLocalDescription",
 }
 ```
-Description : It is send when local description is not set successfully",
