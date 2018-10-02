@@ -210,7 +210,7 @@ webRTCAdaptor.stop()
 
  * **`no_peer_associated_before`**: This is peer to peer connection error definition.It is sent back to the user when there is no peer associated with the stream.
 
- * **`notSetLocalDescription`**: It is send when local description is not set successfully.
+ * **`notSetLocalDescription`**: It is sent when local description is not set successfully.
 
 
 
