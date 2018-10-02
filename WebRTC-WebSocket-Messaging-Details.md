@@ -259,7 +259,7 @@ Client can update/remove the related video views from UI.
     streamId: "the_id_of_the_user_stream"
 }
 ```
-### WebSocket Error Callbacks
+## WebSocket Error Callbacks
 
 ```json
 {
