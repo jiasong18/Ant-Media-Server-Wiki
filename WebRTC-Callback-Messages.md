@@ -24,13 +24,8 @@ Description : it is send when local description is not set successfully",
 
 **`"TypeError"`** Reason : The list of constraints specified is empty, or has all constraints set to false.
 
-callbackError - navigator.mediaDevices.getUserMedia(thiz.mediaConstraints)
-callbackError - navigator.mediaDevices.getUserMedia({audio:true, video:false}).then(function(micStream)
-callbackError - (typeof thiz.mediaConstraints.audio != "undefined" && thiz.mediaConstraints.audio != false)
-callbackError - var media_audio_constraint = { audio: thiz.mediaConstraints.audio }
-callbackError - if (typeof thiz.mediaConstraints.video != "undefined" && thiz.mediaConstraints.video != "false")
-callbackError - navigator.mediaDevices.getUserMedia({audio:thiz.mediaConstraints.audio})
-
+**`"TypeError"`** Reason : The list of constraints specified is empty, or has all constraints set to false.
+**`"TypeError"`** Reason : The list of constraints specified is empty, or has all constraints set to false.
 ```json
 {
     message : "AudioAlreadyActive",
