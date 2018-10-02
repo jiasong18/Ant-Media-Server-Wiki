@@ -8,7 +8,7 @@ This documentation is for developers who need to callbacks and their description
 }
 ```
 Description : it is send when local description is not set successfully",
-## JS Error Callbacks 
+## JavaScript Error Callbacks 
 
 **`"WebSocketNotSupported"`** Reason: WebSocket connection is not supported for environment or connection is not in the correct state.
 
@@ -33,7 +33,7 @@ Description : it is send when local description is not set successfully",
 **`"NoActiveConnection"`** Reason: Error definition it is sent when no active WebSocket connection.
 
 
-## Other WebSocket Error Callbacks
+## WebSocket Error Callbacks
 
 ```json
 {
