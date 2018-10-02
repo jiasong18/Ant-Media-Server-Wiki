@@ -1,14 +1,15 @@
 This documentation is for developers who need to callbacks and their descriptions for WebRTC operations.
 
-## Communication Callbacks
+## WebSocket Communication Callbacks
 
 ```json
 {
     error : "notSetLocalDescription",
 }
 ```
- description : " Error definition it is send when local description is not set successfully",
-## JS Callbacks
+description : it is send when local description is not set successfully",
+## JS Error Callbacks 
+
 
 WebSocketNotSupported -  !("WebSocket" in window)
 WebSocketNotSupported - (wsConn.readyState == 0 || wsConn.readyState == 2 || wsConn.readyState == 3) 
