@@ -33,7 +33,7 @@ Description : it is send when local description is not set successfully",
 **`"NoActiveConnection"`** Reason: Error definition it is sent when no active WebSocket connection.
 
 
-## Other Callbacks
+## Other WebSocket Error Callbacks
 
 ```json
 {
