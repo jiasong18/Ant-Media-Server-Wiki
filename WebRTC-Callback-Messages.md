@@ -8,7 +8,7 @@ This documentation is for developers who need to callbacks and their description
     definition : "notSetLocalDescription",
 }
 ```
-Description : it is send when local description is not set successfully",
+Description : It is send when local description is not set successfully",
 ## JavaScript Error Callbacks 
 
 **`"WebSocketNotSupported"`** Reason: WebSocket connection is not supported for environment or connection is not in the correct state.
