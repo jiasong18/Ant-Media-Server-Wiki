@@ -5,10 +5,9 @@ This documentation is for developers who need to callbacks and their description
 ```json
 {
     error : "notSetLocalDescription",
-    description : " Error definition it is send when local description is not set successfully",
 }
 ```
-
+ description : " Error definition it is send when local description is not set successfully",
 ## JS Callbacks
 
 WebSocketNotSupported -  !("WebSocket" in window)
