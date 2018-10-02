@@ -4,7 +4,8 @@ This documentation is for developers who need to callbacks and their description
 
 ```json
 {
-    error : "notSetLocalDescription",
+    command : "error",
+    definition : "notSetLocalDescription",
 }
 ```
 Description : it is send when local description is not set successfully",
@@ -37,6 +38,7 @@ Description : it is send when local description is not set successfully",
 
 ```json
 {
+    command : "error",
     definition : "noStreamNameSpecified",
 }
 ```
@@ -44,6 +46,7 @@ Description: Error definition it is sent when stream id is not specified in the 
 
 ```json
 {
+    command : "error",
     definition: "not_allowed_unregistered_streams",
 }
 ```
@@ -51,6 +54,7 @@ Description: This is sent back to the user if the publisher wants to send a stre
 
 ```json
 {
+    command : "error",
     definition : "no_room_specified",
 }
 ```
@@ -58,6 +62,7 @@ Description: This is sent back to the user when there is no room specified in  j
 
 ```json
 {
+    command : "error",
     definition : "unauthorized_access",
 }
 ```
@@ -65,6 +70,7 @@ Description : This is sent back to the user when the token is not validated",
 
 ```json
 {
+    command : "error",
     definition : "no_encoder_settings",
 }
 ```
@@ -72,6 +78,7 @@ Description : This is sent back to the user when there are no encoder settings a
 
 ```json
 {
+    command : "error",
     definition : "no_peer_associated_before",
 }
 ```
