@@ -23,17 +23,17 @@ This documentation is for developers who need to callbacks and their description
 
  * **`NotSupportedError`**: Error definition it is sent when SSL is needed.
 
- * **`noStreamNameSpecified**: Error definition it is sent when stream id is not specified in the message.
+ * **`noStreamNameSpecified`**: Error definition it is sent when stream id is not specified in the message.
 
- * **`not_allowed_unregistered_streams**: This is sent back to the user if the publisher wants to send a stream with an unregistered id and server is configured not to allow this kind of streams.
+ * **`not_allowed_unregistered_streams`**: This is sent back to the user if the publisher wants to send a stream with an unregistered id and server is configured not to allow this kind of streams.
 
- * **`no_room_specified**: This is sent back to the user when there is no room specified in  joining the video conference.
+ * **`no_room_specified`**: This is sent back to the user when there is no room specified in  joining the video conference.
 
- * **`unauthorized_access**: This is sent back to the user when the token is not validated.
+ * **`unauthorized_access`**: This is sent back to the user when the token is not validated.
 
- * **`no_encoder_settings**: This is sent back to the user when there are no encoder settings available in publishing the stream.
+ * **`no_encoder_settings`**: This is sent back to the user when there are no encoder settings available in publishing the stream.
 
- * **`no_peer_associated_before**: This is peer to peer connection error definition.It is sent back to the user when there is no peer associated with the stream.
+ * **`no_peer_associated_before`**: This is peer to peer connection error definition.It is sent back to the user when there is no peer associated with the stream.
 
- * **`notSetLocalDescription**: It is send when local description is not set successfully.
+ * **`notSetLocalDescription`**: It is send when local description is not set successfully.
 
