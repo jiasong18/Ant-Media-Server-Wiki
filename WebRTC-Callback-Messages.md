@@ -8,19 +8,18 @@ This documentation is for developers who need to callbacks and their description
     description : " Error definition it is send when local description is not set successfully",
 }
 ```
-```json
-{
-    message : "takeConfiguration",
-    description : "it is send when configuration is requested",
-}
-```
-```json
-{
-    message : "takeCandidate",
-    description : "it is send when iceCandidate is requested",
-}
-```
+
 ## JS Callbacks
+
+WebSocketNotSupported -  !("WebSocket" in window)
+WebSocketNotSupported - (wsConn.readyState == 0 || wsConn.readyState == 2 || wsConn.readyState == 3) 
+
+callbackError - navigator.mediaDevices.getUserMedia(thiz.mediaConstraints)
+callbackError - navigator.mediaDevices.getUserMedia({audio:true, video:false}).then(function(micStream)
+callbackError - (typeof thiz.mediaConstraints.audio != "undefined" && thiz.mediaConstraints.audio != false)
+callbackError - var media_audio_constraint = { audio: thiz.mediaConstraints.audio }
+callbackError - if (typeof thiz.mediaConstraints.video != "undefined" && thiz.mediaConstraints.video != "false")
+callbackError - navigator.mediaDevices.getUserMedia({audio:thiz.mediaConstraints.audio})
 
 ```json
 {
