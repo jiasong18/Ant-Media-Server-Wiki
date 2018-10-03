@@ -32,3 +32,10 @@ Again assume that there is a live stream in Ant Media Server with `<STREAM_ID>` 
 
 After live stream is finished, the URL above plays the recorded MP4 file if it is created.
 
+## Get Preview Live and VoD Streams
+* Preview image URL will be available in this URL 
+`http://<SERVER_NAME>:5080/<APP_NAME>/previews/<STREAM_ID>.png` 
+	
+* Preview image is saved as 640x480.
+* Preview image creation period can be set as settings.createPreviewPeriod=<PERIOD> in
+`<ANT_MEDIA_DIR>/webapps/<APP_NAME>/WEB-INF/red5-web.properties` 
