@@ -3,7 +3,7 @@ This library simplifies connection between browsers and iOS Devices (iPhone and 
 This documentation aims to introduce how to use AntMedia WebRTC iOS SDK in your application. This SDK supports three modes: Peer to peer, play and publish.  
 
 ## Features
-* Full written in Swift 4. 
+* Fully written in Swift 4. 
 * Peer Connection: Two nodes connect to each other, 1-1 connection
 * Publish: One node publishes, 1-N connection
 * Play: Other nodes play broadcast from publisher,1-N connection
@@ -63,7 +63,7 @@ client.setOptions(url: server, streamId: room, mode: self.getMode())
 client.setVideoViews(local: localVideoView, remote: remoteVideoView)
 ```
 
-If you run the Ant Media Server (Enterprise Edition) on your computer, server url should be localhost, if not ip address should be used. No protocol or port needed.
+If you run the Ant Media Server (Enterprise Edition) on your computer, server url should be localhost, if not ip address should be used. Please do not forget to the protocol (ws or wss).
 
 Stream id is a kind of room name to make it easier finding each node. 
 
