@@ -1,4 +1,4 @@
-* First of all we create a text file with name of Dockerfile as follows:
+* First of all we create a text file with name of `Dockerfile` as follows:
 ```
 FROM ubuntu:16.04
 
