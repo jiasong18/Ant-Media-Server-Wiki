@@ -1,6 +1,7 @@
 ## Enable DB Based Cluster Mode
 To run Ant Media Server in DB Based Clustering please follow these steps.
 * Install MongoDB into a server. You can look [here](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/).
+* Set `bind_ip` value as `0.0.0.0` in `/etc/mongod.conf` file to let all connections to the MongoDB.
 * Install Ant Media Server one or more server. You can look [here](https://github.com/ant-media/Ant-Media-Server/wiki/Getting-Started).
 * Download the `change_server_mode.sh` shell script.
 ```
@@ -11,7 +12,10 @@ chmod 755 change_server_mode.sh
 
 `sudo ./change_server_mode.sh cluster <MONGO_SERVER_IP>`
 
-* Set `bind_ip` value as `0.0.0.0` in `/etc/mongod.conf` file to let all connections to the MongoDB.
+** _Note: run the command to restart Ant Media Server in standalone mode._
+
+`sudo ./change_server_mode.sh standalone`
+
 
 ## Autoscaling
 * As new Ant Media Server instances started in DB Based Cluster mode, they are automatically added to the cluster. You can check nodes from Management Console.
