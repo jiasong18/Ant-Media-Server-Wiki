@@ -8,5 +8,6 @@ wget https://raw.githubusercontent.com/ant-media/Scripts/master/change_server_mo
 chmod 755 change_server_mode.sh
 ```
 * Run the command to restart Ant Media Server in DB based cluster mode.
+
 `sudo ./change_server_mode.sh cluster <MONGO_SERVER_IP>`
 
