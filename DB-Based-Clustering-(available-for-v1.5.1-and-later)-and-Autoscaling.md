@@ -12,7 +12,10 @@ chmod 755 change_server_mode.sh
 
 `sudo ./change_server_mode.sh cluster <MONGO_SERVER_IP>`
 
-** _Note: run the command to restart Ant Media Server in standalone mode._
+
+***
+
+_Note: run the command to restart Ant Media Server in standalone mode._
 
 `sudo ./change_server_mode.sh standalone`
 
