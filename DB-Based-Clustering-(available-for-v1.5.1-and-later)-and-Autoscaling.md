@@ -11,3 +11,12 @@ chmod 755 change_server_mode.sh
 
 `sudo ./change_server_mode.sh cluster <MONGO_SERVER_IP>`
 
+# Autoscaling
+* As new Ant Media Server instances started in DB Based Cluster mode, they are automatically added to the cluster. You can check nodes from `http://<ANT_MEDIA_SERVER_NODE_k_IP>:5080/#/cluster`.
+
+# How DB Based Cluster Works
+* In this mode there are no multicast messages.
+* Newly started instance register it to the MongoDB.
+* When an instance starts to receive live stream, it register itself as origin of the stream.
+* When the load balancer forwards a play request to any of the instances in the cluster, instance get the origin from MondoDB. It fetches live stream from the origin and send to audience.
+
