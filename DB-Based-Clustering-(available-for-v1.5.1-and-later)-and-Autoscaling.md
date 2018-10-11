@@ -15,7 +15,7 @@ chmod 755 change_server_mode.sh
 
 ***
 
-_Note: run the command to restart Ant Media Server in standalone mode._
+_**Note:** run the command to exit from cluster mode and restart Ant Media Server in standalone mode._
 
 `sudo ./change_server_mode.sh standalone`
 
