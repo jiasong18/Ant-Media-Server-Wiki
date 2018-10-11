@@ -12,7 +12,9 @@ chmod 755 change_server_mode.sh
 `sudo ./change_server_mode.sh cluster <MONGO_SERVER_IP>`
 
 ## Autoscaling
-* As new Ant Media Server instances started in DB Based Cluster mode, they are automatically added to the cluster. You can check nodes from `http://<ANT_MEDIA_SERVER_NODE_k_IP>:5080/#/cluster`.
+* As new Ant Media Server instances started in DB Based Cluster mode, they are automatically added to the cluster. You can check nodes from Management Console.
+
+`http://<ANT_MEDIA_SERVER_NODE_k_IP>:5080/#/cluster`.
 
 ## How DB Based Cluster Works
 * In this mode there are no multicast messages.
