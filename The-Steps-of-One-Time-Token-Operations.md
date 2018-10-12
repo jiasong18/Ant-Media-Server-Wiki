@@ -26,7 +26,7 @@ The sample token creation service URL for local request:
 
 `http://localhost:5080/LiveApp/rest/broadcast/getToken?id=541211332342978513714151&expireDate=123232&type=play`
 
-Please note that you need to call this rest service either from the local machine which Ant Media Server is running on or from remote after successfully logged in to management panel due to the security reasons.
+Please note that calling this rest service from remote is restricted due to the security reasons.
 
 If you want to remove this filtering mechanism please remove the below lines from webapps-> {Application} -> WEBINF -> web.xml
 
