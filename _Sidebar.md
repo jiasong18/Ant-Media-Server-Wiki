@@ -20,7 +20,7 @@
    * WebRTC
      * [WebRTC Publish & Play JavaScript SDK](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-Publish-&-Play-JavaScript-SDK)
      * [WebRTC WebSocket Messaging Details](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-WebSocket-Messaging-Details)
-     * [WebRTC Callback Messages](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-Callback-Messages)
+     * [WebRTC JS Error Callback Messages](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-Error-Callback-Messages)
      * [WebRTC Signalling Server](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-Signalling-Server)
      * [WebRTC iOS SDK](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-iOS-SDK-Documentation)
      * [WebRTC Android SDK](https://github.com/ant-media/Ant-Media-Server/wiki/Step-by-Step-Guide-to-Build-WebRTC-Native-Android-App)
