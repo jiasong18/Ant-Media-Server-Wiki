@@ -138,7 +138,7 @@ backend backend_http
   server ams2 172.30.0.42:5080 check cookie ams2  #if you do not use session stickiness, remove cookie ams2
     # you can add more instances 
 ```
-Even if you don't want to use sticky sessions for http requast, you must use it for HLS playing requests due to performance issues and statistics correctness. You can configure HAProxy as follows to make only HLS session sticky.
+**Note:**Even if you don't want to use sticky sessions for http requests, you must use it for HLS playing (m3u8 and ts) requests due to performance issues and correctness of statistics. You can configure HAProxy as follows to make only HLS session sticky.
 ```
 frontend http_lb
   bind *:80
