@@ -14,7 +14,7 @@ records live videos in several formats like HLS, MP4, etc.
 
 
 Download and save the Ant Media Server Community/Enterprise Edition from http://antmedia.io to your disk.
-
+Ant Media Server is being tested on ubuntu 14.04 and 16.04 versions on CI. 
 
 Now, there are two methods to run the server,
 * **Running as a Service** is for production
