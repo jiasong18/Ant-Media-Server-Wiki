@@ -35,5 +35,7 @@ This documentation is for developers who need to callbacks and their description
 
  * **`no_peer_associated_before`**: This is peer to peer connection error definition.It is sent back to the user when there is no peer associated with the stream.
 
- * **`notSetLocalDescription`**: It is send when local description is not set successfully.
+ * **`notSetLocalDescription`**: It is sent when local description is not set successfully.
+
+ * **`screen_share_permission_denied`**: It is sent when user does not allow screen share
 
