@@ -37,6 +37,9 @@ you can use https through 5443. Like below
 https://example.com:5443
 ```
 
+**ATTENTION:** If port 80 is used by some other process or it's forwarded to some other port, 
+`enable_ssl.sh` will not be successful. Please disable the process or delete the port forwarding temporarily in running the `enable_ssl.sh` script above  
+
 
 #### References
 - [Blog Post: Enable SSL with Just One Command](https://antmedia.io/enable-ssl-on-ant-media-server/)
