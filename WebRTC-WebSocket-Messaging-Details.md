@@ -255,8 +255,8 @@ Client can update/remove the related video views from UI.
 6. Any user can leave the room by sending below message
 ```json
 {
-    command : "stop",
-    streamId: "the_id_of_the_user_stream"
+    command : "leaveFromRoom",
+    room: "roomName"
 }
 ```
 ## WebSocket Error Callbacks
