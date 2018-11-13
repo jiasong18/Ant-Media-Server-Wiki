@@ -88,4 +88,6 @@ That's all. As a result, you can take some custom actions according to your proj
 
 We hope this post will help you to make automation in your project.  Please <a href="https://antmedia.io/#contact">keep in touch</a> if you have any question. We will be happy if we can help you.
 
+> **Attention:** Please process the result in your backend URL as soon as possible because these callbacks is called in event loop threads that does not support long running operations.  
+
 &nbsp;
