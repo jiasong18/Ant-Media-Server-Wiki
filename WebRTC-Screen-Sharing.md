@@ -26,43 +26,40 @@ We just add some simple functions to js/webrtc_adaptor.js file to seamless switc
 
 ```javascript
 
-var webRTCAdaptor = new WebRTCAdaptor({
-		websocket_url : websocketURL,
-		mediaConstraints : mediaConstraints,
-		peerconnection_config : pc_config,
-		sdp_constraints : sdpConstraints,
-		localVideoId : "localVideo",
-		debug:true,
-		callback : function(info, description) {
-			if (info == "initialized") {
-				console.log("initialized");
+    var webRTCAdaptor = new WebRTCAdaptor({
+	websocket_url : websocketURL,
+	mediaConstraints : mediaConstraints,
+	peerconnection_config : pc_config,
+	sdp_constraints : sdpConstraints,
+	localVideoId : "localVideo",
+	debug:true,
+	callback : function(info, description) {
+	     if (info == "initialized") {
+		console.log("initialized");
 				
-			} else if (info == "publish_started") {
-				//stream is being published
-				console.log("publish started");
-				
-			} else if (info == "publish_finished") {
-				//stream is being finished
-				console.log("publish finished");
-				
-			}
-			else if (info == "screen_share_extension_available") {
-				console.log("screen share extension available");
-			
-			}
-			else if (info == "closed") {
-				//console.log("Connection closed");
-				if (typeof description != "undefined") {
-					console.log("Connecton closed: " + JSON.stringify(description));
-				}
-			}
-		},
-		callbackError : function(error, message) {
-			//some of the possible errors, NotFoundError, SecurityError,PermissionDeniedError
+	     } else if (info == "publish_started") {
+		//stream is being published
+		console.log("publish started");		
+	     } else if (info == "publish_finished") {
+		//stream is being finished
+		console.log("publish finished");		
+	     }
+	     else if (info == "screen_share_extension_available") {
+		console.log("screen share extension available");	
+	      }
+	      else if (info == "closed") {
+		  //console.log("Connection closed");
+		  if (typeof description != "undefined") {
+			console.log("Connecton closed: " + JSON.stringify(description));
+		  }
+	      }
+	},
+	callbackError : function(error, message) {
+	    //some of the possible errors, NotFoundError, SecurityError,PermissionDeniedError
             
 			console.log("error callback: " +  JSON.stringify(error));
-		}
-	});
+	}
+});
 
 ```
 
