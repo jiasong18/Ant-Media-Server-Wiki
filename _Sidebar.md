@@ -5,7 +5,6 @@
   * [How to remove port forwardings?](https://github.com/ant-media/Ant-Media-Server/wiki/FAQ#how-to-remove-port-forwardings)
   * [How to Enable SSL for Ant Media Server ?](https://github.com/ant-media/Ant-Media-Server/wiki/Enable-SSL-for-Ant-Media-Server)
   * [How to Reduce Latency in RTMP to HLS?](https://github.com/ant-media/Ant-Media-Server/wiki/Reduce-Latency-in-RTMP-to-HLS-Streaming)
-  * [How to Reset Web Manager Password?](https://github.com/ant-media/Ant-Media-Server/wiki/Frequently-Ask-Questions#how-can-i-reset-the-password-for-web-manager-of-ant-media-server)
 
 ## User Guide
    * [Getting Started](https://github.com/ant-media/Ant-Media-Server/wiki/Getting-Started)
