@@ -4,7 +4,6 @@
   * [How to fix "Make sure that your domain name was entered correctly and the DNS A/AAAA record(s)"?](https://github.com/ant-media/Ant-Media-Server/wiki/FAQ#how-to-fix-make-sure-that-your-domain-name-was-entered-correctly-and-the-dns-aaaaa-records)
   * [How to remove port forwardings?](https://github.com/ant-media/Ant-Media-Server/wiki/FAQ#how-to-remove-port-forwardings)
   * [How to Enable SSL for Ant Media Server ?](https://github.com/ant-media/Ant-Media-Server/wiki/Enable-SSL-for-Ant-Media-Server)
-  * [How to Reduce Latency in RTMP to HLS?](https://github.com/ant-media/Ant-Media-Server/wiki/Reduce-Latency-in-RTMP-to-HLS-Streaming)
 
 ## User Guide
    * [Getting Started](https://github.com/ant-media/Ant-Media-Server/wiki/Getting-Started)
