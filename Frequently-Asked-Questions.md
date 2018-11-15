@@ -10,7 +10,7 @@
 
 * ### [How to Fix "NotSupportedError" in Publishing WebRTC?](https://github.com/ant-media/Ant-Media-Server/wiki/FAQ#how-to-fix-notsupportederror-in-publishing-webrtc-stream-in-ant-media-server)
 
-* ### [WebRTC Stream stops after a few seconds?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-resolve-%22WebRTC-Stream-stops-after-a-few-seconds%22-issue%3F)
+* ### [WebRTC stream stops after a few seconds?](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-stream-stops-after-a-few-seconds)
 
 * ### [How to reduce 8 to 10 seconds latency ?](link)
 
