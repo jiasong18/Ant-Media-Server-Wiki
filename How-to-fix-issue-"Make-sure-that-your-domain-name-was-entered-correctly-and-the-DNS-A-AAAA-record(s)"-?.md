@@ -1,5 +1,5 @@
-First of all make sure that A record is entered in your DNS settings and point to your server. 
-If you are sure about that, check your ports whether 443 or 80 ports are not blocked or forwarded to any port. 
-If you forward 80 or 443 ports to 5080 and 5443, then please remove these port forwarding settings as described [here](dfgdfg).
+* First of all make sure that A record is entered in your DNS settings and point to your server.
+* If you are sure about that, check your ports whether 443 or 80 ports are not blocked or forwarded to any port. 
+* If you forward 80 or 443 ports to 5080 and 5443, then please remove these port forwarding settings as described [here](dfgdfg).
 
 If you are still having issues, please let us know that. [contact@antmedia.io](mailto:contact@antmedia.io) 
