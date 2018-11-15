@@ -1,3 +1,12 @@
+### Frequenlt Asked Questions
+  * [WebRTC Stream stops after a few seconds?](https://github.com/ant-media/Ant-Media-Server/wiki/FAQ#how-to-resolve-webrtc-stream-stops-after-a-few-seconds-issue)
+  * [How to Fix "NotSupportedError" in Publishing WebRTC?](https://github.com/ant-media/Ant-Media-Server/wiki/FAQ#how-to-fix-notsupportederror-in-publishing-webrtc-stream-in-ant-media-server)
+  * [How to fix "Make sure that your domain name was entered correctly and the DNS A/AAAA record(s)"?](https://github.com/ant-media/Ant-Media-Server/wiki/FAQ#how-to-fix-make-sure-that-your-domain-name-was-entered-correctly-and-the-dns-aaaaa-records)
+  * [How to remove port forwardings?](https://github.com/ant-media/Ant-Media-Server/wiki/FAQ#how-to-remove-port-forwardings)
+  * [How to Enable SSL for Ant Media Server ?](https://github.com/ant-media/Ant-Media-Server/wiki/Enable-SSL-for-Ant-Media-Server)
+  * [How to Reduce Latency in RTMP to HLS?](https://github.com/ant-media/Ant-Media-Server/wiki/Reduce-Latency-in-RTMP-to-HLS-Streaming)
+  * [How to Reset Web Manager Password?](https://github.com/ant-media/Ant-Media-Server/wiki/Frequently-Ask-Questions#how-can-i-reset-the-password-for-web-manager-of-ant-media-server)
+
 ## User Guide
    * [Getting Started](https://github.com/ant-media/Ant-Media-Server/wiki/Getting-Started)
    * [Publish Live Stream with RTMP](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-Live-Stream-with-RTMP)
@@ -29,13 +38,3 @@
    * [The Steps of the One-Time Token Operations](https://github.com/ant-media/Ant-Media-Server/wiki/The-Steps-of-One-Time-Token-Operations)
    * [Amazon (AWS) S3 Integration](https://github.com/ant-media/Ant-Media-Server/wiki/Amazon-(AWS)-S3-Integration) 
    * [Webhook Integration: No worry, we'll call you](https://github.com/ant-media/Ant-Media-Server/wiki/Webhook-Integration:-No-worry,-We'll-call-you)
-
-### FAQ
-  * [WebRTC Stream stops after a few seconds?](https://github.com/ant-media/Ant-Media-Server/wiki/FAQ#how-to-resolve-webrtc-stream-stops-after-a-few-seconds-issue)
-  * [How to Fix "NotSupportedError" in Publishing WebRTC?](https://github.com/ant-media/Ant-Media-Server/wiki/FAQ#how-to-fix-notsupportederror-in-publishing-webrtc-stream-in-ant-media-server)
-  * [How to fix "Make sure that your domain name was entered correctly and the DNS A/AAAA record(s)"?](https://github.com/ant-media/Ant-Media-Server/wiki/FAQ#how-to-fix-make-sure-that-your-domain-name-was-entered-correctly-and-the-dns-aaaaa-records)
-  * [How to remove port forwardings?](https://github.com/ant-media/Ant-Media-Server/wiki/FAQ#how-to-remove-port-forwardings)
-  * [How to Enable SSL for Ant Media Server ?](https://github.com/ant-media/Ant-Media-Server/wiki/Enable-SSL-for-Ant-Media-Server)
-  * [How to Reduce Latency in RTMP to HLS?](https://github.com/ant-media/Ant-Media-Server/wiki/Reduce-Latency-in-RTMP-to-HLS-Streaming)
-  * [How to Reset Web Manager Password?](https://github.com/ant-media/Ant-Media-Server/wiki/Frequently-Ask-Questions#how-can-i-reset-the-password-for-web-manager-of-ant-media-server)
-
