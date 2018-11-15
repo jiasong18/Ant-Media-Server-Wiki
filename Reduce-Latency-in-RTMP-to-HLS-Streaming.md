@@ -14,6 +14,6 @@ To reduce the HLS latency there are some parameters and it can be reduced to 8-1
 * OBS Advanced Keyframe Interval: Second critical parameter is sending key frame in every 2 seconds(This value should consistent with HLS segment time) and it is critical to split videos into 2 sec duration segments. Open Broadcaster Software(OBS) sends key frame for every 10 seconds by default and the latency will increase to 30 seconds
 ![Key Frame Interval](https://i0.wp.com/antmedia.io/wp-content/uploads/2018/05/obs-keyframe-setting.png)
 
-After you have done these adjustments, your delay will be significantly reduced. If you have any questions or comment just send an email to contact at antmedia dot io
+After you have done these adjustments, your delay will be significantly reduced. 
 
 If you are still having issues, please let us know that. [contact@antmedia.io](mailto:contact@antmedia.io) 
