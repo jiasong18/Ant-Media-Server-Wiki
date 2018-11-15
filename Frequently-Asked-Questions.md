@@ -12,4 +12,4 @@
 
 * ### [WebRTC stream stops after a few seconds](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-stream-stops-after-a-few-seconds)
 
-* ### [How to reduce latency (8 to 10 seconds) in WebRTCAppEE ?](link)
+* ### [How to reduce latency (8 to 10 seconds) in WebRTCAppEE ?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-reduce-latency-(8-to-10-seconds)-in-WebRTCAppEE)
