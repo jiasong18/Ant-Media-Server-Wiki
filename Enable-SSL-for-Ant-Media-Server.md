@@ -40,6 +40,7 @@ https://example.com:5443
 **ATTENTION:** If port 80 is used by some other process or it's forwarded to some other port, 
 `enable_ssl.sh` will not be successful. Please disable the process or delete the port forwarding temporarily in running the `enable_ssl.sh` script above  
 
+If you are still having issues, please let us know that. [contact@antmedia.io](mailto:contact@antmedia.io) 
 
 #### References
 - [Blog Post: Enable SSL with Just One Command](https://antmedia.io/enable-ssl-on-ant-media-server/)
