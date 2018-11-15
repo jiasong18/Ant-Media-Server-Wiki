@@ -8,7 +8,7 @@
 
 * ### [How to fix "Make sure that your domain name was entered correctly and the DNS A/AAAA record(s)"?](https://github.com/ant-media/Ant-Media-Server/wiki/FAQ#how-to-fix-make-sure-that-your-domain-name-was-entered-correctly-and-the-dns-aaaaa-records)
 
-* ### [How to Fix "NotSupportedError" in Publishing WebRTC?](https://github.com/ant-media/Ant-Media-Server/wiki/FAQ#how-to-fix-notsupportederror-in-publishing-webrtc-stream-in-ant-media-server)
+* ### [How to Fix "NotSupportedError" in Publishing WebRTC?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-fix-%E2%80%9CNotSupportedError%E2%80%9D-in-publishing-WebRTC-stream-in-Ant-Media-Server-%3F)
 
 * ### [WebRTC stream stops after a few seconds](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-stream-stops-after-a-few-seconds)
 
