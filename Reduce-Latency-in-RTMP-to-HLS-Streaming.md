@@ -15,3 +15,5 @@ To reduce the HLS latency there are some parameters and it can be reduced to 8-1
 ![Key Frame Interval](https://i0.wp.com/antmedia.io/wp-content/uploads/2018/05/obs-keyframe-setting.png)
 
 After you have done these adjustments, your delay will be significantly reduced. If you have any questions or comment just send an email to contact at antmedia dot io
+
+If you are still having issues, please let us know that. [contact@antmedia.io](mailto:contact@antmedia.io) 
