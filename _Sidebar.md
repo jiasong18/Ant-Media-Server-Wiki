@@ -1,5 +1,4 @@
 ### [Frequenty Asked Questions](frequently-asked-questions)
-  * [WebRTC Stream stops after a few seconds?](https://github.com/ant-media/Ant-Media-Server/wiki/FAQ#how-to-resolve-webrtc-stream-stops-after-a-few-seconds-issue)
 
 ## User Guide
    * [Getting Started](https://github.com/ant-media/Ant-Media-Server/wiki/Getting-Started)
