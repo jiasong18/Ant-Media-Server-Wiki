@@ -1,4 +1,4 @@
-* ### [How to Reset Web Manager Password?](https://github.com/ant-media/Ant-Media-Server/wiki/How-can-I-reset-the-password-for-Web-Manager-of-Ant-Media-Server%3F)
+* ### [How to Reset Web Manager Password?](https://github.com/ant-media/Ant-Media-Server/wiki/Reset-Web-Manager-password-of-Ant-Media-Server)
 
 * ### [How to Reduce Latency in RTMP to HLS?](https://github.com/ant-media/Ant-Media-Server/wiki/Reduce-Latency-in-RTMP-to-HLS-Streaming)
 
