@@ -16,7 +16,7 @@ Here we have only one Ant Media Server instance as SUT.
 * To prepare Ant Media Server, please look at [here](https://github.com/ant-media/Ant-Media-Server/wiki/Getting-Started).
 * To prepare Test Server, please look at [here](https://github.com/ant-media/Ant-Media-Server/wiki/Preparation-of-Test-Server).
 
-## Cluster Setup
+# Cluster Setup
 Here we have a cluster structure as SUT which contains one origin and two edge servers.
 ```
                                                +--------------------+
