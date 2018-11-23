@@ -63,12 +63,6 @@ Here we have a cluster structure as SUT which contains one origin and two edge s
 * Download Dockerfile prepared for Ant Media Test environment from here.
 - Build Docker file
 `docker build ...`
-# Test Plans
-## HLS Load Test
-## RTMP Load Test
-## WebRTC Load Test
-## RTMP Publisher Load Test
-## WebRTC Cluster Load Test
-## WebRTC Publisher Load Test
+
 
 # Running Tests
