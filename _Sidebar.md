@@ -35,7 +35,7 @@
 ## Load Testing Guide
    * [Test Environment]()
      * [One Instance Setup]()
-     * [Cluster]()
+     * [Cluster Setup]()
    * [Preparation of Test Server](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-Live-Stream-with-RTMP)
    * [Test Plans](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Plans)
      * [HLS Player Load Test](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Plans#hls-player-load-test)
