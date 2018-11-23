@@ -29,26 +29,25 @@ Here we have a cluster structure as SUT which contains one origin and two edge s
 |                   |    streaming  |          |                    |
 |                   +---------------+          +--------------------+
 |                   |
-|    Test Server    | playing             +-----------------------------+
-|                   +<--------------------+                             |
-|                   |                     |       Load Balancer         |
-|                   +<------------------->+                             |
-+-------------------+   rest              +------+-------------+--------+
-                                                 |             |
-                                                 |             |
-                                                 |             |
-                                                 |             |
-                                                 |             |
-                                 +---------------+----+   +----+---------------+
-                                 |                    |   |                    |
-                                 |                    |   |                    |
-                                 |  Ant Media Server  |   |  Ant Media Server  |
-                                 |                    |   |                    |
-                                 |     (Edge-1)       |   |     (Edge-2)       |
-                                 |                    |   |                    |
-                                 |                    |   |                    |
-                                 +--------------------+   +--------------------+
-
+|    Test Server    | playing          +---------------------------------------------+
+|                   +<-----------------+                                             |
+|                   |                  |    Load Balancer                            |
+|                   +----------------->+                                             |
++-------------------+   rest           +----+-----------+-------------------+--------+
+                                            |           |                   |
+                                            |           |                   |
+                                            |           |                   |
+                                            |           |                   |
+                                            |           |                   |
+                             +--------------+-+  +------+---------+      +--+-------------+
+                             |                |  |                |      |                |
+                             |                |  |                |      |                |
+                             |Ant Media Server|  |Ant Media Server| ...  |Ant Media Server|
+                             |                |  |                |      |                |
+                             |   (Edge-1)     |  |   (Edge-2)     |      |   (Edge-2)     |
+                             |                |  |                |      |                |
+                             |                |  |                |      |                |
+                             +----------------+  +----------------+      +----------------+
 ```
 ### Preparation of Setup:
 * To prepare Cluster, please look at [here](https://github.com/ant-media/Ant-Media-Server/wiki/DB-Based-Clustering-(available-for-v1.5.1-and-later)-and-Autoscaling).
