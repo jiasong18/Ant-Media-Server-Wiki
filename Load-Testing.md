@@ -1,6 +1,8 @@
 In this tutorial, we explain how load tests can be made for Ant Media Server.
 # Test Setup
-## Testing One Instance
+Test setups has two parts: test server and SUT (system under test). We have two different setups for two different SUT. 
+## One Instance Setup
+Here we have only one Ant Media Server instance as SUT.
 ```
 +-------------------+                  +----------------------+
 |                   |   streaming      |                      |
@@ -12,7 +14,12 @@ In this tutorial, we explain how load tests can be made for Ant Media Server.
 |                   |    rest          |                      |
 +-------------------+                  +----------------------+
 ```
-# Testing Cluster
+### Preparation and Running:
+* To prepare Ant Media Server, please look at here.
+* To prepare Test Server, please look at here.
+* To run tests and collect results, please look at here.
+## Cluster Setup
+Here we have a cluster structure as SUT which contains one origin and two edge servers.
 ```
                                                +--------------------+
                                                |                    |
@@ -26,7 +33,7 @@ In this tutorial, we explain how load tests can be made for Ant Media Server.
 |                   |
 |    Test Server    | playing             +-----------------------------+
 |                   +<--------------------+                             |
-|                   |                     | Load Balancer               |
+|                   |                     |       Load Balancer         |
 |                   +<------------------->+                             |
 +-------------------+   rest              +------+-------------+--------+
                                                  |             |
@@ -45,7 +52,11 @@ In this tutorial, we explain how load tests can be made for Ant Media Server.
                                  +--------------------+   +--------------------+
 
 ```
-You can make load tests for Ant Media Server by following the steps.
-Step 0: Preparation of Software Under Test
+### Preparation and Running:
+* To prepare Cluster, please look at here.
+* If you want to use HAProxy as load balancer, please look at here.
+* To prepare Test Server, please look at here.
+* To run tests and collect results, please look at here.
 
-You must have at least one server in which Ant Media Server is installed. If you want cluster tests you must prepare cluster.  
+# Preparation of Test Server
+# Test Plans and Running Tests
