@@ -33,10 +33,10 @@
    * [Webhook Integration: No worry, we'll call you](https://github.com/ant-media/Ant-Media-Server/wiki/Webhook-Integration:-No-worry,-We'll-call-you)
 
 ## Load Testing Guide
-   * [Test Environment]()
-     * [One Instance Setup]()
-     * [Cluster Setup]()
-   * [Preparation of Test Server](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-Live-Stream-with-RTMP)
+   * [Test Environment](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Environment)
+     * [One Instance Setup](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Environment#one-instance-setup)
+     * [Cluster Setup](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Environment#cluster-setup)
+   * [Preparation of Test Server](https://github.com/ant-media/Ant-Media-Server/wiki/Preparation-of-Test-Server)
    * [Test Plans](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Plans)
      * [HLS Player Load Test](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Plans#hls-player-load-test)
      * [RTMP Player Load Test](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Plans#rtmp-player-load-test)
