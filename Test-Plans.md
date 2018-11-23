@@ -1,6 +1,6 @@
-# HLS Load Test
-# RTMP Load Test
-# WebRTC Load Test
+# HLS Player Load Test
+# RTMP Player Load Test
+# WebRTC Player Load Test
 # RTMP Publisher Load Test
-# WebRTC Cluster Load Test
+# WebRTC Player Cluster Load Test
 # WebRTC Publisher Load Test
