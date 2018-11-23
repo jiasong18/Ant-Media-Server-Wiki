@@ -13,6 +13,41 @@ In this tutorial, we explain how load tests can be made for Ant Media Server.
 +-------------------+                  +----------------------+
 ```
 # Testing Cluster
+```
+
+                                                                 +--------------------+
+                                                                 |                    |
+                                                                 |                    |
+                                                                 |  Ant Media Server  |
+                                             +------------------>+                    |
+                                             |                   |     (Origin)       |
+   +-------------------+                     |                   |                    |
+   |                   |          streaming  |                   |                    |
+   |                   +---------------------+                   +--------------------+
+   |                   |
+   |    Test Server    |       playing             +--------------------------------------------------+
+   |                   +<--------------------------+                                                  |
+   |                   |                           |               Load Balancer                      |
+   |                   +<------------------------->+                                                  |
+   +-------------------+         rest              +--------------------------------------------------+
+                                                               |                         |
+                                                               |                         |
+                                                               |                         |
+                                                               |                         |
+                                                               |                         |
+                                                               v                         v
+                                                    +--------------------+        +--------------------+
+                                                    |                    |        |                    |
+                                                    |                    |        |                    |
+                                                    |  Ant Media Server  |        |  Ant Media Server  |
+                                                    |                    |        |                    |
+                                                    |     (Edge-1)       |        |     (Edge-2)       |
+                                                    |                    |        |                    |
+                                                    |                    |        |                    |
+                                                    +--------------------+        +--------------------+
+
+
+```
 You can make load tests for Ant Media Server by following the steps.
 Step 0: Preparation of Software Under Test
 
