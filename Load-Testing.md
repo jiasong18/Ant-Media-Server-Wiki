@@ -14,7 +14,7 @@ Here we have only one Ant Media Server instance as SUT.
 |                   |    rest          |                      |
 +-------------------+                  +----------------------+
 ```
-### Preparation and Running:
+### Preparation of Setup and Running Tests:
 * To prepare Ant Media Server, please look at here.
 * To prepare Test Server, please look at here.
 * To run tests and collect results, please look at here.
@@ -52,7 +52,7 @@ Here we have a cluster structure as SUT which contains one origin and two edge s
                                  +--------------------+   +--------------------+
 
 ```
-### Preparation and Running:
+### Preparation of Setup and Running Tests:
 * To prepare Cluster, please look at here.
 * If you want to use HAProxy as load balancer, please look at here.
 * To prepare Test Server, please look at here.
