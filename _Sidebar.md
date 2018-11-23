@@ -31,3 +31,16 @@
    * [The Steps of the One-Time Token Operations](https://github.com/ant-media/Ant-Media-Server/wiki/The-Steps-of-One-Time-Token-Operations)
    * [Amazon (AWS) S3 Integration](https://github.com/ant-media/Ant-Media-Server/wiki/Amazon-(AWS)-S3-Integration) 
    * [Webhook Integration: No worry, we'll call you](https://github.com/ant-media/Ant-Media-Server/wiki/Webhook-Integration:-No-worry,-We'll-call-you)
+
+## Load Testing Guide
+   * [Test Environment]()
+     * [One Instance Setup]()
+     * [Cluster]()
+   * [Preparation of Test Server](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-Live-Stream-with-RTMP)
+   * [Test Plans](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Plans)
+     * [HLS Player Load Test](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Plans#hls-player-load-test)
+     * [RTMP Player Load Test](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Plans#rtmp-player-load-test)
+     * [WebRTC Player Load Test](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Plans#webrtc-player-load-test)
+     * [RTMP Publisher Load Test](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Plans#rtmp-publisher-load-test)
+     * [WebRTC Player in Cluster Load Test](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Plans#webrtc-player-in-cluster-load-test)
+     * [WebRTC Publisher Load Test](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Plans#webrtc-publisher-load-test)
