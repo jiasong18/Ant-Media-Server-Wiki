@@ -12,23 +12,19 @@ records live videos in several formats like HLS, MP4, etc.
 
 ### Linux (Ubuntu)
 
-
+#### 1. Download Ant Media Server 
 Download and save the Ant Media Server Community/Enterprise Edition from http://antmedia.io to your disk.
 Ant Media Server is being tested on ubuntu 14.04 and 16.04 versions on CI. 
 
-Now, there are two methods to run the server,
-* **Running as a Service** is for production
-* **Manual Start** is for testing and debugging issues.
-
-#### Running as a Service
+#### 2. Open Terminal and Go to Directory
 
 Open a terminal and go to the directory where you have downloaded Ant Media Server Zip file
 
 ```
-cd path/to/where/ant-media-server....zip/exists
+cd path/to/where/ant-media-server....zip
 ```
 
-
+#### 3. Download Installation Script
 Download the `install_ant-media-server.sh` shell script 
 
 ```
@@ -36,9 +32,10 @@ wget https://raw.githubusercontent.com/ant-media/Scripts/master/install_ant-medi
 chmod 755 install_ant-media-server.sh
 ```
 
+#### 4. Run the Installation Script
 Call the download script file by giving ant-media-server zip file. The command below installs Ant Media Server and starts the service. Ant Media Server zip files are in format `ant-media-server-<community|enterprise>-<version>-<date>.zip`
 ```
-sudo ./install_ant-media-server.sh <Downloaded Ant Media Server Zip File> 
+sudo ./install_ant-media-server.sh ant-media-server*.zip 
 ```
 
 
@@ -53,19 +50,9 @@ sudo service antmedia stop
 sudo service antmedia start
 ```
 
-#### Manual Start
+#### Accessing Web panel 
+Open your browser and type `http://SERVER_IP_ADDRESS:5080` to go to the web panel. If you're having difficulty in accessing the web panel, there may be a **firewall** that blocks accessing the 5080 port. 
 
-If you are developing actively or you need to start and stop manually, you can stop service (`sudo service antmedia stop`) and start server manually by  running `start.sh` command 
-
-- Unzip the downloaded Ant Media Server zip file
-- Open a terminal, go to the folder where you extracted the Ant Media Server and run start.sh
-type 
-
-```
-cd path/to/ant-media-server
-./start.sh
-```
-The server should start a few seconds later.
 
 ## Server Ports
 In order to server run properly you need to open some network ports. 
