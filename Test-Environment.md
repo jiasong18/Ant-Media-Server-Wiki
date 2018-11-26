@@ -23,7 +23,7 @@ Here we have a cluster structure as SUT which contains one origin and N edge ser
                                        |                    |
                                        |                    |
                                        |  Ant Media Server  |
-                            +---------^+                    |
+                            +--------->+                    |
                             |          |     (Origin)       |
 +-----------+               |          |                    |
 |           |    streaming  |          |                    |
