@@ -20,13 +20,10 @@ We have 5 different load test plans(prepared with JMeter) for different aims.
 ### WebRTC Player Load Test
 *aim:* This test is performed to determine the maximum number of WebRTC players that play the same stream.
 *scenario:*We publish a stream with WebRTC and connect increasing numbers of WebRTC players to the stream.
-*measurements:* By using REST api we get CPU usage, memory usage, video send period and audio send period.
-*expectations:* video and audio send period are to be about 40ms and 10ms respectivly.
+*measurements:* By using REST api we get CPU usage, memory usage.
 *results:* As a result, we have 4 plots:
   - CPU usage vs Players count
   - Memory usage vs Players count
-  - Video send period vs Players count
-  - Audio send period vs Players count
 ### RTMP Publisher Load Test
 *aim:* This test is performed to determine the maximum number of RTMP publishers for a server.
 *scenario:* We create the increasing number of publishers that publish to the same server. This test can be made for different encoding settings.
