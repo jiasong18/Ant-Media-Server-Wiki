@@ -38,4 +38,4 @@
      * [Cluster Setup](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Environment#cluster-setup)
    * [Preparation of Test Server and Running Tests](https://github.com/ant-media/Ant-Media-Server/wiki/Preparation-of-Test-Server-and-Running-Tests)
    * [Test Plans](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Plans)
-   * [Inside The Box](https://github.com/ant-media/Ant-Media-Server/wiki/Inside-The-Box)
+   * [Inside of The Box](https://github.com/ant-media/Ant-Media-Server/wiki/Inside-of-The-Box)
