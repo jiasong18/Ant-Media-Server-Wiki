@@ -1,16 +1,16 @@
-Step.1: Go to the installation directory(/usr/local/antmedia) of the server. 
+### Step.1: Go to the installation directory of Ant Media Server. 
 
-`...
+`
 cd /usr/local/antmedia
-...`
+`
 
-Step.2: Remove "server.db" file. 
+### Step.2: Remove "server.db" file. 
 
 `
 sudo rm server.db
 `
 
-Step.3: Restart Ant Media Server.
+### Step.3: Restart Ant Media Server.
 
 `
 sudo service antmedia restart
