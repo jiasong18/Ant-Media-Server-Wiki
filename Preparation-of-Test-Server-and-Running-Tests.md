@@ -1,5 +1,5 @@
 0. Install docker to your server. You can look [here](https://docs.docker.com/install/) for docker installation.
-1. Download Dockerfile prepared for Ant Media Test environment from here. You can download with the following command
+1. Download Dockerfile prepared for Ant Media Test environment from [here](https://github.com/ant-media/Scripts/blob/master/Dockerfile_AntMediaTest). You can download with the following command
 
 `wget https://raw.githubusercontent.com/ant-media/Scripts/master/Dockerfile_AntMediaTest`
 
