@@ -9,62 +9,63 @@ After building the dockerfile we get a docker image which contains all necessary
 - *Other:* gnuplot (to plot result graphs), jq (to read json from bash), unzip  
 
 ### Directory Structure  
+```
 /home/antmedia/test
-|-- TestScriptAndTools-master
+|-- TestScriptAndTools-master   (this directory is downloaded from hithub)
 |   |-- 1_HLSLoadTest
 |   |   |-- RTMP_HLS.jmx
-|   |   `-- report.sh
+|   |   '-- report.sh
 |   |-- 2_RTMPLoadTest
 |   |   |-- RTMP_RTMP.jmx
-|   |   `-- report.sh
+|   |   '-- report.sh
 |   |-- 3_WebRTCLoadTest
 |   |   |-- WebRTC_WebRTC.jmx
-|   |   `-- report.sh
+|   |   '-- report.sh
 |   |-- 4_RTMPPublisherLoadTest
 |   |   |-- RTMP_Publisher.jmx
-|   |   `-- report.sh
+|   |   '-- report.sh
 |   |-- 5_WebRTCPublisherLoadTest
 |   |   |-- WebRTC_Publisher.jmx
-|   |   `-- report.sh
+|   |   '-- report.sh
 |   |-- Common
 |   |   |-- config.json
 |   |   |-- config.sh
-|   |   `-- runtest.sh
+|   |   '-- runtest.sh
 |   |-- Media
-|   |   `-- Test_600kbps.mp4
-|   `-- Tools
+|   |   '-- Test_600kbps.mp4
+|   '-- Tools
 |       |-- RTMPClient
 |       |-- WebRTCTest
-|       `-- loadtester-0.0.1-SNAPSHOT-spring-boot.jar
+|       '-- loadtester-0.0.1-SNAPSHOT-spring-boot.jar
 |
-|-- apache-jmeter-5.0 (subdirectories are cropped)
+|-- apache-jmeter-5.0 (jmeter installation directory. subdirectories are cropped)
 |
 |
-`-- results
+'-- results      (created after first test)
     |-- history
     |-- hls_play
-    |   |-- 2018-11-26_18:24:49
-    |   |   |-- getonets.csv
-    |   |   |-- jmeter.log
-    |   |   |-- m3u8.xml
-    |   |   |-- measures.csv
-    |   |   |-- measures.png
-    |   |   |-- report.sh
-    |   |   |-- RTMPClient
-    |   |   |-- RTMP_HLS.jmx
-    |   |   |-- rtmp_hls.jtl
-    |   |   |-- Test_600kbps.mp4
-    |   |   `-- WebRTCTest
-    |   `-- YYYY-MM-DD_hh:mm:ss
+    |   |-- 2018-11-26_18:24:49      (for each test run a directory is created like this)
+    |   |   |-- getonets.csv       (created by JMeter contains result data)
+    |   |   |-- jmeter.log         (created by JMeter)
+    |   |   |-- m3u8.xml           (created by JMeter)
+    |   |   |-- measures.csv       (created by JMeter contains result data)
+    |   |   |-- measures.png       (created after test finished by report.sh)
+    |   |   |-- report.sh          (copied from TestScriptAndTools-master directory)
+    |   |   |-- RTMPClient         (copied from TestScriptAndTools-master directory)
+    |   |   |-- RTMP_HLS.jmx       (copied from TestScriptAndTools-master directory)
+    |   |   |-- rtmp_hls.jtl       (copied from TestScriptAndTools-master directory)
+    |   |   |-- Test_600kbps.mp4   (copied from TestScriptAndTools-master directory)
+    |   |   '-- WebRTCTest         (copied from TestScriptAndTools-master directory)
+    |   '-- YYYY-MM-DD_hh:mm:ss
     |-- rtmp_play
-    |   `- YYYY-MM-DD_hh:mm:ss
+    |   '- YYYY-MM-DD_hh:mm:ss
     |-- rtmp_publish
-    |   `-- YYYY-MM-DD_hh:mm:ss
+    |   '-- YYYY-MM-DD_hh:mm:ss
     |-- webrtc_play
-    |   `-- YYYY-MM-DD_hh:mm:ss
-    `-- webrtc_publish
-        `-- YYYY-MM-DD_hh:mm:ss
-
+    |   '-- YYYY-MM-DD_hh:mm:ss
+    '-- webrtc_publish
+        '-- YYYY-MM-DD_hh:mm:ss
+```
 ## What happens?
 ```
              X                 .===========.                                                                            X       .================.
