@@ -1,4 +1,69 @@
 ## What is in Docker Container?
+After building the dockerfile we get a docker image which contains all necessary software and artifacts for load test.
+### Installed Softwares
+- *Java:* Used by JMeter and test web application.
+- *JMeter:* Used as test execution engine for load tests.
+- *FFmpeg:* Used for RTMP publishing and, RTMP and HLS playing.
+- *QT Libraries:* Necessary for WebRTCTest tool.
+- *Ant Media Tools:* WebRTCTest (used for both publishing and playing), RTMPClient (used for playing and measuring latency), Test web application (used for managing tests).
+- *Other:* gnuplot (to plot result graphs), jq (to read json from bash), unzip  
+
+### Directory Structure  
+/home/antmedia/test
+|-- TestScriptAndTools-master
+|   |-- 1_HLSLoadTest
+|   |   |-- RTMP_HLS.jmx
+|   |   `-- report.sh
+|   |-- 2_RTMPLoadTest
+|   |   |-- RTMP_RTMP.jmx
+|   |   `-- report.sh
+|   |-- 3_WebRTCLoadTest
+|   |   |-- WebRTC_WebRTC.jmx
+|   |   `-- report.sh
+|   |-- 4_RTMPPublisherLoadTest
+|   |   |-- RTMP_Publisher.jmx
+|   |   `-- report.sh
+|   |-- 5_WebRTCPublisherLoadTest
+|   |   |-- WebRTC_Publisher.jmx
+|   |   `-- report.sh
+|   |-- Common
+|   |   |-- config.json
+|   |   |-- config.sh
+|   |   `-- runtest.sh
+|   |-- Media
+|   |   `-- Test_600kbps.mp4
+|   `-- Tools
+|       |-- RTMPClient
+|       |-- WebRTCTest
+|       `-- loadtester-0.0.1-SNAPSHOT-spring-boot.jar
+|
+|-- apache-jmeter-5.0 (subdirectories are cropped)
+|
+|
+`-- results
+    |-- history
+    |-- hls_play
+    |   |-- 2018-11-26_18:24:49
+    |   |   |-- getonets.csv
+    |   |   |-- jmeter.log
+    |   |   |-- m3u8.xml
+    |   |   |-- measures.csv
+    |   |   |-- measures.png
+    |   |   |-- report.sh
+    |   |   |-- RTMPClient
+    |   |   |-- RTMP_HLS.jmx
+    |   |   |-- rtmp_hls.jtl
+    |   |   |-- Test_600kbps.mp4
+    |   |   `-- WebRTCTest
+    |   `-- YYYY-MM-DD_hh:mm:ss
+    |-- rtmp_play
+    |   `- YYYY-MM-DD_hh:mm:ss
+    |-- rtmp_publish
+    |   `-- YYYY-MM-DD_hh:mm:ss
+    |-- webrtc_play
+    |   `-- YYYY-MM-DD_hh:mm:ss
+    `-- webrtc_publish
+        `-- YYYY-MM-DD_hh:mm:ss
 
 ## What happens?
 ```
