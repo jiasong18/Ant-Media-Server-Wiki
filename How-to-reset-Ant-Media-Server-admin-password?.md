@@ -1,8 +1,8 @@
 Step.1: Go to the installation directory(/usr/local/antmedia) of the server. 
 
-`
+`...
 cd /usr/local/antmedia
-`
+...`
 
 Step.2: Remove "server.db" file. 
 
