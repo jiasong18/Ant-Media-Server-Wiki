@@ -4,12 +4,12 @@ You can look [here](https://docs.docker.com/install/) for docker installation.
 ### Step 2. Download DockerFile for Ant Media Server
 Download Dockerfile prepared for Ant Media Test environment from [here](https://github.com/ant-media/Scripts/blob/master/Dockerfile_AntMediaTest). You can download with the following command:
 
-$` sudo wget https://raw.githubusercontent.com/ant-media/Scripts/master/Dockerfile_AntMediaTest`
+`$ sudo wget https://raw.githubusercontent.com/ant-media/Scripts/master/Dockerfile_AntMediaTest`
 
 ### Step 3. Build Dockerfile
 Build Dockerfile with the following command:
 
-` $ sudo docker build -f Dockerfile_AntMediaTest -t antmedia/test .`
+`$ sudo docker build -f Dockerfile_AntMediaTest -t antmedia/test .`
 
 ### Step 4. Run Dockerfile
 Run your container with the following command:
