@@ -1,5 +1,4 @@
 ### [Frequenty Asked Questions](frequently-asked-questions)
-### [All About Features](all-about-features)
 
 ## User Guide
    * [Getting Started](https://github.com/ant-media/Ant-Media-Server/wiki/Getting-Started)
