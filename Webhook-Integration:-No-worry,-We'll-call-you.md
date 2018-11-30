@@ -83,7 +83,7 @@ It's time to know when Ant Media Server calls webhooks with which parameters. He
    * <strong>id</strong>: stream id of the broadcast
    * <strong>action: </strong>"vodReady"
    * <strong>vodName:  </strong>vod file name
-   * <strong>vodId:  </strong>vod id 
+   * <strong>vodId:  </strong>vod id in the datastore
 
 That's all. As a result, you can take some custom actions according to your project by checking <em>action</em> variable in your backend URL.
 
