@@ -69,17 +69,17 @@ Here is a sample JSON for using <em>createBroadcast</em> method with <a href="ht
 ## Webhooks List
 It's time to know when Ant Media Server calls webhooks with which parameters. Here is a simple list for that
 
- * <strong>liveStreamStarted: </strong>Ant Media server calls this hook when a new live stream is started. It sends POST (application/x-www-form-urlencoded) request to URL with following variables
+ * <strong>liveStreamStarted: </strong>Ant Media server calls this hook when a new live stream is started. It sends **POST (application/x-www-form-urlencoded)** request to URL with following variables
    * <strong>id</strong>:  stream id of the broadcast
    * <strong>action</strong>: "liveStreamStarted"
    * <strong>streamName</strong>: stream name of the broadcast. It can be null.
    * <strong>category</strong>:  stream category of the broadcast. It can be null. 
- * <strong>liveStreamEnded: </strong>Ant Media Server calls this hook when a live stream is ended. It sends POST(application/x-www-form-urlencoded) request to URL with following variables.
+ * <strong>liveStreamEnded: </strong>Ant Media Server calls this hook when a live stream is ended. It sends **POST(application/x-www-form-urlencoded)** request to URL with following variables.
    * <strong>id: </strong>stream id of the broadcast
    * <strong>action: </strong>"liveStreamEnded"
    * <strong>streamName: </strong>stream name of the broadcast. It can be null.
    * <strong>category: </strong>stream category of the broadcast. It can be null.
- * <strong>vodReady: </strong>Ant Media Server calls this hook when the recording of the live stream is ended. It sends POST(application/x-www-form-urlencoded) request to URL with following variables.
+ * <strong>vodReady: </strong>Ant Media Server calls this hook when the recording of the live stream is ended. It sends **POST(application/x-www-form-urlencoded)** request to URL with following variables.
    * <strong>id</strong>: stream id of the broadcast
    * <strong>action: </strong>"vodReady"
    * <strong>vodName:  </strong>vod file name
