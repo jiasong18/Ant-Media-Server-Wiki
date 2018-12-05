@@ -14,9 +14,9 @@ Build Dockerfile with the following command:
 ### Step 4. Run Dockerfile
 Run your container with the following command:
 
-` $ sudo docker run -w "/home/antmedia/test/TestScriptAndTools-master/Tools/"  antmedia/test java -jar loadtester-0.0.1-SNAPSHOT-spring-boot.jar`
+` $ sudo docker run -w "/home/antmedia/test/TestScriptAndTools-master/Tools/" -p 8090:8090 antmedia/test java -jar loadtester-0.0.1-SNAPSHOT-spring-boot.jar`
 
-### Step 5. Connect to Ant Media Server within Docker
+### Step 5. Connect to Ant Media Load Test Server within Docker
 Open web browser and connect to `<dockercontainer ip>:8090`
 
 ### Step 6. Complete configuration
