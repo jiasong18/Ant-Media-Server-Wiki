@@ -53,4 +53,4 @@ Here we have a cluster structure as SUT which contains one origin and N edge ser
 ### Preparation of Setup:
 * To prepare Cluster, please look at [here](https://github.com/ant-media/Ant-Media-Server/wiki/DB-Based-Clustering-(available-for-v1.5.1-and-later)-and-Autoscaling).
 * If you want to use HAProxy as load balancer, please look at [here](https://github.com/ant-media/Ant-Media-Server/wiki/Load-Balancer-with-HAProxy-SSL-Termination).
-* To prepare Test Server, please look at [here](https://github.com/ant-media/Ant-Media-Server/wiki/Preparation-of-Test-Server).
+* To prepare Test Server, please look at [here](https://github.com/ant-media/Ant-Media-Server/wiki/Preparation-of-Test-Server-and-Running-Tests).
