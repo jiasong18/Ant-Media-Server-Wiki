@@ -47,17 +47,15 @@ Let's see how to make it step by step
 				
 			} else if (info == "publish_started") {
 				//stream is being published 
-				console.log("publish started");
-				
-				
+				console.log("publish started");	
 			} else if (info == "publish_finished") {
 				//stream is finished
 				console.log("publish finished");
 			} else if (info == "screen_share_extension_available") {
-				screen_share_checkbox.disabled = false;
+                                //screen share extension is avaiable
 				console.log("screen share extension available");
-				install_extension_link.style.display = "none";
 			} else if (info == "screen_share_stopped") {
+                                 //"Stop Sharing" is clicked in chrome screen share dialog
 				console.log("screen share stopped");
 			}
 
