@@ -39,3 +39,5 @@ This documentation is for developers who need to callbacks and their description
 
  * **`screen_share_permission_denied`**: It is sent when user does not allow screen share
 
+ * **`screen_share_stopped`**: It is sent when user clicks `Stop sharing` button in the dialog
+
