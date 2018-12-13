@@ -53,8 +53,14 @@ Let's see how to make it step by step
 			} else if (info == "publish_finished") {
 				//stream is finished
 				console.log("publish finished");
-				
+			} else if (info == "screen_share_extension_available") {
+				screen_share_checkbox.disabled = false;
+				console.log("screen share extension available");
+				install_extension_link.style.display = "none";
+			} else if (info == "screen_share_stopped") {
+				console.log("screen share stopped");
 			}
+
 		},
 		callbackError : function(error) {
 			//some of the possible errors, NotFoundError, SecurityError,PermissionDeniedError
