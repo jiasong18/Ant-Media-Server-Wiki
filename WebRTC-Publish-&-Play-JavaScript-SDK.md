@@ -42,19 +42,28 @@ Let's see how to make it step by step
 		sdp_constraints : sdpConstraints,
 		localVideoId : "localVideo",
 		callback : function(info) {
-			if (info == "initialized") {
+			if (info == "initialized") 
+                        {
 				console.log("initialized");
 				
-			} else if (info == "publish_started") {
+			} 
+                        else if (info == "publish_started") 
+                        {
 				//stream is being published 
 				console.log("publish started");	
-			} else if (info == "publish_finished") {
+			} 
+                        else if (info == "publish_finished") 
+                        {
 				//stream is finished
 				console.log("publish finished");
-			} else if (info == "screen_share_extension_available") {
+			} 
+                        else if (info == "screen_share_extension_available") 
+                        {
                                 //screen share extension is avaiable
 				console.log("screen share extension available");
-			} else if (info == "screen_share_stopped") {
+			} 
+                        else if (info == "screen_share_stopped") 
+                        {
                                  //"Stop Sharing" is clicked in chrome screen share dialog
 				console.log("screen share stopped");
 			}
