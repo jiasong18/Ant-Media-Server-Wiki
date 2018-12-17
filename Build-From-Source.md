@@ -4,6 +4,15 @@
 A couple of repos should be clone and build with maven so that git and maven should be installed in advance
 
 * Go to a directory where you clone repos
+
+* Clone and build Ant-Media-Server-Parent
+```
+$ git clone https://github.com/ant-media/ant-media-server-parent.git
+$ cd Ant-Media-Server-Parent/
+$ mvn clean install -Dgpg.skip=true
+$ cd ..
+```
+
 * Clone and build Ant-Media-Server-Common
 
 ```
