@@ -25,7 +25,6 @@ The Server creates tokens with [getToken](https://github.com/ant-media/Ant-Media
 
 The sample token creation service URL:
 
-[IP_Address]/<Application_Name>
 `http://[IP_Address]:5080/<Application_Name>/rest/broadcast/getToken?id=<Stream_Id>&expireDate=<Expire_Date>&type=publish`
 
 Please note that calling this rest service from remote is restricted due to the security reasons.
