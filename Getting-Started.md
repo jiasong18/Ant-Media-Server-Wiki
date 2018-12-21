@@ -46,19 +46,19 @@ sudo service antmedia start
 
 Call the download script file by giving ant-media-server zip file. The command below installs Ant Media Server and starts the service. Ant Media Server zip files are in format `ant-media-server-<community|enterprise>-<version>-<date>.zip`
 
-##### UPDATE ON AN OLD VERSION 
+##### 4.1. UPDATE ON AN OLD VERSION 
 You need to add "true" to the end of the command line if you want to keep your settings from previous installation.
 ```
 sudo ./install_ant-media-server.sh ant-media-server-VERSION-DATE_TIME.zip true
 ```
 
-##### FIRST TIME INSTALLATION
+##### 4.2. FIRST TIME INSTALLATION
 For a clean new installation:
 ```
 sudo ./install_ant-media-server.sh ant-media-server-VERSION-DATE_TIME.zip 
 ```
 
-#### Accessing Web panel 
+#### 5. Accessing Web panel 
 Open your browser and type `http://SERVER_IP_ADDRESS:5080` to go to the web panel. If you're having difficulty in accessing the web panel, there may be a **firewall** that blocks accessing the 5080 port. 
 
 
