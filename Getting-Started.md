@@ -35,11 +35,12 @@ chmod 755 install_ant-media-server.sh
 #### 4. Run the Installation Script
 Call the download script file by giving ant-media-server zip file. The command below installs Ant Media Server and starts the service. Ant Media Server zip files are in format `ant-media-server-<community|enterprise>-<version>-<date>.zip`
 
-##### IMPORTANT
+##### UPDATE ON AN OLD VERSION 
 You need to add "true" to the end of the command line if you want to keep your settings from previous installation.
 ```
 sudo ./install_ant-media-server.sh ant-media-server-VERSION-DATE_TIME.zip true
 ```
+##### FIRST TIME INSTALLATION
 For a clean new installation:
 ```
 sudo ./install_ant-media-server.sh ant-media-server-VERSION-DATE_TIME.zip 
