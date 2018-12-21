@@ -52,7 +52,7 @@ You need to add "true" to the end of the command line if you want to keep your s
 sudo ./install_ant-media-server.sh ant-media-server-VERSION-DATE_TIME.zip true
 ```
 
-##### 4.2. FIRST TIME INSTALLATION
+##### 4.2. FRESH INSTALLATION
 For a clean new installation:
 ```
 sudo ./install_ant-media-server.sh ant-media-server-VERSION-DATE_TIME.zip 
