@@ -16,6 +16,9 @@ Ant Media Server is an open source media server that supports:
  * One-Time Token Control in **Enterprise Edition**
  * Object Detection in **Enterprise Edition**
  
+ ### Community
+ Please join and ask your questions in this mail group: https://groups.google.com/forum/#!forum/ant-media-server
+
  ### Links
  
  * [Documentation](https://antmedia.io/documentation) 
@@ -60,4 +63,3 @@ https://github.com/ant-media/Ant-Media-Server/releases/
  
  [contact@antmedia.io](mailto:contact@antmedia.io)
  
-
