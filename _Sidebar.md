@@ -1,7 +1,7 @@
 ### [Frequenty Asked Questions](frequently-asked-questions)
 
 ## User Guide
-   * [Getting Started](https://github.com/ant-media/Ant-Media-Server/wiki/Getting-Started)
+   * [Getting Started & Installation](https://github.com/ant-media/Ant-Media-Server/wiki/Getting-Started)
    * [Publish Live Stream with RTMP](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-Live-Stream-with-RTMP)
      * [Publish with a Desktop Software](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-with-a-Desktop-Software---Open-Broadcaster-Software)
      * [Publish with a Hardware Encoder](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-with-a-Hardware-Encoder---Teradek-Vidiu-Pro)
