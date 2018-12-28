@@ -21,7 +21,6 @@ Ant Media Server is an open source media server that supports:
 
  ### Links
  
- * [Documentation](https://antmedia.io/documentation) 
  * [Web site](https://antmedia.io)
  * [Community Edition vs. Enterprise Edition](https://antmedia.io/#comparison_table)
  
