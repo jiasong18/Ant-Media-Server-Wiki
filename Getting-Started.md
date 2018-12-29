@@ -33,6 +33,22 @@ chmod 755 install_ant-media-server.sh
 ```
 
 #### 4. Run the Installation Script
+
+  #### 4.1 Update over Older Version 
+  You need to add "true" to the end of the command line if you want to keep your settings from previous 
+  installation.
+  ```
+  sudo ./install_ant-media-server.sh ant-media-server-VERSION-DATE_TIME.zip true
+  ```
+
+  #### 4.2. Fresh Installation
+  For a clean new installation:
+  ```
+  sudo ./install_ant-media-server.sh ant-media-server-VERSION-DATE_TIME.zip 
+  ```
+
+#### 5. Control the Service
+
 You can check the service if it is running
 ```
 sudo service antmedia status
@@ -44,21 +60,7 @@ sudo service antmedia stop
 sudo service antmedia start
 ```
 
-Call the download script file by giving ant-media-server zip file. The command below installs Ant Media Server and starts the service. Ant Media Server zip files are in format `ant-media-server-<community|enterprise>-<version>-<date>.zip`
-
-##### 4.1. UPDATE ON AN OLD VERSION 
-You need to add "true" to the end of the command line if you want to keep your settings from previous installation.
-```
-sudo ./install_ant-media-server.sh ant-media-server-VERSION-DATE_TIME.zip true
-```
-
-##### 4.2. FRESH INSTALLATION
-For a clean new installation:
-```
-sudo ./install_ant-media-server.sh ant-media-server-VERSION-DATE_TIME.zip 
-```
-
-#### 5. Accessing Web panel 
+#### 6. Accessing Web panel 
 Open your browser and type `http://SERVER_IP_ADDRESS:5080` to go to the web panel. If you're having difficulty in accessing the web panel, there may be a **firewall** that blocks accessing the 5080 port. 
 
 
