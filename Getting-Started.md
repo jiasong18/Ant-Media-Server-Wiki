@@ -38,13 +38,13 @@ chmod 755 install_ant-media-server.sh
   You need to add "true" to the end of the command line if you want to keep your settings from previous 
   installation.
   ```
-  sudo ./install_ant-media-server.sh ant-media-server-VERSION-DATE_TIME.zip true
+  sudo ./install_ant-media-server.sh ant-media-server*.zip true
   ```
 
   #### 4.2. Fresh Installation
   For a clean new installation:
   ```
-  sudo ./install_ant-media-server.sh ant-media-server-VERSION-DATE_TIME.zip 
+  sudo ./install_ant-media-server.sh ant-media-server*.zip 
   ```
 
 #### 5. Control the Service
