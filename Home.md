@@ -18,6 +18,7 @@ Ant Media Server is an open source media server that supports:
  
  ### Community
  Please join and ask your questions in this mail group: https://groups.google.com/forum/#!forum/ant-media-server
+ You can also ask your questions at Stack Overflow with the ant-media-server tag. 
 
  ### Links
  
