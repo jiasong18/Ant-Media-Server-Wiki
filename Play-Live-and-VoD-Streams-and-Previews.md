@@ -37,5 +37,7 @@ After live stream is finished, the URL above plays the recorded MP4 file if it i
 `http://<SERVER_NAME>:5080/<APP_NAME>/previews/<STREAM_ID>.png` 
 	
 * Preview image is saved as 640x480.
-* Preview image creation period can be set as `settings.createPreviewPeriod=<PERIOD>` in
+* Preview image creation period (in ms) can be set as `settings.createPreviewPeriod=<PERIOD>` in
 `<ANT_MEDIA_DIR>/webapps/<APP_NAME>/WEB-INF/red5-web.properties` 
+* Time that stream started can be added to preview image file name if `settings.addDateTimeToMp4FileName` is set to true in `<ANT_MEDIA_DIR>/webapps/<APP_NAME>/WEB-INF/red5-web.properties`
+* In case of new stream starting with same name, a suffix as `_N` can be added to preview image file name if `settings.previewOverwrite` is set to false in `<ANT_MEDIA_DIR>/webapps/<APP_NAME>/WEB-INF/red5-web.properties` otherwise preview of new stream is overwritten to old one.
