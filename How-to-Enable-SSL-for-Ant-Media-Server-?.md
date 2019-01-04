@@ -11,7 +11,7 @@ Go to the folder where Ant-Media-Server is installed. Default directory is /usr/
 ```
 cd /usr/local/antmedia
 ```
-If apache is running, you need to enable it first.
+If apache is running, you need to disable it first.
 
 ```
 sudo service apache2 stop
