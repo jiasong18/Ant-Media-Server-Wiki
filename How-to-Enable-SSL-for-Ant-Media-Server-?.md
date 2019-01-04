@@ -11,6 +11,11 @@ Go to the folder where Ant-Media-Server is installed. Default directory is /usr/
 ```
 cd /usr/local/antmedia
 ```
+If apache is running, you need to enable it first.
+
+```
+sudo service apache2 stop
+```
 
 There should be a `enable_ssl.sh` file in the installation directory. 
 Call the enable_ssl.sh with your domain name
@@ -24,6 +29,7 @@ sudo ./enable_ssl.sh example.com
 Usage:
 sudo ./enable_ssl.sh -d {DOMAIN_NAME}
 sudo ./enable_ssl.sh -f {FULL_CHAIN_FILE} -p {PRIVATE_KEY_FILE} -d {DOMAIN_NAME} 
+sudo servive apache2 start
 ```	
 	
 
