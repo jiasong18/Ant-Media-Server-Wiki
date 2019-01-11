@@ -9,7 +9,7 @@ In cluster mode, each node registers itself to MongoDB as a cluster node. All re
 
 ![Antmedia Cluster Page](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/antmedia-cluster.png)
 
-In the image above there are 3 nodes in MongoDB but the node with IP 172.17.0.3 is not in the cluster at the moment. If you wan to see it in the cluster table anymore, you can delete it by clicking the Delete icon under the Actions column.
+In the image above there are 3 nodes in MongoDB but the node with IP 172.17.0.3 is not in the cluster at the moment. If you don't want to see it in the cluster table anymore, you can delete it by clicking the Delete icon under the Actions column.
 
 ## Colums:
 **Node IP:**It show IP address of the node.
