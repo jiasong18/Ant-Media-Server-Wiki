@@ -7,7 +7,7 @@ Cluster page can be opened from the sidebar of the management console. In cluste
 
 In cluster mode, each node registers itself to MongoDB as a cluster node. All registered nodes are listed in the cluster table even if it is off at the moment.
 
-![Antmedia Cluster Page](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/antmedia-cluster.png)
+![Antmedia Cluster Page](images/antmedia-cluster.png)
 
 In the image above there are 3 nodes in MongoDB but the node with IP 172.17.0.3 is not in the cluster at the moment. If you don't want to see it in the cluster table anymore, you can delete it by clicking the Delete icon under the Actions column.
 
