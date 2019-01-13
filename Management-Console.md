@@ -1,7 +1,15 @@
 # Dashboard
 Todo
 # Application Pages
-Todo
+## Live Streams
+### Live Streams Table
+#### Stream Name
+#### Status
+#### Viewers
+In this column of the Live Stream Table number of subscribers of the stream are presented. This presentation is made separately for each protocol ie. WebRTC, HLS and RTMP as shown in the image below.
+![Antmedia Stream Viewers](images/antmedia-stream-viewers.png)
+#### Social Share
+#### Actions
 # Cluster Page
 Cluster page can be opened from the sidebar of the management console. In cluster page, there is a cluster table in which cluster nodes are listed as rows.
 
