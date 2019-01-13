@@ -10,9 +10,11 @@ In this column of the Live Stream Table number of subscribers of the stream are 
 ![Antmedia Stream Viewers](images/antmedia-stream-viewers.png)
 ##### WebRTC Client Statistics
 WebRTC Client Statistics window opens when you click the eye icon near the WebRTC Viewer count. There are two graphics in this window.
-**Bitrate vs Clients**
+
+**Bitrate vs Clients:**
 This graphic shows the measured bitrate and sending bitrate of a stream for each client.
-**Media Send Period vs Clients**
+
+**Media Send Period vs Clients:**
 This graphic shows send period of video and audio for each client in ms. The period is expected as 1/fps for video and 10ms for audio.
 ![Antmedia WebRTC Client Statistics](images/antmedia-webrtc-statistics.png)
 #### Social Share
