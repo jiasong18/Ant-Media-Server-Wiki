@@ -11,8 +11,8 @@ Go to the folder where Ant-Media-Server is installed. Default directory is /usr/
 ```
 cd /usr/local/antmedia
 ```
-If apache is running, you need to disable it first.
 
+_If there is a service that uses 80 port, you need to disable it. If your system has Apache Web Server, you need to disable it first such a command below_
 ```
 sudo service apache2 stop
 ```
@@ -29,10 +29,12 @@ sudo ./enable_ssl.sh example.com
 Usage:
 sudo ./enable_ssl.sh -d {DOMAIN_NAME}
 sudo ./enable_ssl.sh -f {FULL_CHAIN_FILE} -p {PRIVATE_KEY_FILE} -d {DOMAIN_NAME} 
-sudo servive apache2 start
 ```	
 	
-
+_If you disable any service that binds to 80 port such as Apache Web Server, enable it again_
+```
+sudo service apache2 start
+```
 
 Make sure that your domain points to your server public IP address in the DNS records 
 
