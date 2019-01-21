@@ -30,6 +30,7 @@
    * [The Steps of the One-Time Token Operations](https://github.com/ant-media/Ant-Media-Server/wiki/The-Steps-of-One-Time-Token-Operations)
    * [Amazon (AWS) S3 Integration](https://github.com/ant-media/Ant-Media-Server/wiki/Amazon-(AWS)-S3-Integration) 
    * [Webhook Integration: No worry, we'll call you](https://github.com/ant-media/Ant-Media-Server/wiki/Webhook-Integration:-No-worry,-We'll-call-you)
+   * [Rest Api Doc](https://antmedia.io/swagger/swagger.html)
 
 ## "Load Testing" Guide 
    * [Test Environment](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Environment)
