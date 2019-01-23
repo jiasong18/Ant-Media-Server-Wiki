@@ -1,4 +1,4 @@
-Ant Media Server will offer secret-based token security control option with 1.7.0 version.
+Ant Media Server will offer secret-based token security control option with 1.6.2 version.
 
 ### Enable Setting and Define Secret Key
 
