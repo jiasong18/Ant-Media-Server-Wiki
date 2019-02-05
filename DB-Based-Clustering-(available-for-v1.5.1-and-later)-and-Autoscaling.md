@@ -21,7 +21,7 @@ chmod 755 change_server_mode.sh
 
 `sudo ./change_server_mode.sh cluster <MONGO_SERVER_IP>`
 
-
+* **Additionally**, Do not forget to open 5000 TCP port for all nodes in order to nodes found each other  
 ***
 
 _**Note:** run the command to exit from cluster mode and restart Ant Media Server in standalone mode._
