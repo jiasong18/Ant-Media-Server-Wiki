@@ -315,3 +315,19 @@ Client can update/remove the related video views from UI.
     definition : "notSetLocalDescription",
 }
 ```
+
+### Check WebRTC Connected with Ping/Pong 
+Whenever you send a ping command to the server, it will respond you with pong command. 
+Ping Command
+```json
+{
+    command : "ping",
+}
+```
+
+Pong Response from Server
+```json
+{
+    command : "pong",
+}
+```
