@@ -19,7 +19,6 @@
 
 ## Developer Guide
    * [Build From Source](https://github.com/ant-media/Ant-Media-Server/wiki/Build-From-Source)
-   * [Build and Update Web Management Panel](https://github.com/ant-media/Ant-Media-Server/wiki/DevGuide---Build-and-Update-Management-Web-Panel)
    * WebRTC
      * [WebRTC Publish & Play JavaScript SDK](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-Publish-&-Play-JavaScript-SDK)
      * [WebRTC WebSocket Messaging Details](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-WebSocket-Messaging-Details)
