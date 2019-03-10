@@ -11,3 +11,6 @@
 * ### [How to fix "NotSupportedError" in Publishing WebRTC ?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-fix-%E2%80%9CNotSupportedError%E2%80%9D-in-publishing-WebRTC-stream-in-Ant-Media-Server-%3F)
 
 * ### [WebRTC stream stops after a few seconds](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-stream-stops-after-a-few-seconds)
+
+* ### In IOS, Chrome and Firefox cannot open the camera.
+Answer: It is an IOS bug: [https://stackoverflow.com/questions/51501642/chrome-and-firefox-are-not-able-to-access-iphone-camera/53093348#53093348](https://stackoverflow.com/questions/51501642/chrome-and-firefox-are-not-able-to-access-iphone-camera/53093348#53093348)
