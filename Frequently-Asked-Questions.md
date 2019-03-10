@@ -12,5 +12,6 @@
 
 * ### [WebRTC stream stops after a few seconds](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-stream-stops-after-a-few-seconds)
 
-* ### [In IOS, Chrome and Firefox cannot open the camera.]()
+* ### [In IOS, Chrome and Firefox cannot open the camera.](https://github.com/ant-media/Ant-Media-Server/wiki/In-IOS,-Chrome-and-Firefox-cannot-open-the-camera.)
 
+* ### [Which codecs are supported by AntMedia?](https://github.com/ant-media/Ant-Media-Server/wiki/Which-codecs-are-supported-by-AntMedia%3F)
