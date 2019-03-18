@@ -43,7 +43,7 @@ chmod 755 install_ant-media-server.sh
   ##### 4.2. Fresh Installation
   For a clean new installation:
   ```
-  sudo ./install_ant-media-server.sh ant-media-server*.zip 
+  sudo ./install_ant-media-server.sh [ANT_MEDIA_SERVER_INSTALLATION_FILE] 
   ```
 
 #### 5. Control the Service
