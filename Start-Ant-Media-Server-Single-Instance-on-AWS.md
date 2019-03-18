@@ -11,18 +11,11 @@ After logging in to AWS Console, you will see the list of AWS Services. Click on
 
 <img src="https://i0.wp.com/antmedia.io/wp-content/uploads/2019/02/Screenshot-from-2019-02-20-21-36-06-768x732.png" alt=" Start Ant Media Server Single Instance on AWS" />
 
+<br>
 EC2 dashboard shows a summary of current resources. Click on **Launch Instance** button.
-
-
 
 <br>
 <br>
-
-
-EC2 dashboard shows a summary of current resources. Click on **Launch Instance** button.
-
-
-
 
 <img src="https://i0.wp.com/antmedia.io/wp-content/uploads/2019/02/Screenshot-from-2019-02-20-21-36-21-768x385.png" alt=" Start Ant Media Server Single Instance on AWS" />
 
