@@ -35,10 +35,9 @@ chmod 755 install_ant-media-server.sh
 #### 4. Run the Installation Script
 
   ##### 4.1 Update over Older Version 
-  You need to add "true" to the end of the command line if you want to keep your settings from previous 
-  installation.
+  You need to add "true" to the end of the command line if you want to keep your settings from previous installation.
   ```
-  sudo ./install_ant-media-server.sh ant-media-server*.zip true
+  sudo ./install_ant-media-server.sh [ANT_MEDIA_SERVER_INSTALLATION_FILE] true
   ```
 
   ##### 4.2. Fresh Installation
@@ -76,7 +75,7 @@ Here are the ports server uses
 
 ### Forward Default http(80), https(443) Ports to 5080 and 5443 
 
-Generally port forwarding is used to forward default ports to the server's ports in order to have easy of use.
+Generally, port forwarding is used to forward default ports to the server's ports in order to have ease of use.
 For instance let's forward 80 to 5080, just type the command below.
 
 ```
@@ -108,7 +107,7 @@ save rules like below
 sudo apt-get install iptables-persistent
 ```
 
-Above command will install iptables-persistent package, after that just run the command below everytime 
+Above command will install iptables-persistent package, after that just run the command below every time 
 you make a change and want it to be persistent
 
 ```
