@@ -15,6 +15,8 @@
   * [DB Based Clustering and Autoscaling](https://github.com/ant-media/Ant-Media-Server/wiki/DB-Based-Clustering-(available-for-v1.5.1-and-later)-and-Autoscaling)
   * [Load Balancer with HAProxy](https://github.com/ant-media/Ant-Media-Server/wiki/Load-Balancer-with-HAProxy-SSL-Termination)
   * [Building and Running Docker Container for Ant Media Server](https://github.com/ant-media/Ant-Media-Server/wiki/Building-and-Running-Docker-Container-for-Ant-Media-Server)
+  * [Start Ant Media Server on AWS (Single Instance)](https://github.com/ant-media/Ant-Media-Server/wiki/Start-Ant-Media-Server-on-AWS-(Single-Instance))
+
 
 
 ## Developer Guide
