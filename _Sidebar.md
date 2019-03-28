@@ -17,8 +17,6 @@
   * [Building and Running Docker Container for Ant Media Server](https://github.com/ant-media/Ant-Media-Server/wiki/Building-and-Running-Docker-Container-for-Ant-Media-Server)
   * [Start Ant Media Server on AWS (Single Instance)](https://github.com/ant-media/Ant-Media-Server/wiki/Start-Ant-Media-Server-on-AWS-(Single-Instance))
 
-
-
 ## Developer Guide
    * [Build From Source](https://github.com/ant-media/Ant-Media-Server/wiki/Build-From-Source)
    * WebRTC
@@ -32,6 +30,7 @@
    * [Amazon (AWS) S3 Integration](https://github.com/ant-media/Ant-Media-Server/wiki/Amazon-(AWS)-S3-Integration) 
    * [Webhook Integration: No worry, we'll call you](https://github.com/ant-media/Ant-Media-Server/wiki/Webhook-Integration:-No-worry,-We'll-call-you)
    * [Rest Api Doc](https://antmedia.io/rest/index.html)
+   * [App Customization](https://github.com/ant-media/Ant-Media-Server/wiki/Add-Your-Customized-Apps-to-Ant-Media-Server)
 
 ## "Load Testing" Guide 
    * [Test Environment](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Environment)
