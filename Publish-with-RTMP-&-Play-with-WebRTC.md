@@ -51,6 +51,6 @@ You can also play on Ant Media Management console which plays via HLS at about 8
 
 ![Ant Media Server Management Console ](https://i0.wp.com/antmedia.io/wp-content/uploads/2018/08/console_play.png)
 
-In order to reduce latency in RTMP streaming, please [follow the instructions here](https://github.com/ant-media/Ant-Media-Server/wiki/Reduce-Latency-in-RTMP-to-HLS-Streaming)
+In order to reduce latency in RTMP streaming, please [follow the instructions here](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-Reduce-Latency-in-RTMP-to-HLS%3F)
 
 We hope this tutorial will be helpful for you 🙂 please feel free in case you have any question, just send an email (contact at antmedia.io) or contact with us from contact page.
