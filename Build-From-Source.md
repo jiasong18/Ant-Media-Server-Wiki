@@ -1,14 +1,14 @@
 ## Build from Source
 
 ### Linux (Ubuntu)
-A couple of repos should be clone and build with maven so that git and maven should be installed in advance
+A couple of repos should be a clone and build with maven so that git and maven should be installed in advance
 
 * Go to a directory where you clone repos
 
-* Clone and build Ant-Media-Server-Parent
+* Clone and build ant-media-server-parent
 ```
 $ git clone https://github.com/ant-media/ant-media-server-parent.git
-$ cd Ant-Media-Server-Parent/
+$ cd ant-media-server-parent/
 $ mvn clean install -Dgpg.skip=true
 $ cd ..
 ```
@@ -49,5 +49,5 @@ $ mvn clean install -Dmaven.javadoc.skip=true -Dmaven.test.skip=true -Dgpg.skip=
 $ ./repackage.sh
 ```
 
-If everthing goes well, a new packaged Ant Media Server(ant-media-server-x.x.x.zip) file will be created 
+If everything goes well, a new packaged Ant Media Server(ant-media-server-x.x.x.zip) file will be created 
 in Ant-Media-Server/target directory
