@@ -93,22 +93,17 @@ public class MainActivity extends AbstractWebRTCActivity {
 
         String streamId = "stream" + (int)(Math.random() * 999);
         String tokenId = "tokenID";
-        callFragment = new CallFragment();
-        callFragment.setCallEvents(webRTCClient);
-        callFragment.setStreamId(streamId);
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.add(R.id.call_fragment_container, callFragment);
-        ft.commit();
 
         SurfaceViewRenderer cameraViewRenderer = findViewById(R.id.camera_view_renderer);
 
-        webRTCClient.setFullScreenRenderer(cameraViewRenderer);
+        SurfaceViewRenderer pipViewRenderer = findViewById(R.id.pip_view_renderer);
 
-        checkPermissions();
-     
-        //streamId is randomly assigned and it will be shown to the screen to watch it on Ant Media Server
-        webRTCClient.startStream(SERVER_URL, streamId, IWebRTCClient.MODE_PUBLISH, tokenId);
+        webRTCClient.setVideoRenderers(pipViewRenderer, cameraViewRenderer);
 
+        // if you want to play mode, you should change IWebRTCClient.MODE_PLAY instead to IWebRTCClient.MODE_PUBLISH
+        webRTCClient.init(SERVER_URL, streamId, IWebRTCClient.MODE_PUBLISH, tokenId);
+
+        webRTCClient.startStream();
     }
 }
 ```
