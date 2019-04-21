@@ -108,7 +108,7 @@ public class MainActivity extends AbstractWebRTCActivity {
 }
 ```
 
-## WebRTCClient params
+## WebRTCClient parameters are in below
 
 ### void WebRTCClient.init(String url, String streamId, String mode, String token)
 
