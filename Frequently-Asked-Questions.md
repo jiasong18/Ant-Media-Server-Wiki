@@ -24,7 +24,7 @@
 
 * ### [How to improve WebRTC bit rate?](https://github.com/ant-media/Ant-Media-Server/wiki/improve-webrtc-bit-rate)
 
-* ### [What are the deployment options for Ant Media Server?](https://github.com/ant-media/Ant-Media-Server/wiki/deployment-options-for-ant-media-server)
+* ### [What are the deployment options for Ant Media Server?](https://github.com/ant-media/Ant-Media-Server/wiki/What-are-the-deployment-options-for-Ant-Media-Server%3F)
 
 * ### [What latencies can I achieve with Ant Media Server Enterprise Edition?](https://github.com/ant-media/Ant-Media-Server/wiki/What-latencies-can-I-achieve-with-Ant-Media-Server-Enterprise-Edition%3F)
 
