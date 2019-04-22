@@ -30,4 +30,4 @@
 
 * ### [How many different bit rates possible with Ant Media Server Enterprise Edition?](https://github.com/ant-media/Ant-Media-Server/wiki/How-many-different-bit-rates-possible-with-Ant-Media-Server-Enterprise-Edition%3F)
 
-* ### [Have the ultra-low latency streams adaptive bit rates as well?](zzz)
+* ### [Have the ultra-low latency streams adaptive bit rates as well?](https://github.com/ant-media/Ant-Media-Server/wiki/Have-the-ultra-low-latency-streams-adaptive-bit-rates-as-well%3F)
