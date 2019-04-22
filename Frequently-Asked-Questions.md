@@ -15,3 +15,7 @@
 * ### [In IOS, Chrome and Firefox cannot open the camera.](https://github.com/ant-media/Ant-Media-Server/wiki/In-IOS,-Chrome-and-Firefox-cannot-open-the-camera.)
 
 * ### [Which codecs are supported by AntMedia?](https://github.com/ant-media/Ant-Media-Server/wiki/Which-codecs-are-supported-by-AntMedia%3F)
+
+* ### [How to Fix a 403 Forbidden Error?](https://antmedia.io)
+
+* ### [How does ADAPTIVE mechanism work on Ant Media Server?](https://antmedia.io)
