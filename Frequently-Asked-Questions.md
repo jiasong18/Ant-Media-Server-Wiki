@@ -18,7 +18,7 @@
 
 * ### [How to Fix a 403 Forbidden Error?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-Fix-403-Forbidden-Error%3F)
 
-* ### [How does ADAPTIVE mechanism work on Ant Media Server?](https://github.com/ant-media/Ant-Media-Server/wiki/adaptive-bitrate-mechanism-on-antmediaserver)
+* ### [How does ADAPTIVE mechanism work on Ant Media Server?](https://github.com/ant-media/Ant-Media-Server/wiki/Adaptive-Bit-Rate-Mechanism-on-Ant-Media-Server)
 
 * ### [How to set up an auto-scaling cluster with Ant Media Server?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-set-up-an-auto-scaling-cluster-with-Ant-Media-Server%3F)
 
