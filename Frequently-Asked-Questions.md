@@ -16,6 +16,6 @@
 
 * ### [Which codecs are supported by AntMedia?](https://github.com/ant-media/Ant-Media-Server/wiki/Which-codecs-are-supported-by-AntMedia%3F)
 
-* ### [How to Fix a 403 Forbidden Error?](https://antmedia.io)
+* ### [How to Fix a 403 Forbidden Error?](https://github.com/ant-media/Ant-Media-Server/wiki/how-to-fix-403-forbidden-error)
 
 * ### [How does ADAPTIVE mechanism work on Ant Media Server?](https://github.com/ant-media/Ant-Media-Server/wiki/adaptive-bitrate-mechanism-on-antmediaserver)
