@@ -1,8 +1,8 @@
-1. ### [How to reset admin password? ?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-reset-Ant-Media-Server-admin-password%3F)
+*1. ### [How to reset admin password? ?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-reset-Ant-Media-Server-admin-password%3F)
 
-2. ### [How to reduce latency in RTMP to HLS ?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-Reduce-Latency-in-RTMP-to-HLS%3F)
+*2. ### [How to reduce latency in RTMP to HLS ?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-Reduce-Latency-in-RTMP-to-HLS%3F)
 
-* ### [How to enable SSL for Ant Media Server ?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-Enable-SSL-for-Ant-Media-Server-%3F)
+*3. ### [How to enable SSL for Ant Media Server ?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-Enable-SSL-for-Ant-Media-Server-%3F)
 
 * ### [How to remove port forwarding ?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-Remove-Port-Forwarding%3F)
 
