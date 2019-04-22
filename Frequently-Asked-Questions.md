@@ -18,4 +18,4 @@
 
 * ### [How to Fix a 403 Forbidden Error?](https://antmedia.io)
 
-* ### [How does ADAPTIVE mechanism work on Ant Media Server?](https://antmedia.io)
+* ### [How does ADAPTIVE mechanism work on Ant Media Server?](https://github.com/ant-media/Ant-Media-Server/wiki/adaptive-bitrate-mechanism-on-antmediaserver)
