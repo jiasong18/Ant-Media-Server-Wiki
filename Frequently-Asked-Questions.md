@@ -1,4 +1,4 @@
-* ### [May I use Docker images to deploy Ant Media Server?](https://github.com/ant-media/Ant-Media-Server/wiki/May-I-use-Docker-images-to-deploy-Ant-Media-Server%3F)
+### 1. [May I use Docker images to deploy Ant Media Server?](https://github.com/ant-media/Ant-Media-Server/wiki/May-I-use-Docker-images-to-deploy-Ant-Media-Server%3F)
 
 * ### [How to reset admin password?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-reset-Ant-Media-Server-admin-password%3F)
 
