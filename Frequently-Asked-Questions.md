@@ -23,3 +23,5 @@
 * ### [How to set up an auto-scaling cluster with Ant Media Server?](https://github.com/ant-media/Ant-Media-Server/wiki/auto-scaling-cluster-with-antmediaserver)
 
 * ### [How to improve WebRTC bit rate?](https://github.com/ant-media/Ant-Media-Server/wiki/improve-webrtc-bit-rate)
+
+* ### [What are the deployment options for Ant Media Server?](https://github.com/ant-media/Ant-Media-Server/wiki/deployment-options-for-ant-media-server)
