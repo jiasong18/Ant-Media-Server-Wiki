@@ -20,7 +20,7 @@
 
 * ### [How does ADAPTIVE mechanism work on Ant Media Server?](https://github.com/ant-media/Ant-Media-Server/wiki/adaptive-bitrate-mechanism-on-antmediaserver)
 
-* ### [How to set up an auto-scaling cluster with Ant Media Server?](https://github.com/ant-media/Ant-Media-Server/wiki/auto-scaling-cluster-with-antmediaserver)
+* ### [How to set up an auto-scaling cluster with Ant Media Server?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-set-up-an-auto-scaling-cluster-with-Ant-Media-Server%3F)
 
 * ### [How to improve WebRTC bit rate?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-improve-WebRTC-bit-rate%3F)
 
