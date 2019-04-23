@@ -110,7 +110,9 @@ public class MainActivity extends AbstractWebRTCActivity {
 
 ## WebRTCClient parameters are in below
 
-### void WebRTCClient.init(String url, String streamId, String mode, String token)
+```java
+
+void WebRTCClient.init(String url, String streamId, String mode, String token)
 
       @param url is websocket url to connect
       @param streamId is the stream id in the server to process
@@ -120,7 +122,7 @@ public class MainActivity extends AbstractWebRTCActivity {
       If mode is MODE_PUBLISH, stream with streamId field will be published to the Server
       if mode is MODE_PLAY, stream with streamId field will be played from the Server
      
-### void WebRTCClient.setOpenFrontCamera(boolean openFrontCamera)
+void WebRTCClient.setOpenFrontCamera(boolean openFrontCamera)
 
       Camera open order
       By default front camera is attempted to be opened at first,
@@ -128,52 +130,53 @@ public class MainActivity extends AbstractWebRTCActivity {
       @param openFrontCamera if it is true, front camera will tried to be opened
                              if it is false, another camera that is not front will be tried to be opened
 
-### void WebRTCClient.startStream()
+void WebRTCClient.startStream()
   
       Starts the streaming according to mode
 
-### void WebRTCClient.stopStream()
+void WebRTCClient.stopStream()
 
       Stops the streaming
 
-### void WebRTCClient.switchCamera()
+void WebRTCClient.switchCamera()
 
       Switches the cameras
 
-### void WebRTCClient.switchVideoScaling(RendererCommon.ScalingType scalingType)
+void WebRTCClient.switchVideoScaling(RendererCommon.ScalingType scalingType)
 
       Switches the video according to type and its aspect ratio
       @param scalingType
 
-### boolean WebRTCClient.toggleMic()
+boolean WebRTCClient.toggleMic()
 
       toggle microphone
       @return Microphone Current Status (boolean)
 
-### void WebRTCClient.stopVideoSource()
+void WebRTCClient.stopVideoSource()
 
       Stops the video source
 
-### void WebRTCClient.startVideoSource()
+void WebRTCClient.startVideoSource()
 
       Starts or restarts the video source
 
-### void WebRTCClient.setSwappedFeeds(boolean b)
+void WebRTCClient.setSwappedFeeds(boolean b)
 
       Swapped the fullscreen renderer and pip renderer
       @param b
 
 
-### void WebRTCClient.setVideoRenderers(SurfaceViewRenderer pipRenderer, SurfaceViewRenderer fullscreenRenderer)
+void WebRTCClient.setVideoRenderers(SurfaceViewRenderer pipRenderer, SurfaceViewRenderer fullscreenRenderer)
 
       Set's the video renderers,
       @param pipRenderer can be nullable
       @param fullscreenRenderer cannot be nullable
 
-### String WebRTCClient.getError()
+String WebRTCClient.getError()
 
       Get the error
       @return error or null if not
+```
 
 ### Edit the `activity_main.xml` as below
 ```xml
