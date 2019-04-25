@@ -53,18 +53,35 @@ sudo service antmedia restart
 ```
 
 ## Using NVIDIA Hardware-based Encoder
-Ant Media Server will check and log at startup if there is a hardware-based GPU encoder in the system and it will use it automatically. No need to do anything. Log at startup will be as follows pay attention the line `cuda verify result true` below
+Ant Media Server will check and log at startup if there is a hardware-based GPU encoder in the system and it will use it automatically. No need to do anything.
 
+## Using NVIDIA Hardware-based Encoder on Docker
+
+On host(Ubuntu 16.04) 
+
+* Install docker-ce according to the link - https://docs.docker.com/install/
+* Install nvidia-docker2
 ```
-Running on  Linux
-Starting Ant Media Server
-Root: /usr/local/antmedia
-Configuation root: /usr/local/antmedia/conf
-Ant Media Server jar was found
-URL list: [file:/usr/local/antmedia/ant-media-server.jar]
-cuda verify result true
-Selected libraries: (175 items)
-...
+curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | \
+  sudo apt-key add -
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | \
+  sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+sudo apt-get update
+
+# Install nvidia-docker2 and reload the Docker daemon configuration
+sudo apt-get install -y nvidia-docker2
+sudo pkill -SIGHUP dockerd
 ```
 
+* Start a docker container with following command
+```
+sudo docker run --runtime=nvidia \
+ --privileged --network host --name cuda-docker2 \
+ -e NVIDIA_VISIBLE_DEVICES=all -e NVIDIA_DRIVER_CAPABILITIES=compute,utility,video \
+ -it nvidia/cuda:10.0-runtime-ubuntu16.04
+```
+In this docker container, you can install Ant-Media-Server Enterprise edition. It automatically uses hardware encoder
+
+ 
 If you need more information for installing on other systems, please check [NVIDIA docs](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html) and [CUDA downloads](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=debnetwork) pages
