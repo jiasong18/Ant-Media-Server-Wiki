@@ -13,12 +13,12 @@ After you are sure that your GPU contains hardware-based encoder, the only thing
 
 Download the deb file
 ```
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.2.88-1_amd64.deb
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_10.1.105-1_amd64.deb
 ```
 
 Install repository meta-data
 ```
-sudo dpkg -i cuda-repo-ubuntu1604_9.2.88-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu1604_10.1.105-1_amd64.deb
 ```
 
 Install CUDA Public GPG Key
@@ -31,9 +31,15 @@ Update repository cache
 sudo apt-get update
 ```
 
-Install CUDA
+Install CUDA Runtime 10.0
 ```
-sudo apt-get install cuda
+sudo apt-get install cuda-runtime-10-0
+```
+
+If you've installed latest version of CUDA runtime(such 10.1) and it does not work, you can install following packets for compatibility
+```
+sudo apt install cuda-cudart-10-0
+sudo apt install cuda-compat-10-0 
 ```
 
 If everthing is ok, you can run the command below to see the status of your GPU
