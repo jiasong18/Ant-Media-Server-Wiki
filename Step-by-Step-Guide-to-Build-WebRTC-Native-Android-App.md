@@ -121,6 +121,9 @@ void WebRTCClient.init(String url, String streamId, String mode, String token)
 
       If mode is MODE_PUBLISH, stream with streamId field will be published to the Server
       if mode is MODE_PLAY, stream with streamId field will be played from the Server
+```
+
+```java
      
 void WebRTCClient.setOpenFrontCamera(boolean openFrontCamera)
 
@@ -129,42 +132,76 @@ void WebRTCClient.setOpenFrontCamera(boolean openFrontCamera)
       if it is set to false, another camera that is not front will be tried to be open
       @param openFrontCamera if it is true, front camera will tried to be opened
                              if it is false, another camera that is not front will be tried to be opened
+```
+
+```java
 
 void WebRTCClient.startStream()
   
       Starts the streaming according to mode
 
+```
+
+```java
+
 void WebRTCClient.stopStream()
 
       Stops the streaming
 
+```
+
+```java
+
 void WebRTCClient.switchCamera()
 
       Switches the cameras
+
+```
+
+```java
 
 void WebRTCClient.switchVideoScaling(RendererCommon.ScalingType scalingType)
 
       Switches the video according to type and its aspect ratio
       @param scalingType
 
+```
+
+```java
+
 boolean WebRTCClient.toggleMic()
 
       toggle microphone
       @return Microphone Current Status (boolean)
 
+```
+
+```java
+
 void WebRTCClient.stopVideoSource()
 
       Stops the video source
 
+```
+
+```java
+
 void WebRTCClient.startVideoSource()
 
       Starts or restarts the video source
+
+```
+
+```java
 
 void WebRTCClient.setSwappedFeeds(boolean b)
 
       Swapped the fullscreen renderer and pip renderer
       @param b
 
+```
+
+```java
 
 void WebRTCClient.setVideoRenderers(SurfaceViewRenderer pipRenderer, SurfaceViewRenderer fullscreenRenderer)
 
@@ -172,10 +209,15 @@ void WebRTCClient.setVideoRenderers(SurfaceViewRenderer pipRenderer, SurfaceView
       @param pipRenderer can be nullable
       @param fullscreenRenderer cannot be nullable
 
+```
+
+```java
+
 String WebRTCClient.getError()
 
       Get the error
       @return error or null if not
+
 ```
 
 ### Edit the `activity_main.xml` as below
