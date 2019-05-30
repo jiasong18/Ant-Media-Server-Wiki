@@ -1,4 +1,4 @@
-OBS(Open Broadcaster Softeware) is Free and open source software for video recording and live streaming.
+OBS(Open Broadcaster Software) is Free and open source software for video recording and live streaming.
 You can use either your PC’s embedded camera or externally connected one as a video source with OBS. 
 Sound sources also can be configured with it. Ant Media Server is fully compatible with OBS software.
 
@@ -11,7 +11,7 @@ Download via its official [web page](https://obsproject.com/). It has Windows, M
 
 ![OBS (Open Broadcaster Software) interface](https://ant-media.github.io/Ant-Media-Server/doc/images/obs_screenshot.jpg)
 
-By default, OBS starts to capture from your embedded camera if exists after inilialized. 
+By default, OBS starts to capture from your embedded camera if exists after initialized. 
 You can add or remove video/audio source from Sources section, such as an image can be broadcasted as a video source or 
 external microphone can be added as a audio source.
 
