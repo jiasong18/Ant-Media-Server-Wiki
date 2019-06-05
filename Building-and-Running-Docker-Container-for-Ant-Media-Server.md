@@ -24,7 +24,7 @@ ENTRYPOINT service antmedia restart && bash
 
 * Download or save `<Ant Media Server installation zip>` file in the same directory with `Dockerfile`. Then run the docker build command.
 
-`docker build --network=host -t <container_name> --build-arg AntMediaServer=<Ant Media Server installation zip> .`
+`docker build --network=host -t <image_tag> --build-arg AntMediaServer=<Ant Media Server installation zip> .`
 
 * Now we have a docker container with Ant Media Server. Lets run it.
 
