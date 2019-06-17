@@ -3,10 +3,9 @@ The one-time token method is one of the effective authentication methods to sec
 ### The Parameters of the Token
 
  * TokenId: Generated a random string from service.
- * StreamId: The Id of the resource that user wants to reach.
- * ExpireDate: The expiration date of the token.
+ * StreamId: The Id of the resource that the user wants to reach.
+ * ExpireDate: The expiration date of the token (Use Unix Timestamp, such as 1560771964).
  * Type: Either `publish` or `play` token.
-
 
 
 ### Enable Setting
