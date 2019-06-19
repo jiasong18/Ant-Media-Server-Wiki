@@ -13,7 +13,7 @@ This documentation aims to introduce how to use AntMedia WebRTC iOS SDK in your 
 
 
 ## Requirements
-In order to use this SDK, you need iOS 10+, WebRTC build, AntMedia WebRTC iOS SDK, Starscream library for signaling  and Ant Media Server Enterprise Edition.  Please contact us at contact@antmedia.io.  We can provide WebRTC Android SDK and Enterprise Edition for trying or personal use.
+In order to use this SDK, you need iOS 10+, WebRTC build, AntMedia WebRTC iOS SDK, Starscream library for signaling  and Ant Media Server Enterprise Edition. 
 
 ## Installation 
 * We already built a version of WebRTC for iOS platform. Here is the link to download: https://antmedia.io/. After download, in Xcode, select your application as target and add WebRTC.framework as embedded binaries. 
