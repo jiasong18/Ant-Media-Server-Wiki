@@ -8,7 +8,7 @@ To run Ant Media Server in DB Based Clustering please follow these steps.
   ```sudo service mongod restart```
 * Make Mongodb start at boot 
 
-  ```systemctl enable mongod.service```
+  ```sudo systemctl enable mongod.service```
 
 ### Ant Media Server Installation
 * Install Ant Media Server one or more server. You can look at [here](https://github.com/ant-media/Ant-Media-Server/wiki/Getting-Started).
