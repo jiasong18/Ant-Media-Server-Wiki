@@ -7,6 +7,7 @@ records live videos in several formats like HLS, MP4, etc.
 * Transcodes live streams into lower resolutions on the fly for adaptive streaming
 * Play live streams with RTMP, RTSP, WebRTC, HLS and Dash Formats
 
+If you want to see all features and comparison of Community vs Enterprise editions, please visit [website](https://antmedia.io/pricing/#comparison_table).
 
 ## Installation
 
