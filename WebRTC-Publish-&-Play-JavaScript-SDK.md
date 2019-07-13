@@ -36,7 +36,7 @@ Let's see how to make it step by step
 	};
 
 	var webRTCAdaptor = new WebRTCAdaptor({
-		websocket_url : "ws://" + location.hostname + ":8081/WebRTCAppEE",
+		websocket_url : "ws://" + location.hostname + ":"+location.port+"/WebRTCAppEE",
 		mediaConstraints : mediaConstraints,
 		peerconnection_config : pc_config,
 		sdp_constraints : sdpConstraints,
@@ -137,7 +137,7 @@ Please take a look at the WebRTCAppEE/index.html file in order to see How JavaSc
 	};
 	
 	var webRTCAdaptor = new WebRTCAdaptor({
-		websocket_url : "ws://" + location.hostname + ":8081/WebRTCAppEE",
+		websocket_url : "ws://" + location.hostname + ":"+ location.port +"/WebRTCAppEE",
 		mediaConstraints : mediaConstraints,
 		peerconnection_config : pc_config,
 		sdp_constraints : sdpConstraints,
