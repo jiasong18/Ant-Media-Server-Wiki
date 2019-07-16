@@ -97,7 +97,7 @@ If you want to remove this filtering mechanism please remove the below lines fro
     command : "play",
     streamId : "stream1",
     token : "tokenId",
-
+    room : "roomId"
 }
 ```
 
