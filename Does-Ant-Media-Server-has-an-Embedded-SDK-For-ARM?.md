@@ -1,0 +1,1 @@
+Yes, Ant Media Server Enterprise has an Embedded SDK for ARM.
