@@ -35,3 +35,5 @@
 * ### [Have the ultra-low latency streams adaptive bit rates as well?](https://github.com/ant-media/Ant-Media-Server/wiki/Have-the-ultra-low-latency-streams-adaptive-bit-rates-as-well%3F)
 
 * ### [Does Ant Media Server have an Embedded SDK?](https://github.com/ant-media/Ant-Media-Server/wiki/Does-Ant-Media-Server-have-an-Embedded-SDK-For-ARM%3F)
+
+* ### [https://github.com/ant-media/Ant-Media-Server/wiki/How-to-configure-path-for-mp4-recordings%3F](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-configure-path-for-mp4-recordings%3F)
