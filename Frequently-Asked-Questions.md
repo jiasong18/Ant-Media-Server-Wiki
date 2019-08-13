@@ -36,4 +36,4 @@
 
 * ### [Does Ant Media Server have an Embedded SDK?](https://github.com/ant-media/Ant-Media-Server/wiki/Does-Ant-Media-Server-have-an-Embedded-SDK-For-ARM%3F)
 
-* ### [https://github.com/ant-media/Ant-Media-Server/wiki/How-to-configure-path-for-mp4-recordings%3F](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-configure-path-for-mp4-recordings%3F)
+* ### [How to configure path for mp4 recordings?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-configure-path-for-mp4-recordings%3F)
