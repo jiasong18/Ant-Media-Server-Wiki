@@ -33,10 +33,11 @@ Again assume that there is a live stream in Ant Media Server with `<STREAM_ID>` 
 After live stream is finished, the URL above plays the recorded MP4 file if it is created.
 
 ## Get Preview Live and VoD Streams (Enterprise Only)
+* Add at least one adaptive stream (For WebRTC streaming)
 * Preview image URL will be available in this URL template 
 `http://<SERVER_NAME>:5080/<APP_NAME>/previews/<STREAM_ID>.png` 
 * Preview image is saved as 480p
 * Preview settings on `<ANT_MEDIA_SERVER_DIR>/webapps/<APP_NAME>/WEB-INF/red5-web.properties` file
   * `settings.createPreviewPeriod=<PERIOD_MS>` : Preview image creation period in milliseconds
-  * `settings.addDateTimeToMp4FileName` : true or false. If true, adds date time value to preview file names. If false, it does not add date time values to preview file names  
+  * `settings.addDateTimeToMp4FileName` : true or false. If true, adds date-time value to preview file names. If false, it does not add date-time values to preview file names  
   * `settings.previewOverwrite` : true or false. If false, when a new stream is received with the same stream id,  `_N` (increasing number) suffix is added to preview file name. If true, new preview file is replaced with the old file with <STREAM_ID>.png when a new stream with the same stream id is received. 
