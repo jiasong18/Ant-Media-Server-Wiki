@@ -26,20 +26,8 @@ The sample token creation service URL:
 
 `http://[IP_Address]:5080/<Application_Name>/rest/broadcast/getToken?id=<Stream_Id>&expireDate=<Expire_Date>&type=publish`
 
-Please note that calling this rest service from remote is restricted due to the security reasons.
+Please note that calling this rest service from remote is restricted due to the security reasons. Please add the requester IP addresses to "Use IP Filtering for RESTful API" section in Settings Tab of the application.
 
-If you want to remove this filtering mechanism please remove the below lines from webapps-> {Application} -> WEBINF -> web.xml
-
-```xml
-<filter>
-    <filter-name>RestAuthenticationFiler</filter-name>
-    <filter-class>io.antmedia.serverapp.pscp.filter.RestAuthenticationFilter</filter-class>
-</filter>
-<filter-mapping>
-    <filter-name>RestAuthenticationFiler</filter-name>
-    <url-pattern>/rest/*</url-pattern>
-</filter-mapping>
-```
 
 #### Step 2. Request with Token 
 
