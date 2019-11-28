@@ -7,19 +7,18 @@ After building the dockerfile we get a docker image which contains all necessary
 
 ### Directory Structure  
 ```
-/home/antmedia/test
-|-- TestScriptAndTools-master   (this directory is downloaded from hithub)
-|   |-- Media
-|   |   '-- Test_600kbps.mp4
-|   '-- Tools
-|       |-- webrtctest
-|       |   |-- run.sh
-|       |   |-- lib
-|       |   '-- webrtctest.jar
-|       '-- loadtester-0.0.1-SNAPSHOT-spring-boot.jar
-||
-|
-'-- results      (created after first test)
-    '-- YYYY-MM-DD_hh:mm:ss
+   /home/antmedia/test
+   |-- webrtctest
+   |   |-- run.sh
+   |   |-- lib
+   |   |-- test.mp4
+   |   '-- webrtctest.jar
+   |
+   |-- loadtester.jar
+   |
+   |-- Test.mp4
+   |
+   '-- results      (created after first test)
+       '-- YYYY-MM-DD_hh:mm:ss
     
 ```
