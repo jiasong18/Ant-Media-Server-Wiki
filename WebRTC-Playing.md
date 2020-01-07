@@ -7,10 +7,10 @@ If you're running Ant Media Server in your local computer, you can also visit `h
 
 2. Write the stream id in text box( `stream1` by default)
 
-    ![Go to the player.html](https://ant-media.github.io/Ant-Media-Server/doc/images/3_Go_to_Play_Page.jpg)
+    ![Go to the player.html](images
 
 3. Press `Start Play` button. After you press the button, WebRTC stream starts playing
 
-    ![Press Start Playing Button](https://ant-media.github.io/Ant-Media-Server/doc/images/4_Press_Start_Play_Button.jpg)
+    ![Press Start Playing Button](images
 
 Congrats. You're playing with WebRTC. Please check the latency. 

@@ -1,6 +1,6 @@
 Ant Media Server can run in cluster mode which means number of Ant Media Server instances(nodes) can work together to scale number of viewers and publishers. In other words, you can publish a live stream to one node of Ant Media Server in the cluster and you can watch the stream in another node in the cluster.
 
-![](https://raw.githubusercontent.com/mekya/antmedia-doc/master/images/origin_edge.png)  
+![](images
 
 Ant Media Server Cluster has mainly four components. 
 1. **Database(MongoDB):** Stream information is recorded to database(MongoDB) to let all nodes access the data. Stream information contains the bitrates, settings, origin node of the stream, etc. 

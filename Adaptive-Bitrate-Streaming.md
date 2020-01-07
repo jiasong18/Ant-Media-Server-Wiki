@@ -6,16 +6,16 @@ More people are getting connected to the internet and more videos are being watc
 
 But there may be an issue about watching video on internet because internet connection speeds usually does not let watching videos in high quality so that player needs buffering and this make you to wait while watching video.
 
-![](https://raw.githubusercontent.com/mekya/antmedia-doc/master/images/buffering.jpg)
+![](images
 
 In order to give better user experience,  service providers create lower resolutions of the videos to make people watch videos seamlessly even if their network condition is not good enough to watch HD videos. So that you do not wait player to buffer in adaptive streaming.
 
-![](https://raw.githubusercontent.com/mekya/antmedia-doc/master/images/AP658325161480_131.jpg)
+![](images
 
 ## Adaptive Bitrate on the Fly
 Lowering the resolutions of videos for recorded streams is not a big deal. However, doing the same job for live streams on the fly is not as easy as recorded streams. Nevertheless, Ant Media Server supports adaptive bitrate streaming in Enterprise Edition and live streams can be played with WebRTC and HLS(Http Live Streaming).
 
-![HLS Adaptive Streaming Schema](https://raw.githubusercontent.com/mekya/antmedia-doc/master/images/HLSsegmentedvideodelivery.png)
+![HLS Adaptive Streaming Schema](images
 
 ## How WebRTC & HLS Adaptive Streaming Works
 Ant Media Server supports adaptive streaming in both WebRTC and HLS formats. On the other hand, there is a _slight difference between WebRTC and HLS adaptive streaming_. In WebRTC, Ant Media Server measures the player's bandwidth and selects the optimum quality according to the player's bandwidth. On the contrary, in HLS, player measures the its bandwidth and fetches the optimum quality from the server.    
@@ -25,7 +25,7 @@ Ant Media Server supports adaptive streaming in both WebRTC and HLS formats. On 
 ### 1. Web Panel
 * `App > Settings > Adaptive Bitrate`
 
-![](https://raw.githubusercontent.com/mekya/antmedia-doc/master/images/abs.png)
+![](images
 
 > **Note :** Adaptive streaming detects the bandwidth and CPU capacity of the device and adjusts the streaming rate and video quality appropriately. Therefore it will be high cpu load. We recommend to use GPU.
 
@@ -33,7 +33,7 @@ Ant Media Server supports adaptive streaming in both WebRTC and HLS formats. On 
 
 The configuration above will create videos at 1080p, 720p and 360p resolutions if the incoming stream’S resolution is higher than 1080p. If the incoming stream's resolution is 480p, then 480p and 360p versions of the stream will be created on the fly.
 
-![](https://raw.githubusercontent.com/mekya/antmedia-doc/master/images/iosmediacaptureresolutions.png)
+![](images
 
 ### 2. Configuration file
 
