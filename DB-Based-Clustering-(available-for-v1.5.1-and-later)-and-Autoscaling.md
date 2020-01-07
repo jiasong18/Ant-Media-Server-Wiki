@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 ## Enable DB Based Cluster Mode
 To run Ant Media Server in DB Based Clustering please follow these steps.
 ### MongoDB Installation

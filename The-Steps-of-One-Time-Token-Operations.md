@@ -1,6 +1,9 @@
 ***
 **_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
 ***
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 
 The one-time token method is one of the effective authentication methods to secure your streams. Ant Media Server offers one-time token security control option with 1.5.0 version.
 

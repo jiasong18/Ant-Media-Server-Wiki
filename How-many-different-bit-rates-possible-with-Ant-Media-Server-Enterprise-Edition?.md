@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 There is virtually no limit.
 AMSEE typically run 4-5 different bitrates with the option to go lower.
 

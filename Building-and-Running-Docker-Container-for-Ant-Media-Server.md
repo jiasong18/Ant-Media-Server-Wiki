@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 * First of all we create a text file with name of `Dockerfile` as follows:
 ```
 FROM ubuntu:16.04

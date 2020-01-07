@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 ### What is RTMP (Real Time Messaging Protocol) ?
 RTMP means Real Time Messaging Protocol. RTMP is mostly depreciated for use as a viewer-facing video streaming protocol. However, RTMP is the most commonly used streaming protocol.
 

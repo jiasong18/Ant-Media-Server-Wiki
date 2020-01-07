@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 Seamless switch between WebRTC Screen Sharing &amp; Camera is available on both Community and Enterprise Edition. We mean by seamless is that you can switch between Screen &amp; Camera in the same session.<img src="https://antmedia.io/wp-content/uploads/2018/10/screen-sharing.png" alt="WebRTC Screen Sharing" width="912" height="550" class="aligncenter wp-image-5203 size-full" />
 
 <h2>Try WebRTC Screen Sharing</h2>

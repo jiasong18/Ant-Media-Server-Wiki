@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 WebRTC Native Android SDK lets developers build their own native WebRTC applications that with just some clicks. WebRTC Android SDK has built-in functions such as publishing to Ant Media Server for one-to-many streaming, playing a stream in Ant Media Server and lastly P2P communication by using Ant Media Server as a signalling server. Anyway, no need to say too much things let's make our hands dirty. 
 
 ### Download the WebRTC Native Android SDK

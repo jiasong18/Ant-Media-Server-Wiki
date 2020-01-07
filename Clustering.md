@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 Ant Media Server can run in Cluster Mode. It means several instances can transport stream to each other and can handle
 high load by running together in the same network.
 

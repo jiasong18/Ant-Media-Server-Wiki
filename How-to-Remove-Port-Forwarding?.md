@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 Check that which port forwardings exist in your system with below command. 
 ```
 sudo iptables -t nat --line-numbers -L

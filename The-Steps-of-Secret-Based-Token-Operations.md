@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 Ant Media Server offers secret-based token security control option with 1.6.2 version.
 
 ### Enable Setting and Define Secret Key

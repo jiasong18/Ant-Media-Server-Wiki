@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 We have 5 different load test plans for different aims.  
 ### HLS Player Load Test
 *aim:* This test is performed to determine the maximum number of HLS players that play the same stream.

@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 Let’s again have a look at step by step manner to make live broadcast from Android App
 
 ### Step 1 : Clone Git Repository 

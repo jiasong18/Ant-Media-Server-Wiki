@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 
 Ant Media Server can convert the RTMP URL or WebRTC Stream to the HLS and can record in MP4. 
 

@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 In this article, we will explain how to reduce latency for RTMP to HLS. But firstly we will keep you inform some of terms Stream protocols like RTMP and HLS about the used technologies.
 
 ### What is RTMP (Real Time Messaging Protocol) ?

@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 ## What is in Docker Container?
 After building the dockerfile we get a docker image which contains all necessary software and artifacts for load test.
 ### Installed Softwares

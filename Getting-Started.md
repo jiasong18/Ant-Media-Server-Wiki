@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 Ant Media Server is a software that can stream live and vod videos. It supports adaptive streaming on the fly and 
 records live videos in several formats like HLS, MP4, etc. 
 

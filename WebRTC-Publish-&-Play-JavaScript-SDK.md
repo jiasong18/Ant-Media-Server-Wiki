@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 Ant Media Server provides WebSocket interface in publishing and playing WebRTC streams. In this document, 
 we will show both how to publish and play WebRTC streams by using JavaScript SDK. 
 

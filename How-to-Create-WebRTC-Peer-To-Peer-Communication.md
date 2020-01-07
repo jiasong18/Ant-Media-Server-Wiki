@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 Let’s have look at WebRTC Peer-to-Peer Communication procedure.
 
 ![WebRTC_P2P](https://i1.wp.com/antmedia.io/wp-content/uploads/2018/11/peer2peer-1.png)

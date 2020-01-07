@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 This documentation is for developers who needs to implement signalling between Ant Media Server and clients 
 for publishing & playing streams. Let's make it step by step
 

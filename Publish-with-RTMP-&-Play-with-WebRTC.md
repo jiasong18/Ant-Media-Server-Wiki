@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 Developers can make their app users broadcast live video not only from their browser with WebRTC, but also from OBS, thanks to WebRTC Adapter. Let’s start with introducing OBS which stands for Open Broadcaster Software. OBS is a free open source software for video recording and live streaming. You can use either your PC’s embedded camera or externally connected one as a video source with OBS. Sound sources also can be configured with it. Ant Media Server Enterprise is fully compatible with OBS.
 
 Let’s have a look at step by step how to use OBS for streaming:

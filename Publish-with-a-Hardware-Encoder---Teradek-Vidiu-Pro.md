@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 Teradek Vidiu Pro is fully compatible with Ant Media Server 1.2.0+ Let’s have a look at step by step how to use Teradek Vidiu Pro for streaming, firstly start by powering the Teradek Vidiu Pro
 
 ### Step 1 : Connect to Teradek Vidiu Pro WiFi Network. 

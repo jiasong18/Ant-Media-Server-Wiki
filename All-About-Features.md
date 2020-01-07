@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 * Is there any video transcoding involved when we want to go from WebRTC to HLS ? 
 
 ***

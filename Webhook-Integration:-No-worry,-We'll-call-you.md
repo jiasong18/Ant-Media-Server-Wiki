@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 Ant Media Server provides webhooks for making your system/app know when certain events occurs on the server. Therefore, you can register your URL to Ant Media Server which makes POST request when a live stream is started, finished or recorded. Firstly,  let's look at how to register your backend URL to Ant Media Server as a webhook. After that, we'll provide reference for webhooks.
 
 <img src="https://antmedia.io/wp-content/uploads/2018/11/webhooks-300x273.png" alt="webhook ant media server" width="300" height="273" class="aligncenter wp-image-5807 size-medium" title="webhooks ant media server" />

@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 Ant Media Server can be easily deployed on the Amazon Web Services Instances. Please note that; this documentation describes single instance deployment. Let's have a look at the steps.
 
 

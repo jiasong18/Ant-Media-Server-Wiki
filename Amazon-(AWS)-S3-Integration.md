@@ -1,12 +1,36 @@
 Amazon S3 Integration lets you upload your MP4 files and previews to S3 automatically so that you do not need to worry about disk space in your server. Here is the simple manual how to enable S3 Integration to your streaming app 
 
-##  Enable AWS S3 in your Streaming App
+## Enable AWS S3 in your Streaming App
 
-* In order to programmatically access to S3, you should have access token and secret keys. You can create a programmatic user to have access token and secret key from [AWS IAM(Identity and Access Management)](https://console.aws.amazon.com/iam/home#/users) console. Just `Add User` by checking `Programmatic Access` box and then in the next section click `Attach existing policies directly` and add `AmazonS3FullAccess` access permission to this user. Copy access token and secret key for this user. 
+* In order to programmatically access to S3, you should have an access token and secret keys. You can create a programmatic user to have an access token and secret key from [AWS IAM(Identity and Access Management)](https://console.aws.amazon.com/iam/home#/users) console. 
 
-* Right now, you should have `access token`, `secret key`, `bucket name` in your hand. You also need to know the region of your bucket. If you do not have any bucket, you can create it on [S3 Console](https://s3.console.aws.amazon.com/s3/home)  
+![](https://antmedia.io/wp-content/uploads/2019/12/1-aws-iam-management-console.png)
 
-* Add a new bean to `red5-web.xml` of your app as below. `red5-web.xml` file is under `WEB-INF` folder of your app. For instance `webapps/LiveApp/WEB-INF/red5-web.xml`
+![Add User in IAM](https://antmedia.io/wp-content/uploads/2019/12/2-aws-add-user-iam-management-console.png)
+
+Just `Add User` by checking `Programmatic Access` box and then in the next section click `Attach existing policies directly` and add `AmazonS3FullAccess` access permission to this user. Copy access token and secret key for this user. 
+
+![Add User in IAM detail](https://antmedia.io/wp-content/uploads/2019/12/3-aws-add-user-detail-in-iam.png)
+
+![](https://antmedia.io/wp-content/uploads/2019/12/4-aws-add-user-detail2-in-iam.png)
+
+* Right now, you should have `access token`, `secret key`, `bucket name` in your hand.
+
+![](https://antmedia.io/wp-content/uploads/2019/12/4-aws-add-user-detail3-in-iam.png)
+
+You also need to know the region of your bucket. If you do not have any bucket, you can create it on [S3 Console](https://s3.console.aws.amazon.com/s3/home)  
+
+![](https://antmedia.io/wp-content/uploads/2019/12/5-aws-add-s3-console.png)
+
+![](https://antmedia.io/wp-content/uploads/2019/12/5-aws-add-s3-console2.png)
+
+![](https://antmedia.io/wp-content/uploads/2019/12/5-aws-add-s3-console3.png)
+
+![](https://i1.wp.com/antmedia.io/wp-content/uploads/2019/12/5-aws-add-s3-console4.png)
+
+![](https://i1.wp.com/antmedia.io/wp-content/uploads/2019/12/5-aws-add-s3-console5.png)
+
+* Add a new bean to `red5-web.xml` of your app as below. `red5-web.xml` file is under `WEB-INF` folder of your app. For instance `webapps` / `LiveApp` / `WEB-INF` / `red5-web.xml`
 
 ```xml
 <bean id="app.storageClient" class="io.antmedia.storage.AmazonS3StorageClient">
@@ -26,61 +50,50 @@ sudo service antmedia restart
 
 Your MP4 files and Preview files will be uploaded to your S3 bucket automatically. 
 
-##  Forward MP4 and Preview Request to S3 in your Streaming App
-This section is optional. If you want to forward http requests to MP4 files and Preview files to S3 directly, you can use a HTTP filter. 
-* Clone the sample app from here [https://gitlab.com/Ant-Media/SampleApp.git](https://gitlab.com/Ant-Media/SampleApp.git)
+###  Forward MP4 and Preview Request to AWS S3 in your Application
 
-* Open the `HttpForwardFilter` in `io.antmedia.serverapp.pscp.filter` package and uncomment the lines with changing your bucket url name
-```java
-public class HttpForwardFilter implements javax.servlet.Filter {
+This section is optional. If you want to forward HTTP requests to MP4 files, Preview files or m3u8 files to AMS S3 directly, you can use this feature with few basic changes in application settings.
 
-	@Override
-	public void destroy() {
 
-	}
 
-	@Override
-	public void doFilter(ServletRequest request, ServletResponse response,
-			FilterChain chain) throws IOException, ServletException {
-		String requestURI = ((HttpServletRequest)request).getRequestURI();
+Open `AMS-DIR` / `webapps` / `{application}` / `WEB-INF` / `red5-web.properties` with your text editor (vim, nano)  
 
-		
-		File f = new File("webapps/"+ requestURI);
-		if (!f.exists()) 
-		{
-			String redirectUri = "WRITE YOUR BUCKET URL like https://s3.eu-central-1.amazonaws.com/" + requestURI;
-			HttpServletResponse httpResponse = (HttpServletResponse) response;
-			httpResponse.sendRedirect(redirectUri);
-			return;
-		}
-		
-		
-		chain.doFilter(request, response);
-	}
+    settings.httpforwarding.extension
 
-	@Override
-	public void init(FilterConfig arg0) throws ServletException {
+Usage Example:
 
-	}
+`settings.httpforwarding.extension=mp4`
 
-}
-```
+You can add extensions with a comma: mp4,png 
 
-* You also need to add S3 bean `red5-web.xml` in `WEB-INF` folder 
-* Package the app with Maven 
-`
-mvn clean package -Dgpg.skip=true
-`
-After the command is done, you will have `WAR` file under `target` directory
+**Detail in code: [HTTP Forward Extension Settings Details](https://github.com/ant-media/Ant-Media-Server-Common/blob/master/src/main/java/io/antmedia/AppSettings.java#L542)**
 
-* Copy the created WAR file under `webapps` directory by removing old LiveApp directory and restart the server
-```
-sudo rm -rf /usr/local/antmedia/webapps/LiveApp
-sudo cp target/LiveApp*.war /usr/local/antmedia/webapps/
-sudo service antmedia restart
-```
+    settings.httpforwarding.baseURL
+    
+Usage Example:
+
+`settings.httpforwarding.baseURL=https://{s3BucketName}.s3.{awsLocation}.amazonaws.com`
+
+**Detail in code: [HTTP Forward BaseURL Settings Details](https://github.com/ant-media/Ant-Media-Server-Common/blob/master/src/main/java/io/antmedia/AppSettings.java#L548)**
+
+When you added above code snippets in Application Settings, your Request URI will be as below.
+
+`https://{s3BucketName}.s3.{awsLocation}.amazonaws.com/streams/{streamId.mp4}`
+
+**Detail in code: [HTTP Forward Filter](https://github.com/ant-media/Ant-Media-Server/blob/master/src/main/java/io/antmedia/filter/HttpForwardFilter.java#L28)**
+
+**Note:** Don't add any leading, trailing white spaces.
+
+Restart Ant Media Server
+
+    sudo service antmedia restart
 
 After server restarted, MP4 and Preview files will be forwarded to S3 directly. 
 
+For example; when requested defined MP4 or any file:
 
-I hope this manual help you in S3 integration to your app, if you have any problem or question with that just let us know at contact@antmedia.io 
+`https://serverDomain:5443/{streamApp}/streams/{streamId}.mp4` 
+
+HTTP request will be redirected as below
+
+`https://{s3BucketName}.s3.{awsLocation}.amazonaws.com/streams/{streamId}.mp4`

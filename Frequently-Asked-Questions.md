@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 * ### [May I use Docker images to deploy Ant Media Server?](https://github.com/ant-media/Ant-Media-Server/wiki/May-I-use-Docker-images-to-deploy-Ant-Media-Server%3F)
 
 * ### [How to reset admin password?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-reset-Ant-Media-Server-admin-password%3F)

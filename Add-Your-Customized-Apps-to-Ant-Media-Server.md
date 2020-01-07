@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 Ant Media Server comes with two apps LiveApp and WebRTCApp (WebRTCAppEE in the enterprise edition). You can customize/rename existing apps or add new ones. You have two options to add new apps. Lets have a look at them;
 
 

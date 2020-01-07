@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 Ant Media Server can also be used as a signalling server for peer to peer connections. WebSocket is used for connection
 between peers and Ant Media Server. 
 

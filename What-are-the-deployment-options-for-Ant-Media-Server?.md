@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 There're 4 different methods to use Ant Media Server (AMS):
 1. If you want to host AMS on your own server/cloud, you can buy Ant Media Server Enterprise Edition License: https://antmedia.io/#products
 

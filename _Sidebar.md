@@ -1,41 +1,65 @@
-### [Frequenty Asked Questions](frequently-asked-questions)
-
 ## User Guide
-   * [Getting Started & Installation](https://github.com/ant-media/Ant-Media-Server/wiki/Getting-Started)
-   * [Publish Live Stream with RTMP](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-Live-Stream-with-RTMP)
-     * [Publish with a Desktop Software](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-with-a-Desktop-Software---Open-Broadcaster-Software)
-     * [Publish with a Hardware Encoder](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-with-a-Hardware-Encoder---Teradek-Vidiu-Pro)
-     * [Publish with a Mobile(Android, iOS) App](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-with-a-Mobile-App-Android)
-   * [Low Latency Publish with RTMP & Play with WebRTC](https://github.com/ant-media/Ant-Media-Server/wiki/Publish-with-RTMP-&-Play-with-WebRTC)
-   * [Low Latency Publish & Play with WebRTC](https://github.com/ant-media/Ant-Media-Server/wiki/Try-Low-Latency-WebRTC-Live-Streaming)
-   * [WebRTC Screen Sharing](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-Screen-Sharing)
-   * [Pull IP Camera Streams](https://github.com/ant-media/Ant-Media-Server/wiki/Pull-IP-Camera-Streams)
-   * [Play Live and VoD Streams and Previews](https://github.com/ant-media/Ant-Media-Server/wiki/Play-Live-and-VoD-Streams-and-Previews)
-   * [Enable NVIDIA GPU Encoder Support](https://github.com/ant-media/Ant-Media-Server/wiki/Enable-NVIDIA-GPU-Encoder-Support)
-  * [DB Based Clustering and Autoscaling](https://github.com/ant-media/Ant-Media-Server/wiki/DB-Based-Clustering-(available-for-v1.5.1-and-later)-and-Autoscaling)
-  * [Load Balancer with HAProxy](https://github.com/ant-media/Ant-Media-Server/wiki/Load-Balancer-with-HAProxy-SSL-Termination)
-  * [Building and Running Docker Container for Ant Media Server](https://github.com/ant-media/Ant-Media-Server/wiki/Building-and-Running-Docker-Container-for-Ant-Media-Server)
-  * [Start Ant Media Server on AWS (Single Instance)](https://github.com/ant-media/Ant-Media-Server/wiki/Start-Ant-Media-Server-on-AWS-(Single-Instance))
+* [Quick Start](Quick-Start)
+  * [Samples List](Sample-List)
+* [Introduction](Introduction)
+* [Installation](Installation)
+* [Publishing Live Streams](Publishing-Live-Streams)
+  * [WebRTC Publishing](WebRTC-Publishing)
+  * [RTMP Publishing](RTMP-Publishing)
+    * [Open Broadcaster Software](Open-Broadcaster-Software-Publishing)
+    * [Teradek Vidiu Pro](Teradek-Publishing)
+    * [Mobile App](https://github.com/ant-media/LiveVideoBroadcaster)
+  * [Re-streaming](Re-streaming)
+    * [Stream Sources (RTMP/HLS/RTSP)](External-Stream-Sources)
+    * [-IP Camera](IP-Camera)
+* [Playing Live Streams](Playing-Live-Streams)
+  * [WebRTC Playing](WebRTC-Playing)
+  * [HLS Playing](HLS-Playing)
+  * [Embedded Web Player](Embedded-Web-Player)
+* [Conference Call](WebRTC-Conference-Call)
+* [-Peer to Peer Call](WebRTC-Peer-to-Peer-Communication)
+* [Adaptive Bitrate(Multi-Bitrate) Streaming](Adaptive-Bitrate-Streaming)
+* Video on Demand Streaming
+* Simulcasting to Social Media Channels
+* Clustering & Scaling
+  * [Generic Installation](Scaling-and-Load-Balancing)
+  * [Installation in AWS](Scaling-with-AWS)
+  * [-Installation in Azure](Scaling-with-Azure)
+* [WebRTC SDKs](WebRTC-SDKs)
+  * [-JavaScript SDK](WebRTC-JavaScript-SDK-Guide)
+  * [-Android SDK](WebRTC-Android-SDK-Documentation)
+  * [-iOS SDK](WebRTC-iOS-SDK-Documentation)
+  * [-Embedded SDK](WebRTC-Embedded-SDK-Documentation)
+* RTMP SDKs
+  * Android SDK
+  * iOS SDK
+* [Security](Security-Documentation)
+  * [-Stream Security](Stream-Security-Documentation)
+  * [-SSL Setup for Ant Media Server](SSL-Setup)
+  * [-REST API Security](REST-API-Security-Documentation)
+* Integration with your Project
+  * [REST Guide](REST-Guide)
+  * [Web Hooks](Webhook-Integration)
+  * [AWS S3](Amazon-(AWS)-S3-Integration)
+  * Azure Blob
+  * [User-defined Scripts](User-defined-Scripts)
+* Advanced
+  * [GPU](GPU) 
+    * [Driver Installation](GPU-Driver-Installation)
+    * [Docker GPU Installation](Docker-GPU-Installation)
+  * [Server Configuration](Server-Configuration-Documentation) 
+  * [App Configuration](Application-Configuration-Documentation)
+* [Load Testing](Load-Testing)
 
-## Developer Guide
-   * [Build From Source](https://github.com/ant-media/Ant-Media-Server/wiki/Build-From-Source)
-   * WebRTC
-     * [WebRTC Publish & Play JavaScript SDK](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-Publish-&-Play-JavaScript-SDK)
-     * [WebRTC WebSocket Messaging Details](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-WebSocket-Messaging-Details)
-     * [WebRTC JS Error Callback Messages](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-Error-Callback-Messages)
-     * [WebRTC Signalling Server](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-Signalling-Server)
-     * [WebRTC iOS SDK](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-iOS-SDK-Documentation)
-     * [WebRTC Android SDK](https://github.com/ant-media/Ant-Media-Server/wiki/Step-by-Step-Guide-to-Build-WebRTC-Native-Android-App)
-   * [The Steps of the One-Time Token Operations](https://github.com/ant-media/Ant-Media-Server/wiki/The-Steps-of-One-Time-Token-Operations)
-   * [Amazon (AWS) S3 Integration](https://github.com/ant-media/Ant-Media-Server/wiki/Amazon-(AWS)-S3-Integration) 
-   * [Webhook Integration: No worry, we'll call you](https://github.com/ant-media/Ant-Media-Server/wiki/Webhook-Integration:-No-worry,-We'll-call-you)
-   * [Rest Api Doc](https://antmedia.io/rest/index.html)
-   * [App Customization](https://github.com/ant-media/Ant-Media-Server/wiki/Add-Your-Customized-Apps-to-Ant-Media-Server)
+## Reference
+* [REST API Reference](https://antmedia.io/rest)
+* [WebRTC - WebSocket Messaging Reference](WebRTC-WebSocket-Messaging-Reference)
+* Streaming Protocols
 
-## "Load Testing" Guide 
-   * [Test Environment](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Environment)
-     * [One Instance Setup](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Environment#one-instance-setup)
-     * [Cluster Setup](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Environment#cluster-setup)
-   * [Preparation of Test Server and Running Tests](https://github.com/ant-media/Ant-Media-Server/wiki/Preparation-of-Test-Server-and-Running-Tests)
-   * [Test Plans](https://github.com/ant-media/Ant-Media-Server/wiki/Test-Plans)
-   * [Inside of The Box](https://github.com/ant-media/Ant-Media-Server/wiki/Inside-of-The-Box)
+## FAQ
+* Pixelating issue?
+
+## Draft
+* [How to Publish with Wirecast](How-to-Publish-with-Wirecast)
+* Nginx Load Balancer
+ 

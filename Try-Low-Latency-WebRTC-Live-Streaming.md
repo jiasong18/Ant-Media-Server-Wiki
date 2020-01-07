@@ -1,3 +1,6 @@
+***
+**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
+***
 Ant Media Server 1.2.0+ Enterprise Edition supports adaptive low latency WebRTC streaming. 
 
 In addition, Ant Media Server can
