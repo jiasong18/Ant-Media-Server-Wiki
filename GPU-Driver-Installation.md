@@ -4,7 +4,7 @@ Ant Media Server can use hardware-based encoder that is available in some NVIDIA
 
 Answer is Performance. Performance increases 5x over x264(CPU) encoder. Btw, x264 is one of the best h.264 software encoder and Ant Media Server uses x264 if there is no GPU in the system.
 
-![](images
+![](images/gpu.png)
 
 # Install CUDA Toolkit
 

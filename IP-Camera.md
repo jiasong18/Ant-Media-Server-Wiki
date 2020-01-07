@@ -16,19 +16,19 @@ You can also use `Auto-Discovery` feature! If IP cameras and Ant Media Server ar
 
 ![](https://raw.githubusercontent.com/mekya/antmedia-doc/master/addipcamera.png)
 
-![](images
+![](images/autodiscovery.png)
 
 If the IP cameras are reachable and configured correctly, Ant Media Server starts the pull live streams from them. You can see its status on the management panel.
 
 Watch the IP Camera, just click the Play button on Actions.
 
-![](images
+![](images/watchipcamera.png)
 
 ## 2. Record IP Camera Streams
 
 The Ant Media Server can save IP Camera streams as MP4 format. In addition, it record streams with defined periods such one hour, ten hours interval. You can see these recorded files on the VoD tab in the management panel. You can set the period the `settings.streamFetcherRestartPeriod` in [App Configuration](App-Configuration)
 
-![](images
+![](images/ipcameravod.png)
 
 ## 3. PTZ(Pan-Tilt-Zoom) and REST API
 Ant Media Server supports PTZ calls through REST API. So that you can move your cameras left, right, top, bottom and change the zoom level. 

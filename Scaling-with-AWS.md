@@ -20,15 +20,15 @@ The procedure below shows how to start an instance in AWS EC2 service as well. I
 
 * [Signup](https://aws.amazon.com/) to AWS if you don’t have an account yet.  Login to [AWS Management Console](https://console.aws.amazon.com/). Then click EC2 Service as shown in the image below.
 
-![](images
+![](images/aws1.png)
 
 * Click “Launch” Instance.
 
-![](images
+![](images/aws2.png)
 
 * Search for “Ubuntu” and Select “Ubuntu 16.04”.
 
-![](images
+![](images/aws3.png)
 
 * Choose Instance Type like m4.xlarge or m5.xlarge series. There are two points here.
   * First one is you may optionally choose a bigger instance according to your streaming load.
@@ -36,31 +36,31 @@ The procedure below shows how to start an instance in AWS EC2 service as well. I
 
 Then click “Review and Launch”.
 
-![](images
+![](images/aws4.png)
 
 * Click “Edit Security Groups” in the image.
 
-![](images
+![](images/aws5.png)
 
 * Add “22” and “27017” TCP ports as follows in the image. Warning is critical for security. We’ll restrict source into a VPC later. Just click “Review and Launch” .
 
-![](images
+![](images/aws6.png)
 
 * In the coming window, Click “Launch” button again. Then it will ask to specify key file. Choose “Create new key pair” and click “Download Key Pair” button. After key file is downloaded. Click “Launch Instances”
 
-![](images
+![](images/aws7.png)
 
 * Right now, your instances should be launching as shown in the image
 
-![](images
+![](images/aws8.png)
 
 * Go to EC2 Instances and Click “Connect” button.
 
-![](images
+![](images/aws9.png)
 
 * It shows a dialog as follow and connect to instance via ssh
 
-![](images
+![](images/aws10.png)
 
 * Right now, you should connect to your instance. To Connect your instance, open a terminal and run a command something like. Please change {YOUR_KEY_FILE} and {INSTANCE_PUBLIC_IP} with your own credentials. For our case, they are “ant.pem” and “ec2-35-159-50-16.eu-central-1.compute.amazonaws.com”
 
@@ -79,7 +79,7 @@ sudo apt-get install -y mongodb-org
 
 `sudo nano /etc/mongod.conf`
 
-![](images
+![](images/mongodb.png)
 
 Press “Ctrl + X” to save the file.
 
@@ -94,15 +94,15 @@ MongoDB installation is complete, just save your MongoDB instance’s local addr
 
 * Click “Auto Scaling > Launch Configurations” and Click “Create Launch Configurations”
 
-![](images
+![](images/aws11.png)
 
 * Click “AWS Marketplace” on the left side menu. Search for “Ant Media Server” and Choose the “Ant Media Server Enterprise” and Click “Select”
 
-![](images
+![](images/aws12.png)
 
 * Choose instance type, in our sample we choose m5.2xlarge. You can choose any instance type according to your project. After that click “Next: Configure details”
 
-![](images
+![](images/aws13.png)
 
 * In the coming window as shown in the image below,  We need to give name and set User data.
 
@@ -116,27 +116,27 @@ cd /usr/local/antmedia
 ```
 The form should be something like below
 
-![](images
+![](images/aws14.png)
 
 * Click “Create Launch Configuration”
 
-![](images
+![](images/aws15.png)
 
 * After launch configuration is created successfully, Click the “Create an Auto Scaling Group using this Launch Configuration”
 
-![](images
+![](images/aws16.png)
 
 * Give a name to scaling group. We give “AMS-Origin-Group”  as a name and choose “eu-central-1a” subnet. We choose only one instance to let all instances appear in the same subnet for having better connectivity.  And then click “Configure Scaling Policies”
 
-![](images
+![](images/aws17.png)
 
 * Choose your scaling policy. In our sample below, our origin group will scale up to 10 instances by providing Average CPU Utilization with %60. Then Click Next and Next.
 
-![](images
+![](images/aws18.png)
 
 * Lastly, Review screen will come and click the “Create Auto Scaling group”
 
-![](images
+![](images/aws19.png)
 
 ## Step 3: Install Scalable Edge Group
 
@@ -146,52 +146,52 @@ Installing scalable edge group almost same as scalable origin group.  Please go 
 
 * Click the “Load Balancings > Load Balancers”  on EC2 Service and Click the “Create” button under Application Load Balancer
 
-![](images
+![](images/aws20.png)
 
 * Give a name to your Load Balancer. Choose both HTTP and HTTPS by clicking “Add listener”. The port settings should be like in the image below.
 Lastly, choose eu-central-1a and eu-central-1b for availability zones. Then Click “Next: Configure Security Groups”
 
-![](images
+![](images/aws21.png)
 
 * Choose your domain certificate from the screen. Then click “Next: Configure Security Groups” . (If you don’t know how to create certificate for ACM, [please follow this guide](https://antmedia.io/ssl-from-aws-certificate-manager-for-domain-name/). )
 
-![](images
+![](images/aws22.png)
 
 * Create Security Group as shown in the image and then Click Next
 
-![](images
+![](images/aws23.png)
 
 * Specify Routing as follows. Create a new target group and forward with HTTP through 5080 port
 
-![](images
+![](images/aws24.png)
 
 * In the Register Targets group, do nothing, just proceed because we bind target later. Proceed to Review section and Click the Create button
 
-![](images
+![](images/aws25.png)
 
 * Right now. All groups should be created, we just need to bind load balancer to the origin and edge scaling groups. Firstly, Go to the “Auto Scaling Groups” and Select the AMS Origin Group and Choose Edit in Actions drop down menu. Then choose the Origin-Target-Group in Target Group as follows in the image. Click “Save” button.
 
-![](images
+![](images/aws26.png)
 
 * The setting above lets Origin Group be in “Origin-Target-Group” so that Load Balancer can forward requests to the Origin Group. Right now it’s time for Edge Group.   We assume that you already created AMS-Edge-Group in Step 3. So that right now just Create a Target from “Load Balancing > Target Groups” as follows
 
-![](images
+![](images/aws27.png)
 
 * Then Go to AMS-Edge-Group in “Auto Scaling > Auto Scaling Groups” and Click the Edit item in the Actions button and add Edge-Target-Group as Target Group as in the image below
 
-![](images
+![](images/aws28.png)
 
 * Here is the last items for Load Balancer.  Go to Load Balancer. Add new Listener for 5080 and 5443 that forward requests to Edge-Target-Group. Firstly Click “Add Listener”
 
-![](images
+![](images/aws29.png)
 
 * Add Listener for HTTP(5080) and HTTPS(5443) as follows.
 
-![](images
+![](images/aws30.png)
 
 * Click “Save” button. It returns the Load Balancer screen then Click “Add Listener” again and add HTTPS(5443) as in the image below
 
-![](images
+![](images/aws31.png)
 
 * Click “Save” button again.
 

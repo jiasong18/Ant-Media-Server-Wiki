@@ -12,7 +12,7 @@ Download via its official [web page](https://obsproject.com/). It has Windows, M
 
 ### Step 2 : Provide Sources:
 
-![OBS (Open Broadcaster Software) interface](images
+![OBS (Open Broadcaster Software) interface](images/obs_screenshot.jpg)
 
 By default, OBS starts to capture from your embedded camera if exists after initialized. 
 You can add or remove video/audio source from Sources section, such as an image can be broadcasted as a video source or 
@@ -29,7 +29,7 @@ Use IP address or server fqdn in the place of <SERVER_ID> and use any id/name fo
     - The server creates a live stream with an unique ID in the format of “rtmp://<SERVER_NAME>/LiveApp/325859929809451108600212”.  
     - You can copy this url with clicking “Publish URL” button.
 
-![Management Console New Live Stream](images
+![Management Console New Live Stream](images/management_console_new_live_stream.png)
 
 ### Step 4: Configure the OBS
 
@@ -39,7 +39,7 @@ You need to write live stream parameters to OBS in order to start broadcasting.
 * Write URL and stream key parameters as described in the below picture. Make sure that Stream ID should be written to 
 Stream Key field not to the URL.
 
-![OBS (Open Broadcaster Software) Stream Configuration](images
+![OBS (Open Broadcaster Software) Stream Configuration](images/OBS_Configuration.png)
  
 
 ### Step 5: Start Stream and Watch 🙂

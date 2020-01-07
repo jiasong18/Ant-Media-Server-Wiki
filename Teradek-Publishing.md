@@ -4,20 +4,20 @@ Teradek Vidiu Pro is fully compatible with Ant Media Server.  Let’s have a loo
 ### 1. Connect to Teradek Vidiu Pro WiFi Network. 
 It creates a WiFi network with name VidiU−XXXXX. Connect that network with your computer and go to the 172.16.1.1 on your browser.
 
-![Connect Teradek's WiFi Network](images
+![Connect Teradek's WiFi Network](images/vidiu_pro_console.png)
 
 Click “Settings” button on the top right and then click “Network” item in the screen.
 
-![Configure Network Settings of Teradek Vidiu](images
+![Configure Network Settings of Teradek Vidiu](images/configure_vidiu_network_button.png)
 
 ### 2. Configure Wireless Network Connection of Teradek Vidiu Pro
 * Click the WiFi item. Choose “Client”  mode and Click “Browse” button to lookup the WiFi networks around.
 
-![Configure WiFi of Teradek Vidiu](images
+![Configure WiFi of Teradek Vidiu](images/set_vidiu_pro_wifi_connectivity.png)
 
 * Choose the WiFi you would like Teradek Vidiu Pro to connect.
 
-![Choose WiFi from list on Teradek Vidiu](images
+![Choose WiFi from list on Teradek Vidiu](images/choose_wifi_for_vidiu_pro.png)
 
 * Enter the password of the WiFi network and click “Apply” button on the top right. Then Restart Teradek Vidiu Pro
 
@@ -28,15 +28,15 @@ Sometimes you may need to power off / on the Teradek Vidiu Pro.
 ### 3. Configure Broadcasting Settings
 * Click the `Broadcast` item on the `Settings` screen
 
-![Configure broadcast settings of Teradek Vidiu](images
+![Configure broadcast settings of Teradek Vidiu](images/configure_broadcasting_settings_vidiu_pro.png)
 
 * Choose `Manual` from Mode then Enter Ant Media Server address to `RTMP Server URL` and write name of the stream id to `Stream` box
 
-![Write Ant Media Server URL on Teradek Vidiu Pro broadcast configuration](images
+![Write Ant Media Server URL on Teradek Vidiu Pro broadcast configuration](images/write_ant_media_server_url_to_vidiu_pro.png)
 
 Click `Apply` button on the top right again.
 
-![Save broadcast settings of Teradek Vidiu Pro](images
+![Save broadcast settings of Teradek Vidiu Pro](images/apply_settings_vidiu_pro.png)
 
 Your device configuration is OK now.
 

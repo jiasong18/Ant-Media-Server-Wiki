@@ -17,16 +17,16 @@ Open MainActivity.java file and assing the Server URL to `RTMP_BASE_URL`. It sho
 ### Step 3: Run the App
 When you run the app on an Android device, below screen should appear. Click Live Video Broadcaster button
 <br/>
-![Live Video broadcaster Main Activity](images
+![Live Video broadcaster Main Activity](images/android_live_broadcaster_main_activity.png)
 
 You should see the below screen
 <br/>
-![Open Video Broadcaster](images
+![Open Video Broadcaster](images/android_mobile_live_video_broadcaster.png)
 
 
 Write a live stream name like “test” to edit text and press the button. Screen should be like below
 <br/>
-![Android Live Broadcasting with RTMP](images
+![Android Live Broadcasting with RTMP](images/android_mobile_broadcasting.png)
 
 
 Ant Media Server accepts again that broadcast and can perform adaptive streaming, recording and publishing to any other 3rd party RTMP server as usual.

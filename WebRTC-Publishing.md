@@ -7,12 +7,12 @@ In order to publish with WebRTC in remote server, you need to install SSL to you
 If you're running Ant Media Server in your local computer, you can also visit `http://localhost:5080/WebRTCAppEE` in EE or `http://localhost:5080/WebRTCApp` in CE. 
 
     
-![Open WebRTCAppEE](images
+![Open WebRTCAppEE](images/1_Open_WebRTCAppEE_and_Let_Browser_Access_Cam_and_Mic.jpg)
     
    
 2. Write stream id or leave it as default and Press `Start Publishing` button. After you press the button, blinking text("Publishing") should appear
 
-    ![Press Start Publishing button](images
+    ![Press Start Publishing button](images/2_Press_Publish_Button.jpg)
 
 Congrats. It's done. Right now, you're publishing to Ant Media Server with your Web Browser.
 

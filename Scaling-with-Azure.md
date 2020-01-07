@@ -4,15 +4,15 @@ This guide describes how to install and set up Ant Media Server on a Microsoft A
 
 * Firstly, click Create a resource in [Azure Dashboard](https://portal.azure.com/).
 
-![](images
+![](images/azure1.png)
 
 * After clicking on Create a resource, you will see the new Marketplace page. Please write “Ant Media Server” to the search side.
 
-![](images
+![](images/azure2.png)
 
 * Choose one of Ant Media Server Community Edition or Enterprise Edition.
 
-![](images
+![](images/azure3.png)
 
 `Community Edition and Enterprise Edition comparison chart is here.`
 
@@ -20,7 +20,7 @@ This guide describes how to install and set up Ant Media Server on a Microsoft A
 ### Part 1 – “Basics” in Create a Virtual Machine
 
 
-![](images
+![](images/azure4.png)
 
 In Subscription, Azure default payment method is Pay-As-You-Go. More details for see this link.
 
@@ -40,7 +40,7 @@ In User name, type the name of the account that you’ll use to administer the v
 
 ### Part 2 – “Disks” in Create a Virtual Machine
 
-![](images
+![](images/azure5.png)
 
 In OS disk type, Effective at input speeds I/O. Premium SSD disks offer high-performance, low-latency disk support for I/O-intensive applications and production workloads.
 
@@ -52,7 +52,7 @@ Use Standard HDD disks for Dev/Test scenarios and less critical workloads at low
 
 ### Part 3 – “Networking” in Create a Virtual Machine
 
-![](images
+![](images/azure6.png)
 
 In Virtual Network, currently selected subscription and location are listed. If you choose to create a new virtual network, it will be created in the same subscription, location, and resource group as the storage account. Virtual networks in a different subscription, and/or paired failover location, may be specified after storage account creation.
 
@@ -72,11 +72,11 @@ UDP:5000-65000 (WebRTC and RTSP)
 ```
 ### Part 4 – “Management” in Create Virtual Machine
 
-![](images
+![](images/azure7.png)
 
 ### Part 5 – “Advanced” in Create Virtual Machine
 
-![](images
+![](images/azure8.png)
 
 Here is Extensions and Cloud-Init options.
 
@@ -86,13 +86,13 @@ Ant Media Server image doesn’t support cloud-init.
 
 ### Part 6 – “Tags” in Create Virtual Machine
 
-![](images
+![](images/azure9.png)
 
 Tags are name/value pairs that enable you to categorize resources and view consolidated billing by applying the same tag to multiple resources and resource groups.
 
 ### Part 7 – “Review + Create” in Create Virtual Machine
 
-![](images
+![](images/azure10.png)
 
 Here you will see the settings you have made in other sections. Checking all the settings you can create the virtual machine.
 

@@ -9,7 +9,7 @@ REST API guide is one of the missing guides that our lovely users need to get st
 * Authorize/Revoke Social Endpoints
 * Change Settings(Bitrates, Recording, Enable/Disable Object Detection, VoD Folder Path) via root app
 
-![](images
+![](images/what_is_rest_api-768x309.png)
 
 For the full REST API Reference, please visit the [https://antmedia.io/rest ](https://antmedia.io/rest )
 
@@ -83,7 +83,7 @@ curl -X GET
 
 The samples below show how to call the REST methods in an easy way. In order to have a look at all methods and their parameters, you can study the REST API Reference at [https://antmedia.io/rest](https://antmedia.io/rest) which has a good look and feel. Thanks to the Swagger.
 
-![](images
+![](images/rest.png)
 
 ## Security – IP Filtering
 
@@ -92,7 +92,7 @@ Ant Media Server generally runs behind an application server so that you want An
 In order to add IP ranges, you should go to the Settings of the app in Web Management Panel and add
 IP Ranges in [CIDR notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation). You can add multiple comma-separated IP Address Ranges.
 
-![](images
+![](images/ipfiltering.png)
 
 ## Conclusion
 

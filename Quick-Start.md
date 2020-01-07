@@ -50,18 +50,18 @@ Ant Media Server Enterprise provides 0.5 seconds end-to-end latency. So let's tr
 * Visit the page `https://your-domain-address.com:5443/WebRTCAppEE/`. 
 > If you're running in localhost, please visit `http://localhost:5080/WebRTCAppEE/`
 * Let browser access the camera and mic. Then click `Start Publishing` 
-![WebRTC Publishing](images
+![WebRTC Publishing](images/1_Open_WebRTCAppEE_and_Let_Browser_Access_Cam_and_Mic.jpg) 
 * After you press the button,  "Publishing" blinking text should appear
 
-    ![Press Start Publishing button](images
+    ![Press Start Publishing button](images/2_Press_Publish_Button.jpg)
 
 #### Playing
 * Visit the page `https://your-domain-address.com:5443/WebRTCAppEE/player.html`. 
 > If you're running in localhost, please visit `http://localhost:5080/WebRTCAppEE/player.html`
 * Write the stream id in text box( `stream1` by default)
- ![Go to the player.html](images
+ ![Go to the player.html](images/3_Go_to_Play_Page.jpg)
 * Press `Start Play` button. After you press the button, WebRTC stream starts playing
- ![Press Start Playing Button](images
+ ![Press Start Playing Button](images/4_Press_Start_Play_Button.jpg)
 
 > Note: Don't forget that the `stream id` on the publish and play pages should be the same.
 

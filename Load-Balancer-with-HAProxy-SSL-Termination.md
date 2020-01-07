@@ -173,6 +173,6 @@ When everything is comple restart the HAProxy
 sudo service haproxy restart
 ```
 and you can view status of the instance throught http://HAPROXY_LB:6080/haproxy_stats URL
-![HAProxy Stats Panel](images
+![HAProxy Stats Panel](images/HAProxy_Stats.png)
 
 If you have a question, please let us know through contact@antmedia.io
