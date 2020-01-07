@@ -91,7 +91,7 @@ sudo change_server_mode.sh standalone
 
 Load Balancer is the sister of cluster so If you make Ant Media Server instances run in Cluster Mode. Then a load balancer will be required to balance the load. In this documentation, you will learn how to install HAProxy Load Balancer with SSL termination.
 
-![](https://raw.githubusercontent.com/mekya/antmedia-doc/master/haproxyssltermination.png)
+![](images/haproxyssltermination.png)
 
 The configuration below balances RTMP, HLS, HTTP/HTTPS and WebSocket(WS/WSS) connections so that it will be used for RTMP, HLS and WebRTC streaming.
 
@@ -239,7 +239,7 @@ systemctl restart haproxy
 
 and you can view status of the instance through `http://HAPROXY_LB:6080/haproxy_stats` URL
 
-![](https://raw.githubusercontent.com/mekya/antmedia-doc/master/haproxy_monitoring.png)
+![](images/haproxy_monitoring.png)
 
 
 

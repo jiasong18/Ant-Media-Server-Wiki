@@ -5,7 +5,7 @@ In addition to developing promising features in Ant Media Server, we have added 
 
 The main critical point is that the IP Cameras should support ONVIF standard. ONVIF make it easy to manage IP Cameras. All CRUD and PTZ operations are based on well-defined SOAP messages.
 
-![](https://github.com/mekya/antmedia-doc/blob/master/onvif_conformance.gif)
+![](images/onvif_conformance.gif)
 
 Let’s have a look at how to pull stream from IP Camera. Of course, first, you need to install Ant Media Server, please see documentation.
 

@@ -8,15 +8,15 @@ Re-streaming from External Source is available both in Community and Enterprise 
 
 * First, log in to the management panel. Click any app on the left side menu and then click `New Live Stream -> Stream Source`. Define the stream name and stream source URL.
 
-![](https://raw.githubusercontent.com/mekya/antmedia-doc/master/restreaming-define-stream-parameters.png)
+![](images/restreaming-define-stream-parameters.png)
 
 * Click `Create` button and Ant Media Server starts to pull streams from its source.
 
-![](https://raw.githubusercontent.com/mekya/antmedia-doc/master/restreaming-stream-pulling.png)
+![](images/restreaming-stream-pulling.png)
 
 * Now, you can watch the stream like any other stream. 
 
-![](https://github.com/mekya/antmedia-doc/blob/master/restreaming-watch-pulled-stream.png)
+![](images/restreaming-watch-pulled-stream.png)
 
 
 > Reminder: All web interface operations and much more can be done programmatically with [REST API](https://antmedia.io/rest). Take a look at the [REST Guide](REST-Guide)  

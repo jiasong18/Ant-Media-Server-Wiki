@@ -148,7 +148,7 @@ webRTCAdaptor.unmuteLocalMic();
 
 In some cases, Peer to Peer Communication cannot be established and a relay server is required for video/audio transmission. For this requirement, TURN servers are needed to relay the video/audio.   
 
-![WebRTC DataPaths](https://github.com/mekya/antmedia-doc/blob/master/dataPathways.png?raw=true)
+![WebRTC DataPaths](images/dataPathways.png?raw=true)
 
 [Coturn](https://github.com/coturn/coturn) can be used as a TURN Server.
 You can enter TURN Server credentials in [peer.html](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/peer.html) as follows.

@@ -46,9 +46,9 @@ Normal bir yazı
 2. sıralı 2
 3. sıralı 3
 
-![AWS Load Balancer](https://raw.githubusercontent.com/mekya/antmedia-doc/master/Screen%20Shot%202019-08-29%20at%2019.26.22.png)
+![AWS Load Balancer](images/Screen%20Shot%202019-08-29%20at%2019.26.22.png)
 
-![Image 2](https://raw.githubusercontent.com/mekya/antmedia-doc/master/Screen%20Shot%202019-08-29%20at%2022.24.28.png)
+![Image 2](images/Screen%20Shot%202019-08-29%20at%2022.24.28.png)
 
 
 

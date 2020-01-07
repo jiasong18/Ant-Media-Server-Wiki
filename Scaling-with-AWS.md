@@ -2,7 +2,7 @@ In this document, we’re going to tell how to setup a Scalable Ant Media Server
 
 Let’s get started how to start your own scalable ultra low latency streaming service on AWS.
 
-![](https://raw.githubusercontent.com/mekya/antmedia-doc//master/images/N-Origin-N-Edge-Cluster-1.png)
+![](images/N-Origin-N-Edge-Cluster-1.png)
 
 Let me give some brief definitions.
 

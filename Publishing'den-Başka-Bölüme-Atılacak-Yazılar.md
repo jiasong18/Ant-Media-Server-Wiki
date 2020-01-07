@@ -57,22 +57,22 @@ Let's start, we assume that you have got Enterprise Edition somehow and download
 2. Open the browser(Chrome or Firefox) and go to the `http://localhost:5080/WebRTCAppEE`. 
     Let browser access your camera and mic unless it cannot send WebRTC Stream to the server.
 
-![WebRTCAppEE stands for WebRTCApp Enterprise Edition](https://github.com/mekya/antmedia-doc/blob/master/1webrtcd.png)
+![WebRTCAppEE stands for WebRTCApp Enterprise Edition](images/1webrtcd.png)
 WebRTCAppEE stands for WebRTCApp Enterprise Edition
    
 3. Write stream name or leave it as default and Press `Start Publishing` button. After you press the button, 
     "Publishing" blinking text should appear.
 
-![](https://github.com/mekya/antmedia-doc/blob/master/2webrtc.png)
+![](images/2webrtc.png)
    
 
 4. Go to the `http://localhost:5080/WebRTCAppEE/player.html`
 
-![](https://github.com/mekya/antmedia-doc/blob/master/44webrtc.png)
+![](images/44webrtc.png)
 
 5. Press `Start Play` button. After you press the button, webrtc stream should be started.
 
-![](https://github.com/mekya/antmedia-doc/blob/master/5webrtc.png)
+![](images/5webrtc.png)
 
 6. Open `http://localhost:5080/WebRTCAppEE/player.html` in other tabs and Press `Start Playing` button again 
    to check how it plays and what the latency is. 

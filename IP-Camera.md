@@ -2,7 +2,7 @@ Ant Media Server can pull RTSP streams from IP Cameras easily and it can be conf
 
 The main point is that the Ant Media Server is compatible with IP Cameras that supports ONVIF standard. In fact, almost all IP Cameras in the market supports ONVIF because it creates a common way manage IP Cameras from different manufacturers.
 
-![Onvif](https://raw.githubusercontent.com/mekya/antmedia-doc/master/onvif.jpeg)
+![Onvif](images/onvif.jpeg)
 
 Let’s have a look at how to pull stream from IP Camera.
 
@@ -14,7 +14,7 @@ Select `LiveApp` from applications on the left side menu, then click `New Live S
 
 You can also use `Auto-Discovery` feature! If IP cameras and Ant Media Server are in the same network, Ant Media Server can automatically discovers them. The screenshot of the Auto-Discovery result is shown below.
 
-![](https://raw.githubusercontent.com/mekya/antmedia-doc/master/addipcamera.png)
+![](images/addipcamera.png)
 
 ![](images/autodiscovery.png)
 
