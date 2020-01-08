@@ -17,7 +17,6 @@ You can easily call this method via the browser address bar since all of it is a
 Load the created heapdump.hprof file bt the VisualVM tool and make memory analyze.
 Check for any leaks. You can also use [Eclipse Memory Analyzer Tool](https://www.eclipse.org/mat/) tool to find leaks automatically.
 
-# Android SDK
 ## I get notSetRemoteDescription error.
-Check your device codec compatibility from:
+Your device may not have the necessary h264 codec. Check your device codec compatibility from:
 https://mozilla.github.io/webrtc-landing/pc_test_no_h264.html
