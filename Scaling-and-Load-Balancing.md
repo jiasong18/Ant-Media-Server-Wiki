@@ -34,12 +34,14 @@ sudo apt-get install -y mongodb-org
   ```
   * Create admin user and password (please change the values for `user` and `pwd` fields)
   ```
+  use admin
+
   db.createUser(
-    {
-      user: "superadmin",
-      pwd: "admin",
-      roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
-    }
+      {
+          user: "superadmin",
+          pwd: "admin",
+          roles: [ "root" ]
+      }
   )
   ```
   * Enable security in MongoDB confiruation 
