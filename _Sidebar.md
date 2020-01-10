@@ -1,7 +1,7 @@
 ## User Guide
+* [Introduction](Introduction)
 * [Quick Start](Quick-Start)
   * [Samples List](Sample-List)
-* [Introduction](Introduction)
 * [Installation](Installation)
 * [Publishing Live Streams](Publishing-Live-Streams)
   * [WebRTC Publishing](WebRTC-Publishing)
