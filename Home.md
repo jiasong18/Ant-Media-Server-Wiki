@@ -1,6 +1,4 @@
-***
-**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
-***
+
 [![Build Status](https://travis-ci.org/ant-media/Ant-Media-Server.svg?branch=master)](https://travis-ci.org/ant-media/Ant-Media-Server)
 
 Ant Media Server 
