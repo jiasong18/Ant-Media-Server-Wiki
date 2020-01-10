@@ -17,26 +17,26 @@
   * [HLS Playing](HLS-Playing)
   * [Embedded Web Player](Embedded-Web-Player)
 * [Conference Call](WebRTC-Conference-Call)
-* [-Peer to Peer Call](WebRTC-Peer-to-Peer-Communication)
+* [Peer to Peer Call](WebRTC-Peer-to-Peer-Communication)
 * [Adaptive Bitrate(Multi-Bitrate) Streaming](Adaptive-Bitrate-Streaming)
 * Video on Demand Streaming
 * Simulcasting to Social Media Channels
 * Clustering & Scaling
   * [Generic Installation](Scaling-and-Load-Balancing)
   * [Installation in AWS](Scaling-with-AWS)
-  * [-Installation in Azure](Scaling-with-Azure)
+  * [Installation in Azure](Scaling-with-Azure)
 * [WebRTC SDKs](WebRTC-SDKs)
-  * [-JavaScript SDK](WebRTC-JavaScript-SDK-Guide)
-  * [-Android SDK](WebRTC-Android-SDK-Documentation)
-  * [-iOS SDK](WebRTC-iOS-SDK-Documentation)
-  * [-Embedded SDK](WebRTC-Embedded-SDK-Documentation)
+  * [JavaScript SDK](WebRTC-JavaScript-SDK-Guide)
+  * [Android SDK](WebRTC-Android-SDK-Documentation)
+  * [iOS SDK](WebRTC-iOS-SDK-Documentation)
+  * [Embedded SDK](WebRTC-Embedded-SDK-Documentation)
 * RTMP SDKs
   * Android SDK
   * iOS SDK
 * [Security](Security-Documentation)
-  * [-Stream Security](Stream-Security-Documentation)
-  * [-SSL Setup for Ant Media Server](SSL-Setup)
-  * [-REST API Security](REST-API-Security-Documentation)
+  * [Stream Security](Stream-Security-Documentation)
+  * [SSL Setup for Ant Media Server](SSL-Setup)
+  * [REST API Security](REST-API-Security-Documentation)
 * Integration with your Project
   * [REST Guide](REST-Guide)
   * [Web Hooks](Webhook-Integration)
