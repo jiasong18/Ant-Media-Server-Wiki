@@ -92,7 +92,7 @@ docker build --network=host -t <image_tag> --build-arg AntMediaServer=<Replace_W
 ### 3. Run the Docker Container
 Now we have a docker container with Ant Media Server. Run the image.
 ```
-docker run --privileged=true -it <container_name>
+docker run --privileged=true -it <image_tag>
 ```
 
 ## Cluster Installation
