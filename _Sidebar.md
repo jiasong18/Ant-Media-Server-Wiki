@@ -64,6 +64,4 @@
 * [Troubleshooting](Troubleshooting)
 
 ## Draft
-* [How to Publish with Wirecast](How-to-Publish-with-Wirecast)
-* Nginx Load Balancer
- 
+* [How to Publish with Wirecast](How-to-Publish-with-Wirecast) 
