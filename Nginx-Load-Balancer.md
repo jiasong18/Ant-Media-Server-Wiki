@@ -59,10 +59,9 @@ In that file, copy the following contents
 stream {
     upstream stream_backend {
 	hash least_conn;
-        server AMS1_SERVER:1935;
-        server AMS2_SERVER:1935;
+	server AMS_ORIGIN1_IP:1935;
+    server AMS_ORIGIN2_IP:1935;
     }
-    
     
     server {
         listen        1935;
@@ -73,79 +72,113 @@ stream {
     
 }
 
-
-user  nginx;
-worker_processes  auto;
-
-error_log  /var/log/nginx/error.log warn;
-pid        /var/run/nginx.pid;
-
+user nginx;
+worker_processes auto;
+pid /var/run/nginx.pid;
+worker_rlimit_nofile 1048576;
 
 events {
-    worker_connections  1024;
-    multi_accept        on;
-    use                 epoll;
+    worker_connections 1048576;
+    multi_accept on;
+    use epoll;
 }
 
-worker_rlimit_nofile 4096;
-
 http {
-    #backend conf.
-    upstream ams_backend {
-	hash least_conn;
-        server AMS1_SERVER:5080;
-        server AMS2_SERVER:5080;
+      #Ant Media Origin
+      upstream antmedia_origin {
+      ip_hash;
+      server AMS_ORIGIN1_IP:5080;
+      server AMS_ORIGIN2_IP:5080;
+    }
+    #Ant Media Edge
+    upstream antmedia_edge {
+      ip_hash;
+      server AMS_EDGE1_IP:5080;
+      server AMS_EDGE2_IP:5080;
     }
 
-#redirect all http requests to https
-server {
-    listen 80 default_server;
-    server_name _;
-    return 301 https://$host$request_uri;
-}   
- 
+    sendfile on;
+    tcp_nopush on;
+    tcp_nodelay on;
+    server_tokens off;
+    keepalive_timeout 300s;
+    types_hash_max_size 2048;
+    include /etc/nginx/mime.types;
+    default_type application/octet-stream;
 
-#https configuration
-    server {
-	listen 443 ssl;
-	ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
-        ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
-        #ssl security
-        ssl_protocols       TLSv1 TLSv1.1 TLSv1.2;
-        ssl_ciphers         HIGH:!aNULL:!MD5;
-        ssl_prefer_server_ciphers  on;
-        ssl_session_cache    shared:SSL:10m;
-        ssl_session_timeout  24h;
-	server_name yourdomain.com;
+    # ssl settings
+    ssl_protocols TLSv1.2;
+    ssl_prefer_server_ciphers on;
+    ssl_ciphers         HIGH:!aNULL:!MD5;
+    ssl_session_cache shared:SSL:50m;
+    ssl_session_tickets off;
 
-        location / {
-            proxy_pass http://ams_backend;
-	    proxy_http_version 1.1;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header Host $host;
-            proxy_set_header Upgrade $http_upgrade;
-            proxy_set_header Connection "Upgrade";
-                }
-    }
-    include       /etc/nginx/mime.types;
-    default_type  application/octet-stream;
-    #added upstream info
+    # logs settings
     log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
                       '$status $body_bytes_sent "$http_referer" '
                       '"$http_user_agent" "$http_x_forwarded_for"'
-		      '"$hostname" "upstream: $upstream_addr"';
+		              '"$hostname" "upstream: $upstream_addr"';
+    access_log /var/log/nginx/access.log;
+    error_log /var/log/nginx/error.log;
 
-    access_log  /var/log/nginx/access.log  main;
-    sendfile        on;
-    tcp_nopush     on;
-    server_tokens off;
-    keepalive_timeout  65;
+    # gzip
+    gzip on;
+    gzip_disable "msie6";
+    gzip_http_version 1.1;
+    gzip_comp_level 6;
+    gzip_types text/plain text/css application/json application/javascript text/javascript application/x-javascript text/xml application/xml application/xml+rss application/vnd.ms-fontobject application/x-font-ttf font/opentype font/x-woff image/svg+xml image/x-icon;
 
-    #gzip  on;
+    # proxy settings
+    proxy_redirect off;
+    proxy_http_version 1.1;
+    proxy_read_timeout 10s;
+    proxy_send_timeout 10s;
+    proxy_connect_timeout 10s;
+     
+    #redirect all http requests to https
+    server {
+        listen 80 default_server;
+        server_name _;
+        return 301 https://$host$request_uri;
+    }  
 
+    #Origin Configuration
+    server {
+            listen 5443 ssl;
+            ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
+            ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
+            server_name ant.murat.ws;
 
-    include /etc/nginx/conf.d/*.conf;
+            location / {
+                proxy_pass http://antmedia_origin;
+    	    	proxy_http_version 1.1;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header Host $host;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection "Upgrade";
+            }
+        }
+    
+    
+    #Edge Configuration
+    server {
+            listen 443 ssl;
+	        ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
+                ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
+	        server_name ant.murat.ws;
+
+ 	        location / {
+                proxy_pass http://antmedia_edge;
+                proxy_http_version 1.1;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header Host $host;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection "Upgrade";
+            }
+        }
+
 }
+
 ```
 Save and close that file.
 
