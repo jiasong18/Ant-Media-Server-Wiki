@@ -8,6 +8,8 @@ Nginx started out as a open source web server designed for maximum performance a
 2. [Install LetsEncrypt](#Let's-Encrypt-for-Nginx-SSL-Termination)
 3. [Nginx Load balancer with ssl termination](#Configure-NGINX-as-a-Load-Balancer)
 
+![Open WebRTCAppEE](images/origin_edge.png)
+
 ## Nginx Installation
 > We prefer to install latest nginx version
 
