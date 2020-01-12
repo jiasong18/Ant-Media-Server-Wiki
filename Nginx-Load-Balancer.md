@@ -2,7 +2,7 @@
 
 Nginx started out as an open source web server designed for maximum performance and stability. Today, however, it also serves as a reverse proxy, HTTP load balancer, and email proxy for IMAP, POP3, and SMTP.
 
-# Prerequisites
+## Prerequisites
 *  [Four servers with Ubuntu 18.04 and Ant Media Enterprise installed](https://github.com/ant-media/Ant-Media-Server/wiki/Installation)
 * One server with Ubuntu 18.04 installed for Nginx Load Balancer
 * One server with Ubuntu 18.04 installed for MongoDB Server (Optional)
