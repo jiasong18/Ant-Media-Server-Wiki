@@ -213,4 +213,6 @@ Reference Link: https://github.com/ant-media/Ant-Media-Server/wiki/Scaling-and-L
 
 ## Ant Media Server Origin and Edge Installation
 
+Follow 2. step in the reference link
+
 Reference Link : https://github.com/ant-media/Ant-Media-Server/wiki/Scaling-and-Load-Balancing#2-installing-origin-group-and-edge-group 
