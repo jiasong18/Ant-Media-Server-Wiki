@@ -25,6 +25,7 @@
   * [Generic Installation](Scaling-and-Load-Balancing)
   * [Installation in AWS](Scaling-with-AWS)
   * [Installation in Azure](Scaling-with-Azure)
+  * [Nginx Load Balancer](Nginx-Load-Balancer)
 * [WebRTC SDKs](WebRTC-SDKs)
   * [JavaScript SDK](WebRTC-JavaScript-SDK-Guide)
   * [Android SDK](WebRTC-Android-SDK-Documentation)
