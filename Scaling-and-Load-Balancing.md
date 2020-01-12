@@ -15,7 +15,7 @@ Ant Media Server Cluster has mainly four components.
 To run Ant Media Server in Clustering please follow these steps.
 
 ## 1. Installing Database(MongoDB)
-You can install MongoDB to an instance or even you can make cluster installation for MongoDB. In this documentation, we explain how to install MongoDB to a Ubuntu 16.04 box.
+You can install MongoDB to an instance or even you can make cluster installation for MongoDB. In this documentation, we explain how to install MongoDB to a Ubuntu 16.04 and Ubuntu 18.04
  
 * Connect your instance and Run the following commands in the shell 
 ```
@@ -73,6 +73,11 @@ sudo change_server_mode.sh cluster <MONGODB_SERVER_IP>
 You can monitor all nodes in the cluster by visiting the web page below in any node.
 ````
 http://<ANT_MEDIA_SERVER_NODE_IP>:5080/#/cluster
+````
+> Note: If you set username and password authentication on MongoDB, you should run it as follow.
+````
+cd /usr/local/antmedia
+sudo change_server_mode.sh cluster <MONGODB_SERVER_IP> <MONGODB_USERNAME> <MONGODB_PASSWORD>
 ````
 
 #### Basics of Clustering
