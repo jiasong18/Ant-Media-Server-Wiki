@@ -1,17 +1,22 @@
 # What is Nginx ?
 
-Nginx started out as a open source web server designed for maximum performance and stability. Today, however, it also serves as a reverse proxy, HTTP load balancer, and email proxy for IMAP, POP3, and SMTP.
+Nginx started out as an open source web server designed for maximum performance and stability. Today, however, it also serves as a reverse proxy, HTTP load balancer, and email proxy for IMAP, POP3, and SMTP.
 
-> This document compatible all debian based os (Debian, Ubuntu etc.)
+# Prerequisites
+1. [4 servers with Ubuntu 18.04 and Ant Media Enterprise installed](https://github.com/ant-media/Ant-Media-Server/wiki/Installation)
+2. 1 server with Ubuntu 18.04 installed for Nginx Load Balancer
+3. 1 server with Ubuntu 18.04 installed for MongoDB Server (Optional)
+
+> This document compatible all Debian based os (Debian, Ubuntu, etc.)
 ## Installation Steps
 1. [Install Nginx](#Nginx-Installation)
 2. [Install LetsEncrypt](#Let's-Encrypt-for-Nginx-SSL-Termination)
-3. [Nginx Load balancer with ssl termination](#Configure-NGINX-as-a-Load-Balancer)
+3. [Nginx Load balancer with SSL termination](#Configure-NGINX-as-a-Load-Balancer)
 
 ![Open WebRTCAppEE](images/origin_edge.png)
 
 ## Nginx Installation
-> We prefer to install latest nginx version
+> We prefer to install latest Nginx version
 
 Install the prerequisites
 
@@ -57,7 +62,7 @@ create new a nginx.conf file with your favorite editor
 
 In that file, copy the following contents
 ```
-# rtmp stream configuration
+# RTMP stream configuration
 stream {
     upstream stream_backend {
 	hash least_conn;
