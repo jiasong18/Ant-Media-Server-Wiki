@@ -45,10 +45,10 @@ run the following commands to create certificate
 ```
 certbot --nginx -d yourdomain.com -d www.yourdomain.com
 ```
-### edit crontab file
-crontab -e
+edit crontab file
+`crontab -e`
 
-### add below line to renew certificate each 80 days.
+add below line to renew certificate each 80 days.
 `0 0 */80 * * root certbot -q renew --nginx`
 
 ## Configure NGINX as a Load Balancer
@@ -172,7 +172,7 @@ http {
             listen 443 ssl;
 	        ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
                 ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
-	        server_name yourdomain;
+	        server_name yourdomain.com;
 
  	        location / {
                 proxy_pass http://antmedia_edge;
