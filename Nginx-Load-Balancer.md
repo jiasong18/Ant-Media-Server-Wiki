@@ -193,7 +193,7 @@ On our server, we have to remove the symbolic link to default, in the /etc/nginx
 
 `sudo rm /etc/nginx/sites-enabled/default`
 
-### Check your configuration for any Error using the following command.
+Check your configuration for any Error using the following command.
 
 `nginx -t`
 
