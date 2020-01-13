@@ -1,6 +1,3 @@
-***
-**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
-***
 ## Build from Source
 
 ### Linux (Ubuntu)
