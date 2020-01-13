@@ -11,7 +11,7 @@
     * [Mobile App](https://github.com/ant-media/LiveVideoBroadcaster)
   * [Re-streaming](Re-streaming)
     * [Stream Sources (RTMP/HLS/RTSP)](External-Stream-Sources)
-    * [-IP Camera](IP-Camera)
+    * [IP Camera](IP-Camera)
 * [Playing Live Streams](Playing-Live-Streams)
   * [WebRTC Playing](WebRTC-Playing)
   * [HLS Playing](HLS-Playing)
