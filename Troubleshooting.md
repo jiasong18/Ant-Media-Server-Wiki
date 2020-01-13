@@ -24,3 +24,6 @@ Check for any leaks. You can also use [Eclipse Memory Analyzer Tool](https://www
 ## I get notSetRemoteDescription error.
 Your device may not have the necessary h264 codec. Check your device codec compatibility from:
 https://mozilla.github.io/webrtc-landing/pc_test_no_h264.html
+
+## I send a stream to the server with RTMP but I can't play the stream with WebRTC player?
+Be sure about video resolution in your adaptive settings is equals and less than the stream you send.
