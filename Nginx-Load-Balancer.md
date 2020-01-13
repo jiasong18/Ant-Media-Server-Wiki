@@ -197,22 +197,8 @@ On our server, we have to remove the symbolic link to default, in the /etc/nginx
 
 `nginx -t`
 
-### And Finally Enable and Restart nginx service
+And Finally Enable and Restart nginx service
 ```
 systemctl enable nginx
 systemctl restart nginx
 ```
-## Installing Database(MongoDB)
-You can install MongoDB to an instance or even you can make cluster installation for MongoDB
-
-If you wish, you can install MongoDB on another server. Here we chose to install on Load Balancer.
-
-Follow 1. step in the reference link
-
-Reference Link: https://github.com/ant-media/Ant-Media-Server/wiki/Scaling-and-Load-Balancing#1-installing-databasemongodb
-
-## Ant Media Server Origin and Edge Installation
-
-Follow 2. step in the reference link
-
-Reference Link : https://github.com/ant-media/Ant-Media-Server/wiki/Scaling-and-Load-Balancing#2-installing-origin-group-and-edge-group 
