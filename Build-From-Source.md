@@ -1,5 +1,3 @@
-## Build from Source
-
 ### Linux (Ubuntu)
 A couple of repos should be a clone and build with maven so that git and maven should be installed in advance
 
