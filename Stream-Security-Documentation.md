@@ -137,15 +137,15 @@ If you want to customize by yourself CORS Filters in Root, you can access in `SE
 
 ## 4. Hash-Based Token
 
-Firstly, settings should be enabled from the settings file of the application in `SERVER_FOLDER` / `webapp` / `{Application}` / `WEB-INF` / `red5-web.properties`
+Firstly, settings should be enabled from the settings file of the application in `SERVER_FOLDER` / `webapp` / `{Application}` / `WEB-INF` / `red5-web.properties` 
 
 <!-- > TODO: Please give settings file path of the application. -->
 
-    settings.hashControlPublishEnabled=false
-    settings.hashControlPlayEnabled=false
-    tokenHashSecret=
+    settings.hashControlPublishEnabled=true
+    settings.hashControlPlayEnabled=true
+    tokenHashSecret=PLEASE_WRITE_YOUR_SECRET_KEY
 
-Set true “settings.hashControlPublishEnabled” to enable secret based hash control for publishing operations, and “settings.hashControlPlayEnabled=” for playing operations.
+Set true `settings.hashControlPublishEnabled` to enable secret based hash control for publishing operations, and `settings.hashControlPlayEnabled` for playing operations.
 
 > Also, do not forget to define a secret key for generating a hash value.
 
