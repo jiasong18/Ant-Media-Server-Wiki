@@ -153,7 +153,7 @@ Set true `settings.hashControlPublishEnabled` to enable secret based hash contro
 
 **Step 1. Generate a Hash**
 
-You need to generate a hash value using the formula sha256(STREAM_ID + ROLE + SECRET) for your application and send to your clients. The values used for hash generation are:
+You need to generate a hash value using the formula `sha256(STREAM_ID + ROLE + SECRET)` for your application and send to your clients. The values used for hash generation are:
 
     STREAM_ID: The id of stream, generated in Ant Media Server.
     ROLE: It is either "play or "publish"
