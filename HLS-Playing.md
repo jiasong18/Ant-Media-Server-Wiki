@@ -24,3 +24,13 @@ https://developers.google.com/web/updates/2017/09/autoplay-policy-changes
 https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/
 
 Congrats. You're playing with HLS.
+
+## More Details About HLS 
+Make sure that HLS muxing is enabled in your application. You can check it on web management panel and check the `HLS Muxing` box in Settings of the app.
+ 
+Assume that HLS Muxing is enabled and there is a stream publishing to Ant Media Server with an RTMP URL in this format:
+ `rtmp://<SERVER_NAME>/LiveApp/<STREAM_ID>`
+
+* HLS URL is in this format: `http://<SERVER_NAME>:5080/LiveApp/streams/<STREAM_ID>.m3u8` 
+
+* If there are an adaptive streams enabled in Enterprise Edition, HLS Master URL is in this format: `http://<SERVER_NAME>:5080/LiveApp/streams/<STREAM_ID>_adaptive.m3u8`
