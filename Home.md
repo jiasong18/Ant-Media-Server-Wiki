@@ -6,16 +6,16 @@ Ant Media Server is a software that can stream live and VoD streams. It supports
 
 Here are the fundamental features of Ant Media Server:
 
-* Ultra Low Latency Adaptive One to Many WebRTC Live Streaming in Enterprise Edition
-* Adaptive Bitrate for Live Streams (WebRTC, MP4, HLS) in Enterprise Edition
-* SFU in One to Many WebRTC Streams in Enterprise Edition
-* Live Stream Publishing with RTMP and WebRTC
-* WebRTC to RTMP Adapter
-* IP Camera Support
-* Recording Live Streams (MP4 and HLS)
-* Restream to Social Media Simultaneously(Facebook and Youtube in Enterprise Edition)
-* One-Time Token Control in Enterprise Edition
-* Object Detection in Enterprise Edition
+* Ultra Low Latency Adaptive One to Many WebRTC Live Streaming in Enterprise Edition.
+* Adaptive Bitrate for Live Streams (WebRTC, MP4, HLS) in Enterprise Edition.
+* SFU in One to Many WebRTC Streams in Enterprise Edition.
+* Live Stream Publishing with RTMP and WebRTC.
+* WebRTC to RTMP Adapter.
+* IP Camera Support.
+* Recording Live Streams (MP4 and HLS).
+* Restream to Social Media Simultaneously(Facebook and Youtube in Enterprise Edition).
+* One-Time Token Control in Enterprise Edition.
+* Object Detection in Enterprise Edition.
 
 ## Community Edition & Enterprise Edition
 Ant Media Server has two versions. One of them is the Community Edition(Free) and the other one is Enterprise Edition. Community Edition is available to [download on Github.](https://github.com/ant-media/Ant-Media-Server)
