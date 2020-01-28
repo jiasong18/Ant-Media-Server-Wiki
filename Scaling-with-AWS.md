@@ -216,7 +216,7 @@ Your password is the one in “password” field in the format “i-xxxxxxxx”
 ## Test Fly
 
 For publishing please visit the `https://your-domain-name/WebRTCAppEE/` and click “Start Publishing” button. The default stream id is “stream1”
-For playing please visit the `https://your-domain-name:5443/WebRTCAppEE/` and click “Start Playing” button. The default stream will be played
+For playing please visit the `https://your-domain-name:5443/WebRTCAppEE/player.html` and click “Start Playing” button. The default stream will be played
 
 As you figure out, we connect default https port(443) for publishing and 5443 port for playing. Because we configure load balancer to forward default port(443) to origin group and 5443 to edge group.
 
