@@ -51,6 +51,7 @@ The table below summarises the available settings. Some settings don’t have to
 * **`settings.encoding.specific`**: Specific settings for selected encoder. For libx264 please check https://trac.ffmpeg.org/wiki/Encode/H.264
 * **`settings.defaultDecodersEnabled`**: If it is set `true`, WebRTC using default decoders(such as VP8, VP9). If it is set `false`, WebRTC using only default h264 decoder. Default value is `false`.
 * **`settings.remoteAllowedCIDR`**: Allowed IP addresses to reach REST API. It must be in CIDR format as a.b.c.d/x
+* **`settings.collectSocialMediaActivityEnabled`**: If it's enabled, interactivity(like, comment, etc.) is collected from social media channel. Default value is `false`.
 * **`db.app.name`**: Application name such as LiveApp, WebRTCApp etc.
 * **`db.name`**: Database name for the application.
 * **`db.type`**: Can be mongodb or mapdb.
