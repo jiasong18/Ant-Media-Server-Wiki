@@ -50,6 +50,28 @@ you will learn the basics of WebRTC JavaScript SDK and JavaScript Error Callback
 
 This documentation is for developers who need to callbacks and their descriptions for WebRTC operations.
 
+### WebRTC JavaScript Info Callbacks 
+
+  * **`initialized`**: WebSocket connection is initialized successfully in this state.
+
+  * **`publish_started`**: WebRTC Stream is published in this notification.
+
+  * **`publish_finished`**: WebRTC Stream is finished in this notification.
+
+  * **`screen_share_extension_available`**: Screen Share extension is available in this notification. 
+
+  * **`screen_share_stopped`**: Screen Share extension is stopped in this notification. 
+
+  * **`closed`**: WebSocket connection is closed in this state.
+
+  * **`pong`**: When client sent ping message, server answers pong message.
+
+  * **`refreshConnection`**: WebSocket connection is refreshed and stream is published in this state.
+
+  * **`ice_connection_state_changed`**: If Ice Connection is changed, server sends changed info.
+
+  * **`updated_stats`**: When Peer stats are changed, server sends updated values.
+
 ### WebRTC JavaScript Error Callbacks 
 
   * **`WebSocketNotSupported`**: WebSocket connection is not supported for environment or connection is not in the correct state.
