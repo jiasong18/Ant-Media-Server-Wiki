@@ -54,19 +54,19 @@ This documentation is for developers who need to callbacks and their description
 
   * **`initialized`**: WebSocket connection is initialized successfully in this state.
 
-  * **`publish_started`**: WebRTC Stream is published in this notification.
+  * **`publish_started`**: WebRTC stream is published in this state.
 
-  * **`publish_finished`**: WebRTC Stream is finished in this notification.
+  * **`publish_finished`**: WebRTC stream is finished in this state.
 
-  * **`screen_share_extension_available`**: Screen Share extension is available in this notification. 
+  * **`screen_share_extension_available`**: Screen Share extension is available in this state. 
 
-  * **`screen_share_stopped`**: Screen Share extension is stopped in this notification. 
+  * **`screen_share_stopped`**: Screen Share is stopped in this state. 
 
   * **`closed`**: WebSocket connection is closed in this state.
 
   * **`pong`**: When client sent ping message, server answers pong message.
 
-  * **`refreshConnection`**: WebSocket connection is refreshed and stream is published in this state.
+  * **`refreshConnection`**: When WebSocket connection is refreshed and stream is published in this state.
 
   * **`ice_connection_state_changed`**: If Ice Connection is changed, server sends changed info.
 
