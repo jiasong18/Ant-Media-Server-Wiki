@@ -54,9 +54,9 @@ This documentation is for developers who need to callbacks and their description
 
   * **`initialized`**: WebSocket connection is initialized successfully in this state.
 
-  * **`publish_started`**: WebRTC stream is published in this state.
+  * **`publish_started`**: WebRTC stream publishing has been started in this state.
 
-  * **`publish_finished`**: WebRTC stream is finished in this state.
+  * **`publish_finished`**: WebRTC stream publishing has been finished in this state.
 
   * **`screen_share_extension_available`**: Screen Share extension is available in this state. 
 
