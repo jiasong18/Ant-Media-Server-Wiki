@@ -31,4 +31,4 @@ ENTRYPOINT service antmedia restart && bash
 
 * Now we have a docker container with Ant Media Server. Lets run it.
 
-`docker run --privileged=true -it <container_name>`
+`docker run --network=host --privileged=true -it <container_name>`
