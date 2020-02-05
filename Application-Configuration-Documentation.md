@@ -39,8 +39,8 @@ The table below summarises the available settings. Some settings don’t have to
 * **`settings.streamFetcherRestartPeriod`**: It's mandatory. Restart time for fetched streams from external sources. Default value is `0`
 * **`settings.muxerFinishScript`**: Bash script file path will be called after stream finishes.
 * **`settings.webRTCFrameRate`**: It's mandatory. Determines the frame rate of video publishing to the WebRTC players. Default value is `20`
-* **`settings.webrtc.portRangeMin`**: It's mandatory. Determines the minimum port number for WebRTC connection. Default value is `0`.
-* **`settings.webrtc.portRangeMax`**: It's mandatory. Determines the maximum port number for WebRTC connection. Default value is `0`.
+* **`settings.webrtc.portRangeMin`**: Determines the minimum port number for WebRTC connections. Default value is `0`.
+* **`settings.webrtc.portRangeMax`**: Determines the maximum port number for WebRTC connections. Default value is `0`.
 * **`settings.webrtc.stunServerURI`**: Stun server URI used for WebRTC signaling. You can check: https://antmedia.io/learn-webrtc-basics-components/. Default value is `stun:stun.l.google.com:19302`.
 * **`settings.webrtc.tcpCandidateEnabled`**: It's mandatory. If it is set `true` then TCP candidates can be used for WebRTC connection. If it is false only UDP port will be used. Default value is `true`.
 * **`settings.encoding.encoderName`**: Can be h264_nvenc or libx264. If you set h264_nvenc but it cannot be opened then libx264 will be used.
