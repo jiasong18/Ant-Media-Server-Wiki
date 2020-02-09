@@ -21,7 +21,7 @@
 * [Adaptive Bitrate(Multi-Bitrate) Streaming](Adaptive-Bitrate-Streaming)
 * Video on Demand Streaming
 * Simulcasting to Social Media Channels
-* Clustering & Scaling
+* [Clustering & Scaling](Clustering-&-Scaling)
   * [Generic Installation](Scaling-and-Load-Balancing)
   * [Installation in AWS](Scaling-with-AWS)
   * [Installation in Azure](Scaling-with-Azure)
