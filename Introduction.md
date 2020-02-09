@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/ant-media/Ant-Media-Server.svg?branch=master)](https://travis-ci.org/ant-media/Ant-Media-Server)
+[![Build Status](https://travis-ci.com/ant-media/Ant-Media-Server.svg?branch=master)](https://travis-ci.com/ant-media/Ant-Media-Server)
 
 # Ant Media Server
 Ant Media Server is a software that can stream live and VoD streams. It supports scalable, ultra low latency (0.5 seconds) adaptive streaming and records live videos in several formats like HLS, MP4, etc.
