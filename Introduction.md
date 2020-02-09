@@ -47,7 +47,7 @@ Enterprise Edition can be purchased [on antmedia.io](https://antmedia.io)
 
 Ant Media Server has basically two types of licenses. 
 1. Ant Media Server Community Edition is free to use.  
-2. Ant Media Server Enterprise Edition has a paid license per instance. Paid license options are hourly, monthly, annually and perpetual. You can get licenses from [antmedia.io](https://antmedia.io) or you can use hourly licenses from Marketplaces in [AWS Marketplace](https://aws.amazon.com/marketplace/search/results?x=0&y=0&searchTerms=Ant+Media+Server&page=1&ref_=nav_search_box), [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Ant%20Media%20Server&page=1). 
+2. Ant Media Server Enterprise Edition has a paid license per instance. Paid license options are hourly, monthly, annually and perpetual. You can get licenses from [antmedia.io](https://antmedia.io) or you can use hourly licenses from Marketplaces in [AWS Marketplace](https://aws.amazon.com/marketplace/search/results?x=0&y=0&searchTerms=Ant+Media+Server&page=1&ref_=nav_search_box), [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Ant%20Media%20Server&page=1). There is also DigitalOcean marketplace image [here](https://marketplace.digitalocean.com/apps/ant-media-server-enterprise-edition). DigitalOcean image requires bring your own license. You can get licenses from [antmedia.io](https://antmedia.io)
 
 #### Enterprise Cluster License
 Enterprise Cluster License is almost same as the Enterprise License. Enterprise Cluster License supports many instances run simultaneously with the same license key. On the other hand, Enterprise License key only supports one instance at a time. 
@@ -78,4 +78,3 @@ There is a user community available in google group. You can join the google gro
 https://groups.google.com/forum/#!forum/ant-media-server
 
 You can also ask your questions at StackOverflow with the `ant-media-server` tag.
-
