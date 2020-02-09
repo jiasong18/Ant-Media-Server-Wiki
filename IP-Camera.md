@@ -26,7 +26,7 @@ Watch the IP Camera, just click the Play button on Actions.
 
 ## 2. Record IP Camera Streams
 
-The Ant Media Server can save IP Camera streams as MP4 format. In addition, it record streams with defined periods such one hour, ten hours interval. You can see these recorded files on the VoD tab in the management panel. You can set the period the `settings.streamFetcherRestartPeriod` in [App Configuration](App-Configuration)
+The Ant Media Server can save IP Camera streams as MP4 format. In addition, it record streams with defined periods such one hour, ten hours interval. You can see these recorded files on the VoD tab in the management panel. You can set the period the `settings.streamFetcherRestartPeriod` in [App Configuration](https://github.com/ant-media/Ant-Media-Server/wiki/Application-Configuration-Documentation)
 
 ![](images/ipcameravod.png)
 
