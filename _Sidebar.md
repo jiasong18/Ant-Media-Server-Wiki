@@ -44,7 +44,7 @@
   * [AWS S3](Amazon-(AWS)-S3-Integration)
   * Azure Blob
   * [User-defined Scripts](User-defined-Scripts)
-* Advanced
+* [Advanced](Advanced)
   * [GPU](GPU) 
     * [Driver Installation](GPU-Driver-Installation)
     * [Docker GPU Installation](Docker-GPU-Installation)
