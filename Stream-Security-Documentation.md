@@ -199,7 +199,7 @@ You need to generate a hash value using the formula sha256(STREAM_ID + ROLE + SE
     token : "hash",
     }
 
-> Please have a look at the principles described in the [WebRTC WebSocket wiki page](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-WebSocket-Messaging-Details).
+> Please have a look at the principles described in the [WebRTC WebSocket wiki page](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-WebSocket-Messaging-Reference).
 
 ### Evaluation of the Hash
 
