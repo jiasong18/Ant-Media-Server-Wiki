@@ -16,7 +16,7 @@ you will learn the basics of WebRTC JavaScript SDK and JavaScript Error Callback
 * **`checkExtension()`**: It's called to check chrome screen share extension is avaiable. If exists it call callback with "screen_share_extension_available".
 * **`enableMicInMixedAudio(enable)`**: It's called enable Microphone in Mixed Audio.
 * **`publish(streamId, token)`**: It's called to publish stream.
-* **`joinRoom(roomName, streamId)`**: It's called to Join Room function in N to N WebRTC Streaming. Check this: [Conference Call](#WebRTC-Conference-Call).
+* **`joinRoom(roomName, streamId)`**: It's called to Join Room function in N to N WebRTC Streaming.
 * **`play(streamId, token, roomId)`**: It's called when play the stream in N to N WebRTC.
 * **`stop(streamId)`**: It's called to stop the stream.
 * **`join(streamId)`**: It's called to join the stream.
