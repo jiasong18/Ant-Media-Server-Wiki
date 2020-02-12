@@ -22,6 +22,13 @@ We're assuming that your Ant Media Server accepts all streams. (There is no any 
 
 ![OBS (Open Broadcaster Software) Stream Configuration](images/OBS_Configuration.png) 
 
+#### Tune for Ultra Low Latency Streaming
+OBS by default is not optimized for ultra low latency streaming. If you push RTMP stream with OBS and play with WebRTC, please open `Settings > Output` and make the rate control `CBR(Constant Bitrate)` and Tune for `zerolatency`.  Secondly, you can configure the bitrate according to your quality and internet bandwidth requirements.
+
+![OBS (Open Broadcaster Software) Tune For ZeroLatency](images/tune_for_ultra_low_latency.png)
+
+**Please keep in mind** that if your network is not stable to send requested bitrate all the time, you'll see **freezes** in playing the stream.  
+
 ### 4: Start Streaming
 Close `Settings` window and just click the “Start Streaming” button in the main window of OBS.
 
