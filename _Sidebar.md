@@ -50,6 +50,7 @@
     * [Docker GPU Installation](Docker-GPU-Installation)
   * [Server Configuration](Server-Configuration-Documentation) 
   * [App Configuration](Application-Configuration-Documentation)
+  * [Create New Application](Create-New-Application)
   * [Build from Source](Build-From-Source)
 * [Load Testing](Load-Testing)
 
