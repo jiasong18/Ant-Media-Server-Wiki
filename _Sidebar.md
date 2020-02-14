@@ -58,8 +58,6 @@
 * [WebRTC - WebSocket Messaging Reference](WebRTC-WebSocket-Messaging-Reference)
 * Streaming Protocols
 
-## FAQ
-* Pixelating issue?
 
 ## Troubleshooting
 * [Troubleshooting](Troubleshooting)
