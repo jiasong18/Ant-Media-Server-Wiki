@@ -58,6 +58,9 @@ The table below summarises the available settings. Some settings don’t have to
 * **`db.host`**: Meaningful for MongoDB. It is the host address of MongoDB as `<mongo_host>:27017` or Mongo Replica Set as `<mongo_host>:27017/?replicaSet=<replication_name>`
 * **`db.user`**: MongoDB user name. Left as blank if no user credentials.
 * **`db.password`**: MongoDB password. Left as blank if no user credentials.
-* **`webapp.dbName`**: No need this setting.
-* **`webapp.contextPath`**: No need this setting.
-* **`webapp.virtualHosts`**: always *.
+* **`settings.encoding.encoderName`**: Name of the encoder to be used in adaptive bitrate. 
+	 * If there is a GPU, server tries to open h264_nvenc.
+	 * If there is no GPU, server tries to open libx264 by default
+* **`settings.encoding.preset`**: Encoder's preset value in adaptive bitrate
+	 Libx264 presets are there https://trac.ffmpeg.org/wiki/Encode/H.264.
+	 Ant Media Server uses "veryfast" by default
