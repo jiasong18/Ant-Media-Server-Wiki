@@ -20,11 +20,11 @@ When you clicking Add Facebook icon, you will face in Authentication page. The a
 
 ![](images/ant-media-server-application-facebook-authentication.png?raw=true)
 
-Once Facebook authorization is complete, your facebook account fan pages and profile page list will come up in Select the target to publish page. Whichever you want to be added, you should select it.
+Once Facebook authorization is complete, your Facebook account fan pages and profile page list will come up in Select the target to publish a page. Whichever you want to be added, you should select it.
 
 ![](images/ant-media-server-facebook-streaming-page.png?raw=true)
 
-After the select page, it will appear in Application / Settings / Social Streaming section.
+After the select page, it will appear in `Application` / `Settings` / `Social Streaming` section.
 
 **Note: In Authentication code page have a specific timeout time. Please perform this operation without delay**
 
@@ -40,7 +40,7 @@ Once Youtube authorization is complete, your Youtube account will come up in Set
 
 ![](images/ant-media-server-youtube-authenticated.png?raw=true)
 
-After the authorization, it will appear in Application / Settings / Social Streaming section.
+After the authorization, it will appear in `Application` / `Settings` / `Social Streaming` section.
 
 **Note: In Authentication code page have a specific timeout time. Please perform this operation without delay.**
 
@@ -54,7 +54,7 @@ When you clicking Add Periscope icon, you will face in Authentication page. Auth
 
 ![](images/ant-media-server-periscope-authenticated.png?raw=true)
 
-After the authorization, it will appear in Application / Settings / Social Streaming section
+After the authorization, it will appear in `Application` / `Settings` / `Social Streaming` section
 
 Note: In Authentication code page have a specific timeout time. Please perform this operation without delay.
 
@@ -62,7 +62,7 @@ Note: In Authentication code page have a specific timeout time. Please perform t
 
 ![](images/ant-media-server-application-social-streaming.png?raw=true)
 
-All of Social Media Authentications is completely you will see your Pages name written in Setting / Social Streaming section.
+All of Social Media Authentications is completely you will see your Pages name written in `Settings` / `Social Streaming` section.
 
 ![](images/ant-media-server-live-stream-social-media.png?raw=true)
 
