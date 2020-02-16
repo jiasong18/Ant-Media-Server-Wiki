@@ -1,8 +1,6 @@
-## General Steps Streaming in Social Media
-
 This guide describes how to live streaming in Social Media on Ant Media Server. This tutorial assumes that you have an Ant Media Server Enterprise Edition or a trial Enterprise Edition.
 
-### Step 1: Choose an Application for Using Social Media Streaming.
+## Step 1: Choose an Application for Using Social Media Streaming.
 
 Firstly, choose an application, you want to stream. Your social accounts are separate in each application. So, which application you have added your social media account, you can use it in that Application.
 
@@ -12,9 +10,9 @@ After clicking on Setting in application, you will see Social Media section in S
 
 ![](images/ant-media-server-application-social-streaming-setting.png?raw=true)
 
-### Step 2: Adding Social Media Account in Ant Media Server
+## Step 2: Adding Social Media Account in Ant Media Server
 
-Option 1 – Adding Facebook Account & Page in Ant Media Server
+### Option 1 – Adding Facebook Account & Page in Ant Media Server
 
 ![](images/ant-media-server-application-facebook-streaming-setting.png?raw=true)
 
@@ -30,7 +28,7 @@ After the select page, it will appear in Application / Settings / Social Streami
 
 **Note: In Authentication code page have a specific timeout time. Please perform this operation without delay**
 
-Option 2 – Adding Youtube Account in Ant Media Server
+### Option 2 – Adding Youtube Account in Ant Media Server
 
 ![](images/ant-media-server-application-youtube-streaming-setting.png?raw=true)
 
@@ -48,7 +46,7 @@ After the authorization, it will appear in Application / Settings / Social Strea
 
 **Note2: Your Live Streaming account must be verified. Account verification simple gif is here:** https://antmedia.io/youtube_verification_ant_media_server.gif
 
-Option 3 – Adding Periscope Account in Ant Media Server
+### Option 3 – Adding Periscope Account in Ant Media Server
 
 ![](images/ant-media-server-periscope-streaming-authentication.png?raw=true)
 
@@ -60,12 +58,11 @@ After the authorization, it will appear in Application / Settings / Social Strea
 
 Note: In Authentication code page have a specific timeout time. Please perform this operation without delay.
 
-Step 3: Live Streaming in Social Media
+## Step 3: Live Streaming in Social Media
 
 ![](images/ant-media-server-application-social-streaming.png?raw=true)
 
 All of Social Media Authentications is completely you will see your Pages name written in Setting / Social Streaming section.
-
 
 ![](images/ant-media-server-live-stream-social-media.png?raw=true)
 
