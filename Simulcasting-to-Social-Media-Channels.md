@@ -44,7 +44,7 @@ After the authorization, it will appear in `Application` / `Settings` / `Social 
 
 **Note: In Authentication code page have a specific timeout time. Please perform this operation without delay.**
 
-**Note2: Your Live Streaming account must be verified. Account verification simple gif is here:** https://antmedia.io/youtube_verification_ant_media_server.gif
+**Note2: Your Live Streaming account must be verified. Account verification simple gif is here:** ![](images/youtube_verification_ant_media_server.gif?raw=true)
 
 ### Option 3 – Adding Periscope Account in Ant Media Server
 
