@@ -1,6 +1,6 @@
 This guide describes how to live streaming in Social Media on Ant Media Server. This tutorial assumes that you have an Ant Media Server Enterprise Edition or a trial Enterprise Edition.
 
-## Step 1: Choose an Application for Using Social Media Streaming.
+## Step 1: Choose an Application for Using Social Media Streaming
 
 Firstly, choose an application, you want to stream. Your social accounts are separate in each application. So, which application you have added your social media account, you can use it in that Application.
 
@@ -44,7 +44,8 @@ After the authorization, it will appear in `Application` / `Settings` / `Social 
 
 **Note: In Authentication code page have a specific timeout time. Please perform this operation without delay.**
 
-**Note2: Your Live Streaming account must be verified. Account verification simple gif is here:** ![](images/youtube_verification_ant_media_server.gif?raw=true)
+**Note2: Your Live Streaming account must be verified. Account verification simple gif is here:** 
+![](images/youtube_verification_ant_media_server.gif?raw=true)
 
 ### Option 3 – Adding Periscope Account in Ant Media Server
 
