@@ -32,7 +32,7 @@ After the select page, it will appear in Application / Settings / Social Streami
 
 Option 2 – Adding Youtube Account in Ant Media Server
 
-![](images/ant-media-server-application-youtube-authentication.png?raw=true)
+![](images/ant-media-server-application-youtube-streaming-setting.png?raw=true)
 
 When you clicking Add Youtube icon, you will face in Authentication page. Authentication page opens, you should click https://www.google.com/device link and Copy Authentication code and enter it to Youtube Page.
 
