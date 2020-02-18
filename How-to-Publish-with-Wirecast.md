@@ -1,5 +1,3 @@
-# Draft
-
 Wirecast is a live video streaming production tool by Telestream. It allows users to create live or on-demand broadcasts for the web. Wirecast supports various sources for capturing such as webcams, ip cameras, NDIs, capture cards etc… We are going to use macbook’s webcam for this post.
 
 We need to create live stream in Ant Media Server, because we will use this live stream id for publishing stream in Wirecast. In Ant Media Server create a live stream with name WireCast1 as in the screen:
