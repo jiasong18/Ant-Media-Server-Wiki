@@ -1,6 +1,6 @@
 # Draft
 
-We need to create live stream in Ant Media Server, because we will use this live stream id for publishing stream in Wirecast. In Ant Media Server create a live stream with name: WireCast1 as in the screen:
+We need to create live stream in Ant Media Server, because we will use this live stream id for publishing stream in Wirecast. In Ant Media Server create a live stream with name WireCast1 as in the screen:
 
 ![](images/wirecast/image6.png?raw=true)
 
