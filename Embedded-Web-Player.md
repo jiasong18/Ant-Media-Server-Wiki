@@ -22,4 +22,5 @@ IFrame status changes to playing when any broadcast is streaming as below image
 If you embed `play.html` page in somewhere, stream resolution seems max-width = 640px, max-height = 480px. If you want to show more than height/width, you should change max-width and max-height parameters in `play.html` page.
 
 HLS Player parameters URL: https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/play.html#L34
+
 WebRTC Player parameters URL: https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/play.html#L50
