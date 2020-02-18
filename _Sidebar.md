@@ -7,6 +7,7 @@
   * [WebRTC Publishing](WebRTC-Publishing)
   * [RTMP Publishing](RTMP-Publishing)
     * [Open Broadcaster Software](Open-Broadcaster-Software-Publishing)
+    * [Wirecast](How-to-Publish-with-Wirecast)
     * [Teradek Vidiu Pro](Teradek-Publishing)
     * [Mobile App](https://github.com/ant-media/LiveVideoBroadcaster)
   * [Re-streaming](Re-streaming)
@@ -62,6 +63,3 @@
 
 ## Troubleshooting
 * [Troubleshooting](Troubleshooting)
-
-## Draft
-* [How to Publish with Wirecast](How-to-Publish-with-Wirecast) 
