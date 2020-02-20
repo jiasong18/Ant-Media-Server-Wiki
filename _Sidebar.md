@@ -63,3 +63,6 @@
 
 ## Troubleshooting
 * [Troubleshooting](Troubleshooting)
+
+## Draft
+* [Screen Share without Plugin](WebRTC-Screen-Sharing-without-Plugin)
