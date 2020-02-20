@@ -14,9 +14,7 @@ Go to WebRTC publishing web page which is `https://domainAddress:5443/WebRTCApp`
 
 You can see simple functions to [js/webrtc_adaptor.js](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/js/webrtc_adaptor.js) file to seamless switch between screen sharing without plugin and camera. You can take a look at the source code of <a href="https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/index.html">WebRTCApp/index.html</a>  to see the full implementation.
 
-
-
-Firstly, There is a new callback with "screen_share_extension_available". If callback function is called with this parameter, it means that Ant Media Server Screen Share extension is ready to use in the Chrome.
+Firstly, there is a new callback with `browser_screen_share_supported`. If callback function is called with this parameter, it means that your browser is Screen Share is ready to use in your browser.
 
 ```javascript
 
@@ -119,6 +117,9 @@ Firstly, There is a new callback with "screen_share_extension_available". If cal
 If your browser is support in `getDisplayMedia`, you only need to call `webRTCAdaptor.switchDesktopCapture(streamId);` function to switch the Screen Sharing
 > `webRTCAdaptor.switchDesktopCapture(streamId);`
 
+Please take a look at the Sample page code at [index.html](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/index.html).
+
+Screen Share without plugin file is located in here `/usr/local/antmedia/webapps/LiveApp/index.html`
 
 ### Switch back to Camera
 
@@ -138,5 +139,9 @@ You should change some definition in `mediaConstraint` as below
 
 ```
 
-After the changing in `mediaConstraints` you only need to call `webRTCAdaptor.switchDesktopCapture(streamId);` function to switch the Screen Sharing
+After the changed in `mediaConstraints` you only need to call `webRTCAdaptor.switchDesktopCapture(streamId);` function to switch the Screen Sharing
 > `webRTCAdaptor.switchDesktopCapture(streamId);`
+
+Please take a look at the Sample page code at [camera_plus_screen.html](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/camera_plus_screen.html).
+
+Screen Share with Camera file is located in here `/usr/local/antmedia/webapps/LiveApp/camera_plus_screen.html`
