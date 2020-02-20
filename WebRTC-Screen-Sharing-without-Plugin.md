@@ -114,12 +114,29 @@ Firstly, There is a new callback with "screen_share_extension_available". If cal
 
 ```
 
-Secondly, if your browser is support in `getDisplayMedia`, you only need to call `webRTCAdaptor.switchDesktopCapture(streamId);` function to switch the Screen Sharing
+** Switch to Screen Share **
+
+If your browser is support in `getDisplayMedia`, you only need to call `webRTCAdaptor.switchDesktopCapture(streamId);` function to switch the Screen Sharing
 > `webRTCAdaptor.switchDesktopCapture(streamId);`
 
 
-Lastly, to switch back to camera, just again call to `webRTCAdaptor.switchVideoCapture(streamId);` function.
+** Switch back to Camera **
+
+Switch back to camera, just again call to `webRTCAdaptor.switchVideoCapture(streamId);` function.
 > `webRTCAdaptor.switchVideoCapture(streamId);`
 
+**Switch to Screen Share with Camera**
 
+You should change some definition in `mediaConstraint` as below 
 
+```javascript
+
+	var mediaConstraints = {
+		video : "screen+camera",
+		audio : true
+	}; 
+
+```
+
+After the changing in `mediaConstraints` you only need to call `webRTCAdaptor.switchDesktopCapture(streamId);` function to switch the Screen Sharing
+> `webRTCAdaptor.switchDesktopCapture(streamId);`
