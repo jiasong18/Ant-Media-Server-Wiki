@@ -11,6 +11,11 @@ Firstly, you should have `getDisplayMedia` supported browser. You can see `getDi
 <li> Go to WebRTC publishing web page which is `https://domainAddress:5443/WebRTCApp` (Community Edition ) or `https://domainAddress:5443/WebRTCAppEE` (Enterprise Edition). By the way,  you need to assign a domain to your server and <a href="https://github.com/ant-media/Ant-Media-Server/wiki/SSL-Setup">install SSL. </a>Otherwise, chrome does not let you access the camera or screen.
 </li>
 
+### Implementing WebRTC Screen Sharing
+
+You can see simple functions to [js/webrtc_adaptor.js](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/js/webrtc_adaptor.js) file to seamless switch between screen sharing without plugin and camera. You can take a look at the source code of <a href="https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/index.html">WebRTCApp/index.html</a>  to see the full implementation.
+
+
 
 
 
