@@ -2,7 +2,7 @@ Seamless switch between WebRTC Screen Sharing & Camera is available on both Comm
 
 <!-- Picture -->
 
-### Try WebRTC Screen Sharing without plugin
+## Try WebRTC Screen Sharing without plugin
 
 Firstly, you should have `getDisplayMedia` supported browser. You can see `getDisplayMedia` supported browser list in [here](https://caniuse.com/#search=getDisplayMedia).
 
@@ -10,7 +10,7 @@ Install Ant Media Server to your server in the cloud with <a href="https://gith
 
 Go to WebRTC publishing web page which is `https://domainAddress:5443/WebRTCApp` (Community Edition ) or `https://domainAddress:5443/WebRTCAppEE` (Enterprise Edition). By the way,  you need to assign a domain to your server and <a href="https://github.com/ant-media/Ant-Media-Server/wiki/SSL-Setup">install SSL. </a>Otherwise, chrome does not let you access the camera or screen.
 
-### Implementing WebRTC Screen Sharing
+## Implementing WebRTC Screen Sharing
 
 You can see simple functions to [js/webrtc_adaptor.js](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/js/webrtc_adaptor.js) file to seamless switch between screen sharing without plugin and camera. You can take a look at the source code of <a href="https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/index.html">WebRTCApp/index.html</a>  to see the full implementation.
 
@@ -114,18 +114,18 @@ Firstly, There is a new callback with "screen_share_extension_available". If cal
 
 ```
 
-** Switch to Screen Share **
+### Switch to Screen Share
 
 If your browser is support in `getDisplayMedia`, you only need to call `webRTCAdaptor.switchDesktopCapture(streamId);` function to switch the Screen Sharing
 > `webRTCAdaptor.switchDesktopCapture(streamId);`
 
 
-** Switch back to Camera **
+### Switch back to Camera
 
 Switch back to camera, just again call to `webRTCAdaptor.switchVideoCapture(streamId);` function.
 > `webRTCAdaptor.switchVideoCapture(streamId);`
 
-**Switch to Screen Share with Camera**
+### Switch to Screen Share with Camera
 
 You should change some definition in `mediaConstraint` as below 
 
