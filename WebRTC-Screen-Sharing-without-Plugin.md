@@ -155,5 +155,3 @@ After the changed in `mediaConstraints` you only need to call `webRTCAdaptor.swi
 > `webRTCAdaptor.switchDesktopCapture(streamId);`
 
 Please take a look at the Sample page code at [camera_plus_screen.html](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/camera_plus_screen.html).
-
-Screen Share with Camera file is located in here `/usr/local/antmedia/webapps/LiveApp/camera_plus_screen.html`
