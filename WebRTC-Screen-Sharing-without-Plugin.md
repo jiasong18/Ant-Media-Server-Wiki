@@ -1,4 +1,4 @@
-Seamless switch between WebRTC Screen Sharing & Camera is available on both Community and Enterprise Edition. This means seamless is that you can switch between Screen & Camera in the same session.
+Seamless switch between WebRTC Screen Sharing & Camera is available on both Community and Enterprise Edition. It means that you can switch between Screen & Camera in the same session.
 
 ![WebRTC Screen Share without Plugin](images/webrtc-screen-share-without-plugin.png)
 
