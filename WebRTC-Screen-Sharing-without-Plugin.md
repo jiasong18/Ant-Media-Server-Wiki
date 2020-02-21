@@ -10,13 +10,13 @@ Visit the WebRTC publishing web page which is `https://domainAddress:5443/WebRTC
 
 > Quick Link: [Learn How to Install SSL to your Ant Media Server](https://github.com/ant-media/Ant-Media-Server/wiki/SSL-Setup)
 
-## Implementing WebRTC Screen Sharing
+## Using WebRTC Screen Sharing 
 
 You can see simple functions to [js/webrtc_adaptor.js](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/js/webrtc_adaptor.js) file to seamless switch between screen sharing and camera. 
 
 You can take a look at the source code of <a href="https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/index.html">WebRTCApp/index.html</a>  to see the full implementation.
 
-Firstly, there is a new callback with `browser_screen_share_supported`. If callback function is called with this parameter, it means that your browser Screen Share is ready to use.
+Firstly, there is a new callback with `browser_screen_share_supported`. If callback method is called with this parameter, it means that your browser Screen Share is ready to use.
 
 ```javascript
 
@@ -116,12 +116,11 @@ Firstly, there is a new callback with `browser_screen_share_supported`. If callb
 
 ### Switch to Desktop Screen Share
 
-If your browser is support in `getDisplayMedia`, you only need to call `webRTCAdaptor.switchDesktopCapture(streamId);` function to switch the Screen Sharing
+If your browser supports  `getDisplayMedia`, you only need to call `webRTCAdaptor.switchDesktopCapture(streamId);` function to switch the Screen Sharing
 > `webRTCAdaptor.switchDesktopCapture(streamId);`
 
 Please take a look at the Sample page code at [index.html](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/index.html).
 
-Screen Share without plugin file is located in here `/usr/local/antmedia/webapps/LiveApp/index.html`
 
 ### Switch back to Camera
 
