@@ -44,7 +44,7 @@ $ cd ../..
 $ git clone https://github.com/ant-media/Ant-Media-Server.git
 $ cd Ant-Media-Server
 $ mvn clean install -Dmaven.javadoc.skip=true -Dmaven.test.skip=true -Dgpg.skip=true
-$ ./repackage.sh
+$ ./repackage_community.sh
 ```
 
 If everything goes well, a new packaged Ant Media Server(ant-media-server-x.x.x.zip) file will be created 
