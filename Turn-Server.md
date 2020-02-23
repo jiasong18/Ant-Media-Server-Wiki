@@ -27,10 +27,11 @@ add the below line
 `vim /etc/turnserver.conf`
 
 Just you need 2 lines.
-```
-user=username:password
-realm=your_public_ip_address
-```
+
+`user=username:password`
+
+`realm=your_public_ip_address`
+
 ## Restart turn server
 
 `systemctl restart coturn`
