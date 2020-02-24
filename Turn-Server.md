@@ -32,7 +32,7 @@ just add it to the 2 lines below.
 user=username:password
 realm=your_public_ip_address
 ```
-## Restart turn server
+and restart turn server
 
 `systemctl restart coturn`
 
