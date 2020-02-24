@@ -23,6 +23,7 @@ add the below line
 `TURNSERVER_ENABLED=1`
 
 ## Configuration turn server
+Edit the following file.
 
 `vim /etc/turnserver.conf`
 
@@ -43,7 +44,7 @@ relay-ip=your_private_ip
 external-ip=your_public_ip/your_private_ip
 ```
 ```
-##Open the following ports:
+#Open the following ports on AWS console
 TCP 443 #TLS listening port
 TCP 3478-3479 #coturn listening port
 TCP 32355-65535 #relay ports range
@@ -55,3 +56,7 @@ That 's it.
 You can check your turn server the below link.
 
 https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/
+
+![](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/turn1.png)
+![](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/turn2.png)
+![](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/turn3.png)
