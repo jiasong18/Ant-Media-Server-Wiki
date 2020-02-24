@@ -36,7 +36,7 @@ realm=your_public_ip_address
 
 `systemctl restart coturn`
 
-## If you use AWS EC2 instance, you need to add extra the below lines 
+* If you use AWS EC2 instance, you need to add extra the below lines 
 ```
 #EC2 private ip address
 relay-ip=your_private_ip
