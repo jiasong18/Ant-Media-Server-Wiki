@@ -26,4 +26,16 @@ Your device may not have the necessary h264 codec. Check your device codec compa
 https://mozilla.github.io/webrtc-landing/pc_test_no_h264.html
 
 ## I send a stream to the server with RTMP but I can't play the stream with WebRTC player?
+
+This issue( "NoStreamExist") due to your sending stream resolution is not enough for the configured Adaptive Bitrate values.
+
+In WebRTC side, you can check your camera resolution capacity in below links:
+https://webrtchacks.github.io/WebRTC-Camera-Resolution/
+https://webrtc.github.io/samples/src/content/getusermedia/resolution/
+
+In RTMP side, you need to check your Video Resolution(Output Resolution) setting values in OBS Video section as an image -> https://imgur.com/a/JlVv04h
+Your Output resolution size should be high than your Adaptive Streaming setting.
+
+If you want to stream 720HD, you need to provide the requirements at least 720p.
+
 Be sure about video resolution in your adaptive settings is equals and less than the stream you send.
