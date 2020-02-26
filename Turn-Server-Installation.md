@@ -43,8 +43,9 @@ relay-ip=your_private_ip
 #EC2 Public/Private ip address
 external-ip=your_public_ip/your_private_ip
 ```
+* Open the following ports on AWS console
+
 ```
-#Open the following ports on AWS console
 TCP 443 #TLS listening port
 TCP 3478-3479 #coturn listening port
 TCP 32355-65535 #relay ports range
