@@ -59,5 +59,6 @@ Open the following link and fill in the blanks then `Add Server`
 [https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/](https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/)
 
 ![](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/turn1.png)
-If everything is fine, you will get the output as in the below image.
+
+Then click `Gather Candidates`. If everything is fine, you will get the output as in the below image.
 ![](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/turn3.png)
