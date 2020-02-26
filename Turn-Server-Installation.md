@@ -53,10 +53,11 @@ UDP 32355-65535 #relay ports range
 ```
 That 's it. 
 
-> You can check your turn server the below link.
+## How to test Turn Server
+Open the following link and fill in the blanks then `Add Server`
 
 [https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/](https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/)
 
 ![](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/turn1.png)
-![](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/turn2.png)
+If everything is fine, you will get the output as in the below image.
 ![](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/turn3.png)
