@@ -5,12 +5,12 @@ Kafka, Logstash, Elasticsearch ve Grafana Kurulumu
 apt-get update && apt-get install openjdk-8-jdk -y
 wget -qO- https://archive.apache.org/dist/kafka/2.2.0/kafka_2.12-2.2.0.tgz | tar -zxvf- -C /opt/ && mv /opt/kafka* /opt/kafka
 
-# server.properties dosyası düzenlenir.
+#server.properties dosyası düzenlenir.
 vim /opt/kafka/config/server.properties
 
 listeners=PLAINTEXT://your_server_ip:9092
 
-# Kafka start edilir.
+#Kafka start edilir.
 
 /opt/kafka/bin/zookeeper-server-start.sh /opt/kafka/config/zookeeper.properties &
 /opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties &
