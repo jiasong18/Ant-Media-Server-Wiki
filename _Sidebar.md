@@ -67,3 +67,4 @@
 ## Draft
 * [Screen Share without Plugin](WebRTC-Screen-Sharing-without-Plugin)
 * [Turn Server Installation](Turn-Server-Installation)
+* [Kafka, Logstash, Grafana, Elasticsearch](Kafka,-Logstash,-Elasticsearch-ve-Grafana-Kurulumu)
