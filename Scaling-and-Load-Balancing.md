@@ -67,11 +67,11 @@ You can easily switch Ant Media Server mode from `standalone` mode to `cluster` 
 
 ````
 cd /usr/local/antmedia
-sudo change_server_mode.sh cluster <MONGODB_SERVER_IP>
+sudo ./change_server_mode.sh cluster <MONGODB_SERVER_IP>
 ````
 > Note: If you set username and password authentication on MongoDB, you should run `change_server_mode.sh` as follow.
 ````
-sudo change_server_mode.sh cluster <MONGODB_SERVER_IP> <MONGODB_USERNAME> <MONGODB_PASSWORD>
+sudo ./change_server_mode.sh cluster <MONGODB_SERVER_IP> <MONGODB_USERNAME> <MONGODB_PASSWORD>
 ````
 
 You can monitor all nodes in the cluster by visiting the web page below in any node.
