@@ -92,7 +92,7 @@ http://<ANT_MEDIA_SERVER_NODE_IP>:5080/#/cluster
 For any case, if you want to return back to standalone mode, just run the following command
 ````
 cd /usr/local/antmedia
-sudo change_server_mode.sh standalone
+sudo ./change_server_mode.sh standalone
 ````
 ## 3. Installing Load Balancer(HAProxy)
 
