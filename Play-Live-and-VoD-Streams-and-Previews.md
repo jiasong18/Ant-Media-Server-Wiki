@@ -33,7 +33,7 @@ Again assume that there is a live stream in Ant Media Server with `<STREAM_ID>` 
 After live stream is finished, the URL above plays the recorded MP4 file if it is created.
 
 ## Get Preview Live and VoD Streams (Enterprise Only)
-* Add at least one adaptive stream (For WebRTC streaming)
+* Add at least one adaptive stream
 * Preview image URL will be available in this URL template 
 `http://<SERVER_NAME>:5080/<APP_NAME>/previews/<STREAM_ID>.png` 
 * Preview image is saved as 480p
