@@ -121,37 +121,14 @@ If your browser supports  `getDisplayMedia`, you only need to call `webRTCAdapto
 
 Please take a look at the Sample page code at [index.html](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/index.html).
 
+### Switch to Screen Share with Camera
+
+You only need to call `webRTCAdaptor.switchDesktopCaptureWithCamera(streamId);` function to switch the Screen Sharing.
+> `webRTCAdaptor.switchDesktopCaptureWithCamera(streamId);`
 
 ### Switch back to Camera
 
 Switch back to camera, just again call to `webRTCAdaptor.switchVideoCapture(streamId);` function.
 > `webRTCAdaptor.switchVideoCapture(streamId);`
 
-### Switch to Screen Share with Camera
-
-You should change some definition in `mediaConstraint` as below 
-
-```javascript
-
-	var mediaConstraints = {
-		video : "screen+camera",
-		audio : true
-	}; 
-
-```
-You can also change camera location and pixels as below:
-
-```javascript
-        var webRTCAdaptor = new WebRTCAdaptor({
-        ...
-	camera_location: "top",  // top or bottom
-	camera_margin: 5,  // in pixel, margin between edges
-	camera_percent: 15, //camera width percentage, it's width % of total view
-        ...
-	});
-```
-
-After the changed in `mediaConstraints` you only need to call `webRTCAdaptor.switchDesktopCapture(streamId);` function to switch the Screen Sharing
-> `webRTCAdaptor.switchDesktopCapture(streamId);`
-
-Please take a look at the Sample page code at [camera_plus_screen.html](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/camera_plus_screen.html).
+Please take a look at the Sample pages code at [camera_plus_screen.html](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/camera_plus_screen.html) and [index.html](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/index.html).
