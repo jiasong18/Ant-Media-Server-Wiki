@@ -123,7 +123,7 @@ Please take a look at the Sample page code at [index.html](https://github.com/an
 
 ### Switch to Screen Share with Camera
 
-You only need to call `webRTCAdaptor.switchDesktopCaptureWithCamera(streamId);` function to switch the Screen Sharing.
+You only need to call `webRTCAdaptor.switchDesktopCaptureWithCamera(streamId);` function to switch the Screen Sharing with Camera
 > `webRTCAdaptor.switchDesktopCaptureWithCamera(streamId);`
 
 ### Switch back to Camera
