@@ -47,6 +47,6 @@ If you want to remove REST Filter in AMS, you should delete below codes in SERVE
 
 <!-- > TODO: Don't quote the sentences too much. -->
 
-**If you delete AuthenticationFilter code block in Application, every one access your REST API.**
+**If you delete AuthenticationFilter code block in Application, every one can access your REST API.**
 
 <!-- > TODO: Don't give contact details. Because this is not a blog post. -->
