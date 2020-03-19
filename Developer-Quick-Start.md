@@ -1,7 +1,7 @@
 ## Requirements
 * Ubuntu 16.04 or 18.04
 * Latest update of Java JDK 8. In the future Java 11 will be supported.
-
+* Apache Maven 3
 ## Recommended folder structure and projects:
 * Clone Ant-Media-Server, Ant-Media-ServerCommon, ant-media-server-parent,  Ant-Media-Server-Service, ManagementConsole_WebApp, red5-plugins, StreamApp projects from [GitHub](https://github.com/ant-media) into **_$home_directory_path/AntMedia_** where **_$home_directory_path_** is path of your home directory.
 * If you are a Enterprise developer: clone the Ant-Media-Enterprise from Gitlab into **_$home_directory_path/AntMedia_**.
@@ -13,3 +13,5 @@
 ### Eclipse Plugins
 * _SonarLint_ : for static code analysis
 * _EclEmma_ : for test coverage
+### Maven setup
+* Change the default Maven used in Eclipse by giving path of the Maven home directory (_/usr/share/$maven_version_ for default installation) in the Preferences/Maven/Installations section of Eclipse.
