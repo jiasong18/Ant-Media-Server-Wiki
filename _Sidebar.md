@@ -72,3 +72,4 @@
 ## Proposals
 * Git Branching
 * UML Diagrams
+* [Developer Quick Start](Developer-Quick-Start)
