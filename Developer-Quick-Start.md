@@ -13,5 +13,12 @@
 ### Eclipse Plugins
 * _SonarLint_ : for static code analysis
 * _EclEmma_ : for test coverage
-### Maven setup
+### Eclipse and Maven setup
 * Change the default Maven used in Eclipse by giving path of the Maven home directory (_/usr/share/$maven_version_ for default installation) in the Preferences/Maven/Installations section of Eclipse.
+* Import the projects to the Eclipse using import _existing Maven projects_ wizard.
+## Deployment
+* _redeploy.sh_ scripts in in Ant-Media-Server or Ant-Media-Enterprise can be used to build and deploy Ant Media Server into **_$home_directory_path/softwares/ant-media-server_**
+## Debugging the Server
+* Start the server in debug mode using _start-debug.sh_ script in **_$home_directory_path/softwares/ant-media-server_** which is generated after deployment.
+* Create a Remote Java Application Debug Configuration in Eclipse in Debug Configurations settings (Host: localhost Port:8787)
+* add all the AntMedia Server projects in Eclipse to the Source Lookup Path in the Debug Configuration.
