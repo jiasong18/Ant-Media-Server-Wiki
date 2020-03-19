@@ -2,7 +2,7 @@
 * Ubuntu 16.04 or 18.04
 * Latest update of Java JDK 8. In the future Java 11 will be supported.
 * Apache Maven 3
-## Recommended folder structure and projects:
+## Recommended Folder Structure and Projects:
 * Clone Ant-Media-Server, Ant-Media-ServerCommon, ant-media-server-parent,  Ant-Media-Server-Service, ManagementConsole_WebApp, red5-plugins, StreamApp projects from [GitHub](https://github.com/ant-media) into `$home_directory_path/AntMedia` where `$home_directory_path` is path of your home directory.
 * If you are a Enterprise developer: clone the Ant-Media-Enterprise from Gitlab into `$home_directory_path/AntMedia`.
 * Create folder `$home_directory_path/softwares/ant-media-server` for the deployed Ant Media Server. Some deployment scripts like _redeploy.sh_ will copy the compiled Ant Media Server into this directory.
@@ -22,3 +22,8 @@
 * Start the server in debug mode using _start-debug.sh_ script in `$home_directory_path/softwares/ant-media-server` which is generated after deployment.
 * Create a Remote Java Application Debug Configuration in Eclipse in Debug Configurations settings (Project: ant-media-server Host: localhost Port: 8787)
 * Add all the AntMedia Server projects in Eclipse to the Source Lookup Path in the Source Tab of the Debug Configuration.
+## Browser Debugging
+* The messages exchanged between AMS applications like WebRTCAppEE and browser and console print-outs can be useful for debugging. They can be observed by using Developer Tools of the browsers. 
+## Recommended Programs to Install for Testing
+* ffmpeg and OBS can be used for publishing rmtp streams to the Ant Media Server.
+* Example ffmpeg command for streaming an mp4 file: ffmpeg -re -i `$video_path/video.mp4` -codec copy -f flv `rtmp://localhost/WebRTCAppEE/stream1`
