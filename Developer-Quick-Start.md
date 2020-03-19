@@ -20,5 +20,5 @@
 * _redeploy.sh_ scripts in in Ant-Media-Server or Ant-Media-Enterprise can be used to build and deploy Ant Media Server into `$home_directory_path/softwares/ant-media-server`
 ## Debugging the Server
 * Start the server in debug mode using _start-debug.sh_ script in `$home_directory_path/softwares/ant-media-server` which is generated after deployment.
-* Create a Remote Java Application Debug Configuration in Eclipse in Debug Configurations settings (Host: localhost Port:8787)
-* add all the AntMedia Server projects in Eclipse to the Source Lookup Path in the Debug Configuration.
+* Create a Remote Java Application Debug Configuration in Eclipse in Debug Configurations settings (Project: ant-media-server Host: localhost Port: 8787)
+* Add all the AntMedia Server projects in Eclipse to the Source Lookup Path in the Source Tab of the Debug Configuration.
