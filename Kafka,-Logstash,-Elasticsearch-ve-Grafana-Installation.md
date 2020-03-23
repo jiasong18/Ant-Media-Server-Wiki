@@ -234,3 +234,23 @@ Default username and password
 1.
 ![Grafana1](images/grafana1.png)
 
+2.
+![Grafana2](images/grafana2.png)
+
+3.
+![Grafana3](images/grafana3.png)
+![Grafana3_1](images/grafana3_1.png)
+
+4.
+![Grafana4](images/grafana4.png)
+
+5.
+![Grafana5](images/grafana5.png)
+
+6. 
+![Grafana6](images/grafana6.png)
+
+7. 
+![Grafana7](images/grafana7.png)
+
+
