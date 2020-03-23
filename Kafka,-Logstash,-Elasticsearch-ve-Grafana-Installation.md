@@ -224,7 +224,12 @@ systemctl enable grafana-server
 systemctl start grafana-server
 ```
 login as follow
+
 `http://your_ip_address:3000/login`
 
-Default username and password 
+Default username and password
+
 `admin/admin`
+
+### Grafana Configuration
+
