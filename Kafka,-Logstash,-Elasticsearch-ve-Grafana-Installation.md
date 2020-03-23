@@ -238,11 +238,11 @@ Default username and password
 ![Grafana2](images/grafana2.png)
 
 3. Set setting as below
-URL : http://127.0.0.1:9200
 ```
-**Index name: logstash-***
-**Time filed name: @timestamp**
-**Version: 7.0+**
+URL : http://127.0.0.1:9200
+Index name: logstash-
+Time filed name: @timestamp
+Version: 7.0+
 ```
 ![Grafana3_1](images/grafana3_1.png)
 ![Grafana3](images/grafana3.png)
