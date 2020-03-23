@@ -2,13 +2,13 @@ In this document, you can monitor Ant Media Server with Kafka, Elastic Search, a
 
 ## **Installation Steps**
 
-**1.** [Kafka Installation and Configuration](#Kafka-Installation-and-Configuration)
+* [Kafka Installation and Configuration](#Kafka-Installation-and-Configuration)
 
-**2.** [Elasticsearch Installation](#Elastic-Search-Installation)
+* [Elasticsearch Installation](#Elastic-Search-Installation)
 
-**3.** [Logstash Installation and Configuration](#Logstash-Installation)
+* [Logstash Installation and Configuration](#Logstash-Installation)
 
-**4.** [Grafana Installation and Configuration](#Grafana-Installation)
+* [Grafana Installation and Configuration](#Grafana-Installation)
 
 ### 1. Kafka Installation and Configuration
 
