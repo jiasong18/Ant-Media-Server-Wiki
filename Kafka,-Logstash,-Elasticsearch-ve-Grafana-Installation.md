@@ -14,7 +14,7 @@ In this document, you can monitor Ant Media Server with Kafka, Elastic Search, a
 
 Kafka is useful for building real-time streaming data pipelines to get data between the systems or applications.
 
-Apache Kafka required Java to run. You must have java installed on your system
+Apache Kafka requires Java. You must have installed java on your system
 
 `apt-get update && apt-get install openjdk-8-jdk -y`
 
