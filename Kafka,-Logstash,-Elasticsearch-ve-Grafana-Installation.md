@@ -22,13 +22,13 @@ Download the Apache Kafka binary files from its official download website and th
 
 `wget -qO- https://archive.apache.org/dist/kafka/2.2.0/kafka_2.12-2.2.0.tgz | tar -zxvf- -C /opt/ && mv /opt/kafka* /opt/kafka`
 
-* edit **server.properties** file as below.
+* Edit **server.properties** file as below.
 
 `vim /opt/kafka/config/server.properties`
 
 `listeners=PLAINTEXT://your_server_ip:9092`
 
-* to start Kafka
+* Start Kafka
 
 Kafka required ZooKeeper so first, start a ZooKeeper server on your system then start Kafka
 ```
