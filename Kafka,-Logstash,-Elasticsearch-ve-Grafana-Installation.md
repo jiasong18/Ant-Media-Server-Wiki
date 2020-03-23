@@ -39,7 +39,7 @@ If you see that the port 9092 and 2181 are in listening mode in the following ou
 
 `netstat -tpln | egrep "9092|2181"`
 
-* To run Kafka as systemd service
+* Run Kafka as systemd service
 
 This will help to manage Kafka services to start/stop using the systemctl command.
 
@@ -68,7 +68,7 @@ WantedBy=multi-user.target
 ```
 #### Kafka-Zookeeper systemd file
 
-to create systemd unit file for Zookeeper with below command:
+Create systemd unit file for Zookeeper with below command
 
 `vim /lib/systemd/system/kafka-zookeeper.service` 
 ```
@@ -91,12 +91,12 @@ Enable and reload the systemd daemon to apply new changes.
 systemctl enable kafka-zookeeper.service
 systemctl enable kafka.service
 ```
-to start kafka server
+Start kafka server
 ```
 systemctl start kafka-zookeeper.service
 systemctl start kafka.service
 ```
-#### Some kafka commands
+#### Some Kafka commands
 
 * List all topics
 
@@ -117,7 +117,7 @@ kafka-webrtc-tester-stats
 
 If you want to monitor AMS, you need to define specify IP address and Kafka port in AMS_INSTALLTION_DIR/conf/red5.properties file.
 
-Open the following line with editor
+Open the following line with the editor
 
 `vim /usr/local/antmedia/conf/red5.properties` 
 
@@ -211,7 +211,7 @@ Save and close the file, then restart logstash service
 
 Grafana is an open source metric analytics & visualization suite.
 
-to install Grafana server, run the following commands.
+In order to install Grafana Server, run the following commands.
 ```
 sudo apt-get install -y software-properties-common wget apt-transport-https
 wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
