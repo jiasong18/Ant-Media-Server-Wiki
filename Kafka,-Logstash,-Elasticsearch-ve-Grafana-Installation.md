@@ -254,7 +254,8 @@ Version: 7.0+
 ![Grafana5](images/grafana5.png)
 
 6. Choose whatever you want to monitor.
-Query: ElasticSearch
+
+`Query: ElasticSearch`
 ![Grafana6](images/grafana6.png)
 
 7. Ant Media Example Dashboard
