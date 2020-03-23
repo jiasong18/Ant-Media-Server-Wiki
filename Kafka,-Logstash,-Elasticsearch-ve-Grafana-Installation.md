@@ -1,10 +1,10 @@
 In this document, you can monitor Ant Media Server with Kafka, Elastic Search, and Grafana.
 
-Installation Steps
+**Installation Steps**
 
 **1.** Kafka Installation and Configuration
 
-**2.** ElasticSearch Installation 
+**2.** ElasticSearch Installation
 
 **3.** Logstash Installation and Configuration
 
@@ -39,7 +39,7 @@ If you see that the port 9092 and 2181 are in listening mode in the following ou
 
 `netstat -tpln | egrep "9092|2181"`
 
-* **to run Kafka as systemd service**
+* To run Kafka as systemd service
 
 This will help to manage Kafka services to start/stop using the systemctl command.
 
@@ -47,7 +47,7 @@ to create systemd unit file for Kafka with below command:
 
 Add the below content. Make sure to set the correct JAVA_HOME path as per the Java installed on your system.
 
-#### Kafka systems file
+#### Kafka systemd file
 
 
 `vim /lib/systemd/system/kafka.service`
@@ -66,7 +66,7 @@ ExecStop=/opt/kafka/bin/kafka-server-stop.sh
 [Install]
 WantedBy=multi-user.target
 ```
-#### Kafka-Zookeeper systems file
+#### Kafka-Zookeeper systemd file
 
 to create systemd unit file for Zookeeper with below command:
 
@@ -101,6 +101,7 @@ systemctl start kafka.service
 * List all topics
 
 `/opt/kafka/bin/kafka-topics.sh --list --bootstrap-server your_kafka_server:9092`
+
 Example:
 ```
 /opt/kafka# bin/kafka-topics.sh --list --bootstrap-server 192.168.1.230:9092
@@ -128,6 +129,7 @@ Example:
 `server.kafka_brokers=192.168.1.230:9092`
 
 Finally, restart Ant Media Server.
+
 `service antmedia restart`
 
 When you run the following command on Kafka server, if there is data flow, everything is configured properly.
@@ -166,17 +168,16 @@ systemctl start elasticsearch.service
 Logstash is a server‑side data processing pipeline that ingests data from multiple sources simultaneously, transforms it, and then sends it to a “stash” like Elasticsearch
 
 update your package lists, then install logstash with the following command
-
+```
 apt-get update && apt-get install logstash
-
+```
 enable logstash service
-systemctl enable logstash.service
+
+`systemctl enable logstash.service`
 
 
-Create /etc/logstash/conf.d/logstash.conf file and add below content.
+Create **/etc/logstash/conf.d/logstash.conf** file and add below content.
 
-bootstrap_servers => kafka_sunucuları
-topics => kafka_topicleri
 ```
 #kafka
 input {
