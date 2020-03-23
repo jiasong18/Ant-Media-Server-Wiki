@@ -231,5 +231,6 @@ Default username and password
 
 `admin/admin`
 
-### Grafana Configuration
+1.
+![Grafana1](images/grafana1.png)
 
