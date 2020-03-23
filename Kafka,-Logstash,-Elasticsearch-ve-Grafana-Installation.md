@@ -206,7 +206,16 @@ Save and close the file, then restart logstash service
 
 `systemctl restart logstash`
 
+#### How to test Elasticsearch and Logstash
+You can test that Elasticsearch and Logstash are working correctly with the command below.
 
+`curl -XGET 'localhost:9200/_cat/indices?v&pretty'`
+
+Example output:
+```
+health status index                   uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   logstash-log-2020.03.23 mf-ffIHBSNO4s7_YoUr_Rw   1   1       1300            0    527.5kb        527.5kb
+```
 ### Grafana Installation
 
 Grafana is an open source metric analytics & visualization suite.
