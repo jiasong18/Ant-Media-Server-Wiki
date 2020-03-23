@@ -47,6 +47,9 @@ to create systemd unit file for Kafka with below command:
 
 Add the below content. Make sure to set the correct JAVA_HOME path as per the Java installed on your system.
 
+#### Kafka systems file
+
+
 `vim /lib/systemd/system/kafka.service`
 ```
 [Unit]
@@ -63,7 +66,7 @@ ExecStop=/opt/kafka/bin/kafka-server-stop.sh
 [Install]
 WantedBy=multi-user.target
 ```
-#Kafka-Zookeeper systemd
+#### Kafka-Zookeeper systems file
 
 to create systemd unit file for Zookeeper with below command:
 
@@ -135,3 +138,92 @@ Output:
 ```
 {"instanceId":"a06e5437-40ee-49c1-8e38-273544964335","cpuUsage":{"processCPUTime":596700000,"systemCPULoad":0,"processCPULoad":1},"jvmMemoryUsage":{"maxMemory":260046848,"totalMemory":142606336,"freeMemory":21698648,"inUseMemory":120907688},"systemInfo":{"osName":"Linux","osArch":"amd64","javaVersion":"1.8","processorCount":1},"systemMemoryInfo":{"virtualMemory":2288324608,"totalMemory":1033015296,"freeMemory":95338496,"inUseMemory":937676800,"totalSwapSpace":2065690624,"freeSwapSpace":2065416192,"inUseSwapSpace":274432},"fileSystemInfo":{"usableSpace":3274645504,"totalSpace":10498625536,"freeSpace":3828133888,"inUseSpace":6670491648},"jvmNativeMemoryUsage":{"inUseMemory":321179648,"maxMemory":520093696},"gpuUsageInfo":[],"localWebRTCLiveStreams":0,"localWebRTCViewers":0,"localHLSViewers":0,"encoders-blocked":0,"encoders-not-opened":0,"publish-timeout-errors":0,"server-timing":{"up-time":22446386,"start-time":1583128594707},"time":"2020-03-02T12:10:18.257Z"}
 ```
+
+### Elastic Search Installation
+
+To begin, run the following commands to import the Elasticsearch public GPG key into APT, install prerequisites packages and add the Elastic source list to the sources.list.d directory.
+```
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+sudo apt-get install apt-transport-https
+echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
+```
+
+update your package lists
+
+`apt-get update`
+
+Then install Elasticsearch with the following command
+
+`apt-get install elasticsearch`
+
+Enable and start elasticsearch service
+```
+systemctl enable elasticsearch.service
+systemctl start elasticsearch.service
+```
+### Logstash Installation
+
+Logstash is a server‑side data processing pipeline that ingests data from multiple sources simultaneously, transforms it, and then sends it to a “stash” like Elasticsearch
+
+update your package lists, then install logstash with the following command
+
+apt-get update && apt-get install logstash
+
+enable logstash service
+systemctl enable logstash.service
+
+
+Create /etc/logstash/conf.d/logstash.conf file and add below content.
+
+bootstrap_servers => kafka_sunucuları
+topics => kafka_topicleri
+```
+#kafka
+input {
+  kafka {
+    bootstrap_servers => "kafka_server_ip:9092"
+    client_id => "logstash"
+    group_id => "logstash"
+    consumer_threads => 3
+    topics => ["ams-instance-stats","ams-webrtc-stats","kafka-webrtc-tester-stats"]
+    codec => "json"
+    tags => ["log", "kafka_source"]
+    type => "log"
+  }
+}
+
+#elasticsearch
+output {
+  elasticsearch {
+       hosts => ["127.0.0.1:9200"] #elasticsearch_ip
+       index => "logstash-%{[type]}-%{+YYYY.MM.dd}"
+  }
+  stdout { codec => rubydebug }
+}
+```
+Save and close the file, then restart logstash service
+
+`systemctl restart logstash`
+
+
+### Grafana Installation
+
+Grafana is an open source metric analytics & visualization suite.
+
+to install Grafana server, run the following commands.
+```
+sudo apt-get install -y software-properties-common wget apt-transport-https
+wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
+sudo apt-get update && sudo apt-get install grafana
+```
+enable and start grafana server 
+```
+systemctl enable grafana-server
+systemctl start grafana-server
+```
+login as follow
+`http://your_ip_address:3000/login`
+
+Default username and password 
+`admin/admin`
