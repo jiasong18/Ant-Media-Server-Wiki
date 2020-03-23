@@ -231,26 +231,33 @@ Default username and password
 
 `admin/admin`
 
-1.
+1. Click `Add data source`
 ![Grafana1](images/grafana1.png)
 
-2.
+2. Select Elasticsearch
 ![Grafana2](images/grafana2.png)
 
-3.
-![Grafana3](images/grafana3.png)
+3. Set setting as below
+URL : http://127.0.0.1:9200
+```
+**Index name: logstash-***
+**Time filed name: @timestamp**
+**Version: 7.0+**
+```
 ![Grafana3_1](images/grafana3_1.png)
+![Grafana3](images/grafana3.png)
 
-4.
+4. Click `New dashboard`
 ![Grafana4](images/grafana4.png)
 
-5.
+5. Click `Add Query`
 ![Grafana5](images/grafana5.png)
 
-6. 
+6. Choose whatever you want to monitor.
+Query: ElasticSearch
 ![Grafana6](images/grafana6.png)
 
-7. 
+7. Ant Media Example Dashboard
 ![Grafana7](images/grafana7.png)
 
 
