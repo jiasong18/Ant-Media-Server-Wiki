@@ -1,10 +1,14 @@
 In this document, you can monitor Ant Media Server with Kafka, Elastic Search, and Grafana.
 
 Installation Steps
-1. Kafka Installation and Configuration
-2. ElasticSearch Installation 
-3. Logstash Installation and Configuration
-4. Grafana Installation
+
+**1.** Kafka Installation and Configuration
+
+**2.** ElasticSearch Installation 
+
+**3.** Logstash Installation and Configuration
+
+**4.** Grafana Installation
 
 ### 1. Kafka Installation and Configuration
 
@@ -18,13 +22,13 @@ Download the Apache Kafka binary files from its official download website and th
 
 `wget -qO- https://archive.apache.org/dist/kafka/2.2.0/kafka_2.12-2.2.0.tgz | tar -zxvf- -C /opt/ && mv /opt/kafka* /opt/kafka`
 
-# edit server.properties file as below.
+* edit **server.properties** file as below.
 
 `vim /opt/kafka/config/server.properties`
 
 `listeners=PLAINTEXT://your_server_ip:9092`
 
-# to start Kafka
+* to start Kafka
 
 Kafka required ZooKeeper so first, start a ZooKeeper server on your system then start Kafka
 ```
@@ -35,7 +39,8 @@ If you see that the port 9092 and 2181 are in listening mode in the following ou
 
 `netstat -tpln | egrep "9092|2181"`
 
-#to run Kafka as systemd service
+* **to run Kafka as systemd service**
+
 This will help to manage Kafka services to start/stop using the systemctl command.
 
 to create systemd unit file for Kafka with below command:
@@ -88,9 +93,9 @@ to start kafka server
 systemctl start kafka-zookeeper.service
 systemctl start kafka.service
 ```
-#Some kafka commands
+#### Some kafka commands
 
-#List all topics
+* List all topics
 
 `/opt/kafka/bin/kafka-topics.sh --list --bootstrap-server your_kafka_server:9092`
 Example:
@@ -100,13 +105,13 @@ ams-instance-stats
 ams-webrtc-stats
 kafka-webrtc-tester-stats
 ```
-#Using Kafka Consumer
+* Using Kafka Consumer
 
 `/opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server 192.168.1.230:9092 --topic ams-instance-stats --from-beginning`
 
-#Ant Media Server Kafka settings
+#### Ant Media Server Kafka settings
 
-If you want to monitor AMS, you need to define specify IP address and Kafka port in AMS/conf/red5.properties file.
+If you want to monitor AMS, you need to define specify IP address and Kafka port in AMS_INSTALLTION_DIR/conf/red5.properties file.
 
 Open the following line with editor
 
