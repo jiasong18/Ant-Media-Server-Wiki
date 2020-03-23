@@ -158,9 +158,6 @@ http {
             location / {
                 proxy_pass http://antmedia_origin;
     	    	proxy_http_version 1.1;
-                proxy_connect_timeout 7d;
-        	proxy_send_timeout 7d;
-		proxy_read_timeout 7d;
                 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
                 proxy_set_header Host $host;
                 proxy_set_header Upgrade $http_upgrade;
@@ -179,6 +176,9 @@ http {
  	        location / {
                 proxy_pass http://antmedia_edge;
                 proxy_http_version 1.1;
+                proxy_connect_timeout 7d;
+        	proxy_send_timeout 7d;
+		proxy_read_timeout 7d;
                 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
                 proxy_set_header Host $host;
                 proxy_set_header Upgrade $http_upgrade;
