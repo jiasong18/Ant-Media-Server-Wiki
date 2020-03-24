@@ -2,15 +2,15 @@ In this document, you can monitor Ant Media Server with Kafka, Elastic Search, a
 
 ## **Installation Steps**
 
-* [Kafka Installation and Configuration](#Kafka-Installation-and-Configuration)
+* [Kafka Installation and Configuration](#Install-Kafka)
 
-* [Elasticsearch Installation](#Elastic-Search-Installation)
+* [Elasticsearch Installation](#Install-Elastic-Search)
 
-* [Logstash Installation and Configuration](#Logstash-Installation)
+* [Logstash Installation and Configuration](#Install-Logstash)
 
-* [Grafana Installation and Configuration](#Grafana-Installation)
+* [Grafana Installation and Configuration](#Install-Grafana)
 
-### 1. Kafka Installation and Configuration
+### 1. Install Kafka
 
 Kafka is useful for building real-time streaming data pipelines to get data between the systems or applications.
 
@@ -141,7 +141,7 @@ Output:
 {"instanceId":"a06e5437-40ee-49c1-8e38-273544964335","cpuUsage":{"processCPUTime":596700000,"systemCPULoad":0,"processCPULoad":1},"jvmMemoryUsage":{"maxMemory":260046848,"totalMemory":142606336,"freeMemory":21698648,"inUseMemory":120907688},"systemInfo":{"osName":"Linux","osArch":"amd64","javaVersion":"1.8","processorCount":1},"systemMemoryInfo":{"virtualMemory":2288324608,"totalMemory":1033015296,"freeMemory":95338496,"inUseMemory":937676800,"totalSwapSpace":2065690624,"freeSwapSpace":2065416192,"inUseSwapSpace":274432},"fileSystemInfo":{"usableSpace":3274645504,"totalSpace":10498625536,"freeSpace":3828133888,"inUseSpace":6670491648},"jvmNativeMemoryUsage":{"inUseMemory":321179648,"maxMemory":520093696},"gpuUsageInfo":[],"localWebRTCLiveStreams":0,"localWebRTCViewers":0,"localHLSViewers":0,"encoders-blocked":0,"encoders-not-opened":0,"publish-timeout-errors":0,"server-timing":{"up-time":22446386,"start-time":1583128594707},"time":"2020-03-02T12:10:18.257Z"}
 ```
 
-### Elastic Search Installation
+### Install Elastic Search
 
 To begin, run the following commands to import the Elasticsearch public GPG key into APT, install prerequisites packages and add the Elastic source list to the sources.list.d directory.
 ```
@@ -163,7 +163,7 @@ Enable and start elasticsearch service
 systemctl enable elasticsearch.service
 systemctl start elasticsearch.service
 ```
-### Logstash Installation
+### Install Logstash
 
 Logstash is a server‑side data processing pipeline that ingests data from multiple sources simultaneously, transforms it, and then sends it to a “stash” like Elasticsearch
 
@@ -216,7 +216,7 @@ Example output:
 health status index                   uuid                   pri rep docs.count docs.deleted store.size pri.store.size
 yellow open   logstash-log-2020.03.23 mf-ffIHBSNO4s7_YoUr_Rw   1   1       1300            0    527.5kb        527.5kb
 ```
-### Grafana Installation
+### Install Grafana
 
 Grafana is an open source metric analytics & visualization suite.
 
