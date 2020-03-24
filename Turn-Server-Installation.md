@@ -55,6 +55,13 @@ UDP 32355-65535 #relay ports range
 That 's it. 
 
 ## How to test Turn Server
+
+### Command Line
+
+turnutils_uclient -v -t -T -u username -w password -p 3478 turn_server_ip
+
+### Web Browser
+
 Open the following link and fill in the blanks then `Add Server`
 
 [https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/](https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/)
