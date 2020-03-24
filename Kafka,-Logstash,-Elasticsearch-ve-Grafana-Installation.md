@@ -47,7 +47,7 @@ to create systemd unit file for Kafka with below command:
 
 Add the below content. Make sure to set the correct JAVA_HOME path as per the Java installed on your system.
 
-#### Kafka systemd file
+### Kafka systemd file
 
 
 `vim /lib/systemd/system/kafka.service`
@@ -66,7 +66,7 @@ ExecStop=/opt/kafka/bin/kafka-server-stop.sh
 [Install]
 WantedBy=multi-user.target
 ```
-#### Kafka-Zookeeper systemd file
+### Kafka-Zookeeper systemd file
 
 Create systemd unit file for Zookeeper with below command
 
