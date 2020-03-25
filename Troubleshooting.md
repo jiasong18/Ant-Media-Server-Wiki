@@ -42,5 +42,7 @@ Be sure about video resolution in your adaptive settings is equals and less than
 
 ## I can't start autoplay in Google Chrome & Mozilla Firefox?
 This is about browsers' policy rules. 
+
 https://developers.google.com/web/updates/2017/09/autoplay-policy-changes
+
 https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide#The_autoplay_feature_policy
