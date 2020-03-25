@@ -39,3 +39,8 @@ Your Output resolution size should be high than your Adaptive Streaming setting.
 If you want to stream 720HD, you need to provide the requirements at least 720p.
 
 Be sure about video resolution in your adaptive settings is equals and less than the stream you send.
+
+## I can't start autoplay in Google Chrome & Mozilla Firefox?
+This is about browsers' policy rules. 
+https://developers.google.com/web/updates/2017/09/autoplay-policy-changes
+https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide#The_autoplay_feature_policy
