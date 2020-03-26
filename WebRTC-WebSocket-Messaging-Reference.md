@@ -229,7 +229,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 }
 ```
 ```streamId``` returned by the server is the stream id client uses to publish stream to the room. 
-```streams``` is the json array which client can play via WebRTC. Client can play each stream by play method above. This strams array can be empty if there is no stream in the room.
+```streams``` is the json array which client can play via WebRTC. Client can play each stream by play method above. This streams array can be empty if there is no stream in the room.
 
 4. When there is a new guy joined the room, server sends below message to each peer in the room.
 ```json
