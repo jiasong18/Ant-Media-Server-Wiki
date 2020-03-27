@@ -6,7 +6,7 @@ Before starting with the development, please read all the relevant user guides f
 ## Recommended Folder Structure and Projects:
 * Clone Ant-Media-Server, Ant-Media-ServerCommon, ant-media-server-parent,  Ant-Media-Server-Service, ManagementConsole_WebApp, red5-plugins, StreamApp projects from [GitHub](https://github.com/ant-media) into `$home_directory_path/AntMedia` where `$home_directory_path` is path of your home directory.
 * If you are a Enterprise developer: clone the Ant-Media-Enterprise from Gitlab into `$home_directory_path/AntMedia`.
-* Create folder `$home_directory_path/softwares/ant-media-server` for the deployed Ant Media Server. Some deployment scripts like _redeploy.sh_ will copy the compiled Ant Media Server into this directory.
+* Create folder `$home_directory_path/softwares` for the deployed Ant Media Server. 
 
 ## Recommended IDEs for Development
 * Latest version of _Eclipse IDE for Java EE Developers_
@@ -18,7 +18,9 @@ Before starting with the development, please read all the relevant user guides f
 * Change the default Maven used in Eclipse by giving path of the Maven home directory (_/usr/share/$maven_version_ for default installation) in the Preferences/Maven/Installations section of Eclipse.
 * Import the projects to the Eclipse using import _existing Maven projects_ wizard.
 ## Deployment
-* _redeploy.sh_ scripts in in Ant-Media-Server or Ant-Media-Enterprise can be used to build and deploy Ant Media Server into `$home_directory_path/softwares/ant-media-server`
+* Build the projects from the source like described in [Build From Source](https://github.com/ant-media/Ant-Media-Server/wiki/Build-From-Source).
+* Copy  `ant-media-server` folder in created packaged zip file (`ant-media-server-x.x.x.zip`) inside `Ant-Media-Server/target directory` into `$home_directory_path/softwares/ant-media-server`. Some partial deployment scripts like _redeploy.sh_ will copy the generated files into this directory.
+* _redeploy.sh_ scripts in in Ant-Media-Server or Ant-Media-Enterprise can be used to partially build and deploy a subproject of Ant Media Server into `$home_directory_path/softwares/ant-media-server` without building all projects.
 ## Debugging the Server
 * Start the server in debug mode using _start-debug.sh_ script in `$home_directory_path/softwares/ant-media-server` which is generated after deployment.
 * Create a Remote Java Application Debug Configuration in Eclipse in Debug Configurations settings (Project: ant-media-server Host: localhost Port: 8787)
