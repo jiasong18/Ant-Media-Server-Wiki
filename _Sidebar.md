@@ -67,7 +67,7 @@
 ## Draft
 * [Screen Share without Plugin](WebRTC-Screen-Sharing-without-Plugin)
 * [Turn Server Installation](Turn-Server-Installation)
-* [Kafka, Logstash, Grafana, Elasticsearch](Kafka,-Logstash,-Elasticsearch-ve-Grafana-Kurulumu)
+* [How to Monitor Ant Media Servers](How-to-Monitor-Ant-Media-Servers)
 
 ## Proposals
 * Git Branching
