@@ -17,9 +17,9 @@ cd path/to/where/ant-media-server....zip
 Download the `install_ant-media-server.sh` shell script 
 
 ```
-wget https://raw.githubusercontent.com/ant-media/Scripts/master/install_ant-media-server.sh
-chmod 755 install_ant-media-server.sh
+wget https://raw.githubusercontent.com/ant-media/Scripts/master/install_ant-media-server.sh && chmod 755 install_ant-media-server.sh
 ```
+
 
 ### 4. Run the Installation Script
 
