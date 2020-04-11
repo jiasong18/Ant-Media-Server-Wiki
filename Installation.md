@@ -86,13 +86,13 @@ ENTRYPOINT service antmedia restart && bash
 ### 2. Build Docker Image 
 Download and save Ant Media Server ZIP file in the same directory with `Dockerfile`. Then run the docker build command from command line
 ```
-docker build --network=host -t <image_tag> --build-arg AntMediaServer=<Replace_With_Ant_Media_Server_Zip_File> .
+docker build --network=host -t antmediaserver --build-arg AntMediaServer=<Replace_With_Ant_Media_Server_Zip_File> .
 ```
 
 ### 3. Run the Docker Container
 Now we have a docker container with Ant Media Server. Run the image.
 ```
-docker run --network=host --privileged=true -it <image_tag>
+docker run --network=host --privileged=true -it antmediaserver
 ```
 
 ## Cluster Installation
