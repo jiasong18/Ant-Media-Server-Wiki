@@ -18,11 +18,11 @@ create_app.sh usage in below.
 
 For example:
 
-sudo ./create_app.sh streamHive /usr/local/antmedia
+`sudo ./create_app.sh streamHive /usr/local/antmedia`
 
 ![](https://i1.wp.com/antmedia.io/wp-content/uploads/2019/11/ant-media-server-new-application.png)
 
-Step 3
+### Step 3
 
 Restart Ant Media Service
 
