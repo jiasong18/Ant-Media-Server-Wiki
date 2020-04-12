@@ -6,15 +6,15 @@ Let’s have a look at the steps:
 
 ### Step 1
 
-Go to the folder where Ant-Media-Server is installed. Default directory is / `usr` / `local` / `antmedia`
+Go to the folder where Ant-Media-Server is installed. Default directory is `/usr/local/antmedia`
 
     cd /usr/local/antmedia
 
-Step 2
+### Step 2
 
 create_app.sh usage in below.
 
-    sudo ./create_app.sh applicationName AMS-Folder-Path
+    sudo ./create_app.sh applicationName AMS-Installation-Directory
 
 For example:
 
