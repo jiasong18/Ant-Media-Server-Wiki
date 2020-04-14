@@ -40,7 +40,6 @@
   * [REST Guide](REST-Guide)
   * [Web Hooks](Webhook-Integration)
   * [AWS S3](Amazon-(AWS)-S3-Integration)
-  * Azure Blob
   * [User-defined Scripts](User-defined-Scripts)
 * [Advanced](Advanced)
   * [GPU](GPU) 
