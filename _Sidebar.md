@@ -32,9 +32,6 @@
   * [Android SDK](WebRTC-Android-SDK-Documentation)
   * [iOS SDK](WebRTC-iOS-SDK-Documentation)
   * [Embedded SDK](WebRTC-Embedded-SDK-Documentation)
-* RTMP SDKs
-  * Android SDK
-  * iOS SDK
 * [Security](Security-Documentation)
   * [Stream Security](Stream-Security-Documentation)
   * [SSL Setup for Ant Media Server](SSL-Setup)
