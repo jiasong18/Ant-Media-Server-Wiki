@@ -313,14 +313,14 @@ Click Alerting / Notification Channel
 ![Grafana_telegram](images/grafana_telegram_1.png)
 
 Add New Channel
-
+![Grafana_telegram](images/grafana_telegram_2.png)
 You can configure as below screenshot
-
+![Grafana_telegram](images/grafana_telegram_3.png)
 Name : name_of_your_notification.
 Type : Telegram
 Bot Api Token: your_bot_token_id
 Chat ID: your_channel_id
 
 If you click on the Send Test and there is a message on the telegram, everything is fine.
-
+![Grafana_telegram](images/grafana_telegram_5.png)
 Now you can set up notifications as you wish.
