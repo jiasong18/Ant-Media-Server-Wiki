@@ -273,13 +273,13 @@ Version: 7.0+
 #### Grafana Telegram Alert
 1. Create a New Bot
 * Open Telegram and search for @BotFather user and send commands to them the following.
-/newbot
+**/newbot**
 enter please your bot name 
-antmedia_grafana
+**antmedia_grafana**
 enter your bot username
-antmedia_grafana_test_bot
+**antmedia_grafana_test_bot**
 
-and then you will see as below lines.
+and then you will get as below lines.
 
 Use this token to access the HTTP API:
 1254341629:AAHYHhJK8TgsUXa7jqBK7wU1bJ8hzWhUFzs
@@ -300,6 +300,25 @@ You will get the below lines.
 {"ok":true,"result":[{"update_id":222389875,
 "channel_post":{"message_id":2,"chat":{"id":-1001181377238,"title":"test","type":"channel"},"date":1587016720,"text":"test"}}]}
 
+You need that number: -1001181377238 
 
+We have configured the chatbot. Now let's start to configure Grafana Notification.
 
+Login to Grafana
 
+http://your_grafana_server:3000
+
+Click Alerting / Notification Channel
+
+Add New Channel
+
+You can configure as below screenshot
+
+Name : name_of_your_notification.
+Type : Telegram
+Bot Api Token: your_bot_token_id
+Chat ID: your_channel_id
+
+If you click on the Send Test and there is a message on the telegram, everything is fine.
+
+Now you can set up notifications as you wish.
