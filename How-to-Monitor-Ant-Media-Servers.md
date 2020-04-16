@@ -271,20 +271,19 @@ Version: 7.0+
 ![Grafana7](images/grafana7.png)
 
 #### Grafana Telegram Alert
+
 1. Create a New Bot
-* Open Telegram and search for @BotFather user and send commands to them the following.
-**/newbot**
-enter please your bot name 
-**antmedia_grafana**
-enter your bot username
-**antmedia_grafana_test_bot**
 
-and then you will get as below lines.
+* Open Telegram and search for @BotFather user and send command the following.
 
+`/newbot`
+
+When you create a new bot, you will get as below lines.
+```
 Use this token to access the HTTP API:
 1254341629:AAHYHhJK8TgsUXa7jqBK7wU1bJ8hzWhUFzs
 Keep your token secure and store it safely, it can be used by anyone to control your bot.
-
+```
 2. Create a Channel and retrieve the channel's chat ID. 
 * Create a channel in telegram
 * Invite your bot to that channel as admin
@@ -293,20 +292,20 @@ Keep your token secure and store it safely, it can be used by anyone to control 
 
 Use cURL or just place this on any Browsers Address Bar:
 
-https://api.telegram.org/bot1254341629:AAHYHhJK8TgsUXa7jqBK7wU1bJ8hzWhUFzs/getUpdates
+`https://api.telegram.org/bot1254341629:AAHYHhJK8TgsUXa7jqBK7wU1bJ8hzWhUFzs/getUpdates`
 
 You will get the below lines.
-
+```
 {"ok":true,"result":[{"update_id":222389875,
 "channel_post":{"message_id":2,"chat":{"id":-1001181377238,"title":"test","type":"channel"},"date":1587016720,"text":"test"}}]}
-
-You need that number: -1001181377238 
+```
+You need that number: `-1001181377238` 
 
 We have configured the chatbot. Now let's start to configure Grafana Notification.
 
 Login to Grafana
 
-http://your_grafana_server:3000
+`http://your_grafana_server:3000`
 
 Click Alerting / Notification Channel
 
@@ -314,13 +313,18 @@ Click Alerting / Notification Channel
 
 Add New Channel
 ![Grafana_telegram](images/grafana_telegram_2.png)
+
 You can configure as below screenshot
 ![Grafana_telegram](images/grafana_telegram_3.png)
+
+```
 Name : name_of_your_notification.
 Type : Telegram
 Bot Api Token: your_bot_token_id
 Chat ID: your_channel_id
-
+```
 If you click on the Send Test and there is a message on the telegram, everything is fine.
+
 ![Grafana_telegram](images/grafana_telegram_5.png)
+
 Now you can set up notifications as you wish.
