@@ -328,3 +328,5 @@ If you click on the Send Test and there is a message on the telegram, everything
 ![Grafana_telegram](images/grafana_telegram_5.png)
 
 Now you can set up notifications as you wish.
+
+If you have any questions, please just drop a line to contact (at) antmedia.io
