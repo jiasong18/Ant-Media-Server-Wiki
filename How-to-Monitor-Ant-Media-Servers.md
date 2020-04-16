@@ -310,6 +310,8 @@ http://your_grafana_server:3000
 
 Click Alerting / Notification Channel
 
+![Grafana_telegram](images/grafana_telegram_1.png)
+
 Add New Channel
 
 You can configure as below screenshot
