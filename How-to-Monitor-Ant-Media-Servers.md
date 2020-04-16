@@ -270,7 +270,7 @@ Version: 7.0+
 **7.** Ant Media Example Dashboard
 ![Grafana7](images/grafana7.png)
 
-#### Grafana Telegram Alert
+### Grafana Telegram Alert
 
 1. Create a New Bot
 
