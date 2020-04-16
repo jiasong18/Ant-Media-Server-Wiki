@@ -270,4 +270,36 @@ Version: 7.0+
 **7.** Ant Media Example Dashboard
 ![Grafana7](images/grafana7.png)
 
+#### Grafana Telegram Alert
+1. Create a New Bot
+* Open Telegram and search for @BotFather user and send commands to them the following.
+/newbot
+enter please your bot name 
+antmedia_grafana
+enter your bot username
+antmedia_grafana_test_bot
+
+and then you will see as below lines.
+
+Use this token to access the HTTP API:
+1254341629:AAHYHhJK8TgsUXa7jqBK7wU1bJ8hzWhUFzs
+Keep your token secure and store it safely, it can be used by anyone to control your bot.
+
+2. Create a Channel and retrieve the channel's chat ID. 
+* Create a channel in telegram
+* Invite your bot to that channel as admin
+* Send a test message.
+* Get the Chat id
+
+Use cURL or just place this on any Browsers Address Bar:
+
+https://api.telegram.org/bot1254341629:AAHYHhJK8TgsUXa7jqBK7wU1bJ8hzWhUFzs/getUpdates
+
+You will get the below lines.
+
+{"ok":true,"result":[{"update_id":222389875,
+"channel_post":{"message_id":2,"chat":{"id":-1001181377238,"title":"test","type":"channel"},"date":1587016720,"text":"test"}}]}
+
+
+
 
