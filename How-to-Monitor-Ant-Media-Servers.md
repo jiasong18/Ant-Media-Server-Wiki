@@ -270,6 +270,10 @@ Version: 7.0+
 **7.** Ant Media Example Dashboard
 ![Grafana7](images/grafana7.png)
 
+If you would like to use the same dashboard, you can download it from the below link.
+
+[https://antmedia.io/antmedia-dashboard.json](https://antmedia.io/antmedia-dashboard.json)
+
 ### Grafana Telegram Alert
 
 1. Create a New Bot
