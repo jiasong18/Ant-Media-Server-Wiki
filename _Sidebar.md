@@ -38,8 +38,6 @@
   * [User-defined Scripts](User-defined-Scripts)
 * [Advanced](Advanced)
   * [GPU Usage](GPU) 
-    * [Driver Installation](GPU-Driver-Installation)
-    * [Docker GPU Installation](Docker-GPU-Installation)
   * [Server Configuration](Server-Configuration-Documentation) 
   * [App Configuration](Application-Configuration-Documentation)
   * [Create New Application](Create-New-Application)
