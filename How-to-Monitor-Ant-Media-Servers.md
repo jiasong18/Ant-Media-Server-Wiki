@@ -1,147 +1,153 @@
-In this document, you can monitor Ant Media Server with Kafka, Elastic Search, and Grafana.
+In this document, you'll learn how to monitor Ant Media Servers with Apache Kafka, Elastic Search and Grafana. So we need to install these components. Here is a step by step guide to install your monitoring system from scratch
 
-## **Installation Steps**
+* [Install Apache Kafka](#Install-Apache-Kafka)
+* [Install Elasticsearch and Logstash](#Install-Elasticsearch-and-Logstash)
+* [Install Grafan](#Install-Grafana)
 
-* [Kafka Installation and Configuration](#Install-Kafka)
-
-* [Elasticsearch Installation](#Install-Elastic-Search)
-
-* [Logstash Installation and Configuration](#Install-Logstash)
-
-* [Grafana Installation and Configuration](#Install-Grafana)
-
-### 1. Install Kafka
+# Install Apache Kafka
 
 Kafka is useful for building real-time streaming data pipelines to get data between the systems or applications.
 
-Apache Kafka requires Java. You must have installed java on your system
+1. Install Java because Apache Kafka requires Java.
 
-`apt-get update && apt-get install openjdk-8-jdk -y`
+   `apt-get update && apt-get install openjdk-8-jdk -y`
 
-Download the Apache Kafka binary files from its official download website and then extract the archive file
+2. Download the Apache Kafka and then extract the archive file
 
-`wget -qO- https://archive.apache.org/dist/kafka/2.2.0/kafka_2.12-2.2.0.tgz | tar -zxvf- -C /opt/ && mv /opt/kafka* /opt/kafka`
+   `wget -qO- https://archive.apache.org/dist/kafka/2.2.0/kafka_2.12-2.2.0.tgz | tar -zxvf- -C /opt/ && mv /opt/kafka* /opt/kafka`
 
-* Edit **server.properties** file as below.
+3. Edit **server.properties** file as below.
 
-`vim /opt/kafka/config/server.properties`
+   `vim /opt/kafka/config/server.properties`
 
-`listeners=PLAINTEXT://your_server_ip:9092`
+   `listeners=PLAINTEXT://your_server_ip:9092`
 
-* Start Kafka
+4. Start Kafka
 
-Kafka required ZooKeeper so first, start a ZooKeeper server on your system then start Kafka
-```
-/opt/kafka/bin/zookeeper-server-start.sh /opt/kafka/config/zookeeper.properties &
-/opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties &
-```
-If you see that the port 9092 and 2181 are in listening mode in the following output, everything is normal.
+   ```
+   /opt/kafka/bin/zookeeper-server-start.sh /opt/kafka/config/zookeeper.properties &
+   /opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties &
+   ```
 
-`netstat -tpln | egrep "9092|2181"`
+   Firstly, we've started ZooKeeper because Kafka needs ZooKeeper and then we've started Kafka
 
-* Run Kafka as systemd service
+5. Check if it's working. Run the command below
 
-This will help to manage Kafka services to start/stop using the systemctl command.
+   `netstat -tpln | egrep "9092|2181"`
 
-to create systemd unit file for Kafka with below command:
+    if you see that the ports(9092 and 2181) are in listening mode, it means it's working.
 
-Add the below content. Make sure to set the correct JAVA_HOME path as per the Java installed on your system.
+## Run Apache Kafka as a `systemd` service. 
+Running Apache Kafka as a `systemd` service will let us manage Kafka services to start/stop using the `systemctl` commands. Follow the instructions below
 
-### Kafka systemd file
+ * Create `systemd` unit file for Apache Kafka
 
+   `vim /lib/systemd/system/kafka.service`
 
-`vim /lib/systemd/system/kafka.service`
-```
-[Unit]
-Description=Apache Kafka Server
-Requires=network.target remote-fs.target
-After=network.target remote-fs.target kafka-zookeeper.service
+ * Copy and paste the below content into the `kafka.service` you've created above.
+    Make sure that you set the correct JAVA_HOME path for your system in the content below
 
-[Service]
-Type=simple
-Environment=JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
-ExecStart=/opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties
-ExecStop=/opt/kafka/bin/kafka-server-stop.sh
+    ```
+    [Unit]
+    Description=Apache Kafka Server
+    Requires=network.target remote-fs.target
+    After=network.target remote-fs.target kafka-zookeeper.service
 
-[Install]
-WantedBy=multi-user.target
-```
-### Kafka-Zookeeper systemd file
+    [Service]
+    Type=simple
+    Environment=JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+    ExecStart=/opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties
+    ExecStop=/opt/kafka/bin/kafka-server-stop.sh
 
-Create systemd unit file for Zookeeper with below command
+    [Install]
+    WantedBy=multi-user.target
+    ```
 
-`vim /lib/systemd/system/kafka-zookeeper.service` 
-```
-[Unit]
-Description=Apache Zookeeper Server
-Requires=network.target remote-fs.target
-After=network.target remote-fs.target
+ * Create `systemd` unit file for Zookeeper
 
-[Service]
-Type=simple
-Environment=JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
-ExecStart=/opt/kafka/bin/zookeeper-server-start.sh /opt/kafka/config/zookeeper.properties
-ExecStop=/opt/kafka/bin/zookeeper-server-stop.sh
+     `vim /lib/systemd/system/kafka-zookeeper.service`
 
-[Install]
-WantedBy=multi-user.target
-```
-Enable and reload the systemd daemon to apply new changes.
-```
-systemctl enable kafka-zookeeper.service
-systemctl enable kafka.service
-```
-Start kafka server
-```
-systemctl start kafka-zookeeper.service
-systemctl start kafka.service
-```
-#### Some Kafka commands
+ * Copy and paste the below content to the `kafka-zookeeper.service` file you've created above.
+     ```
+     [Unit]
+     Description=Apache Zookeeper Server
+     Requires=network.target remote-fs.target
+     After=network.target remote-fs.target
+
+     [Service]
+     Type=simple
+     Environment=JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+     ExecStart=/opt/kafka/bin/zookeeper-server-start.sh /opt/kafka/config/zookeeper.properties
+     ExecStop=/opt/kafka/bin/zookeeper-server-stop.sh
+
+     [Install]
+     WantedBy=multi-user.target
+     ```
+* Enable and reload the systemd daemon to apply new changes.
+  ```
+  systemctl enable kafka-zookeeper.service
+  systemctl enable kafka.service
+  ```
+  Start kafka server
+  ```
+  systemctl start kafka-zookeeper.service
+  systemctl start kafka.service
+  ```
+
+## Kafka settings for Ant Media Server
+
+If you want to monitor Ant Media Server, you need to set the IP address of your Apache Kafka in `AMS_INSTALLTION_DIR/conf/red5.properties` file.
+
+* Open the following line with the editor
+
+  `vim /usr/local/antmedia/conf/red5.properties` 
+
+* Edit the following line
+
+  `server.kafka_brokers=ip_address:port_number`
+
+  Replace `ip_address:port_number` with Apache Kafka IP Address and port number
+
+  Example:
+  `server.kafka_brokers=192.168.1.230:9092`
+
+* Restart Ant Media Server.
+
+  `service antmedia restart`
+
+* Check if it's working
+
+  When you run the following command on Kafka server, if there is data flow, everything is configured properly.
+
+  `/opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server 192.168.1.230:9092 --topic ams-instance-stats --from-beginning`
+
+  Output should be something like below:
+  ```
+  {"instanceId":"a06e5437-40ee-49c1-8e38-273544964335","cpuUsage":
+  {"processCPUTime":596700000,"systemCPULoad":0,"processCPULoad":1},"jvmMemoryUsage": 
+  {"maxMemory":260046848,"totalMemory":142606336,"freeMemory":21698648,"inUseMemory":120907688},"systemInfo": 
+  {"osName":"Linux","osArch":"amd64","javaVersion":"1.8","processorCount":1},"systemMemoryInfo":
+  ...
+  ```
+### Some Useful Apache Kafka commands
 
 * List all topics
 
-`/opt/kafka/bin/kafka-topics.sh --list --bootstrap-server your_kafka_server:9092`
+  `/opt/kafka/bin/kafka-topics.sh --list --bootstrap-server your_kafka_server:9092`
 
-Example:
-```
-/opt/kafka# bin/kafka-topics.sh --list --bootstrap-server 192.168.1.230:9092
-ams-instance-stats
-ams-webrtc-stats
-kafka-webrtc-tester-stats
-```
-* Using Kafka Consumer
+  Example:
+  ```
+  /opt/kafka/bin/kafka-topics.sh --list --bootstrap-server 192.168.1.230:9092
+  ams-instance-stats
+  ams-webrtc-stats
+  kafka-webrtc-tester-stats
+  ```
+* Monitor messages for a specific topic with Kafka Consumer as we've used above
 
-`/opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server 192.168.1.230:9092 --topic ams-instance-stats --from-beginning`
+   `/opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server 192.168.1.230:9092 --topic ams-instance-stats --from-beginning`
 
-#### Ant Media Server Kafka settings
 
-If you want to monitor AMS, you need to define specify IP address and Kafka port in AMS_INSTALLTION_DIR/conf/red5.properties file.
-
-Open the following line with the editor
-
-`vim /usr/local/antmedia/conf/red5.properties` 
-
-Edit the following line
-
-`server.kafka_brokers=ip_address:port_number`
-
-Example:
-`server.kafka_brokers=192.168.1.230:9092`
-
-Finally, restart Ant Media Server.
-
-`service antmedia restart`
-
-When you run the following command on Kafka server, if there is data flow, everything is configured properly.
-
-`/opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server 192.168.1.230:9092 --topic ams-instance-stats --from-beginning`
-
-Output:
-```
-{"instanceId":"a06e5437-40ee-49c1-8e38-273544964335","cpuUsage":{"processCPUTime":596700000,"systemCPULoad":0,"processCPULoad":1},"jvmMemoryUsage":{"maxMemory":260046848,"totalMemory":142606336,"freeMemory":21698648,"inUseMemory":120907688},"systemInfo":{"osName":"Linux","osArch":"amd64","javaVersion":"1.8","processorCount":1},"systemMemoryInfo":{"virtualMemory":2288324608,"totalMemory":1033015296,"freeMemory":95338496,"inUseMemory":937676800,"totalSwapSpace":2065690624,"freeSwapSpace":2065416192,"inUseSwapSpace":274432},"fileSystemInfo":{"usableSpace":3274645504,"totalSpace":10498625536,"freeSpace":3828133888,"inUseSpace":6670491648},"jvmNativeMemoryUsage":{"inUseMemory":321179648,"maxMemory":520093696},"gpuUsageInfo":[],"localWebRTCLiveStreams":0,"localWebRTCViewers":0,"localHLSViewers":0,"encoders-blocked":0,"encoders-not-opened":0,"publish-timeout-errors":0,"server-timing":{"up-time":22446386,"start-time":1583128594707},"time":"2020-03-02T12:10:18.257Z"}
-```
-
-### Install Elastic Search
+# Install Elastic Search
 
 To begin, run the following commands to import the Elasticsearch public GPG key into APT, install prerequisites packages and add the Elastic source list to the sources.list.d directory.
 ```
