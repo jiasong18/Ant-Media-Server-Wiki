@@ -27,6 +27,7 @@
   * [Installation in AWS](Scaling-with-AWS)
   * [Installation in Azure](Scaling-with-Azure)
   * [Nginx Load Balancer](Nginx-Load-Balancer)
+* [Monitor Ant Media Servers with Apache Kafka and Grafana](How-to-Monitor-Ant-Media-Servers)
 * [WebRTC SDKs](WebRTC-SDKs)
   * [JavaScript SDK](WebRTC-JavaScript-SDK-Guide)
   * [Android SDK](WebRTC-Android-SDK-Documentation)
@@ -63,7 +64,6 @@
 ## Draft
 * [Screen Share without Plugin](WebRTC-Screen-Sharing-without-Plugin)
 * [Turn Server Installation](Turn-Server-Installation)
-* [How to Monitor Ant Media Servers](How-to-Monitor-Ant-Media-Servers)
 
 ## Proposals
 * Git Branching
