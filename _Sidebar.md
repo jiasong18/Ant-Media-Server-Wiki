@@ -37,7 +37,7 @@
   * [AWS S3](Amazon-(AWS)-S3-Integration)
   * [User-defined Scripts](User-defined-Scripts)
 * [Advanced](Advanced)
-  * [GPU](GPU) 
+  * [GPU Usage](GPU) 
     * [Driver Installation](GPU-Driver-Installation)
     * [Docker GPU Installation](Docker-GPU-Installation)
   * [Server Configuration](Server-Configuration-Documentation) 
