@@ -279,7 +279,7 @@ Grafana is an open source metric analytics & visualization suite.
 > [https://antmedia.io/antmedia-dashboard.json](https://antmedia.io/antmedia-dashboard.json)
 
 ### Create Telegram Alert
-You can define an alert in Grafana and it can notify when specific errors happen
+You can define an alert in Grafana and it can notify when specific events happen
 
 1. Create a New Bot
      * Open Telegram and search for @BotFather user and send the following command.
