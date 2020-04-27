@@ -26,6 +26,7 @@ Enterprise Edition can be purchased [on antmedia.io](https://antmedia.io)
 | Ultra Low Latency <br>One-to-Many WebRTC Streaming    | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
 | End-to-End Latency     | 8-12 Seconds  | 0.5 Seconds (500ms)  |
 | Scaling  | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
+| RTMP(Ingesting) to WebRTC (Playing)  | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
 | Hardware Encoding(GPU)  | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
 | Adaptive Bitrate  | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
 | Secure Streaming  | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
