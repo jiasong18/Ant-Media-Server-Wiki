@@ -1,3 +1,5 @@
+## If you use a Local database (internal database), please follow the following instructions.
+
 #### Step.1: Go to the installation directory of Ant Media Server. 
 
 `
