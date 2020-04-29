@@ -46,3 +46,12 @@ This is about browsers' policy rules.
 https://developers.google.com/web/updates/2017/09/autoplay-policy-changes
 
 https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide#The_autoplay_feature_policy
+
+## Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+
+The reasons for this error are that your CA certificate is not available on your server. For this, you need to download the root and intermediate certificates of the SSL provider (SHA-1, SHA-2 must be the correct version). After that, you need to import Java, which works currently active with the keytool tool.
+
+For example:
+keytool -import -trustcacerts -alias AddTrustExternalCARoot -file comodorsaaddtrustca.crt -keystore /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/cacerts
+keytool -import -trustcacerts -alias comodointermediate -file addtrustexternalcaroot.crt -keystore /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/cacerts
+keytool -import -trustcacerts -alias comodointermediate2 -file comodorsadomainvalidationsecureserverca.crt -keystore /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/cacerts
