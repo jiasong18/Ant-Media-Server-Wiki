@@ -47,6 +47,14 @@ https://developers.google.com/web/updates/2017/09/autoplay-policy-changes
 
 https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide#The_autoplay_feature_policy
 
+## Connect JMX port via SSH Tunel
+
+JMX port in Ant Media Server only accepts incoming requests coming from `localhost`. In order to connect JMX port to your remote server, you need to have port forwarding like below 
+```
+ssh  -N -L 5599:localhost:5599 username@your_server_address
+```
+The command above forwards your local computer port 5599 to your server's 5599 port. After running this command, you can have JMX connection to your own local computer 5599 port via VisualVM, JConsole, etc. and it's connected to your server automatically.
+
 ## Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
 
 The reasons for this error are that your CA certificate is not available on your server. For this, you need to download the root and intermediate certificates of the SSL provider (SHA-1, SHA-2 must be the correct version). After that, you need to import Java, which works currently active with the keytool tool.
