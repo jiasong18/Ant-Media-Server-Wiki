@@ -50,7 +50,8 @@ The sample token creation service URL in Play Scenario:
 **Live Stream / VoD URL usage:**
 
     http://[IP_Address]/<Application_Name>/streams/streamID.mp4?token=tokenId
-
+    http://[IP_Address]/<Application_Name>/streams/streamID.m3u8?token=tokenId
+    http://[IP_Address]/<Application_Name>/play.html?name=streamID&playOrder=hls&token=tokenId
 **WebRTC usage:**
 
 **-Playing usage:** Again the token parameter should be inserted to play WebSocket message. Also please have a look at the principles described in the [WebRTC playing wiki page](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-WebSocket-Messaging-Details#playing-webrtc-stream).
