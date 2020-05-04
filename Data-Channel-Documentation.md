@@ -14,7 +14,7 @@ You can enable Data Channel basically in Ant Media Server Dashboard Panel. You n
 
 Note: Make sure to enable correct application.
 
-AMS Dashboard photo
+
 
 ## 2. Data Channel Usage in Android SDK
 
