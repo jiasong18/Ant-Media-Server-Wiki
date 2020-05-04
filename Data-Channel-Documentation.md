@@ -17,39 +17,60 @@ Note: Make sure the enable correct application.
 AMS Dashboard photo
 
 ## 2. Data Channel Usage in Android SDK
-asdasd
-Farklı
+
+Exchanging data through WebRTC Data Channels is equally straightforward with Ant Media Server Android WebRTC SDK. Your Activity should implement IDataChannelObserver interface as shown below:
+
+```
+public interface IDataChannelObserver {
+    void onBufferedAmountChange(long previousAmount, String dataChannelLabel);
+    void onStateChange(DataChannel.State state, String dataChannelLabel);
+    void onMessage(DataChannel.Buffer buffer, String dataChannelLabel);
+    void onMessageSent(DataChannel.Buffer buffer, boolean successful);
+}
+```
 
 ## 3. Data Channel Usage in Javascript SDK
-asdasd
+Sending and receiving messages via data channels can be implemented using Ant Media Server Javascript SDK with less than 10 lines of code.
+
+When initializing WebRTCAdaptor you need to give a callback function (see Java Script SDK Guide in Wiki).
+
+`sendData = function(streamId, message)` function in webrtc_adaptor.js is used to send messages like the following code:
+
+```javascript
+webRTCAdaptor.sendData("stream1", "Hi!");
+```
+
 Google Chrome ve Mozilla tipleri farklı 
 
 ## 4. Data Channel Callbacks
 
-`callback : function(info, description) {`
+```javascript
+callback : function(info, description) {
 
- `if (info == "data_channel_opened") {`
+ if (info == "data_channel_opened") {
 
-     `console.log("data channel is open");`
+     console.log("data channel is open");
 
- `}`
- `else if (info == "data_received") {`
+ }
+ else if (info == "data_received") {
 
-     `console.log("Message received ", description.data );`
+     console.log("Message received ", description.data );
 
-     `handleData(description);`
- `}`
+     handleData(description);
+ }
 
- `else if (info == "data_channel_error") {`
+ else if (info == "data_channel_error") {
 
-     `handleError(description);`
+     handleError(description);
 
- `} else if (info == "data_channel_closed") {`
+ } else if (info == "data_channel_closed") {
 
-     `console.log("Data channel closed " );`
- `}`
+     console.log("Data channel closed " );
+ }
+```
 
 ## 5. Data Channel Demos
+We have prepared some demos for this feature. You can use this feature in 2.0 version. 
 
 5 - a - String
 5 - b - Byte
