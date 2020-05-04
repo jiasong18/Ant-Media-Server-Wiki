@@ -9,17 +9,17 @@ This guide explains Data Channel technical details in Ant Media Server. Briefly,
 
 ### How to enable Data Channel in Management Panel
 
-## Data Channel Usage in Android 
+## 2. Data Channel Usage in Android 
 
 Farklı
 
-## Data Channel in Web
+## 3. Data Channel in Web
 
 Google Chrome ve Mozilla tipleri farklı 
 
-## Data Channel Callbacks
+## 4. Data Channel Callbacks
 
-## Data Channel Demos
+## 5. Data Channel Demos
 
 5 - a - String
 5 - b - Byte
