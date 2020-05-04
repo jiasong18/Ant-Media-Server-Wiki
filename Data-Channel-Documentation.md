@@ -1,9 +1,9 @@
 This guide explains Data Channel technical details in Ant Media Server. Briefly, Data Channel features are;
-1. [What is Data Channel, how can I use?](#what-is-data-channel-how-can-i-use)
-2. [Data Channel Usage in Android](#data-channel-usage-in-android)
-3- [Data Channel in Web Browser](#data-channel-in-web)
-4- [Data Channel Callbacks](#data-channel-callbacks)
-5- [Demo Data Channel](#data-channel-demos)
+1. [What is Data Channel, how can I use?](#1-what-is-data-channel-how-can-i-use)
+2. [Data Channel Usage in Android](#2-data-channel-usage-in-android)
+3- [Data Channel in Web Browser](#3-data-channel-in-web)
+4- [Data Channel Callbacks](#4-data-channel-callbacks)
+5- [Demo Data Channel](#5-data-channel-demos)
 
 ## 1. What is Data Channel, how can I use?
 
