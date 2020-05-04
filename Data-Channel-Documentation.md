@@ -16,16 +16,38 @@ Note: Make sure the enable correct application.
 
 AMS Dashboard photo
 
-## 2. Data Channel Usage in Android 
+## 2. Data Channel Usage in Android SDK
 asdasd
 Farklı
 
-## 3. Data Channel in Web
+## 3. Data Channel Usage in Javascript SDK
 asdasd
 Google Chrome ve Mozilla tipleri farklı 
 
 ## 4. Data Channel Callbacks
-tesdasd
+
+`callback : function(info, description) {`
+
+ `if (info == "data_channel_opened") {`
+
+     `console.log("data channel is open");`
+
+ `}`
+ `else if (info == "data_received") {`
+
+     `console.log("Message received ", description.data );`
+
+     `handleData(description);`
+ `}`
+
+ `else if (info == "data_channel_error") {`
+
+     `handleError(description);`
+
+ `} else if (info == "data_channel_closed") {`
+
+     `console.log("Data channel closed " );`
+ `}`
 
 ## 5. Data Channel Demos
 
