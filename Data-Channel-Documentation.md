@@ -78,7 +78,7 @@ public interface IDataChannelObserver {
 ## 5. Data Channel Modes
 
 
-## 6. Data Channel Demos
+## 6. Data Channel Hooks
 We have prepared some demos for this feature. You can use this feature in 2.0 version. 
 
 5 - a - String
