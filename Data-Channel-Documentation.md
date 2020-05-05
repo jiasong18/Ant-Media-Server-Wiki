@@ -3,7 +3,8 @@ This guide explains Data Channel technical details in Ant Media Server. Briefly,
 2. [Data Channel Usage in Javascript SDK](#2-data-channel-usage-in-javascript-sdk)
 3. [Data Channel Usage in Android SDK](#3-data-channel-usage-in-android-sdk)
 4. [Data Channel Usage in iOS SDK](#4-data-channel-usage-in-ios-sdk)
-5. [Data Channel Demos](#5-data-channel-demos)
+5. [Data Channel Modes](#5-data-channel-modes)
+6. [Data Channel Demos](#6-data-channel-demos)
 
 ## 1. What is Data Channel, how can I use?
 A data channel is can be used when transferring data from one device to another. Data Channels can be utilized in various use cases where an arbitrary form of data communication is needed in addition to low latency video and audio communication.
@@ -74,7 +75,10 @@ public interface IDataChannelObserver {
 ## 4. Data Channel Usage in iOS SDK
 
 
-## 5. Data Channel Demos
+## 5. Data Channel Modes
+
+
+## 6. Data Channel Demos
 We have prepared some demos for this feature. You can use this feature in 2.0 version. 
 
 5 - a - String
