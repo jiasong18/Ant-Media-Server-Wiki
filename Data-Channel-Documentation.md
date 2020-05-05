@@ -1,8 +1,8 @@
 This guide explains Data Channel technical details in Ant Media Server. Briefly, Data Channel features are;
 1. [What is Data Channel, How to use Data Channel with Ant Media Server](#1-what-is-data-channel-how-can-i-use)
-2. [Data Channel Usage in Android SDK](#2-data-channel-usage-in-android-sdk)
-3. [Data Channel Usage in iOS SDK](#3-data-channel-usage-in-ios-sdk)
-4. [Data Channel Usage in Javascript SDK](#4-data-channel-usage-in-javascript-sdk)
+2. [Data Channel Usage in Javascript SDK](#2-data-channel-usage-in-javascript-sdk)
+3. [Data Channel Usage in Android SDK](#3-data-channel-usage-in-android-sdk)
+4. [Data Channel Usage in iOS SDK](#4-data-channel-usage-in-ios-sdk)
 5. [Data Channel Demos](#5-data-channel-demos)
 
 ## 1. What is Data Channel, how can I use?
@@ -10,29 +10,14 @@ A data channel is can be used when transferring data from one device to another.
 
 ### How to enable Data Channel in Management Panel
 
+![Ant Media Server Management Panel Data Channel](https://antmedia.io/wp-content/uploads/2020/05/Data-Channel-1.png)
+
 You can enable Data Channel basically in Ant Media Server Dashboard Panel. You need to enable data channel support in Ant Media Server Management Console `/applications/applicationName` settings tab. After enabling data channel support, the server administrator can choose if the players are allowed to send messages only to the publisher or to the publisher and to all other players or to nobody.
 
 Note: Make sure to enable correct application.
 
 
-
-## 2. Data Channel Usage in Android SDK
-
-Exchanging data through WebRTC Data Channels is equally straightforward with Ant Media Server Android WebRTC SDK. Your Activity should implement IDataChannelObserver interface as shown below:
-
-```
-public interface IDataChannelObserver {
-    void onBufferedAmountChange(long previousAmount, String dataChannelLabel);
-    void onStateChange(DataChannel.State state, String dataChannelLabel);
-    void onMessage(DataChannel.Buffer buffer, String dataChannelLabel);
-    void onMessageSent(DataChannel.Buffer buffer, boolean successful);
-}
-```
-
-## 3. Data Channel Usage in iOS SDK
-
-
-## 4. Data Channel Usage in Javascript SDK
+## 2. Data Channel Usage in Javascript SDK
 Sending and receiving messages via data channels can be implemented using Ant Media Server Javascript SDK with less than 10 lines of code.
 
 When initializing WebRTCAdaptor you need to give a callback function (see Java Script SDK Guide in Wiki).
@@ -71,6 +56,23 @@ callback : function(info, description) {
      console.log("Data channel closed " );
  }
 ```
+
+
+## 3. Data Channel Usage in Android SDK
+
+Exchanging data through WebRTC Data Channels is equally straightforward with Ant Media Server Android WebRTC SDK. Your Activity should implement IDataChannelObserver interface as shown below:
+
+```
+public interface IDataChannelObserver {
+    void onBufferedAmountChange(long previousAmount, String dataChannelLabel);
+    void onStateChange(DataChannel.State state, String dataChannelLabel);
+    void onMessage(DataChannel.Buffer buffer, String dataChannelLabel);
+    void onMessageSent(DataChannel.Buffer buffer, boolean successful);
+}
+```
+
+## 4. Data Channel Usage in iOS SDK
+
 
 ## 5. Data Channel Demos
 We have prepared some demos for this feature. You can use this feature in 2.0 version. 
