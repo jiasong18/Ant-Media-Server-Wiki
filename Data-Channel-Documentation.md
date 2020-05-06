@@ -94,7 +94,7 @@ Set your Data Channel observer in the WebRTCClient object like this:
 
 Then your Activity is ready to send and receive data.
 
-`To send data, the developer just needs to call sendMessageViaDataChannel method of WebRTCClient and pass the raw data like this:`
+To send data, the developer just needs to call sendMessageViaDataChannel method of WebRTCClient and pass the raw data like this:
 
 `webRTCClient.sendMessageViaDataChannel(buf);`
 
