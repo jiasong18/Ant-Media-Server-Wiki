@@ -111,10 +111,19 @@ Data Channel implementation in Ant Media Server opens a new set of possibilities
 
 
 ## 5. Data Channel Modes
+There are 3 modes in Data Channel feature. These are `Publisher & All Player`, `Only Publisher` and `Nobody`
+
+### a- Publisher & All Player
+Publisher
+
+### b- Only Publisher
+
+
+### c- Nobody
+
 
 
 ## 6. Data Channel Hooks
-We have prepared some demos for this feature. You can use this feature in 2.0 version. 
 
 5 - a - String
 5 - b - Byte
