@@ -34,9 +34,11 @@ webRTCAdaptor.sendData("stream1", "Hi!");
 
 For communication between different clients, it is always better to send the text messages in a structured data format like XML or JSON. Here is a simple example JSON TextMessage object representing our text messages:
 
+```javascript
 { messageId:"uniqueId1", // unique id for each message
 messageDate: 23414123235, // time and date as long unix time stamp
 messageBody: "Hi"} // actual text message typed by the user
+```
 
 Google Chrome ve Mozilla tipleri farklı 
 
