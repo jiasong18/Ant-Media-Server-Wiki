@@ -15,7 +15,7 @@ A data channel is can be used when transferring data from one device to another.
 
 You can enable Data Channel basically in Ant Media Server Dashboard Panel. You need to enable data channel support in Ant Media Server Management Console `/applications/applicationName` settings tab. After enabling data channel support, the server administrator can choose if the players are allowed to send messages only to the publisher or to the publisher and to all other players or to nobody.
 
-Note: Make sure to enable correct application.
+Note: Make sure to enable the correct application.
 
 
 ## 2. Data Channel Usage in Javascript SDK
@@ -28,6 +28,12 @@ When initializing WebRTCAdaptor you need to give a callback function (see Java S
 ```javascript
 webRTCAdaptor.sendData("stream1", "Hi!");
 ```
+
+For communication between different clients, it is always better to send the text messages in a structured data format like XML or JSON. Here is a simple example JSON TextMessage object representing our text messages:
+
+{ messageId:"uniqueId1", // unique id for each message
+messageDate: 23414123235, // time and date as long unix time stamp
+messageBody: "Hi"} // actual text message typed by the user
 
 Google Chrome ve Mozilla tipleri farklı 
 
@@ -71,6 +77,28 @@ public interface IDataChannelObserver {
     void onMessageSent(DataChannel.Buffer buffer, boolean successful);
 }
 ```
+
+When a data channel message is received, onMessage method will be called, where you decide how to handle the received data.
+
+Similary, onMessageSent method is called, when a message is successfully sent or a sending attempt failed.
+
+Before initialization of WebRTCClient you need to:
+
+Set your Data Channel observer in the WebRTCClient object like this:
+
+`webRTCClient.setDataChannelObserver(this);`
+
+`Enable data channel communication by putting following key-value pair to your Intent before initialization of WebRTCClient with it:`
+
+`this.getIntent().putExtra(EXTRA_DATA_CHANNEL_ENABLED, true);`
+
+Then your Activity is ready to send and receive data.
+
+`To send data, the developer just needs to call sendMessageViaDataChannel method of WebRTCClient and pass the raw data like this:`
+
+`webRTCClient.sendMessageViaDataChannel(buf);`
+
+Data Channel implementation in Ant Media Server opens a new set of possibilities and use cases for our customers and end-users. Furthermore, our functional and practical SDKs will make life easier for WebRTC developers.
 
 ## 4. Data Channel Usage in iOS SDK
 
