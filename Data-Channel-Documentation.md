@@ -88,7 +88,7 @@ Set your Data Channel observer in the WebRTCClient object like this:
 
 `webRTCClient.setDataChannelObserver(this);`
 
-`Enable data channel communication by putting following key-value pair to your Intent before initialization of WebRTCClient with it:`
+Enable data channel communication by putting following key-value pair to your Intent before initialization of WebRTCClient with it:
 
 `this.getIntent().putExtra(EXTRA_DATA_CHANNEL_ENABLED, true);`
 
