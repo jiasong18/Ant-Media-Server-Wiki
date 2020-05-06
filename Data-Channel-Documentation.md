@@ -19,6 +19,9 @@ Note: Make sure to enable the correct application.
 
 
 ## 2. Data Channel Usage in Javascript SDK
+
+![Data Channel in Web](https://antmedia.io/wp-content/uploads/2020/04/webMessageScreenshot-1024x545.png)
+
 Sending and receiving messages via data channels can be implemented using Ant Media Server Javascript SDK with less than 10 lines of code.
 
 When initializing WebRTCAdaptor you need to give a callback function (see Java Script SDK Guide in Wiki).
