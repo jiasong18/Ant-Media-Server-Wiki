@@ -67,6 +67,8 @@ callback : function(info, description) {
 
 ## 3. Data Channel Usage in Android SDK
 
+![Data Channel in Android](https://antmedia.io/wp-content/uploads/2020/04/androidMessageScreenshot-600x577.png)
+
 Exchanging data through WebRTC Data Channels is equally straightforward with Ant Media Server Android WebRTC SDK. Your Activity should implement IDataChannelObserver interface as shown below:
 
 ```
