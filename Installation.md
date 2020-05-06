@@ -60,12 +60,12 @@ Open your browser and type `http://SERVER_IP_ADDRESS:5080` to go to the web pane
 ### 1. Create `Dockerfile`
 Create a text file with name of `Dockerfile` as follows
 ```
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 ARG AntMediaServer
 
 RUN apt-get update
-RUN apt-get install -y libx11-dev
+RUN apt-get install -y libx11-dev libcap-dev
 RUN apt-get install -y wget
 
 ADD ./${AntMediaServer} /home
