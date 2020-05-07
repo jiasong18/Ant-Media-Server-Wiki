@@ -58,31 +58,11 @@ Open your browser and type `http://SERVER_IP_ADDRESS:5080` to go to the web pane
 ## Docker Installation
 
 ### 1. Create `Dockerfile`
-Create a text file with name of `Dockerfile` as follows
-```
-FROM ubuntu:18.04
+Download the Dockerfile file.
 
-ARG AntMediaServer
-
-RUN apt-get update
-RUN apt-get install -y libx11-dev libcap-dev
-RUN apt-get install -y wget
-
-ADD ./${AntMediaServer} /home
-
-RUN cd home \
-    && pwd \
-    && wget https://raw.githubusercontent.com/ant-media/Scripts/master/install_ant-media-server.sh \
-    && chmod 755 install_ant-media-server.sh
-
-RUN cd home \
-    && pwd \
-    && ./install_ant-media-server.sh ${AntMediaServer}
-
-ENTRYPOINT service antmedia restart && bash
-```
-
-
+`
+wget https://raw.githubusercontent.com/ant-media/Scripts/master/Dockerfile
+`
 ### 2. Build Docker Image 
 Download and save Ant Media Server ZIP file in the same directory with `Dockerfile`. Then run the docker build command from command line
 ```
