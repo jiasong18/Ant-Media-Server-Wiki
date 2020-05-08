@@ -116,16 +116,21 @@ Data Channel implementation in Ant Media Server opens a new set of possibilities
 There are 3 modes in Data Channel feature. These are `Publisher & All Player`, `Only Publisher` and `Nobody`
 
 ### a- Publisher & All Player
-This section enables sending any message to all publishers and players in the same stream ID. 
+Player messages are delivered to everyone both publisher and all players.
 
 ### b- Only Publisher
-This section enables sending any message to only publishers.
+Player messages are delivered to only publisher
 
 ### c- Nobody
-This section ensures that no messages can be sent to anyone.
+Player messages are delivered to nobody. In order words, player cannot send messages
 
 ## 6. Data Channel Hooks
+All data channel messages are delivered to these hooks as well. So that you can able to integrate into any third-party application.
 
-5 - a - String
-5 - b - Byte
+**Add Data Channel Webhook URL**
+In order to add default URL,  just follow the steps below
+
+Open your apps `red5-web.properties`  and add `settings.dataChannelWebHook` property to that file. `red5-web.properties` file is under `webapps/<app_name>/WEB-INF` folder.
+
+
 
