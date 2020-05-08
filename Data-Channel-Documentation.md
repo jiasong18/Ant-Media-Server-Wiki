@@ -127,10 +127,14 @@ Player messages are delivered to nobody. In order words, player cannot send mess
 ## 6. Data Channel Hooks
 All data channel messages are delivered to these hooks as well. So that you can able to integrate into any third-party application.
 
-**Add Data Channel Webhook URL**
+* Add Data Channel Webhook URL
 In order to add default URL,  just follow the steps below
 
 Open your apps `red5-web.properties`  and add `settings.dataChannelWebHook` property to that file. `red5-web.properties` file is under `webapps/<app_name>/WEB-INF` folder.
 
+* Restart the server on command line
+sudo service antmedia restart
+
+After the restarting, you can use the Data Channel Webhook feature.
 
 
