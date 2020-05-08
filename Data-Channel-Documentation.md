@@ -114,14 +114,13 @@ Data Channel implementation in Ant Media Server opens a new set of possibilities
 There are 3 modes in Data Channel feature. These are `Publisher & All Player`, `Only Publisher` and `Nobody`
 
 ### a- Publisher & All Player
-Publisher
+This section enables sending any message to all publishers and players in the same stream ID. 
 
 ### b- Only Publisher
-
+This section enables sending any message to only publishers.
 
 ### c- Nobody
-
-
+This section ensures that no messages can be sent to anyone.
 
 ## 6. Data Channel Hooks
 
