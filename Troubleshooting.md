@@ -60,6 +60,9 @@ The command above forwards your local computer port 5599 to your server's 5599 p
 The reasons for this error are that your CA certificate is not available on your server. For this, you need to download the root and intermediate certificates of the SSL provider (SHA-1, SHA-2 must be the correct version). After that, you need to import Java, which works currently active with the keytool tool.
 
 For example:
-keytool -import -trustcacerts -alias AddTrustExternalCARoot -file comodorsaaddtrustca.crt -keystore /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/cacerts
-keytool -import -trustcacerts -alias comodointermediate -file addtrustexternalcaroot.crt -keystore /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/cacerts
-keytool -import -trustcacerts -alias comodointermediate2 -file comodorsadomainvalidationsecureserverca.crt -keystore /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/cacerts
+
+`keytool -import -trustcacerts -alias AddTrustExternalCARoot -file comodorsaaddtrustca.crt -keystore /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/cacerts`
+
+`keytool -import -trustcacerts -alias comodointermediate -file addtrustexternalcaroot.crt -keystore /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/cacerts`
+
+`keytool -import -trustcacerts -alias comodointermediate2 -file comodorsadomainvalidationsecureserverca.crt -keystore /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/cacerts`
