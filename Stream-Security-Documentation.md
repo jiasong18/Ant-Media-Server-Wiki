@@ -36,11 +36,11 @@ The Server creates tokens with [getToken](https://github.com/ant-media/Ant-Media
 
 The sample token creation service URL in Publish Scenario:
 
-    http://[IP_Address]:5080/<Application_Name>/rest/broadcast/getToken?id=<Stream_Id>&expireDate=<Expire_Date>&type=publish
+    http://[IP_Address]:5080/<Application_Name>/rest/v2/broadcast/getToken?id=<Stream_Id>&expireDate=<Expire_Date>&type=publish
 
 The sample token creation service URL in Play Scenario:
 
-    http://[IP_Address]:5080/<Application_Name>/rest/broadcast/getToken?id=<Stream_Id>&expireDate=<Expire_Date>&type=play
+    http://[IP_Address]:5080/<Application_Name>/rest/v2/broadcast/getToken?id=<Stream_Id>&expireDate=<Expire_Date>&type=play
 
 
 **RTMP URL usage:**
