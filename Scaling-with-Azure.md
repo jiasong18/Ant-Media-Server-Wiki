@@ -69,6 +69,7 @@ TCP:5080 (HTTP)
 TCP:5443 (HTTPS)
 TCP:5554 (RTSP)
 UDP:5000-65000 (WebRTC and RTSP)
+TCP:5000-65000 (WebRTC and RTSP)
 ```
 ### Part 4 – “Management” in Create Virtual Machine
 
