@@ -131,4 +131,4 @@ You only need to call `webRTCAdaptor.switchDesktopCaptureWithCamera(streamId);` 
 Switch back to camera, just again call to `webRTCAdaptor.switchVideoCapture(streamId);` function.
 > `webRTCAdaptor.switchVideoCapture(streamId);`
 
-Please take a look at the Sample pages code at [camera_plus_screen.html](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/camera_plus_screen.html) and [index.html](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/index.html).
+Please take a look at the Sample pages code at [index.html](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/index.html).
