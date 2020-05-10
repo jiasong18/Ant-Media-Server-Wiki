@@ -1,0 +1,1 @@
+In this documentation, we're going to explain simply how to use VP8 & H.264 in Ant Media Server.
