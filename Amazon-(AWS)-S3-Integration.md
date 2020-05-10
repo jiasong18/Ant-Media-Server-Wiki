@@ -22,13 +22,7 @@ You also need to know the region of your bucket. If you do not have any bucket, 
 
 ![](https://antmedia.io/wp-content/uploads/2019/12/5-aws-add-s3-console.png)
 
-![](https://antmedia.io/wp-content/uploads/2019/12/5-aws-add-s3-console2.png)
-
-![](https://antmedia.io/wp-content/uploads/2019/12/5-aws-add-s3-console3.png)
-
-![](https://i1.wp.com/antmedia.io/wp-content/uploads/2019/12/5-aws-add-s3-console4.png)
-
-![](https://i1.wp.com/antmedia.io/wp-content/uploads/2019/12/5-aws-add-s3-console5.png)
+![AWS S3 Create New Bucket](https://antmedia.io/wp-content/uploads/2020/05/aws-s3-create-new-bucket.png)
 
 * Add a new bean to `red5-web.xml` of your app as below. `red5-web.xml` file is under `WEB-INF` folder of your app. For instance `webapps` / `LiveApp` / `WEB-INF` / `red5-web.xml`
 
