@@ -63,7 +63,7 @@ Ant Media provides *free Enterprise Licenses** for the *students, academics, com
 
 ## Supported Environments
 Ant Media Server runs on **Linux(Ubuntu)** and **MacOS**.  it supports only x64 architecture. 
-Ubuntu 16.04 is officially supported and auxiliary scripts are provided for Ubuntu 16.04. In addition, It's known that Ant Media Server is used on Centos, SUSE, Debian distributions as well.
+Ubuntu 16.04 & 18.04 is officially supported and auxiliary scripts are provided for Ubuntu 16.04 & 18.04. In addition, It's known that Ant Media Server is used on Centos, SUSE, Debian distributions as well.
 
 ## Extensions
 ### Object Recognition with TensorFlow
