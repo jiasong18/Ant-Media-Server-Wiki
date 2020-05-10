@@ -3,7 +3,7 @@
 
 ### 1. Download Ant Media Server 
 Download and save the Ant Media Server Community/Enterprise Edition from http://antmedia.io to your disk.
-Ant Media Server is being tested on Ubuntu 16.04 and 18.04 versions on CI. 
+Ant Media Server is being tested on Ubuntu 18.04 versions on CI. 
 
 ### 2. Open Terminal and Go to Directory
 
