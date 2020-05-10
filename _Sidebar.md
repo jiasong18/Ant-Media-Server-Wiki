@@ -55,6 +55,7 @@
 * [Frequently Asked Questions](Frequently-Asked-Questions)
 
 ## Draft
+* [H.264 & VP8 Documentation](H.264-&-VP8-Documentation)
 * [Screen Share without Plugin](WebRTC-Screen-Sharing-without-Plugin)
 * [Turn Server Installation](Turn-Server-Installation)
 
