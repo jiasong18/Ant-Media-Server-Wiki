@@ -71,6 +71,9 @@ TCP:5554 (RTSP)
 UDP:5000-65000 (WebRTC and RTSP)
 TCP:5000-65000 (WebRTC and RTSP)
 ```
+
+Important Note: You need to open TCP port range(TCP:5000-65000) for the internal network. It should not be open to public.
+
 ### Part 4 – “Management” in Create Virtual Machine
 
 ![](images/azure7.png)
