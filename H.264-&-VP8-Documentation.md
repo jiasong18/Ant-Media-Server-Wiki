@@ -2,7 +2,9 @@ In this documentation, we're going to explain simply how to use H.264 & VP8 in A
 
 ![H264-VP8 General Settings](https://antmedia.io/wp-content/uploads/2020/05/H264-VP8-general.png)
 
-Moreover, you can have some options for data delivery of players.  There are basically three options
+VP8 and H.264 are mandatory codecs in WebRTC according to RFC 7742. On the other hand, not all browsers support VP8 and H.264 codecs at the same time which may be caused by some licensing issues. 
+
+Ant Media Server supports H.264 for 1.x versions and now Ant Media Server supports  VP8 for 2.x versions including transcoding, clustering. So that all of the devices can play WebRTC streams within their browsers.
 
 1. [H.264 & VP8 Enabled](#1-h264--vp8-enabled)
 2. [Only H.264 Enabled](#2-only-h264-enabled)
