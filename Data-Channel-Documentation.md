@@ -116,13 +116,13 @@ Data Channel implementation in Ant Media Server opens a new set of possibilities
 There are 3 modes in Data Channel feature. These are `Publisher & All Player`, `Only Publisher` and `Nobody`
 
 ### a- Publisher & All Player
-Player messages are delivered to everyone both publisher and all players.
+Player messages are delivered to all other players who are watching the stream and publisher. Again publisher messages are delivered to all players.
 
 ### b- Only Publisher
-Player messages are delivered to only publisher
+Player messages are only delivered to the publisher and again publisher messages are delivered to all players.
 
 ### c- Nobody
-Player messages are delivered to nobody. In order words, player cannot send messages
+Only publisher can send messages to the players and players cannot send messages.
 
 ## 6. Data Channel Hooks
 All data channel messages are delivered to these hooks as well. So that you can able to integrate into any third-party application.
