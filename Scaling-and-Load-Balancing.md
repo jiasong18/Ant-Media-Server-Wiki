@@ -88,6 +88,7 @@ http://<ANT_MEDIA_SERVER_NODE_IP>:5080/#/cluster
   * Node fetches live stream from the origin node
   * Distribute stream to the viewers
 
+Important Note: You need to open this TCP port range(TCP:5000-65000) for the internal network. It should not be open to public 
 
 For any case, if you want to return back to standalone mode, just run the following command
 ````
