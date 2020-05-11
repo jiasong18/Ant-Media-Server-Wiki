@@ -44,6 +44,8 @@ Then click “Review and Launch”.
 
 * Add “22” and “27017” TCP ports as follows in the image. Warning is critical for security. We’ll restrict source into a VPC later. Just click “Review and Launch” .
 
+Important Note: You need to open TCP port range(TCP:5000-65000) for the internal network. It should not be open to public. 
+
 ![](images/aws6.png)
 
 * In the coming window, Click “Launch” button again. Then it will ask to specify key file. Choose “Create new key pair” and click “Download Key Pair” button. After key file is downloaded. Click “Launch Instances”
