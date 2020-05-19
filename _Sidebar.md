@@ -42,7 +42,7 @@
   * [App Configuration](Application-Configuration-Documentation)
   * [Create New Application](Create-New-Application)
   * [Build from Source](Build-From-Source)
-* [Load Testing](Load-Testing)
+* [WebRTC Load Testing](Load-Testing)
 
 ## Reference
 * [REST API Reference](https://antmedia.io/rest)
