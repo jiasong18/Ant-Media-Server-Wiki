@@ -53,32 +53,46 @@ Here we have a cluster structure as SUT which contains one origin and N edge ser
 
 ***
 
-# Preparation of Test Server
-## Step 1. Install Docker to your host
-You can look [here](https://docs.docker.com/install/) for docker installation.
+# Ant Media WebRTC Test Tool
+You can download test tool from [here](https://github.com/ant-media/TestScriptAndTools/blob/master/Tools/webrtctest-release.zip).
 
-## Step 2. Download DockerFile for Ant Media Server
-Download Dockerfile prepared for Ant Media Test environment from [here](https://github.com/ant-media/Scripts/blob/master/Dockerfile_AntMediaTest). You can download with the following command:
+Ant Media WebRTC Test Tool is a java project for testing Ant Media Server WebRTC capabilities.
 
-`$ sudo wget https://raw.githubusercontent.com/ant-media/Scripts/master/Dockerfile_AntMediaTest`
+* Ant Media WebRTC Test is compatible with Ant Media Server signaling protocol. 
+* Ant Media WebRTC Test has two modes: publisher and player. (-m flag determines the mode)
+* Ant Media WebRTC Test has two options with UI or without UI. (-u flag determines the UI on/off)
+* You can save received(in player mode) video.
+* You can create load with -n flag as many as your machine CPU lets you.
 
-## Step 3. Build Dockerfile
-Build Dockerfile with the following command:
+# Running Ant Media WebRTC Test Tool
 
-`$ sudo docker build -f Dockerfile_AntMediaTest -t antmedia/test .`
+It can be run from terminal with the following options.
+```
+./run.sh -f output.mp4 -m publisher -n 1  #publishes output.mp4 to the server with default name myStream
+```
 
-## Step 4. Run Dockerfile
-Run your container with the following command:
+```
+./run.sh -m player -n 100 -i stream1 -s 10.10.175.53 -u false #plays 100 viewers for default stream myStream
+```
 
-` $ sudo docker run -w "/usr/local/test" --name amstest -p 8090:8090 antmedia/test java -jar loadtester.jar`
+### Parameters
+```
+Flag 	 Name      	 Default   	 Description                 
+---- 	 ----      	 -------   	 -----------   
+f    	 File Name 	 test.mp4     	 Source file* for publisher output file for player        
+s    	 Server IP 	 localhost 	 server ip                   
+q    	 Security  	 false     	 true(wss) or false(ws)      
+l        Log Level       3               0:VERBOSE,1:INFO,2:WARNING,3:ERROR,4:NONE
+i    	 Stream Id 	 myStream  	 id for stream               
+m    	 Mode      	 player    	 publisher or player         
+u    	 Show GUI  	 true      	 true or false               
+p    	 Port      	 5080      	 websocket port number 
+v    	 Verbose   	 false     	 true or false 
+n    	 Count     	 1         	 Number of player/publisher connctions 
+k        Kafka Broker    null            Kafka broker address with port
+r    	 Publish Loop 	 false           true or false
+c    	 Codec           h264            h264 or VP8 
+d    	 Data Channel    false           true or false 
+```
 
-## Step 5. Connect to Ant Media Load Test Server within Docker
-Open web browser and connect to `<dockercontainer ip>:8090`
-
-## Step 6. Complete configuration
-Fill configuration parameters according to your test setup. 
- - For one instance setup, both Origin Server and Edge Access Point are set with IP of the running server instance. 
- - For cluster setup, Origin Server is set with IP of the origin server and Edge Access Point is set with IP of the load-balancer.
- 
-## Step 7. Run test
-Run the test and wait for the result. The result will be available in Results panel after test finishes.
+*File in mp4 format should have h264 encoded video and opus encoded audio
