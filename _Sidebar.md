@@ -60,6 +60,7 @@
 * [H.264 & VP8 Documentation](H.264-&-VP8-Documentation)
 * [Screen Share without Plugin](WebRTC-Screen-Sharing-without-Plugin)
 * [Turn Server Installation](Turn-Server-Installation)
+* [Web Panel IP Filtering](Web-Panel-IP-Filtering)
 
 ## Proposals
 * Git Branching
