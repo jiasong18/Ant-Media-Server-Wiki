@@ -32,7 +32,7 @@ If One-Time Token control is enabled, then all publish and play requests should 
 
 **Create a Token in Publish&Play Scenario**
 
-The Server creates tokens with [getTokenV2](https://github.com/ant-media/Ant-Media-Server/blob/master/src/main/java/io/antmedia/rest/BroadcastRestService.java) Rest Service getting streamId, expireDate and type parameters with query parameters. Service returns tokenId and other parameters. It is important that streamId and type parameters should be defined properly. Because tokenId needs to match with both streamId and type.
+The Server creates tokens with [getTokenV2](https://github.com/ant-media/Ant-Media-Server/blob/master/src/main/java/io/antmedia/rest/BroadcastRestService.java) Rest Service getting `streamId`, `expireDate` and `type` parameters with query parameters. Service returns `tokenId` and other parameters. It is important that `streamId` and type parameters should be defined properly. Because `tokenId` needs to match with both `streamId` and type.
 
 The sample token creation service URL in Publish Scenario:
 
@@ -42,6 +42,7 @@ The sample token creation service URL in Play Scenario:
 
     http://[IP_Address]:5080/<Application_Name>/rest/v2/broadcasts/<Stream_Id>/token?expireDate=<Expire_Date>&type=play
 
+Expire Date format is Unix Timestamp. Check also -> https://www.epochconverter.com/
 
 **RTMP URL usage:**
 
