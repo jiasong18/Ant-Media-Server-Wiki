@@ -1,4 +1,4 @@
-## User Guide ff
+## User Guide
 * [Introduction](Introduction)
 * [Quick Start](Quick-Start)
   * [Samples List](Sample-List)
