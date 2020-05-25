@@ -164,7 +164,9 @@ You need to generate a hash value using the formula `sha256(STREAM_ID+ROLE+SECRE
 **Step 2. Request with Hash**
 
 The system controls hash validity during publishing or playing. __Keep in mind that there is NO '+' in calculating the hash in this formula `sha256(STREAM_ID+ROLE+SECRET)`__
-Here is an example for that. Let's say `STREAM_ID: stream1`, `ROLE: publish`, `SECRET: this_is_secret`
+Here is an example for that. 
+
+Let's say `STREAM_ID: stream1`, `ROLE: publish`, `SECRET: this_is_secret`
 Your hash is the result of this calculation: `sha256(stream1publishthis_is_secret)`
 
 Go to [JavaScript SHA-256](https://geraintluff.github.io/sha256/) for online demo
