@@ -1,6 +1,3 @@
-***
-**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
-***
 Ant Media Server provides webhooks for making your system/app know when certain events occurs on the server. Therefore, you can register your URL to Ant Media Server which makes POST request when a live stream is started, finished or recorded. Firstly,  let's look at how to register your backend URL to Ant Media Server as a webhook. After that, we'll provide reference for webhooks.
 
 <img src="https://antmedia.io/wp-content/uploads/2018/11/webhooks-300x273.png" alt="webhook ant media server" width="300" height="273" class="aligncenter wp-image-5807 size-medium" title="webhooks ant media server" />
@@ -12,15 +9,6 @@ In order to add default URL,  just follow the steps below
  	<li>Open your apps <em>red5-web.properties</em>  and add <em>settings.listenerHookURL</em> property to that file. <em>red5-web.properties </em>file is under <em>webapps/&lt;app_name&gt;/WEB-INF</em>  folder
 <pre>...
 settings.listenerHookURL=http://www.example.com/webhook/
-...</pre>
-</li>
- 	<li>Open your apps <em>red5-web.xml</em> file and add <em>settings.listenerHookURL</em> to the <em>app.settings</em> bean.
-<pre class="p1"><span class="s1">...
-&lt;</span><span class="s2">bean</span><span class="s3"> </span><span class="s4">id</span><span class="s3">=</span>"app.settings"<span class="s3"> </span><span class="s4">class</span><span class="s3">=</span>"io.antmedia.AppSettings"<span class="s1">&gt;
-...</span>
-<span class="s1">  &lt;</span><span class="s2">property</span><span class="s3"> </span><span class="s4">name</span><span class="s3">=</span>"listenerHookURL"<span class="s3"> </span><span class="s4">value</span><span class="s3">=</span>"${settings.listenerHookURL}"<span class="s3"> </span><span class="s1">/&gt;
-</span>...
-<span class="s1">&lt;/</span>bean&gt;
 ...</pre>
 </li>
  	<li>Restart the server on command line
