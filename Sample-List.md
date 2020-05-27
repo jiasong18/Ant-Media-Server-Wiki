@@ -18,13 +18,6 @@ https://domain-name.com:5443/LiveApp/player.html
 ````
 File is located at `/usr/local/antmedia/webapps/LiveApp/player.html`
 
-### WebRTC Screen Sharing with Camera
-
-````
-https://domain-name.com:5443/LiveApp/camera_plus_screen.html
-````
-File is located at `/usr/local/antmedia/webapps/LiveApp/camera_plus_screen.html`
-
 ### WebRTC Audio Publishing
 
 WebRTC Audio publishing is available **in Enterprise Edition**
