@@ -13,7 +13,8 @@ The table below summarises the available settings. Some settings don’t have to
 * **`settings.hlsListSize`**: Set the maximum number of playlist entries. If 0 the list file will contain all the segments.
 * **`settings.hlsTime`**: Target segment length in seconds. Segment will be cut on the next key frame after this time has passed.
 * **`settings.deleteHLSFilesOnEnded`**: It's mandatory. If it is set then created segment files will be deleted after streaming. Default value is `true`.
-* **`settings.hlsPlayListType`**: It can be *event:* or *vod*. New .ts files are only be appended to the list and and past .ts files are not deleted.
+* **`settings.hlsPlayListType`**: It can be *event:* or *vod*. Check HLS documentation for EXT-X-PLAYLIST-TYPE.
+* **`settings.hlsflags`**: Set hls_flags for HLS muxer. Separate with + or -. Check for details: https://ffmpeg.org/ffmpeg-formats.html#Options-6 
 * **`settings.webRTCEnabled`**: It's mandatory. If it is set true then WebRTC playing is enabled. Default value is `false`
 * **`settings.listenerHookURL`**: You must set this to subscribe some event notifications. For details check: https://antmedia.io/webhook-integration/
 * **`settings.acceptOnlyStreamsInDataStore`**: It's mandatory. If it is set true you cannot start publishing unless you add the stream id to the database. You can add stream id by REST API. Default value is `false`.
