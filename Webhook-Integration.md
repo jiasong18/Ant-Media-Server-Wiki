@@ -11,23 +11,11 @@ In order to add default URL,  just follow the steps below
 settings.listenerHookURL=http://www.example.com/webhook/
 ...</pre>
 </li>
- 	<li>Open your apps <em>red5-web.xml</em> file and add <em>settings.listenerHookURL</em> to the <em>app.settings</em> bean.
-<pre class="p1"><span class="s1">...
-&lt;</span><span class="s2">bean</span><span class="s3"> </span><span class="s4">id</span><span class="s3">=</span>"app.settings"<span class="s3"> </span><span class="s4">class</span><span class="s3">=</span>"io.antmedia.AppSettings"<span class="s1">&gt;
-...</span>
-
-
-<span class="s1">  &lt;</span><span class="s2">property</span><span class="s3"> </span><span class="s4">name</span><span class="s3">=</span>"listenerHookURL"<span class="s3"> </span><span class="s4">value</span><span class="s3">=</span>"${settings.listenerHookURL}"<span class="s3"> </span><span class="s1">/&gt;
-</span>...
-<span class="s1">&lt;/</span>bean&gt;
-...</pre>
-> **Attention:** Please ensure that the the "io.antmedia.AppSettings" bean does not exist elsewhere within this file. 
-</li>
  	<li>Restart the server on command line
 <pre>sudo service antmedia restart</pre>
 </li>
 </ul>
-Your Ant Media Server now has a default hook which is called when certain events happen (see below) 
+Right now, there is a default webhook URL for your app.
 <h3>Add Custom Webhook for Streams</h3>
 Ant Media Server provides creating streams through rest service. Therefore, If you want to specify the webhook URL for each stream, you can use <em>createBroadcast</em> method in <a href="https://github.com/ant-media/Ant-Media-Server/blob/master/src/main/java/io/antmedia/rest/BroadcastRestService.java">rest service.</a>  <em>createBroadcast</em> method has <a href="https://github.com/ant-media/Ant-Media-Server-Common/blob/master/src/main/java/io/antmedia/datastore/db/types/Broadcast.java">Broadcast</a> object parameter which has <em>listenerHookURL </em>field<em> . </em>
 
@@ -70,7 +58,7 @@ Here is a sample JSON for using <em>createBroadcast</em> method with <a href="ht
 
 
 ## Webhooks List
-Ant Media Server will hook to your website using a POST request with "application/x-www-form-urlencoded" as the body. Some example responses are: 
+It's time to know when Ant Media Server calls webhooks with which parameters. Here is a simple list for that
 
  * <strong>liveStreamStarted: </strong>Ant Media server calls this hook when a new live stream is started. It sends **POST (application/x-www-form-urlencoded)** request to URL with following variables
    * <strong>id</strong>:  stream id of the broadcast
@@ -88,8 +76,10 @@ Ant Media Server will hook to your website using a POST request with "applicatio
    * <strong>vodName:  </strong>vod file name
    * <strong>vodId:  </strong>vod id in the datastore
 
-That's all. As a result, you can now determine the type of the request by using the <em>action</em> parameter within the POST request.
+That's all. As a result, you can take some custom actions according to your project by checking <em>action</em> variable in your backend URL.
 
 We hope this post will help you to make automation in your project.  Please <a href="https://antmedia.io/#contact">keep in touch</a> if you have any question. We will be happy if we can help you.
 
-> **Attention:** Please process the POST request within your application as quick as possible as the hooks are called within the event loop thread which will not wait for your application to complete complex tasks.  
+> **Attention:** Please process the result in your backend URL as soon as possible because these callbacks is called in event loop threads that does not support long running operations.  
+
+&nbsp;
