@@ -54,7 +54,7 @@ Here we have a cluster structure as SUT which contains one origin and N edge ser
 ***
 
 # Ant Media WebRTC Test Tool
-You can download test tool from [here](https://github.com/ant-media/TestScriptAndTools/blob/master/Tools/webrtctest-release.zip).
+You can download test tool from [here](https://drive.google.com/file/d/16YLb5zAbSJ8rgzmoP6P01SmOl-C0WmVe/view?usp=sharing).
 
 Ant Media WebRTC Test Tool is a java project for testing Ant Media Server WebRTC capabilities.
 
