@@ -19,7 +19,7 @@ For the rest of this guide, we try to explain how to call REST methods, give som
 
 All REST methods are bind `rest` path of the app. Let me give a sample. Ant Media Server Community Edition has `LiveApp` and `WebRTCApp` by default. On the other hand, Enterprise Edition has `LiveApp` and `WebRTCAppEE` by default. The `LiveApp` REST methods (for instance broadcast’s get method) are available as follows
 
-`http://SERVER_ADDRESS:5080/LiveApp/rest/broadcast/get?id={STREAM_ID}`
+`http://SERVER_ADDRESS:5080/LiveApp/rest/v2/broadcasts/{STREAM_ID}`
 
 Let’s make an example with the so-famous `curl` tool. By the way,  Postman is another great tool for testing purposes. It also generates code snippets in several programming languages such as Java, PHP, Go, Python, etc.
 
@@ -29,7 +29,7 @@ According to REST Reference, we should call create the method as follows.
 Important Note: Please keep in mind that the REST interface only responds to the calls that are made from 127.0.0.1 by default. If you call from any other IP Address, it does not return. For allowing more IP Address, take a look at the  Security section later in this post.
 ```
 curl -X POST
-http://localhost:5080/LiveApp/rest/broadcast/create
+http://localhost:5080/LiveApp/rest/v2/broadcasts/create
 -H ‘content-type: application/json’
 -d ‘{“name”:”test_video”}’
 ```
@@ -40,7 +40,7 @@ We can provide a `Broadcast` object as a parameter in JSON format. Ant Media Ser
 Getting a broadcast is easier. You just need to add the `streamId` as a query parameter to `streamId` variable as follows.
 ```
 curl -X GET
-‘http://localhost:5080/LiveApp/rest/broadcast/get?id=650320906975923279669775’
+‘http://localhost:5080/LiveApp/rest/v2/broadcasts/650320906975923279669775’
 ```
 `get` method returns the Broadcast object as `create` method. This is the sample JSON response that get method returns.
 ```
