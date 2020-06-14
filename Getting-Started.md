@@ -17,7 +17,32 @@ Here are the fundamental features of Ant Media Server:
 * One-Time Token Control in Enterprise Edition.
 * Object Detection in Enterprise Edition.
 
-If you want to see all features and comparison of Community vs Enterprise editions, please visit [website](https://antmedia.io/pricing/#comparison_table).
+## Community Edition & Enterprise Edition
+Ant Media Server has two versions. One of them is the Community Edition(Free) and the other one is Enterprise Edition. Community Edition is available to [download on Github.](https://github.com/ant-media/Ant-Media-Server)
+Enterprise Edition can be purchased [on antmedia.io](https://antmedia.io) 
+
+|      | Community Edition  | Enterprise Edition |
+| :---         |     :---:      | :---: |
+| Ultra Low Latency <br>One-to-Many WebRTC Streaming    | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
+| End-to-End Latency     | 8-12 Seconds  | 0.5 Seconds (500ms)  |
+| Scaling  | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
+| RTMP(Ingesting) to WebRTC (Playing)  | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
+| Hardware Encoding(GPU)  | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
+| Adaptive Bitrate  | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
+| Secure Streaming  | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
+| iOS & Android WebRTC SDK  | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
+| iOS & Android RTMP SDK  | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
+| RTMP, RTSP, MP4 and HLS Support  | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
+| WebRTC to RTMP Adapter  | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
+| 360 Degree Live & VoD Streams  | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
+| Web Management Dashboard  | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
+| IP Camera Support  | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
+| Re-stream Remote Streams | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
+| Open Source | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
+| Simulcasting to Periscope | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
+| Simulcast to Facebook & Youtube | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
+| Support |  Community |  E-mail, On-site  |
+| Price |  Free |  Paid  |
 
 ## Installation
 
