@@ -1,14 +1,21 @@
-***
-**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
-***
-Ant Media Server is a software that can stream live and vod videos. It supports adaptive streaming on the fly and 
-records live videos in several formats like HLS, MP4, etc. 
 
-## Features
-* Receive live streams in RTMP, RTSP and WebRTC
-* Records live streams in MP4, FLV, HLS and Dash Formats
-* Transcodes live streams into lower resolutions on the fly for adaptive streaming
-* Play live streams with RTMP, RTSP, WebRTC, HLS and Dash Formats
+[![Build Status](https://travis-ci.com/ant-media/Ant-Media-Server.svg?branch=master)](https://travis-ci.com/ant-media/Ant-Media-Server)
+
+# Ant Media Server
+Ant Media Server is a software that can stream live and VoD streams. It supports scalable, ultra low latency (0.5 seconds) adaptive streaming and records live videos in several formats like HLS, MP4, etc.
+
+Here are the fundamental features of Ant Media Server:
+
+* Ultra Low Latency Adaptive One to Many WebRTC Live Streaming in Enterprise Edition.
+* Adaptive Bitrate for Live Streams (WebRTC, MP4, HLS) in Enterprise Edition.
+* SFU in One to Many WebRTC Streams in Enterprise Edition.
+* Live Stream Publishing with RTMP and WebRTC.
+* WebRTC to RTMP Adapter.
+* IP Camera Support.
+* Recording Live Streams (MP4 and HLS).
+* Restream to Social Media Simultaneously(Facebook and Youtube in Enterprise Edition).
+* One-Time Token Control in Enterprise Edition.
+* Object Detection in Enterprise Edition.
 
 If you want to see all features and comparison of Community vs Enterprise editions, please visit [website](https://antmedia.io/pricing/#comparison_table).
 
@@ -18,7 +25,7 @@ If you want to see all features and comparison of Community vs Enterprise editio
 
 #### 1. Download Ant Media Server 
 Download and save the Ant Media Server Community/Enterprise Edition from http://antmedia.io to your disk.
-Ant Media Server is being tested on ubuntu 14.04 and 16.04 versions on CI. 
+Ant Media Server is being tested on Ubuntu 18.04 versions on CI.
 
 #### 2. Open Terminal and Go to Directory
 
@@ -74,8 +81,8 @@ Here are the ports server uses
 * TCP:1935 (RTMP)
 * TCP:5080 (HTTP)
 * TCP:5443 (HTTPS)
-* TCP:5554 (RTSP)
-* UDP:5000-65000 (WebRTC and RTSP)
+* UDP:5000-65000 (WebRTC)
+* TCP:5000-65000 (You need to open this range in only cluster mode for internal network. It should not be open to public.)
 
 ### Forward Default http(80), https(443) Ports to 5080 and 5443 
 
