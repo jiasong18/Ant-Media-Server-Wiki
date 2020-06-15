@@ -1,4 +1,8 @@
 # Ant Media Server
+## How to fix Pixelating?
+?
+## How to fix Choppy Stream?
+?
 ## I see High CPU Usage.
 Please get Thread Dump by using the following REST methods:
 `GET http://AMS_URL:5080/rest/threads-info`
