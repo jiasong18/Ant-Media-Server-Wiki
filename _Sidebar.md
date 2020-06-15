@@ -47,7 +47,6 @@
 ## Reference
 * [REST API Reference](https://antmedia.io/rest)
 * [WebRTC - WebSocket Messaging Reference](WebRTC-WebSocket-Messaging-Reference)
-* Streaming Protocols
 
 
 ## Troubleshooting
