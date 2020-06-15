@@ -5,6 +5,7 @@
 * [Installation](Installation)
 * [Publishing Live Streams](Publishing-Live-Streams)
   * [WebRTC Publishing](WebRTC-Publishing)
+  * [Screen Share without Plugin](WebRTC-Screen-Sharing-without-Plugin)
   * [RTMP Publishing](RTMP-Publishing)
   * [Re-streaming Sources & IP Cameras](Re-streaming)
 * [Playing Live Streams](Playing-Live-Streams)
@@ -56,7 +57,6 @@
 ## Draft
 * [Data Channel Documentation](Data-Channel-Documentation)
 * [H.264 & VP8 Documentation](H.264-&-VP8-Documentation)
-* [Screen Share without Plugin](WebRTC-Screen-Sharing-without-Plugin)
 * [Turn Server Installation](Turn-Server-Installation)
 * [Web Panel IP Filtering](Web-Panel-IP-Filtering)
 
