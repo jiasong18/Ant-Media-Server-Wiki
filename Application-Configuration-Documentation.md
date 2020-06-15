@@ -45,7 +45,6 @@ The table below summarises the available settings. Some settings don’t have to
 * **`settings.webrtc.stunServerURI`**: Stun server URI used for WebRTC signaling. You can check: https://antmedia.io/learn-webrtc-basics-components/. Default value is `stun:stun.l.google.com:19302`.
 * **`settings.webrtc.tcpCandidateEnabled`**: It's mandatory. If it is set `true` then TCP candidates can be used for WebRTC connection. If it is false only UDP port will be used. Default value is `true`.
 * **`settings.encoding.encoderName`**: Can be h264_nvenc or libx264. If you set h264_nvenc but it cannot be opened then libx264 will be used.
-* **`settings.encoding.preset`**: Please check https://trac.ffmpeg.org/wiki/Encode/H.264
 * **`settings.encoding.profile`**: Please check https://trac.ffmpeg.org/wiki/Encode/H.264
 * **`settings.encoding.level`**: Please check https://trac.ffmpeg.org/wiki/Encode/H.264
 * **`settings.encoding.rc`**: Please check https://trac.ffmpeg.org/wiki/Encode/H.264
