@@ -150,7 +150,7 @@ http {
 
     #Origin Configuration
     server {
-            listen 5443 ssl;
+            listen 443 ssl;
             ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
             ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
             server_name yourdomain.com;
@@ -168,7 +168,7 @@ http {
     
     #Edge Configuration
     server {
-            listen 443 ssl;
+            listen 5443 ssl;
 	        ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
                 ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
 	        server_name yourdomain.com;
