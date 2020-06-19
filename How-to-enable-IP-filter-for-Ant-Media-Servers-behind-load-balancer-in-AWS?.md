@@ -4,7 +4,7 @@ How to enable IP filter for Ant Media Servers behind load balancer in AWS?
 
 `vim /usr/local/antmedia/conf/jee-container.xml`
 
-2. Find the below line. 
+2. Find the line as follow. 
 
 `<bean id="valve.access" class="org.apache.catalina.valves.AccessLogValve">`
 
