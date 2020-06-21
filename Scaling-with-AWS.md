@@ -215,6 +215,10 @@ It gives you an output like this
 
 Your password is the one in “password” field in the format “i-xxxxxxxx”
 
+## Enable IP Filtering 
+
+Please visit [How to enable IP filter behind a load balancer?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-enable-IP-filter-for-Ant-Media-Servers-behind-load-balancer-in-AWS%3F)
+
 ## Test Fly
 
 For publishing please visit the `https://your-domain-name/WebRTCAppEE/` and click “Start Publishing” button. The default stream id is “stream1”
