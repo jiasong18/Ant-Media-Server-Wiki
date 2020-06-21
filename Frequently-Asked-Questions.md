@@ -41,3 +41,5 @@
 * ### [Does Ant Media Server have an Embedded SDK?](https://github.com/ant-media/Ant-Media-Server/wiki/Does-Ant-Media-Server-have-an-Embedded-SDK-For-ARM%3F)
 
 * ### [How to configure path for mp4 recordings?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-configure-path-for-mp4-recordings%3F)
+
+* ### [How to enable IP filter for Ant Media Servers behind load balancer in AWS?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-enable-IP-filter-for-Ant-Media-Servers-behind-load-balancer-in-AWS%3F)
