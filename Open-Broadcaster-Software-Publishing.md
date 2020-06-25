@@ -22,6 +22,9 @@ We're assuming that your Ant Media Server accepts all streams. (There is no any 
 
 ![OBS (Open Broadcaster Software) Stream Configuration](images/OBS_Configuration.png) 
 
+**When you're using tokens** you need to generate a publish token and use it in this format inside the stream key : `streamdid?token=tokenid`
+![](https://00941014915502880116.googlegroups.com/attach/6d0318c46c45e/Screenshot%20from%202020-06-22%2018-14-18.png?part=0.1&view=1&vt=ANaJVrFXnyqBuYIzn9dG1oI6PE3zVgUE7z29T-6tbRj_rXr-K91CKOWBWC9ouLl1bK-2eUiALFZwNvGcPIqxLD6fPdi4VVyNzsBYW2k8cop6vDIU1Sdc-mU)
+
 #### Tune for Ultra Low Latency Streaming
 OBS by default is not optimized for ultra low latency streaming. If you push RTMP stream with OBS and play with WebRTC, please open `Settings > Output` and make the rate control `CBR(Constant Bitrate)` and Tune for `zerolatency`.  Secondly, you can configure the bitrate according to your quality and internet bandwidth requirements.
 
