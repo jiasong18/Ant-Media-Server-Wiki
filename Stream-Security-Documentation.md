@@ -13,6 +13,7 @@ For example: If Ant Media Server accepts undefined streams, it accepts any incom
 
 You can find in more detail in [here](Application-Configuration-Documentation)
 <!-- > TODO: Please give the new configuration file. Not the old one. -->
+After modifying the configuration, please add the streamId, stream name in "broadcast" collections of your App.
 
 <!-- > TODO: Please also show the related web panel screen for this setting -->
 
