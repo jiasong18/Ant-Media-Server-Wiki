@@ -1,6 +1,3 @@
-***
-**_NOTE:_** We have updated our documentation. This page is outdated. You can access updated version from the sidebar menu.
-***
 Load Balancer is the sister of cluster so If you make Ant Media Server instances run in Cluster Mode. 
 Then a load balancer will be required to balance the load. 
 
