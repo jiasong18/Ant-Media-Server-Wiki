@@ -101,15 +101,3 @@ For the Load Balancer, we have 2 choices. We are using Nginx Load Balancer as de
 
 1. [Nginx Load Balancer](Nginx-Load-Balancer)
 2. [Load-Balancer-with-HAProxy-SSL-Termination](HAProxy Load Balancer) 
-
-
-
-
-
-
-
-
-
-
-
-
