@@ -100,4 +100,4 @@ sudo ./change_server_mode.sh standalone
 For the Load Balancer, we have 2 choices. We are using Nginx Load Balancer as default. By the way, you can also use HAProxy for the Load Balancer. Here are the both of selection docs:
 
 1. [Nginx Load Balancer](Nginx-Load-Balancer)
-2. [Load-Balancer-with-HAProxy-SSL-Termination](HAProxy Load Balancer) 
+2. [HAProxy Load Balancer](Nginx-Load-Balancer)
