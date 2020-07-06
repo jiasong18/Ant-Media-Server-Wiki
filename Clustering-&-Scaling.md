@@ -2,3 +2,4 @@
 * [Installation in AWS](https://github.com/ant-media/Ant-Media-Server/wiki/Scaling-with-AWS)
 * [Installation in Azure](https://github.com/ant-media/Ant-Media-Server/wiki/Scaling-with-Azure)
 * [Nginx Load Balancer](https://github.com/ant-media/Ant-Media-Server/wiki/Nginx-Load-Balancer)
+* [HAProxy Load Balancer](Load-Balancer-with-HAProxy-SSL-Termination)
