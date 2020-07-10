@@ -29,6 +29,7 @@ Enterprise Edition can be purchased [on antmedia.io](https://antmedia.io)
 | Hardware Encoding(GPU)  | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
 | Adaptive Bitrate  | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
 | Secure Streaming  | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
+| Video Conferencing  | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
 | iOS & Android WebRTC SDK  | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
 | iOS & Android RTMP SDK  | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
 | RTMP, RTSP, MP4 and HLS Support  | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
