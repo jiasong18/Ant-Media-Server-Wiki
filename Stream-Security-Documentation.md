@@ -49,6 +49,10 @@ Expire Date format is Unix Timestamp. Check also -> https://www.epochconverter.c
 
     rtmp://[IP_Address]/<Application_Name>/streamID?token=tokenId
 
+Here is OBS settings for the Hash-Based Token
+![OBS One Time Token Image](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/ant-media-server-one-time-token.png)
+
+
 **Live Stream / VoD URL usage:**
 
     http://[IP_Address]/<Application_Name>/streams/streamID.mp4?token=tokenId
