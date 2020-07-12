@@ -176,6 +176,9 @@ Go to [JavaScript SHA-256](https://geraintluff.github.io/sha256/) for online dem
 
     rtmp://[IP_Address]/<Application_Name>/<Stream_Id>?token=hash
 
+Here is OBS settings for the Hash-Based Token
+![OBS Hash-Based Token Image](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/ant-media-server-hash-based-token.png)
+
 **WebRTC Publishing:** Hash parameter should be inserted to publish WebSocket messages.
 
     {
