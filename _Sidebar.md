@@ -56,7 +56,7 @@
 * [Frequently Asked Questions](Frequently-Asked-Questions)
 
 ## Draft
-* [Data Channel Documentation](Data-Channel-Documentation)
+* [Data Channel](Data-Channel)
 * [H.264 & VP8 Documentation](H.264-&-VP8-Documentation)
 * [Turn Server Installation](Turn-Server-Installation)
 * [Web Panel IP Filtering](Web-Panel-IP-Filtering)
