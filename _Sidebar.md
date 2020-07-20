@@ -12,7 +12,6 @@
   * [WebRTC Playing](WebRTC-Playing)
   * [HLS Playing](HLS-Playing)
   * [Embedded Web Player](Embedded-Web-Player)
-* [WebRTC Codec Support - H.264 & VP8](WebRTC-Codec-Support)
 * [Conference Call](WebRTC-Conference-Call)
 * [Peer to Peer Call](WebRTC-Peer-to-Peer-Communication)
 * [Adaptive Bitrate(Multi-Bitrate) Streaming](Adaptive-Bitrate-Streaming)
@@ -44,6 +43,7 @@
   * [Server Configuration](Server-Configuration-Documentation) 
   * [App Configuration](Application-Configuration-Documentation)
   * [Create New Application](Create-New-Application)
+  * [WebRTC Codecs - H.264 & VP8](WebRTC-Codecs-Support)
   * [Build from Source](Build-From-Source)
 * [WebRTC Load Testing](Load-Testing)
 
