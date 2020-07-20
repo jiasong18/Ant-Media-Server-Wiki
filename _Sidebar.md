@@ -47,6 +47,7 @@
   * [WebRTC Codecs - H.264 & VP8](WebRTC-Codecs)
   * [Build from Source](Build-From-Source)
 * [WebRTC Load Testing](Load-Testing)
+* [Turn Server Installation](Turn-Server-Installation)
 
 ## Reference
 * [REST API Reference](https://antmedia.io/rest)
@@ -59,7 +60,7 @@
 
 ## Draft
 * [Data Channel](Data-Channel)
-* [Turn Server Installation](Turn-Server-Installation)
+
 
 ## Proposals
 * Git Branching
