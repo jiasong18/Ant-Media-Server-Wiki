@@ -51,8 +51,20 @@ You can stop/start the service anytime you want.
 sudo service antmedia stop
 sudo service antmedia start
 ```
+### 6. Install SSL for your Ant Media Server
+> If you're installing on your localhost, you can skip this step. 
 
-### 6. Accessing Web panel 
+Please make sure that your server instance has Public IP address and a domain is assigned to its Public IP address. Then go to the folder where Ant Media Server is installed. Default directory is `/usr/local/antmedia`
+```` 
+cd /usr/local/antmedia
+````
+Run `./enable_ssl.sh` script in AMS installation directory. Please don't forget to replace `{DOMAIN_NAME}` with your domain name.
+````
+sudo ./enable_ssl.sh -d {DOMAIN_NAME}
+````
+
+For detailed information about SSL, follow [SSL Setup](SSL-Setup).
+### 7. Accessing Web panel 
 Open your browser and type `http://SERVER_IP_ADDRESS:5080` to go to the web panel. If you're having difficulty in accessing the web panel, there may be a **firewall** that blocks accessing the 5080 port. 
 
 
