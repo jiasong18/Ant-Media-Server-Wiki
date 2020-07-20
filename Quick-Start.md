@@ -13,6 +13,9 @@ You can download Ant Media Server Enterprise at [antmedia.io](https://antmedia.i
 If you want to try Community Edition, you can download at [github.com](https://github.com/ant-media/Ant-Media-Server)
 After the download, you will have a compressed file that contains the Ant Media Server. 
 
+You can download Community Edition from [Releases](https://github.com/ant-media/Ant-Media-Server/releases) and 
+Enterprise Edition on your account at [antmedia.io](https://antmedia.io) after you get a license on [antmedia.io](https://antmedia.io)
+
 ### 2. Install your Ant Media Server
 
 Open a terminal and go to the directory where you download the Ant Media Server.
