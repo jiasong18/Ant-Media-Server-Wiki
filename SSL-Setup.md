@@ -34,7 +34,12 @@ sudo ./enable_ssl.sh -d example.com
 `enable_ssl.sh` script supports external fullchain.pem and privkey.pem files as in the following format
 ```
 sudo ./enable_ssl.sh -f {FULL_CHAIN_FILE} -p {PRIVATE_KEY_FILE} -d {DOMAIN_NAME} 
-```	
+```
+Ex:	
+```
+sudo ./enable_ssl.sh -f yourdomain.crt -p yourdomain.key -d yourdomain.com
+sudo ./enable_ssl.sh -f yourdomain.pem -p yourdomain.key -d yourdomain.com
+```
 	
 _If you disable any service that binds to 80 port such as Apache Web Server, enable it again_
 ```
