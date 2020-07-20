@@ -9,12 +9,9 @@ There are 2 options to start an Ant Media Server (AMS).
 > Quick launch in [AWS](https://aws.amazon.com/marketplace/search/results?x=0&y=0&searchTerms=Ant+Media+Server&page=1&ref_=nav_search_box) or [Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Ant%20Media%20Server&page=1) or [DigitalOcean](https://marketplace.digitalocean.com/apps/ant-media-server-enterprise-edition)
 
 ### 1. Download Ant Media Server
-You can download Ant Media Server Enterprise at [antmedia.io](https://antmedia.io). 
-If you want to try Community Edition, you can download at [github.com](https://github.com/ant-media/Ant-Media-Server)
+You can download Community Edition from [Releases](https://github.com/ant-media/Ant-Media-Server/releases) or 
+download Enterprise Edition on your account on [antmedia.io](https://antmedia.io) after you get a license on [antmedia.io.](https://antmedia.io)
 After the download, you will have a compressed file that contains the Ant Media Server. 
-
-You can download Community Edition from [Releases](https://github.com/ant-media/Ant-Media-Server/releases) and 
-Enterprise Edition on your account at [antmedia.io](https://antmedia.io) after you get a license on [antmedia.io](https://antmedia.io)
 
 ### 2. Install your Ant Media Server
 
