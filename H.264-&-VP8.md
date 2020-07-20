@@ -12,7 +12,7 @@ If a browser does not play streams(notSetRemoteDescription error), you can think
 
 * Adaptive Bitrate Mode(if you have at least one adaptive bitrate): Ant Media Server ingest stream and transcode it into H.264 and VP8. So that devices that only support H264 or VP8 can play the streams.
 
-## Only H.264 Enabled
+# H.264 Enabled & VP8 Disabled
 
 ![Only H.264 Enabled](https://antmedia.io/wp-content/uploads/2020/05/Only-H.264-Enabled.png)
 
@@ -21,8 +21,7 @@ If a browser does not play streams(notSetRemoteDescription error), you can think
 
 You can check if your device supports H264 [in this link](https://mozilla.github.io/webrtc-landing/pc_test_no_h264.html)
 
-
-# Only VP8 Enabled
+# H.264 Disabled & VP8 Enabled
 
 ![Only VP8 Enabled](https://antmedia.io/wp-content/uploads/2020/05/Only-VP8-Enabled.png)
 
