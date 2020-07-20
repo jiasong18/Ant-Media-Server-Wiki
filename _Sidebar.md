@@ -33,6 +33,7 @@
   * [Stream Security](Stream-Security-Documentation)
   * [SSL Setup for Ant Media Server](SSL-Setup)
   * [REST API Security](REST-API-Security-Documentation)
+  * [Web Panel IP Filtering](Web-Panel-IP-Filtering)
 * [Integration with your Project](Integration-with-your-Project)
   * [REST Guide](REST-Guide)
   * [Web Hooks](Webhook-Integration)
@@ -59,7 +60,6 @@
 ## Draft
 * [Data Channel](Data-Channel)
 * [Turn Server Installation](Turn-Server-Installation)
-* [Web Panel IP Filtering](Web-Panel-IP-Filtering)
 
 ## Proposals
 * Git Branching
