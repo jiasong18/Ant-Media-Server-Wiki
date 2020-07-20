@@ -1,4 +1,4 @@
-# What is a Turn Server ?
+# What is a TURN Server ?
 
 A TURN server is a network entity in charge of relaying media in VoIP related protocols. This includes SIP, H.323, WebRTC and other protocols.
 
@@ -6,13 +6,13 @@ When you try reaching out directly from one browser to another with voice or vid
 
 When there are some network securities like firewall, then data packet does not transfer and we do not get proper streaming of another user.
 
-So we use turn server for this solution.
+So we use TURN server for this solution.
 
-## Install turn server
+## Install TURN server
 
 `apt-get update && apt-get install coturn`
 
-## Enable turn server
+## Enable TURN server
 
 Edit the following file.
 
@@ -22,7 +22,7 @@ add the below line
 
 `TURNSERVER_ENABLED=1`
 
-## Configuration turn server
+## Configure TURN server
 Edit the following file.
 
 `vim /etc/turnserver.conf`
@@ -32,7 +32,7 @@ just add it to the 2 lines below.
 user=username:password
 realm=your_public_ip_address
 ```
-and restart turn server
+and restart TURN server
 
 `systemctl restart coturn`
 
