@@ -8,6 +8,8 @@ When there are some network securities like firewall, then data packet does not 
 
 So we use TURN server for this solution.
 
+Ant Media Server does not require TURN server even if there is Symmetric NAT. However it's required if UDP ports are blocked for any reason or Ant Media Server is used as signaling server in P2P communication.   
+
 ## Install TURN server
 
 `apt-get update && apt-get install coturn`
