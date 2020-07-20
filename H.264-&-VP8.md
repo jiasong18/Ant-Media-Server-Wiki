@@ -28,4 +28,4 @@ You can check if your device supports H264 [in this link](https://mozilla.github
 * SFU Mode: Ant Media Server can only ingest VP8 streams and forwards it into the players.
 * Adaptive Bitrate Mode: Ant Media Server can only ingest VP8 and transcode the stream into different VP8 bitrates and send to the players.
 
-_If you only have VP8 enabled, HLS Streaming & MP4 Recording will not work. _
+_If you only have VP8 enabled, HLS Streaming & MP4 Recording will not work._
