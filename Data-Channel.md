@@ -1,28 +1,32 @@
 This guide explains Data Channel technical details in Ant Media Server. Briefly, Data Channel features are;
-* [What is Data Channel?](#1-what-is-data-channel-how-can-i-use)
-* [Data Channel Usage]
-* [Data Channel Modes](#5-data-channel-modes)
+* [What is Data Channel?](what-is-data-channel)
+* [Data Channel Usage](data-channel-usage)
 * [Data Channel Hooks](#6-data-channel-hooks)
 
-## What is Data Channel, how can I use?
-Data channel can be used when transferring data from one device to another. Data Channels can be utilized in various use cases where an arbitrary form of data communication is needed in addition to low latency video and audio communication.
+## What is Data Channel?
+Data channel is another channel in WebRTC other than video and audio. In data channel, you can send any kind of information to the other clients. Data Channels can be utilized in various use cases including chatting, control messages, file sharing, etc. Ant Media Server provides a generic data channel infrastructure that can be used in all use cases.
 
 ### How to enable Data Channel in Management Panel
 
 ![Ant Media Server Management Panel Data Channel](https://antmedia.io/wp-content/uploads/2020/05/Data-Channel-1.png)
 
-You can enable Data Channel basically in Ant Media Server Dashboard Panel. You need to enable data channel support in Ant Media Server Management Console `/applications/applicationName` settings tab. After enabling data channel support, the server administrator can choose if the players are allowed to send messages only to the publisher or to the publisher and to all other players or to nobody.
+Just enable data channel support in Ant Media Server Management Console `/applications/applicationName` settings tab. After enabling data channel support, you can have some options for data delivery. Here are the options you can choose
 
-Note: Make sure to enable the correct application.
+* **Publisher & All Player**:
+Players' and Publisher's messages are delivered to publisher and all other players who are watching the stream and publisher.
 
+* **Only Publisher**:
+Player messages are only delivered to the publisher. Publisher messages are delivered to all players.
 
-## 2. Data Channel Usage in Javascript SDK
+* **Nobody**:
+Only publisher can send messages to the players and players cannot send messages.
 
+## Data Channel Usage
+### Usage in JavaScript
 ![Data Channel in Web](https://antmedia.io/wp-content/uploads/2020/04/webMessageScreenshot-1024x545.png)
 
 Sending and receiving messages via data channels can be implemented using Ant Media Server Javascript SDK with less than 10 lines of code.
-
-When initializing WebRTCAdaptor you need to give a callback function (see Java Script SDK Guide in Wiki).
+When initializing WebRTCAdaptor you need to give a callback function.
 
 `sendData = function(streamId, message)` function in webrtc_adaptor.js is used to send messages like the following code:
 
@@ -39,8 +43,7 @@ messageDate: 23414123235, // time and date as long unix time stamp
 messageBody: "Hi" // actual text message typed by the user
 } 
 ``` 
-
-### Data Channel Callbacks
+#### JavaScript Callbacks
 
 ```javascript
 callback : function(info, description) {
@@ -68,7 +71,7 @@ callback : function(info, description) {
 ```
 
 
-## 3. Data Channel Usage in Android SDK
+### Usage in Android SDK
 
 ![Data Channel in Android](https://antmedia.io/wp-content/uploads/2020/04/androidMessageScreenshot-600x577.png)
 
@@ -83,56 +86,40 @@ public interface IDataChannelObserver {
 }
 ```
 
-When a data channel message is received, onMessage method will be called, where you decide how to handle the received data.
-
-Similary, onMessageSent method is called, when a message is successfully sent or a sending attempt failed.
+When a data channel message is received, `onMessage` method will be called, where you decide how to handle the received data.
+Similarly, `onMessageSent` method is called when a message is successfully sent or a sending attempt failed.
 
 Before initialization of WebRTCClient you need to:
+* Set your Data Channel observer in the WebRTCClient object like this:
 
-Set your Data Channel observer in the WebRTCClient object like this:
+  ```webRTCClient.setDataChannelObserver(this);```
 
-`webRTCClient.setDataChannelObserver(this);`
+* Enable data channel communication by putting following key-value pair to your Intent before initialization of WebRTCClient with it:
 
-Enable data channel communication by putting following key-value pair to your Intent before initialization of WebRTCClient with it:
+  ```this.getIntent().putExtra(EXTRA_DATA_CHANNEL_ENABLED, true);```
 
-`this.getIntent().putExtra(EXTRA_DATA_CHANNEL_ENABLED, true);`
+  Then your Activity is ready to send and receive data.
 
-Then your Activity is ready to send and receive data.
+* To send data, call `sendMessageViaDataChannel` method of WebRTCClient and pass the raw data like this:
 
-To send data, the developer just needs to call sendMessageViaDataChannel method of WebRTCClient and pass the raw data like this:
-
-`webRTCClient.sendMessageViaDataChannel(buf);`
-
-Data Channel implementation in Ant Media Server opens a new set of possibilities and use cases for our customers and end-users. Furthermore, our functional and practical SDKs will make life easier for WebRTC developers.
-
-## 4. Data Channel Usage in iOS SDK
+  ```webRTCClient.sendMessageViaDataChannel(buf);```
 
 
-## 5. Data Channel Modes
-![Data Channel Modes](https://antmedia.io/wp-content/uploads/2020/05/Data-Channel-2.png)
-
-There are 3 modes in Data Channel feature. These are `Publisher & All Player`, `Only Publisher` and `Nobody`
-
-### a- Publisher & All Player
-Player messages are delivered to all other players who are watching the stream and publisher. Again publisher messages are delivered to all players.
-
-### b- Only Publisher
-Player messages are only delivered to the publisher and again publisher messages are delivered to all players.
-
-### c- Nobody
-Only publisher can send messages to the players and players cannot send messages.
-
-## 6. Data Channel Hooks
-All data channel messages are delivered to these hooks as well. So that you can able to integrate into any third-party application.
+## Data Channel Hooks
+In order to integrate Data Channel to your application, you can use web hooks. All data channel messages are delivered to these hooks as well. 
 
 * Add Data Channel Webhook URL
 In order to add default URL,  just follow the steps below
 
-Open your apps `red5-web.properties`  and add `settings.dataChannelWebHook` property to that file. `red5-web.properties` file is under `webapps/<app_name>/WEB-INF` folder.
-
-* Restart the server on command line
+* Open your apps `red5-web.properties` which is under `webapps/<app_name>/WEB-INF` 
+* Add `settings.dataChannelWebHook` property and assign your web hook url
+* Save the file and sestart the server
+```
 sudo service antmedia restart
+```
+After restarting, your url is called with data channel messages.
 
-After the restarting, you can use the Data Channel Webhook feature.
+
+# Which parameters are going to be sent to that hook?
 
 
