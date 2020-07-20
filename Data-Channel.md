@@ -105,7 +105,7 @@ Before initialization of WebRTCClient you need to:
   ```webRTCClient.sendMessageViaDataChannel(buf);```
 
 
-## Data Channel Hooks
+## Data Channel Web Hooks
 In order to integrate Data Channel to your application, you can use web hooks. All data channel messages are delivered to these hooks as well. 
 
 * Add Data Channel Webhook URL
@@ -121,5 +121,6 @@ After restarting, your url is called with data channel messages.
 
 
 # Which parameters are going to be sent to that hook?
+* Add web hooks to web hook url doc 
 
 
