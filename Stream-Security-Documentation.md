@@ -233,6 +233,7 @@ Publisher IP filter feature allows you to specify the IP addresses allowed for p
 
 To enable publisher IP filtering you must set `settings.allowedPublisherIps` in `AMS_DIR/webapps/<App_Name>/WEB_INF/red5.properties` file with the allowed IP addresses.
 
-    Example: settings.allowedPublisherIps=10.20.30.40/24,127.0.0.1/32 allows IPs 10.20.30.[0-255] and 127.0.0.1.
+Example: 
+`settings.allowedPublisherIps=10.20.30.40/24,127.0.0.1/32` allows IPs 10.20.30.[0-255] and 127.0.0.1.
 
 You can [read more](https://whatismyipaddress.com/cidr/) about CIDR notation.
