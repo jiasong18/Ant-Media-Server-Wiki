@@ -65,3 +65,7 @@ The table below summarises the available settings. Some settings don’t have to
 * **`settings.encoding.preset`**: Encoder's preset value in adaptive bitrate
 	 Libx264 presets are there https://trac.ffmpeg.org/wiki/Encode/H.264.
 	 Ant Media Server uses "veryfast" by default
+* **`settings.httpforwarding.extension`**: Forwards the http requests with this extension to `settings.httpforwarding.baseURL`
+	 * It supports comma separated extensions. Like mp4,m3u8
+	 * Don't add any leading, trailing white spaces
+* **`settings.httpforwarding.baseURL`**: Forward the incoming http request to this base url
