@@ -2,8 +2,8 @@ When you get the new version news for Ant Media Server AMI, you may want to use 
 
 ![](images/awsupgrade.jpg)
 
-Installation On Running AWS Instance:
-Contact Us: send email to contact@antmedia.io and ask for the new version
-Connect your server with ssh
-Download the new version of Ant Media Server to your instance
-Install new version as told in [this document](https://github.com/ant-media/Ant-Media-Server/wiki/Installation)
+Installation On Running AWS Instance: 
+Contact Us: send email to contact@antmedia.io and ask for the new version  
+Connect your server with ssh  
+Download the new version of Ant Media Server to your instance  
+Install new version as told in [this document](https://github.com/ant-media/Ant-Media-Server/wiki/Installation)  
