@@ -29,6 +29,24 @@ Install CUDA Public GPG Key
 sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
 ```
 
+### Installation on Ubuntu 18.04 x86_64
+
+Download the deb file
+```
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1804_10.1.105-1_amd64.deb
+```
+
+Install repository meta-data
+```
+sudo dpkg -i cuda-repo-ubuntu1804_10.1.105-1_amd64.deb
+```
+
+Install CUDA Public GPG Key
+```
+sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+```
+### Continue For Ubuntu 16.04 & 18.04 x86_64
+
 Update repository cache
 ```
 sudo apt-get update
