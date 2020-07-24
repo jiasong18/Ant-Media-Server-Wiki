@@ -33,7 +33,7 @@ sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/
 
 Download the deb file
 ```
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1804_10.1.105-1_amd64.deb
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.1.105-1_amd64.deb
 ```
 
 Install repository meta-data
