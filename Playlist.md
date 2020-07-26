@@ -1,7 +1,10 @@
 This guide describes how to use Playlist feature on Ant Media Server. You can use this feature in both Community Edition and Enterprise Edition.
 
 1. [What is Linear Live Streaming](#what-is-linear-live-streaming)
-2. [How to create a Playlist?](#2-how-to-create-a-playlist)
+2. [How to create a Playlist?](#how-to-create-a-playlist)
+3. [How to Build your online TV channel in AMS?](#how-to-build-your-online-tv-channel-in-ams)
+4. [How to play Linear Live Streaming?](#how-to-play-linear-live-streaming)
+
 
 ![Linear Live Streaming 101](https://antmedia.io/wp-content/uploads/2020/07/ant-media-server-linear-live-stream-101.jpg)
 
