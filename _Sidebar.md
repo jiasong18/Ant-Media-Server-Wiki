@@ -60,7 +60,7 @@
 
 ## Draft
 * [Data Channel](Data-Channel)
-
+* [Playlist](Playlist)
 
 ## Proposals
 * Git Branching
