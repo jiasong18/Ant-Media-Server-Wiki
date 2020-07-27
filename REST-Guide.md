@@ -90,7 +90,7 @@ The samples below show how to call the REST methods in an easy way. In order to 
 Ant Media Server generally runs behind an application server so that you want Ant Media Server responds to the calls that are made from specific IP ranges.  By default, Ant Media Server only responds to the calls that are made from 127.0.0.1.
 
 In order to add IP ranges, you should go to the Settings of the app in Web Management Panel and add
-IP Ranges in [CIDR notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation). You can add multiple comma-separated IP Address Ranges.
+IP Ranges in [CIDR notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation). You can add multiple comma-separated IP Address Ranges. Please take note that IP filter settings of LiveApp and WebRTCAppEE are separate. You can have different IP filter settings for each Web Application.
 
 ![](images/ipfiltering.png)
 
