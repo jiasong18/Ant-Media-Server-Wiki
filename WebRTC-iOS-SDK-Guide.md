@@ -1,7 +1,13 @@
 Ant Media's WebRTC iOS SDK lets you build your own iOS application that can publish and play WebRTC broadcasts with just a few lines of code.   
 In this doc, we're going to cover the following topics. 
-* How to run the sample WebRTC iOS app
-* How to create a WebRTC iOS app
+* How to Run the Sample WebRTC iOS app
+  * Publish Stream from your iPhone
+  * Play Stream on your iPhone
+  * P2P Communication with your iPhone
+* How to develop a WebRTC iOS app
+  * Implement Publishing
+  * Implement Playing
+  * Implement Data Channel Communication
 * FAQ 
 
 ## How to Run the Sample WebRTC iOS app
@@ -51,7 +57,7 @@ Playing stream on your iPhone is almost the same as Publishing. Before playing, 
 
 After tapping 'Connect' button, stream will start playing. 
 
-### P2P Communication on your iPhone
+### P2P Communication with your iPhone
 WebRTC iOS SDK also supports P2P communication. As you guess, just tap 'P2P' and then 'Connect' button. 
 <img src="./images/tap_p2p_button.png" width=240 />
 
