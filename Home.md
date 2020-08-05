@@ -17,6 +17,7 @@ Here are the fundamental features of Ant Media Server:
 * One-Time Token Control in Enterprise Edition.
 * Object Detection in Enterprise Edition.
 * H.264,H.265 and VP8 
+* WebRTC Data Channels
 
 ## Community Edition & Enterprise Edition
 Ant Media Server has two versions. One of them is the Community Edition(Free) and the other one is Enterprise Edition. Community Edition is available to [download on Github.](https://github.com/ant-media/Ant-Media-Server)
