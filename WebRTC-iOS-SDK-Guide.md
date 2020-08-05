@@ -43,11 +43,25 @@ Set the stream id to anything else then 'stream1' and Tap 'Connect' button on th
  
 <img src="./images/access_camera_ios.png" width=360 />
 
-Then it will start Publishing to your Ant Media Server. You can go to the web panel of Ant Media Server(http://server_ip:5080) and watch the stream there. 
+Then it will start Publishing to your Ant Media Server. You can go to the web panel of Ant Media Server(http://server_ip:5080) and watch the stream there.You can also quickly play the stream via https://your_domain:5443/WebRTCAppEE/player.html
 
 ### Play Stream on your iPhone
-Playing stream on your iPhone is almost the same as Publishing. You just need to tap 'Play' button and make sure that there is a stream is already available in the server with same stream id in your textbox. For our sample, stream id is still "stream1"
+Playing stream on your iPhone is almost the same as Publishing. Before playing, make sure that there is a stream is already publishing to the server with same stream id in your textbox (You can quickly publish to the Ant Media Server via https://your_domain:5443/WebRTCAppEE). For our sample, stream id is still "stream1" in the image below. Then you just need to tap 'Play' button and tap 'Connect' button.  
+<img src="./images/tap_play_button.png" width=240 />
+
+After tapping 'Connect' button, stream will start playing. 
+
+### P2P Communication on your iPhone
+WebRTC iOS SDK also supports P2P communication. As you guess, just tap 'P2P' and then 'Connect' button. 
+<img src="./images/tap_p2p_button.png" width=240 />
+
+When there is another peer is connected to the same stream id via Android, iOS or Web, then P2P communication will be established and you can talk each other. You can quick connect to the same stream id via https://your_domain:5443/WebRTCAppEE/peer.html
+
+
+
+
  
+
 
 
 
