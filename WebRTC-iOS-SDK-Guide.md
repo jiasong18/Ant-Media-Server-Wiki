@@ -9,6 +9,8 @@ In this doc, we're going to cover the following topics.
 ### Download the WebRTC iOS SDK
 WebRTC iOS and Android SDK's are free to download. You can access them through [this link on antmedia.io](https://antmedia.io/free-webrtc-android-ios-sdk/). If you're an enterprise user, it will be also available for you to download in your subscription page. Anyway, after you download the SDK, you can just unzip the file and open the project with Xcode. 
 
+### Open and Run the Project in Xcode
+
 * Open the Xcode in your MacOS and Click the Open Another Project if you don't see the Sample Project in your list.
 ![Open Xcode](./images/Xcode_open_another_project.png)
 
@@ -18,6 +20,7 @@ WebRTC iOS and Android SDK's are free to download. You can access them through [
 * After project opens, connect your iPhone to your Mac and choose your iPhone in Xcode as shown below. 
 ![Open WebRTC Sample Project in Xcode](./images/choose_your_iphone_in_xcode.png)
 
+### Publish Stream from your iPhone 
 * Click `Run` button on the top left of the Xcode. Then project is going to be built and deployed to your iPhone. 
 ![WebRTC iOS App is running](./images/choose_your_iphone_in_xcode.png)
 
@@ -27,10 +30,14 @@ WebRTC iOS and Android SDK's are free to download. You can access them through [
 * Write Your Ant Media Server's full WebSocket URL and tap `Save` button. Its format is like this `ws://192.168.7.25:5080/WebRTCAppEE/websocket`. If you already install SSL to Ant Media Server, you can also use `wss://your_domain_address:5443/WebRTCAppEE/websocket` for your URL.
 <img src="./images/set_server_ip.png" width=360 />
 
-* Tap 'Connect' button on the main screen. Then it will ask you to access the Camera and Mic. Allow it.
+* Set the stream id to anything else then 'stream1' and Tap 'Connect' button on the main screen. Then it will ask you to access the Camera and Mic. After you allow the Camera and Mic access, stream will be published on Ant Media Server.   
 <img src="./images/access_camera_ios.png" width=360 />
 
 * Then it will start Publishing to your Ant Media Server. You can go to the web panel of Ant Media Server(http://server_ip:5080) and watch the stream there. 
+
+### Play Stream from your iPhone
+
+
 
 
   
