@@ -15,6 +15,9 @@ WebRTC iOS and Android SDK's are free to download. You can access them through [
 * Go to the directory where you download and unzip the iOS SDK. Open the `AntMediaReferenceApplication.xcworkspace` file
 ![Open WebRTC Sample Project in Xcode](./images/open_sample_project.png)
 
+* After project opens, connect your iPhone to your Mac and choose your iPhone in Xcode as shown below. 
+![Open WebRTC Sample Project in Xcode](./images/choose_your_iphone_in_xcode.png)
+
 
 
 
