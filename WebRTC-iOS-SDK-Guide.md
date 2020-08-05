@@ -24,9 +24,16 @@ WebRTC iOS and Android SDK's are free to download. You can access them through [
 * Tap `Publish` button and then Tap `Set Server IP` under the connect button in your iPhone. 
 <img src="./images/tap_publish_button.png" width=360 />
 
-
 * Write Your Ant Media Server's full WebSocket URL and tap `Save` button. Its format is like this `ws://192.168.7.25:5080/WebRTCAppEE/websocket`. If you already install SSL to Ant Media Server, you can also use `wss://your_domain_address:5443/WebRTCAppEE/websocket` for your URL.
 <img src="./images/set_server_ip.png" width=360 />
+
+* Tap 'Connect' button on the main screen. Then it will ask you to access the Camera and Mic. Allow it.
+<img src="./images/access_camera_ios.png" width=360 />
+
+* Then it will start Publishing to your Ant Media Server. You can go to the web panel of Ant Media Server(http://server_ip:5080) and watch the stream there. 
+
+
+  
 
 
 
