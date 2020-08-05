@@ -24,6 +24,7 @@ After project opens, connect your iPhone to your Mac and choose your iPhone in X
 ![Open WebRTC Sample Project in Xcode](./images/choose_your_iphone_in_xcode.png)
 
 ### Publish Stream from your iPhone 
+
 Click `Run` button on the top left of the Xcode. Then project is going to be built and deployed to your iPhone. 
 
 ![WebRTC iOS App is running](./images/choose_your_iphone_in_xcode.png)
@@ -32,9 +33,11 @@ Tap `Publish` button and then Tap `Set Server IP` under the connect button in yo
 
 <img src="./images/tap_publish_button.png" width=360 />
 
-Write Your Ant Media Server's full WebSocket URL and tap `Save` button. Its format is like this `ws://192.168.7.25:5080/WebRTCAppEE/websocket`. If you already install SSL to Ant Media Server, you can also use `wss://your_domain_address:5443/WebRTCAppEE/websocket` for your URL.
+
+Write Your Ant Media Server's full WebSocket URL and tap `Save` button. Its format is like this `ws://192.168.7.25:5080/WebRTCAppEE/websocket`. If you install SSL to Ant Media Server, you can also use `wss://your_domain_address:5443/WebRTCAppEE/websocket`.
 
 <img src="./images/set_server_ip.png" width=360 />
+
 
 Set the stream id to anything else then 'stream1' and Tap 'Connect' button on the main screen. Then it will ask you to access the Camera and Mic. After you allow the Camera and Mic access, stream will be published on Ant Media Server. 
  
