@@ -22,7 +22,7 @@ WebRTC iOS and Android SDK's are free to download. You can access them through [
 ![WebRTC iOS App is running](./images/choose_your_iphone_in_xcode.png)
 
 * Tap `Publish` button and then Tap `Set Server IP` under the connect button in your iPhone. 
-![Tap Publish and Set Server ip](./images/tap_publish_button.png)
+![Tap Publish and Set Server ip](./images/tap_publish_button.png | width=100)
 
 
 
