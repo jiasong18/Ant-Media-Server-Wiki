@@ -22,9 +22,11 @@ WebRTC iOS and Android SDK's are free to download. You can access them through [
 ![WebRTC iOS App is running](./images/choose_your_iphone_in_xcode.png)
 
 * Tap `Publish` button and then Tap `Set Server IP` under the connect button in your iPhone. 
-![Tap Publish and Set Server ip](./images/tap_publish_button.png | width=100)
+<img src="./images/tap_publish_button.png" width=360 />
 
 
+* Write Your Ant Media Server's full WebSocket URL and tap `Save` button. Its format is like this `ws://192.168.7.25:5080/WebRTCAppEE/websocket`. If you already install SSL to Ant Media Server, you can also use `wss://your_domain_address:5443/WebRTCAppEE/websocket` for your URL.
+<img src="./images/set_server_ip.png" width=360 />
 
 
 
