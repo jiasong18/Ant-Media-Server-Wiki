@@ -45,7 +45,9 @@ Set the stream id to anything else then 'stream1' and Tap 'Connect' button on th
 
 Then it will start Publishing to your Ant Media Server. You can go to the web panel of Ant Media Server(http://server_ip:5080) and watch the stream there. 
 
-### Play Stream from your iPhone
+### Play Stream on your iPhone
+Playing stream on your iPhone is almost the same as Publishing. You just need to tap 'Play' button and make sure that there is a stream is already available in the server with same stream id in your textbox. For our sample, stream id is still "stream1"
+ 
 
 
 
