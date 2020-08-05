@@ -18,6 +18,12 @@ WebRTC iOS and Android SDK's are free to download. You can access them through [
 * After project opens, connect your iPhone to your Mac and choose your iPhone in Xcode as shown below. 
 ![Open WebRTC Sample Project in Xcode](./images/choose_your_iphone_in_xcode.png)
 
+* Click `Run` button on the top left of the Xcode. Then project is going to be built and deployed to your iPhone. 
+![WebRTC iOS App is running](./images/choose_your_iphone_in_xcode.png)
+
+* Tap `Publish` button and then Tap `Set Server IP` under the connect button. 
+![Tap Publish and Set Server ip](./images/tap_publish_button.png)
+
 
 
 
