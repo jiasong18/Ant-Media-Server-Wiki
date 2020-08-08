@@ -80,7 +80,7 @@ In this doc, we're going to cover the following topics.
 
 We highly recommend using the sample project to get started your application. Nevertheless, it's good to know the dependencies and how it works. So that we're going to tell how to create a WebRTC iOS app from Scratch. Let's get started. 
 
-## Create Xcode Project
+### Create Xcode Project
 * Open Xcode and Create a project. Choose `Single View App` from the templates. 
 
 <img src="./images/Xcode_new_project.png" width=480 />
@@ -224,7 +224,7 @@ We highly recommend using the sample project to get started your application. Ne
 
    When a new message is received, the delegate's following method is called.
 
-   ```
+   ```swift
    func dataReceivedFromDataChannel(streamId: String, data: Data, binary: Bool)
    ```
 
