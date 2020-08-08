@@ -88,7 +88,7 @@ We highly recommend using the sample project to get started your application. Ne
 
 * Name your project as 'WebRTCiOSApp' below
 
-<img src="./images/story_board_new_project.png" width=480 />
+<img src="./images/story_board_new_project.png" width=720 />
 
 * Open your terminal and go to the directory where you create your project and make the pod installation. You can learn more about pods on [cocoapods.org](https://cocoapods.org/)
   ```
@@ -114,16 +114,16 @@ We highly recommend using the sample project to get started your application. Ne
 
    Close the Xcode project and open the `WebRTCiOSApp.xcworkspace` in Xcode
     
-   <img src="./images/open_workspace_xcode.png" width=480 />
+   <img src="./images/open_workspace_xcode.png" width=720 />
 
 
   * Make the Project Target to iOS 10 
 
-  <img src="./images/ios_10.png" width=480 />
+  <img src="./images/ios_10.png" width=720 />
 
   * Disable bitcode 
 
-  <img src="./images/disable_bitcode.png" width=480 />
+  <img src="./images/disable_bitcode.png" width=720 />
 
   * Copy `WebRTC.framework` and `WebRTCiOSSDK.framework` folders to your projects directory.
     * `WebRTC.Framework`: is directly available under `WebRTCiOSReferenceProject`
@@ -131,11 +131,11 @@ We highly recommend using the sample project to get started your application. Ne
   
   * Embed `WebRTC.framework` and `WebRTCiOSSDK.framework` to your projects. 
 
-  <img src="./images/click_add_items_to_embed.png" width=480 />
+  <img src="./images/click_add_items_to_embed.png" width=720 />
 
   * Choose 'Add Others' in the coming windows at the bottom left and select `Add Files`. Then add `WebRTC.framework` and `WebRTCiOSSDK.framework`. After it's dones, it should be shown like below. 
 
-   <img src="./images/frameworks_added.png" width=480 />
+   <img src="./images/frameworks_added.png" width=720 />
 
 
   * Try to build and run the app. If you get some errors like some methods are only available in some iOS versions. Use `@available` annotation. You can get more info about this [on this post](https://fluffy.es/allow-app-created-in-xcode-11-to-run-on-ios-12-and-lower/)
@@ -146,7 +146,7 @@ We highly recommend using the sample project to get started your application. Ne
 
   * Add Mic and Camera Usage Descriptions 
 
-  <img src="./images/camera_mic_usage.png" width=480 />
+  <img src="./images/camera_mic_usage.png" width=720 />
 
 
   * It's now to write some code. Initialize `webRTCClient` in `ViewController`
