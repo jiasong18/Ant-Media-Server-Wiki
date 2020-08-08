@@ -49,6 +49,7 @@ If you want to remove REST Filter in AMS, you should delete below codes in SERVE
 
 **If you delete AuthenticationFilter code block in Application, every one can access your REST API.**
 
+Here is the IP Filter Demo:
 ![IP Filter](images/ip-filter.gif)
 
 <!-- > TODO: Don't give contact details. Because this is not a blog post. -->
