@@ -69,7 +69,7 @@ In this doc, we're going to cover the following topics.
 
   After tapping 'Connect' button, stream will start playing. 
 
-* ### P2P Communication with your iPhone
+## P2P Communication with your iPhone
   WebRTC iOS SDK also supports P2P communication. As you guess, just tap 'P2P' and then 'Connect' button. 
 
   <img src="./images/tap_p2p_button.png" width=240 />
