@@ -5,9 +5,9 @@ In this doc, we're going to cover the following topics.
   * Play Stream on your iPhone
   * P2P Communication with your iPhone
 * How to develop a WebRTC iOS app
-  * Implement Publishing
-  * Implement Playing
-  * Implement Data Channel Communication
+  * How to Publish
+  * How to Play
+  * How to use DataChannel
 * FAQ 
 
 ## How to Run the Sample WebRTC iOS app
@@ -77,13 +77,156 @@ In this doc, we're going to cover the following topics.
   When there is another peer is connected to the same stream id via Android, iOS or Web, then P2P communication will be established and you can talk each other. You can quick connect to the same stream id via https://your_domain:5443/WebRTCAppEE/peer.html
 
 
-* ## How to develop a WebRTC iOS app
+## How to develop a WebRTC iOS app from Scratch
 
+We highly recommend using the sample project to get started your application. Nevertheless, it's good to know the dependencies and how it works. So that we're going to tell how to create a WebRTC iOS app from Scratch. Let's get started. 
+
+### Create Xcode Project
+* Open Xcode and Create a project. Choose `Single View App` from the templates. 
+
+**IMG: Put Single View App **
+
+* Name your project as 'WebRTCiOSApp' below
+
+**IMG: Put WebRTCiOSApp project created**
+
+* Open your terminal and go to the directory where you create your project and make the pod installation. You can learn more about pods on [cocoapods.org](https://cocoapods.org/)
+  ```
+  cd /go/to/the/directory/where/you/create/the/project
+  pod init
+  ```
+
+  `Podfile` should be created after running `pod init`. Open the `Podfile`, paste the following and save it. 
+   ```
+   target 'WebRTCiOSApp' do
+     # Comment the next line if you don't want to use dynamic frameworks
+     use_frameworks!
+
+     # Pods for WebRTCiOSApp
+    pod 'Starscream', '~> 3.1.1'
+   end
+   ```
+  
+   Run the following command for pod installation
+   ```
+   pod install
+   ```
+
+   Close the Xcode project and open the `WebRTCiOSApp.xcworkspace` in Xcode
+    
+    **IMG: Put open workspace image**
+
+  * Make the Project Target to iOS 10 
+
+  **IMG: Put ios 10 image**
+
+  * Disable bitcode 
+
+  **IMG: Disable bitcode **
+
+  * Copy `WebRTC.framework` and `WebRTCiOSSDK.framework` folders to your projects directory.
+    * `WebRTC.Framework`: is directly available under `WebRTCiOSReferenceProject`
+    * `WebRTCiOSSDK.Framework`: is created by running `./export_fat_framework.sh` in `WebRTCiOSReferenceProject` directory. After that, it will be ready under `Release-universal` directory. Alternatively, you can import source code of `WebRTCiOSSDK` to your project directly.
+  
+  * Embed `WebRTC.framework` and `WebRTCiOSSDK.framework` to your projects. 
+
+ **IMG: Click add items bitcode **
+
+  * Choose 'Add Others' in the coming windows at the bottom left and select `Add Files`. Then add `WebRTC.framework` and `WebRTCiOSSDK.framework`. After it's dones, it should be shown like below. 
+
+ **IMG: frameworks added **
+
+  * Try to build and run the app. If you get some errors like some methods are only available in some iOS versions. Use `@available` annotation. You can get more info about this [on this post](https://fluffy.es/allow-app-created-in-xcode-11-to-run-on-ios-12-and-lower/)
+
+### How to Publish
+
+  * Create a UIView and add a Button to your StoryBoard. This is just simple iOS App development, we don't give details here. You can get lots of tutorial about that in the Internet.
+
+  * Add Mic and Camera Usage Descriptions 
+
+**IMG: Camera and Mic permission **
+
+  * It's now to write some code. Initialize `webRTCClient` in `ViewController`
+
+    ```swift
+    let webRTCClient: AntMediaClient = AntMediaClient.init()
+    ```
+  * Add the following codes to `viewDidLoad()` method.
+    ```swift
+     webRTCClient.delegate = self
+     webRTCClient.setOptions(url: "ws://ovh36.antmedia.io:5080/WebRTCAppEE/websocket", streamId: "stream123", token: "", mode: .publish, enableDataChannel: false)
+     webRTCClient.setLocalView(container: videoView, mode: .scaleAspectFit)
+     webRTCClient.start()
+    ``` 
+  * Implement the delegate in your `ViewController`. Xcode helps you for implementation.
+
+  * ViewController should look below. After you run the Application, it will start publishing with streamId: 'stream123' to your server.
+    ```swift
+    class ViewController: UIViewController {
+    
+      @IBOutlet var videoView: UIView!
+    
+      let webRTCClient: AntMediaClient = AntMediaClient.init()
+    
+      override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        webRTCClient.delegate = self
+        //Don't forget to write your server url.
+        webRTCClient.setOptions(url: "ws://your_server_url:5080/WebRTCAppEE/websocket", streamId: "stream123", token: "", mode: .publish, enableDataChannel: false)
+        webRTCClient.setLocalView(container: videoView, mode: .scaleAspectFit)
+        webRTCClient.start()
+      }
+
+    }
+    ```  
  
+ 
+### How to Play
 
+  Playing a Stream is simpler than Publishing. We just need to change some codes in `viewDidLoad()`. As a result, following code snippets just plays the stream on your server with streamId: 'stream123'. Make sure that, before you try to play, you need to publish a stream to your server with having stream id 'stream123'
 
+ ```swift
+   class ViewController: UIViewController {
+    
+     @IBOutlet var videoView: UIView!
+    
+     let webRTCClient: AntMediaClient = AntMediaClient.init()
+    
+     override func viewDidLoad() {
+        super.viewDidLoad()
+        
+       
+        webRTCClient.delegate = self
+         //Don't forget to write your server url.
+        webRTCClient.setOptions(url: "ws://your_server_url:5080/WebRTCAppEE/websocket", streamId: "stream123", token: "", mode: .play, enableDataChannel: false)
+        webRTCClient.setRemoteView(remoteContainer: videoView, mode: .scaleAspectFit)
+        webRTCClient.start()
+    }
+  }
+  ``` 
 
+### How to use Data Channel
 
+  Ant Media Server and iOS SDK can use data channels in WebRTC.  In order to use Data Channel, make sure that it's enabled both [server side](https://github.com/ant-media/Ant-Media-Server/wiki/Data-Channel) and mobile.  In order to enable it for server side, you can just set the `enableDataChannel` parameter to true in `setOptions` method. 
+
+   ```swift
+   webRTCClient.setOptions(url: "ws://your_server_url:5080/WebRTCAppEE/websocket", streamId: "stream123", 
+       token: "", mode: .play, enableDataChannel: true)
+   ```
+
+   After that, you can send data with the following method of `AntMediaClient`
+   ```swift
+   func sendData(data: Data, binary: Bool = false)
+   ```
+
+   When a new message is received, the delegate's following method is called.
+
+   ```
+   func dataReceivedFromDataChannel(streamId: String, data: Data, binary: Bool)
+   ```
+
+   There is also data channel usage example exist in the Reference project.
 
   
 
