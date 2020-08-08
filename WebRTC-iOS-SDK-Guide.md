@@ -29,19 +29,19 @@ In this doc, we're going to cover the following topics.
 
   Open the Xcode in your MacOS and Click the Open Another Project if you don't see the Sample Project in your list.
 
-  ![Open Xcode](./images/Xcode_open_another_project.png)
+   <img src="./images/Xcode_open_another_project.png" width=720 />
 
   Go to the directory where you download and unzip the iOS SDK. Open the `AntMediaReferenceApplication.xcworkspace` file
 
-  ![Open WebRTC Sample Project in Xcode](./images/open_sample_project.png)
+  <img src="./images/open_sample_project.png" width=720 />
 
   After project opens, connect your iPhone to your Mac and choose your iPhone in Xcode as shown below. 
 
-  ![Open WebRTC Sample Project in Xcode](./images/choose_your_iphone_in_xcode.png)
+  <img src="./images/choose_your_iphone_in_xcode.png" width=720 />
 
   Click `Run` button on the top left of the Xcode. Then project is going to be built and deployed to your iPhone. 
 
-  ![WebRTC iOS App is running](./images/choose_your_iphone_in_xcode.png)
+  <img src="./images/choose_your_iphone_in_xcode.png" width=720 />
 
 * ### Publish Stream from your iPhone 
 
