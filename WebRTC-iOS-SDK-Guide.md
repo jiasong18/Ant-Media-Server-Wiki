@@ -76,11 +76,11 @@ In this doc, we're going to cover the following topics.
   When there is another peer is connected to the same stream id via Android, iOS or Web, then P2P communication will be established and you can talk each other. You can quick connect to the same stream id via https://your_domain:5443/WebRTCAppEE/peer.html
 
 
-## Develop a WebRTC iOS app
+# Develop a WebRTC iOS app
 
 We highly recommend using the sample project to get started your application. Nevertheless, it's good to know the dependencies and how it works. So that we're going to tell how to create a WebRTC iOS app from Scratch. Let's get started. 
 
-### Create Xcode Project
+## Create Xcode Project
 * Open Xcode and Create a project. Choose `Single View App` from the templates. 
 
 <img src="./images/Xcode_new_project.png" width=480 />
@@ -139,7 +139,7 @@ We highly recommend using the sample project to get started your application. Ne
 
   * Try to build and run the app. If you get some errors like some methods are only available in some iOS versions. Use `@available` annotation. You can get more info about this [on this post](https://fluffy.es/allow-app-created-in-xcode-11-to-run-on-ios-12-and-lower/)
 
-### How to Publish
+## How to Publish
 
   * Create a UIView and add a Button to your StoryBoard. This is just simple iOS App development, we don't give details here. You can get lots of tutorial about that in the Internet.
 
@@ -162,7 +162,7 @@ We highly recommend using the sample project to get started your application. Ne
     ``` 
   * Implement the delegate in your `ViewController`. Xcode helps you for implementation.
 
-  * ViewController should look below. After you run the Application, it will start publishing with streamId: 'stream123' to your server.
+  * ViewController should look like below. After you run the Application, it will start publishing with streamId: 'stream123' to your server.
     ```swift
     class ViewController: UIViewController {
     
@@ -184,7 +184,7 @@ We highly recommend using the sample project to get started your application. Ne
     ```  
  
  
-### How to Play
+## How to Play
 
   Playing a Stream is simpler than Publishing. We just need to change some codes in `viewDidLoad()`. As a result, following code snippets just plays the stream on your server with streamId: 'stream123'. Make sure that, before you try to play, you need to publish a stream to your server with having stream id 'stream123'
 
@@ -208,7 +208,7 @@ We highly recommend using the sample project to get started your application. Ne
   }
   ``` 
 
-### How to use Data Channel
+## How to use Data Channel
 
   Ant Media Server and iOS SDK can use data channels in WebRTC.  In order to use Data Channel, make sure that it's enabled both [server side](https://github.com/ant-media/Ant-Media-Server/wiki/Data-Channel) and mobile.  In order to enable it for server side, you can just set the `enableDataChannel` parameter to true in `setOptions` method. 
 
