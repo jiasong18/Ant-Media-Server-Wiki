@@ -51,5 +51,6 @@ If you want to remove REST Filter in AMS, you should delete below codes in SERVE
 
 Here is the IP Filter Demo:
 ![IP Filter](images/ip-filter.gif)
+For the detail, you can check with this link -> [IP Filter Gif](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/ip-filter.gif)
 
 <!-- > TODO: Don't give contact details. Because this is not a blog post. -->
