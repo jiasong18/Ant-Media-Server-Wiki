@@ -120,7 +120,10 @@ sudo service antmedia restart
 After restarting, your url is called with data channel messages.
 
 
-# Which parameters are going to be sent to that hook?
-* Add web hooks to web hook url doc 
+### Webhooks List
+
+Ant Media Server will hook to your website using a POST request with "multipart/form-data" as the body. Some example responses are:
+
+data: message in the broadcast
 
 
