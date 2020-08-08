@@ -60,6 +60,7 @@
 
 ## Draft
 * [Data Channel](Data-Channel)
+* [WebRTC iOS SDK Guide](WebRTC-iOS-SDK-Guide)
 * [Playlist](Playlist)
 
 ## Proposals
