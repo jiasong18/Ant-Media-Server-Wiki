@@ -10,7 +10,7 @@ In this doc, we're going to cover the following topics.
   * How to use DataChannel
 * FAQ 
 
-## How to Run the Sample WebRTC iOS app
+# How to Run the Sample WebRTC iOS app
 
 * ### Download the WebRTC iOS SDK
   WebRTC iOS and Android SDK's are free to download. You can access them through [this link on antmedia.io](https://antmedia.io/free-webrtc-android-ios-sdk/). If you're an enterprise user, it will be also available for you to download in your subscription page. Anyway, after you download the SDK, you can just unzip the file and open the project with Xcode. 
@@ -43,7 +43,7 @@ In this doc, we're going to cover the following topics.
 
   <img src="./images/choose_your_iphone_in_xcode.png" width=720 />
 
-* ### Publish Stream from your iPhone 
+## Publish Stream from your iPhone 
 
   * Tap `Publish` button and then Tap `Set Server IP` under the connect button in your iPhone. 
 
@@ -61,7 +61,7 @@ In this doc, we're going to cover the following topics.
 
   * Then it will start Publishing to your Ant Media Server. You can go to the web panel of Ant Media Server(http://server_ip:5080) and watch the stream there.You can also quickly play the stream via https://your_domain:5443/WebRTCAppEE/player.html
 
-* ### Play Stream on your iPhone
+## Play Stream on your iPhone
 
   Playing stream on your iPhone is almost the same as Publishing. Before playing, make sure that there is a stream is already publishing to the server with same stream id in your textbox (You can quickly publish to the Ant Media Server via https://your_domain:5443/WebRTCAppEE). For our sample, stream id is still "stream1" in the image below. Then you just need to tap 'Play' button and tap 'Connect' button.  
 
