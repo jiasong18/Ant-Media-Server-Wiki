@@ -1,7 +1,7 @@
 This guide explains Data Channel technical details in Ant Media Server. Briefly, Data Channel features are;
-* [What is Data Channel?](what-is-data-channel)
-* [Data Channel Usage](data-channel-usage)
-* [Data Channel Hooks](#6-data-channel-hooks)
+* [What is Data Channel?](#what-is-data-channel)
+* [Data Channel Usage](#data-channel-usage)
+* [Data Channel Hooks](#data-channel-web-hooks)
 
 ## What is Data Channel?
 Data channel is another channel in WebRTC other than video and audio. In data channel, you can send any kind of information to the other clients. Data Channels can be utilized in various use cases including chatting, control messages, file sharing, etc. Ant Media Server provides a generic data channel infrastructure that can be used in all use cases.
