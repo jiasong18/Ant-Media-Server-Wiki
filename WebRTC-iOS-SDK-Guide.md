@@ -9,7 +9,7 @@ In this doc, we're going to cover the following topics.
   * How to Play
   * How to use DataChannel
 
-# How to Run the Sample WebRTC iOS app
+# Run the Sample WebRTC iOS app
 
 * ### Download the WebRTC iOS SDK
   WebRTC iOS and Android SDK's are free to download. You can access them through [this link on antmedia.io](https://antmedia.io/free-webrtc-android-ios-sdk/). If you're an enterprise user, it will be also available for you to download in your subscription page. Anyway, after you download the SDK, you can just unzip the file and open the project with Xcode. 
