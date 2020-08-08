@@ -15,6 +15,16 @@ In this doc, we're going to cover the following topics.
 ### Download the WebRTC iOS SDK
 WebRTC iOS and Android SDK's are free to download. You can access them through [this link on antmedia.io](https://antmedia.io/free-webrtc-android-ios-sdk/). If you're an enterprise user, it will be also available for you to download in your subscription page. Anyway, after you download the SDK, you can just unzip the file and open the project with Xcode. 
 
+### Install Dependency
+
+Open your terminal and go to the directory where the reference project resides and run `pod install` . If you are not familiar with pods, visit [cocoapods.org](https://cocoapods.org/) for documentation and installation. 
+
+```
+cd /go/to/the/directory/where/you/unzip/the/SDK
+pod install
+```
+This install the Starscream packet for WebSocket connections. 
+
 ### Open and Run the Project in Xcode
 
 Open the Xcode in your MacOS and Click the Open Another Project if you don't see the Sample Project in your list.
