@@ -39,12 +39,11 @@ In this doc, we're going to cover the following topics.
 
   ![Open WebRTC Sample Project in Xcode](./images/choose_your_iphone_in_xcode.png)
 
-* ### Publish Stream from your iPhone 
-
   Click `Run` button on the top left of the Xcode. Then project is going to be built and deployed to your iPhone. 
 
   ![WebRTC iOS App is running](./images/choose_your_iphone_in_xcode.png)
 
+* ### Publish Stream from your iPhone 
   Tap `Publish` button and then Tap `Set Server IP` under the connect button in your iPhone. 
 
   <img src="./images/tap_publish_button.png" width=240 />
