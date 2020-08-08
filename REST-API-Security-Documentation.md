@@ -51,6 +51,4 @@ If you want to remove REST Filter in AMS, you should delete below codes in SERVE
 
 ![IP Filter](images/ip-filter.gif)
 
-images/project
-
 <!-- > TODO: Don't give contact details. Because this is not a blog post. -->
