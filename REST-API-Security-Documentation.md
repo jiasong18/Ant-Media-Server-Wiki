@@ -1,6 +1,6 @@
 <!-- > TODO: Don't use "We". Because this is a formal documentation. -->
 
-This guide explains how to Control REST API Security on Ant Media Server. You can able to secure your REST Services with IP Filter feature.
+This guide explains how to Control REST API Security on Ant Media Server. You could secure your REST Services with IP Filter feature.
 
 ### IP Filter in REST API
 
