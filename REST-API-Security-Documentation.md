@@ -22,7 +22,7 @@ IP Filter feature usage is in Dashboard / Application(LiveApp or etc.) / Use IP 
 > TODO: Use ` in specifying paths use `IP Filtering Settings` in `Dashboard > {Application} > Settings` in panel.  
 -->
 
-If you want some IP addresses to be able to access REST APIs, you should add IP’s or IP Ranges in `Dashboard > {Application} > Settings` > `IP Filtering Settings` in panel.
+If you want only some IP addresses to be able to access REST APIs, you should add IP’s or IP Ranges in `Dashboard > {Application} > Settings` > `IP Filtering Settings` in panel.
 
 ![REST API Filter](https://antmedia.io/wp-content/uploads/2019/12/antmedia-dashboard-IP-Filter.png)
 
@@ -30,7 +30,7 @@ If you want some IP addresses to be able to access REST APIs, you should add IP�
 > in different machines still cannot access the REST API when 127.0.0.1 is on the list.
 --> 
 
-**If 127.0.0.1 is deleted, requests in the server(localhost) is disabled. People in the same network but in different machines still cannot access the REST API when 127.0.0.1 is on the list.**
+**If 127.0.0.1 is deleted, requests in the server(localhost) is disabled. Devices in the same network can access but other devices that are not cannot access the REST API when 127.0.0.1 is on the list.**
 
 <!-- > TODO: I think you would want to mean `If you want to remove` not `if you remove` ? -->
 If you want to remove REST Filter in AMS, you should delete below codes in SERVER_FOLDER/webapp/Application(LiveApp or etc.)/WEB-INF/web.xml
@@ -51,6 +51,6 @@ If you want to remove REST Filter in AMS, you should delete below codes in SERVE
 
 Here is the IP Filter Demo:
 ![IP Filter](images/ip-filter.gif)
-For the detail, you can check with this link -> [IP Filter Gif](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/ip-filter.gif)
+For more details, you can check this link -> [IP Filter Gif](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/ip-filter.gif)
 
 <!-- > TODO: Don't give contact details. Because this is not a blog post. -->
