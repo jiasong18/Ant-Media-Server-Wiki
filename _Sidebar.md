@@ -58,7 +58,7 @@
 * [Troubleshooting](Troubleshooting)
 * [Frequently Asked Questions](Frequently-Asked-Questions)
 
-## Draft
+## Draft 
 * [Data Channel](Data-Channel)
 * [WebRTC iOS SDK Guide](WebRTC-iOS-SDK-Guide)
 * [WebRTC iOS SDK Reference](WebRTC-iOS-SDK-Reference)
@@ -68,3 +68,5 @@
 * Git Branching
 * UML Diagrams
 * [Developer Quick Start](Developer-Quick-Start)
+* HTTP Forwarding
+* Quality Filter - FPS, Resolution, Bitrate
