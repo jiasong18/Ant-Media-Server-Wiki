@@ -71,3 +71,4 @@
 * HTTP Forwarding
 * Quality Filter - FPS, Resolution, Bitrate
 * Update WebRTC Android SDK
+* JavaScript -  bitrateMeasurement 
