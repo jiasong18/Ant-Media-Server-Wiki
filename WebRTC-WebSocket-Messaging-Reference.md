@@ -205,12 +205,13 @@ Server relays the answer sdp to the first peer
 ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 ```
 
-2. Client sends join JSON command to the server with room name parameter. 
+2. Client sends join JSON command to the server with room name parameter. `streamId` field is optional in case `streamId` should be specified in advance. If `streamId` is not sent, server returns with a random `streamId` in the second message.
 
 ```json
 {
     command : "joinRoom",
     room : "room1",
+    streamId: "stream_id_you_want_to_use"
 }
 ```
 3. Server notifies the client with available streams in the room
