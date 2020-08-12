@@ -1,13 +1,31 @@
-#### Where to download JavaScript SDK?
-  JavaScript SDK is available in the Ant Media Server. It can be accessed via `http://SERVER_ADDR:5080/LiveApp/js/webrtc_adaptor.js`. Its file location is `/usr/local/antmedia/webapps/LiveApp/js/webrtc_adaptor.js`.  Its source code is also available [in here](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/js/webrtc_adaptor.js)  
+### Where to download JavaScript SDK?
+JavaScript SDK is available in the Ant Media Server. It can be accessed via `http://SERVER_ADDR:5080/LiveApp/js/webrtc_adaptor.js`. Its file location is `/usr/local/antmedia/webapps/LiveApp/js/webrtc_adaptor.js`.  Its source code is also available [in here](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/js/webrtc_adaptor.js)  
 
-
-#### May I use Docker images to deploy Ant Media Server
+### May I use Docker images to deploy Ant Media Server
 YES. Utilizing Docker images is a very common way of deploying Ant Media Server.  Check the [Installation](https://github.com/ant-media/Ant-Media-Server/wiki/Installation#docker-installation)
 
+### How to reset admin password?
+* Stop the server `service antmedia stop`.
+* Delete the `server.db` file under `/usr/local/antmedia/`
+* Start the server `service antmedia start``
 
+If you're using `mongodb` as database, your password will be in `serverdb` database and in `User` collection. 
+* Connect to your `mongodb` server with `mongo` client. 
+* Type `use serverdb;`
+* Type `db.User.find()` and it shows you the output like below.
+    `
+    { "_id" : ObjectId("5ea486690f09e71c2462385a"), "className" : "io.antmedia.rest.model.User", 
+      "email" : "test@antmedia.io", "password" : "1234567", "userType" : "ADMIN" }
+    `
+* You can update the password with a command something like below. Change the parameters below according to the your case.
+   `
+   db.User.updateOne( { email:"test@antmedia.io" }, { $set: { "password" : "test123" }})
+   `
+* Alternatively, you can delete the user with a command something like below. Change the parameters below according to the your case.
+   `
+   db.User.deleteOne( { "email": "test@antmedia.io" } )
+   `
 
-* ### [How to reset admin password?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-reset-Ant-Media-Server-admin-password%3F)
 
 * ### [How to reduce latency in RTMP to HLS ?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-Reduce-Latency-in-RTMP-to-HLS%3F)
 
