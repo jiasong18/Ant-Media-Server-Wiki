@@ -65,10 +65,11 @@
 * [Playlist](Playlist)
 
 ## Proposals
-* Git Branching
-* UML Diagrams
+* Update WebRTC Android SDK
 * [Developer Quick Start](Developer-Quick-Start)
 * HTTP Forwarding
 * Quality Filter - FPS, Resolution, Bitrate
-* Update WebRTC Android SDK
 * JavaScript -  bitrateMeasurement 
+* Edit FAQ
+* Git Branching
+* UML Diagrams
