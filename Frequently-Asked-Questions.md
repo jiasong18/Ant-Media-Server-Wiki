@@ -1,7 +1,7 @@
-* ### How to tune OBS for Ultra Low Latency Streaming?
-?
-* ### How to improve quality in WebRTC Streams?
-?
+#### Where to download JavaScript SDK?
+  JavaScript SDK is available in the Ant Media Server. It can be accessed via `http://SERVER_ADDR:5080/LiveApp/js/webrtc_adaptor.js`. Its file location is `/usr/local/antmedia/webapps/LiveApp/js/webrtc_adaptor.js`.  Its source code is also available [in here](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/js/webrtc_adaptor.js)  
+
+
 * ### [May I use Docker images to deploy Ant Media Server?](https://github.com/ant-media/Ant-Media-Server/wiki/May-I-use-Docker-images-to-deploy-Ant-Media-Server%3F)
 
 * ### [How to reset admin password?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-reset-Ant-Media-Server-admin-password%3F)
@@ -43,3 +43,8 @@
 * ### [How to configure path for mp4 recordings?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-configure-path-for-mp4-recordings%3F)
 
 * ### [How to enable IP filter for Ant Media Servers behind load balancer in AWS?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-enable-IP-filter-for-Ant-Media-Servers-behind-load-balancer-in-AWS%3F)
+
+* ### How to tune OBS for Ultra Low Latency Streaming?
+?
+* ### How to improve quality in WebRTC Streams?
+?
