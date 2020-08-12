@@ -2,7 +2,10 @@
   JavaScript SDK is available in the Ant Media Server. It can be accessed via `http://SERVER_ADDR:5080/LiveApp/js/webrtc_adaptor.js`. Its file location is `/usr/local/antmedia/webapps/LiveApp/js/webrtc_adaptor.js`.  Its source code is also available [in here](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/js/webrtc_adaptor.js)  
 
 
-* ### [May I use Docker images to deploy Ant Media Server?](https://github.com/ant-media/Ant-Media-Server/wiki/May-I-use-Docker-images-to-deploy-Ant-Media-Server%3F)
+#### May I use Docker images to deploy Ant Media Server
+YES. Utilizing Docker images is a very common way of deploying Ant Media Server.  Check the [Installation](https://github.com/ant-media/Ant-Media-Server/wiki/Installation#docker-installation)
+
+
 
 * ### [How to reset admin password?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-reset-Ant-Media-Server-admin-password%3F)
 
