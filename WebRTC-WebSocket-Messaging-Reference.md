@@ -210,7 +210,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 ```json
 {
     command : "joinRoom",
-    room : "room1",
+    room : "room_id_for_your_conference",
     streamId: "stream_id_you_want_to_use"
 }
 ```
@@ -223,35 +223,33 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
     streams: [
         "stream1_in_the_room",
         "stream2_in_the_room",
-        .
-        .
-        .
+        ...
     ]
 }
 ```
 ```streamId``` returned by the server is the stream id client uses to publish stream to the room. 
 ```streams``` is the json array which client can play via WebRTC. Client can play each stream by play method above. This streams array can be empty if there is no stream in the room.
 
-4. When there is a new guy joined the room, server sends below message to each peer in the room.
+4. Web app should pull the server periodically for the room info as follows, 
 ```json
 {
-    command : "notification",
-    definition : "streamJoined",
-    streamId: "new_stream_id_joined_the_room"
-    
+    command : "getRoomInfo",
+    room : "room_id_for_your_conference",
 }
 ```
-Client can play the new joined stream with the streamId by the play method above.
+5. Server returns the active streams in the room as follows. Application should synchronize the players in their side.
 
-5. When someone leaves the room, server sends the below message to each peer in the room. 
 ```json
 {
-    command : "notification",
-    definition : "streamLeaved",
-    streamId: "stream_id_leaved_the_room"
+   command:"roomInformation",
+   room: "room_id_for_your_conference",
+   streams: [
+              "stream1_in_the_room",
+              "stream2_in_the_room",
+              ...
+            ]
 }
 ```
-Client can update/remove the related video views from UI. 
 
 6. Any user can leave the room by sending below message
 ```json
