@@ -235,6 +235,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 {
     command : "getRoomInfo",
     room : "room_id_for_your_conference",
+    streamId: "unique_stream_id_returned_by_the_server"
 }
 ```
 5. Server returns the active streams in the room as follows. Application should synchronize the players in their side.
