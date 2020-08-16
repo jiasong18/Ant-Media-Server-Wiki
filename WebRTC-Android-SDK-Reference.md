@@ -1,13 +1,19 @@
 ## IDataChannelObserver, IEncoderStatisticsListener, IWebRTCClient, IWebRTCListener
 
-In this doc, you can see the method references in `IWebRTCListener` and `AntMediaClientDelegate`
+In this doc, you can see the method references in `IDataChannelObserver`, `IEncoderStatisticsListener`, `IWebRTCClient` and `IWebRTCListener`
 
 ### IDataChannelObserver
 ```java
-    /** The data channel's bufferedAmount has changed. */
+     /** 
+     * The data channel's bufferedAmount has changed.
+     */
     void onBufferedAmountChange(long previousAmount, String dataChannelLabel);
-    /** The data channel state has changed. */
+
+     /** 
+     * The data channel state has changed.
+     */
     void onStateChange(DataChannel.State state, String dataChannelLabel);
+
     /**
      * A data buffer was successfully received.
      */
@@ -44,10 +50,9 @@ In this doc, you can see the method references in `IWebRTCListener` and `AntMedi
     String MODE_JOIN = "join";
 
     /**
-     * Multi track play
+     * Multi-track play
      */
     String MODE_MULTI_TRACK_PLAY = "multi_track_play";
-
 
     /**
      * Camera open order
@@ -57,7 +62,6 @@ In this doc, you can see the method references in `IWebRTCListener` and `AntMedi
      *                        if it is false, another camera that is not front will be tried to be opened
      */
     void setOpenFrontCamera(boolean openFrontCamera);
-
 
     /**
 
@@ -70,7 +74,6 @@ In this doc, you can see the method references in `IWebRTCListener` and `AntMedi
      * @param token one time token string
      */
     void init(String url, String streamId, String mode, String token, Intent intent);
-
 
     /**
      * Starts the streaming according to mode
@@ -128,8 +131,6 @@ In this doc, you can see the method references in `IWebRTCListener` and `AntMedi
      */
     String getError();
 
-
-
     void setMediaProjectionParams(int resultCode, Intent data);
 
     /**
@@ -142,64 +143,64 @@ In this doc, you can see the method references in `IWebRTCListener` and `AntMedi
 
 IWebRTCListener
 ```java
-/**
-  * It's called when websocket connection has been disconnected
-  */
- void onDisconnected();
+    /**
+     * It's called when WebSocket connection has been disconnected
+     */
+    void onDisconnected();
 
- /**
-  * This method is fired when publishing(broadcasting) to the server has been finished
-  */
- void onPublishFinished();
+    /**
+     * This method is fired when publishing(broadcasting) to the server has been finished
+     */
+    void onPublishFinished();
 
- /**
-  * This method is fired when playing stream has been finished
-  */
- void onPlayFinished();
+    /**
+     * This method is fired when playing stream has been finished
+    */
+    void onPlayFinished();
 
- /**
-  * This method is fired when publishing to the server has been started
-  */
- void onPublishStarted();
+    /**
+    * This method is fired when publishing to the server has been started
+    */
+    void onPublishStarted();
 
- /**
-  * This method is fired when playing has been started
-  */
- void onPlayStarted();
+    /**
+     * This method is fired when playing has been started
+     */
+    void onPlayStarted();
 
- /**
-  * This method is fired when client tries to play a stream that is not available in the server
-  */
- void noStreamExistsToPlay();
+    /**
+     * This method is fired when client tries to play a stream that is not available in the server
+     */
+     void noStreamExistsToPlay();
 
- void onError(String description);
+     void onError(String description);
 
- void onSignalChannelClosed(WebSocket.WebSocketConnectionObserver.WebSocketCloseNotification code);
+     void onSignalChannelClosed(WebSocket.WebSocketConnectionObserver.WebSocketCloseNotification code);
 
- /**
-  * This method is called every time, connection is established with the remote peer.
-  * It's called both p2p, play and publish modes.
-  */
- void onIceConnected();
+    /**
+     * This method is called every time, connection is established with the remote peer.
+     * It's called both p2p, play and publish modes.
+     */
+     void onIceConnected();
 
- /**
-  * This method is fired when Ice connection has been disconnected
-  */
- void onIceDisconnected();
+    /**
+     * This method is fired when Ice connection has been disconnected
+     */
+     void onIceDisconnected();
 
- /**
-  * It's called in multi track play mode and reports the tracks to the listener
-  * @param tracks
-  */
- void onTrackList(String[] tracks);
+    /**
+     * It's called in multi track play mode and reports the tracks to the listener
+     * @param tracks
+     */
+     void onTrackList(String[] tracks);
 
- /**
-  * It's called when bitrate measurements received from serves.
-  * targetBitrate should be greater than (videoBitrate + audioBitrate) for a good quality stream
-  * @param streamId
-  * @param targetBitrate
-  * @param videoBitrate
-  * @param audioBitrate
-  */
- void onBitrateMeasurement(String streamId, int targetBitrate, int videoBitrate, int audioBitrate);
+    /**
+     * It's called when bitrate measurements received from serves.
+     * targetBitrate should be greater than (videoBitrate + audioBitrate) for a good quality stream
+     * @param streamId
+     * @param targetBitrate
+     * @param videoBitrate
+     * @param audioBitrate
+     */
+     void onBitrateMeasurement(String streamId, int targetBitrate, int videoBitrate, int audioBitrate);
 ```
