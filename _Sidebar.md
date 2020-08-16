@@ -27,7 +27,6 @@
 * [WebRTC SDKs](WebRTC-SDKs)
   * [JavaScript SDK](WebRTC-JavaScript-SDK-Guide)
   * [Android SDK](WebRTC-Android-SDK-Documentation)
-  * [iOS SDK](WebRTC-iOS-SDK-Documentation)
   * [iOS SDK Guide](WebRTC-iOS-SDK-Guide)
     * [WebRTC iOS SDK Reference](WebRTC-iOS-SDK-Reference)
   * [Embedded SDK](WebRTC-Embedded-SDK-Documentation)
