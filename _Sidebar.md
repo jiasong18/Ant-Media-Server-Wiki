@@ -28,6 +28,8 @@
   * [JavaScript SDK](WebRTC-JavaScript-SDK-Guide)
   * [Android SDK](WebRTC-Android-SDK-Documentation)
   * [iOS SDK](WebRTC-iOS-SDK-Documentation)
+  * [iOS SDK Guide](WebRTC-iOS-SDK-Guide)
+    * [WebRTC iOS SDK Reference](WebRTC-iOS-SDK-Reference)
   * [Embedded SDK](WebRTC-Embedded-SDK-Documentation)
 * [Security](Security-Documentation)
   * [Stream Security](Stream-Security-Documentation)
@@ -60,8 +62,6 @@
 
 ## Draft 
 * [Data Channel](Data-Channel)
-* [WebRTC iOS SDK Guide](WebRTC-iOS-SDK-Guide)
-* [WebRTC iOS SDK Reference](WebRTC-iOS-SDK-Reference)
 * [Playlist](Playlist)
 
 ## Proposals
