@@ -1,3 +1,6 @@
+### This doc is outdated. Please visit [iOS SDK Guide](https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-iOS-SDK-Guide)
+
+
 This library simplifies the connection between browsers and iOS Devices (iPhone and iPad for now) by using Ant Media server as a signaling server. 
 
 This documentation aims to introduce how to use AntMedia WebRTC iOS SDK in your application. This SDK supports three modes: Peer to peer, play and publish.  
