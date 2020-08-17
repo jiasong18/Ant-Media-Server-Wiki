@@ -316,18 +316,70 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 }
 ```
 
-### Check WebRTC Connected with Ping/Pong 
-Whenever you send a ping command to the server, it will respond you with pong command. 
-Ping Command
-```json
-{
+## Miscellaneous WebSocket Methods
+#### Ping/Pong 
+  Whenever you send a ping command to the server, it will respond you with pong command. 
+  Ping Command
+  ```json
+  {
     command : "ping",
-}
-```
+  }
+  ```
 
-Pong Response from Server
-```json
-{
+  Pong Response from Server
+  ```json
+  {
     command : "pong",
-}
-```
+  }
+  ```
+#### Get Stream Information from Server
+  You may use this method to learn more about stream status and bitrates. Client should send the following message in websocket
+  ```json
+  {
+     command: "getStreamInfo",
+     streamId: "stream_id_that_you_want_to_get_info"
+  } 
+  ```
+  Server returns this method in two ways. It may return stream information as follows
+  ```json
+  {
+     command: "streamInformation",
+     streamId: "stream_id_of_the_stream_information",
+     streamInfo: [{
+                   streamWidth: resolution_width,
+                   streamHeight: resolution_height,
+                   videoBitrate: video_bitrate,
+                   audioBitrate: audio_bitrate,
+                   videoCodec: codec_of_the_video 
+                 },
+                 ...
+                 ]
+  }
+  ```
+
+  If stream is not active, it will return no
+  ```json
+  {
+    command : "error",
+    definition : "no_stream_exist",
+    streamId: "id_of_the_stream"
+  }
+  ```
+#### Get Room Information from Server
+  Server returns the whole active streams in the room with this method. Client should send the following message for this method
+  ```json
+  {
+     command: "getRoomInfo",
+     room: "room_id_that_you_want_to_get_info",
+     streamId: "server_returns_while_you_join_the_room"
+  } 
+  ```
+  Server responds in following format
+  ```json
+  {
+     command: "roomInformation",
+     room: "room_id_that_this_information_belongs_to",
+     streams: [ stream_id_1, stream_id_2, ...]
+  }
+  ```
+  
