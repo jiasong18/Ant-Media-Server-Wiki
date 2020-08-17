@@ -19,6 +19,8 @@ Here are the fundamental features of Ant Media Server:
 * H.264,H.265 and VP8 
 * WebRTC Data Channels
 
+#### _This doc includes information both for Community and Enterprise Editions. If somethings are not working according to this doc, you may be using Community Edition and you try to use a feature of Enterprise. Check the Community vs. Enterprise below_
+
 ## Community Edition & Enterprise Edition
 Ant Media Server has two versions. One of them is the Community Edition(Free) and the other one is Enterprise Edition. Community Edition is available to [download on Github.](https://github.com/ant-media/Ant-Media-Server)
 Enterprise Edition can be purchased [on antmedia.io](https://antmedia.io) 
