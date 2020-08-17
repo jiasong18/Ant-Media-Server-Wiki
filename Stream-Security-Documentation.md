@@ -31,6 +31,9 @@ By enabling this option, one-time tokens are required for publishing and playing
 
 If One-Time Token control is enabled, then all publish and play requests should be sent with a token parameter.
 
+<!-- > TODO: change the screenshot of one time token web panel after version 2.2 is released -->
+After version 2.2 one time token security option in the Dashboard will be divided into two parts. There will be seperate options for enabling/disabling one time tokens for publishing and for playing. This will allow for example using one time tokens for only players and hash-based tokens (or no security) for publishers or vice-versa.    
+
 **Create a Token in Publish&Play Scenario**
 
 The Server creates tokens with [getTokenV2](https://github.com/ant-media/Ant-Media-Server/blob/master/src/main/java/io/antmedia/rest/BroadcastRestService.java) Rest Service getting `streamId`, `expireDate` and `type` parameters with query parameters. Service returns `tokenId` and other parameters. It is important that `streamId` and type parameters should be defined properly. Because `tokenId` needs to match with both `streamId` and type.
