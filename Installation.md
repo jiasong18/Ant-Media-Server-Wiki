@@ -4,8 +4,8 @@
 ### 1. Download Ant Media Server 
 Download and save the Ant Media Server Community/Enterprise Edition to your disk.
 Ant Media Server is being tested on Ubuntu 18.04 versions on CI. 
-- Community Edition can be downloadable from [Releases](https://github.com/ant-media/Ant-Media-Server/releases)
-- Enterprise Edition can be downloadable on your account after you get a license on [antmedia.io](https://antmedia.io) 
+- Community Edition can be downloaded from [Releases](https://github.com/ant-media/Ant-Media-Server/releases)
+- Enterprise Edition can be downloaded on your account after you get a license on [antmedia.io](https://antmedia.io) 
 
 ### 2. Open Terminal and Go to Directory
 
