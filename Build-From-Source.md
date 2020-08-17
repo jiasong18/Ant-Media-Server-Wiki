@@ -1,7 +1,7 @@
 ### Linux (Ubuntu)
 A couple of commons repos should be cloned and build with maven. 
 
-* Go to a directory where you clone repos
+* Go to a directory where you will clone repos
 
 * Clone and build ant-media-server-parent
   ```
