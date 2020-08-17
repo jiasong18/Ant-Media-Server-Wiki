@@ -15,12 +15,14 @@ We provide WebRTC Native Android SDK to Ant Media Server users for free. You can
 
 ### Creating Android Project
 
-Just Click Open an Existing Android Studio Project. A window should open as shown below for the project path. Select your project in a path and Click to the OK button.
-
+Just Click Open an Existing Android Studio Project. A window should open as shown below for the project path.
 
 ![Android Project Path](images/android-open-project-path.png)
 
+Select your project in a path and Click to the OK button.
+
 ![Android project path apply](images/android-project-path-apply.png)
+
 
 
 
