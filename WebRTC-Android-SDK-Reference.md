@@ -1,6 +1,4 @@
-## IDataChannelObserver, IEncoderStatisticsListener, IWebRTCClient, IWebRTCListener
-
-In this doc, you can see the method references in `IDataChannelObserver`, `IEncoderStatisticsListener`, `IWebRTCClient` and `IWebRTCListener`
+In this doc, you can see the method references in `IDataChannelObserver`, `IEncoderStatisticsListener`, `IWebRTCClient` and `IWebRTCListener` interfaces.
 
 ### IDataChannelObserver
 ```java
