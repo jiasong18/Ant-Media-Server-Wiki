@@ -1,8 +1,8 @@
 ### How to install SSL on the AWS EC2 server instance?
-1- Please use an Elastic IP address.
-2- Add A record in your Elastic IP address.
-3- After that please check DNS records in here -> https://dnschecker.org/
-4- if everything is fine, follow this tutorial -> https://github.com/ant-media/Ant-Media-Server/wiki/SSL-Setup
+1. Please use an Elastic IP address.
+2. Add A record in your Elastic IP address.
+3. After that please check DNS records in here -> https://dnschecker.org/
+4. If everything is fine, follow this tutorial -> https://github.com/ant-media/Ant-Media-Server/wiki/SSL-Setup
 
 ### Where to download JavaScript SDK?
 JavaScript SDK is available in the Ant Media Server. It can be accessed via `http://SERVER_ADDR:5080/LiveApp/js/webrtc_adaptor.js`. Its file location is `/usr/local/antmedia/webapps/LiveApp/js/webrtc_adaptor.js`.  Its source code is also available [in here](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/js/webrtc_adaptor.js)  
