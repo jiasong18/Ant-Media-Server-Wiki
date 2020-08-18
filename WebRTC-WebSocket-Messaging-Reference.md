@@ -308,13 +308,34 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
     definition : "no_peer_associated_before",
 }
 ```
-  * `notSetLocalDescription`: It is send when local description is not set successfully
+  * `notSetLocalDescription`: It is sent when local description is not set successfully
 ```json
 {
     command : "error",
     definition : "notSetLocalDescription",
 }
 ```
+  * `highResourceUsage`: It is sent when server is overloaded. Server overload means over CPU usage or over RAM usage. Over CPU usage means CPU load is more than the `server.cpu_limit` value  in `conf/red5.properties`. Its default value is %85. Over RAM usage means available memory in the system is less than `server.min_free_ram` value in `conf/red5.properties`. Its unit is MB and default value is 10.
+  ```json
+  {
+    command : "error",
+    definition : "highResourceUsage",
+  }
+  ```
+  * `streamIdInUse`: The server sends this message if it detects that there is already an active stream(preparing or publishing state) with that same stream id when a user tries to publish a stream. One may get this error if s/he tries to re-publish a stream with the same stream id without closing the previous WebRTC connection. 
+  ```json
+  {
+    command : "error",
+    definition : "streamIdInUse",
+  }
+  ```
+  * `publishTimeoutError`: The server sends this message if WebRTC publishing is not started in a specified time period. This value is configurable via `settings.webrtc.client.start.timeoutMs` property in App Configuration. Its default value is 5000 milliseconds   
+  ```json
+  {
+    command : "error",
+    definition : "publishTimeoutError",
+  }
+  ```
 
 ## Miscellaneous WebSocket Methods
 #### Ping/Pong 
