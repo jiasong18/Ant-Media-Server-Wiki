@@ -92,8 +92,41 @@ Choose WebRTC Native Android SDK and click OK button
 
 <img alt="Choose API in drop down list" src="https://antmedia.io/wp-content/uploads/2018/07/Screen-Shot-2018-07-27-at-09.39.27.png" width="800px" />
 
+## Prepare the App for Streaming
 
+  * Create a MainActivity.java Class and add a Button to your activity main layout. This is just simple Android App development, we don't give details here. You can get lots of tutorials about that on the Internet.
 
+  * Add permissions in Manifest file.
+
+Open the AndroidManifest.xml and add below permissions between `application` and `manifest`tag
+```xml
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+```
+
+<img alt="Set permissions for the App" src="https://antmedia.io/wp-content/uploads/2020/08/android-manifest-permissions.png" width="800px" />
+
+### Implement MainActivity onCreate function
+
+Open the MainActivity.java and implement it as below. You should change `SERVER_URL` according to your Ant Media Server address. Secondly, the third parameter in the last line of the code below is `IWebRTCClient.MODE_PUBLISH` that publishes the stream to the server. You can use `IWebRTCClient.MODE_PLAY` for playing stream and `IWebRTCClient.MODE_JOIN` for P2P communication. If token control is enabled, you should define `tokenId` parameter.
+
+## How to Publish
+
+  * It's now to write some code. Initialize `webRTCClient` in `MainActivity.java`
 
 
 
