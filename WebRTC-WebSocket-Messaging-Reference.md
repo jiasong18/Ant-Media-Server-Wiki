@@ -338,7 +338,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
   ```
 
 ## Miscellaneous WebSocket Methods
-#### Ping/Pong 
+* `ping` & `pong` 
   Whenever you send a ping command to the server, it will respond you with pong command. 
   Ping Command
   ```json
@@ -353,15 +353,14 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
     command : "pong",
   }
   ```
-#### Get Stream Information from Server
-  You may use this method to learn more about stream status and bitrates. Client should send the following message in websocket
+* `getStreamInfo`: Get Stream Information from Server. You may use this method to learn more about stream status and bitrates. Client should send the following message.
   ```json
   {
      command: "getStreamInfo",
      streamId: "stream_id_that_you_want_to_get_info"
   } 
   ```
-  Server returns this method in two ways. It may return stream information as follows
+  Server returns in two ways. It may return stream information as follows
   ```json
   {
      command: "streamInformation",
@@ -378,7 +377,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
   }
   ```
 
-  If stream is not active, it will return no
+  If stream is not active, it will return `no_stream_exist`
   ```json
   {
     command : "error",
@@ -386,8 +385,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
     streamId: "id_of_the_stream"
   }
   ```
-#### Get Room Information from Server
-  Server returns the whole active streams in the room with this method. Client should send the following message for this method
+* `getRoomInfo`: Get Room Information from server that returns the whole active streams in the room. Client should send the following message to get the response from the server.
   ```json
   {
      command: "getRoomInfo",
@@ -403,4 +401,14 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
      streams: [ stream_id_1, stream_id_2, ...]
   }
   ```
-  
+* `bitrateMeasurement`: Server periodically sends this information to the WebRTC viewers. It lets develop show a message to the user if it's internet bandwidth is not good enough. If the `targetBitrate` is bigger than the sum of `videoBitrate` and `audioBitrate`, it means internet bandwidth is good enough to play the video. If the `targetBitrate`  is less than the sum of `videoBitrate` and `audioBitrate`, it means some playback issues(pixelating, packet drop, etc.) may happen and it disturbs the user experience. 
+  ```json
+  {
+    command : "notification",
+    definition : "bitrateMeasurement",
+    streamId: "unique_stream_id_returned_by_the_server"
+    targetBitrate: measured_bandwidth_of_the_client,
+    videoBitrate: video_bitrate_of_the_current_playing_video,
+    audioBitrate: "audio_bitrate_of_the_current_playing_audio
+  }
+  ```
