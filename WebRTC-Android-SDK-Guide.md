@@ -298,9 +298,20 @@ Playing a Stream is almost the same with Publishing. We just need to change some
 
 ## How to use Data Channel
 
+Ant Media Server and Android SDK can use data channels in WebRTC. In order to use Data Channel, make sure that it's enabled both [server-side](https://github.com/ant-media/Ant-Media-Server/wiki/Data-Channel) and mobile.
 
+Before initialization of webRTCClient you need to:
 
+* Set your Data Channel observer in the WebRTCClient object like this:
 
+  ```webRTCClient.setDataChannelObserver(this);```
 
+* Enable data channel communication by putting following key-value pair to your Intent before initialization of WebRTCClient with it:
 
+  ```this.getIntent().putExtra(EXTRA_DATA_CHANNEL_ENABLED, true);```
 
+  Then your Activity is ready to send and receive data.
+
+* To send data, call `sendMessageViaDataChannel` method of WebRTCClient and pass the raw data like this:
+
+  ```webRTCClient.sendMessageViaDataChannel(buf);```
