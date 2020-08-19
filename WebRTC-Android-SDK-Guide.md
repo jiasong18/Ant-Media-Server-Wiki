@@ -124,9 +124,183 @@ Open the AndroidManifest.xml and add below permissions between `application` and
 
 Open the MainActivity.java and implement it as below. You should change `SERVER_URL` according to your Ant Media Server address. Secondly, the third parameter in the last line of the code below is `IWebRTCClient.MODE_PUBLISH` that publishes the stream to the server. You can use `IWebRTCClient.MODE_PLAY` for playing stream and `IWebRTCClient.MODE_JOIN` for P2P communication. If token control is enabled, you should define `tokenId` parameter.
 
+```java
+   /**
+     * Change this address with your Ant Media Server address
+     */
+    public static final String SERVER_ADDRESS = "serverdomain.com:5080";
+
+    /**
+     * Mode can Publish, Play or P2P
+     */
+    private String webRTCMode = IWebRTCClient.MODE_PLAY;
+
+    public static final String SERVER_URL = "ws://"+ SERVER_ADDRESS +"/WebRTCAppEE/websocket";
+    public static final String REST_URL = "http://"+SERVER_ADDRESS+"/WebRTCAppEE/rest/v2";
+    private CallFragment callFragment;
+
+    private WebRTCClient webRTCClient;
+
+    private Button startStreamingButton;
+    private String operationName = "";
+    private Timer timer;
+    private String streamId;
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        // Set window styles for fullscreen-window size. Needs to be done before
+        // adding content.
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
+                | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD | WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
+                | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+        //getWindow().getDecorView().setSystemUiVisibility(getSystemUiVisibility());
+
+        setContentView(R.layout.activity_main);
+        SurfaceViewRenderer cameraViewRenderer = findViewById(R.id.camera_view_renderer);
+        SurfaceViewRenderer pipViewRenderer = findViewById(R.id.pip_view_renderer);
+
+        startStreamingButton = (Button)findViewById(R.id.start_streaming_button);
+
+        // Check for mandatory permissions.
+        for (String permission : CallActivity.MANDATORY_PERMISSIONS) {
+            if (this.checkCallingOrSelfPermission(permission) != PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "Permission " + permission + " is not granted", Toast.LENGTH_SHORT).show();
+                return;
+            }
+        }
+
+        if (webRTCMode.equals(IWebRTCClient.MODE_PUBLISH)) {
+            startStreamingButton.setText("Start Publishing");
+            operationName = "Publishing";
+        }
+        else  if (webRTCMode.equals(IWebRTCClient.MODE_PLAY)) {
+            startStreamingButton.setText("Start Playing");
+            operationName = "Playing";
+        }
+        else if (webRTCMode.equals(IWebRTCClient.MODE_JOIN)) {
+            startStreamingButton.setText("Start P2P");
+            operationName = "P2P";
+        }
+
+        this.getIntent().putExtra(EXTRA_CAPTURETOTEXTURE_ENABLED, true);
+        this.getIntent().putExtra(EXTRA_VIDEO_FPS, 30);
+        this.getIntent().putExtra(EXTRA_VIDEO_BITRATE, 2500);
+        this.getIntent().putExtra(EXTRA_CAPTURETOTEXTURE_ENABLED, true);
+
+        webRTCClient = new WebRTCClient( this,this);
+
+        //webRTCClient.setOpenFrontCamera(false);
+
+        streamId = "stream1";
+        String tokenId = "tokenId";
+
+        webRTCClient.setVideoRenderers(pipViewRenderer, cameraViewRenderer);
+
+       // this.getIntent().putExtra(CallActivity.EXTRA_VIDEO_FPS, 24);
+        webRTCClient.init(SERVER_URL, streamId, webRTCMode, tokenId, this.getIntent());
+    }
+
+    public void startStreaming(View v) {
+        if (!webRTCClient.isStreaming()) {
+            ((Button)v).setText("Stop " + operationName);
+            webRTCClient.startStream();
+        }
+        else {
+            ((Button)v).setText("Start " + operationName);
+            webRTCClient.stopStream();
+        }
+    }
+```
+
+### Create activity_main.xml layout
+
+Create an activity_main.xml layout file and add below codes.
+
+```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/camera_view_renderer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/pip_view_renderer"
+        android:layout_height="144dp"
+        android:layout_width="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:id="@+id/start_streaming_button"
+        android:onClick="startStreaming"
+        android:layout_gravity="bottom|center"/>
+
+    <FrameLayout
+        android:id="@+id/call_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    </FrameLayout>
+```
+
 ## How to Publish
 
-  * It's now to write some code. Initialize `webRTCClient` in `MainActivity.java`
+We need to change some codes in onCreate. As a result, following code snippets just publish the stream on your server with `streamId`: 'stream1'.
+
+  * You need to set `webRTCMode` to`IWebRTCClient.MODE_PUBLISH`.
+
+```java
+    private String webRTCMode = IWebRTCClient.MODE_PUBLISH;
+```
+
+  * It's now to write some code. Initialize `webRTCClient` in `MainActivity.java`.
+
+```java
+    private WebRTCClient webRTCClient;
+
+    webRTCClient.setVideoRenderers(pipViewRenderer, cameraViewRenderer);
+    webRTCClient.init(SERVER_URL, streamId, webRTCMode, tokenId, this.getIntent());`
+```
+
+## How to Play
+
+Playing a Stream is almost the same with Publishing. We just need to change some codes in onCreate. As a result, following code snippets just plays the stream on your server with `streamId`: 'stream1'. Make sure that, before you try to play, you need to publish a stream to your server with having stream id 'stream1'
+
+  * You need to set `webRTCMode` to`IWebRTCClient.MODE_PLAY`.
+
+```java
+    private String webRTCMode = IWebRTCClient.MODE_PLAY;
+```
+
+  * It's now to write some code. Initialize `webRTCClient` in `MainActivity.java`.
+
+```java
+    private WebRTCClient webRTCClient;
+
+    webRTCClient.setVideoRenderers(pipViewRenderer, cameraViewRenderer);
+    webRTCClient.init(SERVER_URL, streamId, webRTCMode, tokenId, this.getIntent());`
+```
+
+## How to use Data Channel
+
+
+
+
 
 
 
