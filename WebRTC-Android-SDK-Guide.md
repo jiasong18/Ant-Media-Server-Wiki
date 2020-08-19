@@ -32,7 +32,7 @@ Select your project in a path and Click to the OK button.
 
   * Set the stream id to anything else then 'stream1' and Tap 'Connect' button on the main screen. Then it will ask you to access the Camera and Mic. After you allow the Camera and Mic access, stream will be published on Ant Media Server.
 
-![Android Publish Page](https://antmedia.io/wp-content/uploads/2020/08/android-webrtc-sdk-play-screen.jpg)
+    <img src="https://antmedia.io/wp-content/uploads/2020/08/android-webrtc-sdk-play-screen.jpg" width=360 />
 
   * Then it will start Publishing to your Ant Media Server. You can go to the web panel of Ant Media Server(http://server_ip:5080) and watch the stream there. You can also quickly play the stream via https://your_domain:5443/WebRTCAppEE/player.html
 
@@ -42,8 +42,7 @@ Select your project in a path and Click to the OK button.
 
   * Playing stream on your Android is almost the same as Publishing. Before playing, make sure that there is a stream is already publishing to the server with same stream id in your `streamId` parameter (You can quickly publish to the Ant Media Server via https://your_domain:5443/WebRTCAppEE). For our sample, stream id is still "stream1" in the image below. Then you just need to tap 'Start Playing' button.
 
-![Android Play Screen](https://antmedia.io/wp-content/uploads/2020/08/android-webrtc-sdk-publish-screen.jpg)
-
+    <img src="https://antmedia.io/wp-content/uploads/2020/08/android-webrtc-sdk-publish-screen.jpg" width=360 />
 
 
 
