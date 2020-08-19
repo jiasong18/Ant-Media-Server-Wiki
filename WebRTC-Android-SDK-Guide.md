@@ -48,7 +48,7 @@ Select your project in a path and Click to the OK button.
 
   WebRTC Android SDK also supports P2P communication. As you guess, just set 'webRTCMode' parameter to IWebRTCClient.MODE_JOIN`.
 
-  <img src="./images/tap_p2p_button.png" width=240 />
+  <img src="https://antmedia.io/wp-content/uploads/2020/08/android-webrtc-sdk-peer-screen.jpg" width=360 />
 
   When there is another peer is connected to the same stream id via Android, iOS or Web, then P2P communication will be established and you can talk each other. You can quick connect to the same stream id via https://your_domain:5443/WebRTCAppEE/peer.html
 
