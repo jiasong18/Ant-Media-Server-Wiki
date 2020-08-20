@@ -4,10 +4,12 @@ In this doc, we're going to cover the following topics.
   * Publish Stream from your Android
   * Play Stream on your Android
   * P2P Communication with your Android
+  * Join Conference Room with your Android
 * Develop a WebRTC Android app
   * How to Publish
   * How to Play
   * How to use DataChannel
+  * How to use Conference Room
 
 # Run the Sample WebRTC Android app
 
@@ -50,7 +52,15 @@ Select your project in a path and Click to the OK button.
 
   <img src="https://antmedia.io/wp-content/uploads/2020/08/android-webrtc-sdk-peer-screen.jpg" width=360 />
 
-  When there is another peer is connected to the same stream id via Android, iOS or Web, then P2P communication will be established and you can talk each other. You can quick connect to the same stream id via `https://your_domain:5443/WebRTCAppEE/peer.html`
+  When there is another peer is connected to the same stream id via Android, iOS or Web, then P2P communication will be established and you can talk to each other. You can quickly connect to the same stream id via `https://your_domain:5443/WebRTCAppEE/peer.html`
+
+## Join Conference Room with your Android
+
+  WebRTC Android SDK also supports Conference Room feature. You just need to start ConferenceActivity.java activity.
+
+  <img src="https://antmedia.io/wp-content/uploads/2020/08/android-webrtc-sdk-conference-room.jpeg" width=360 />
+
+  When there are other streams are connected to the same stream id via Android, iOS or Web, then Conference Room will be established and you can talk to each other. You can quickly connect to the same stream id via `https://your_domain:5443/WebRTCAppEE/conference.html`
 
 # Develop a WebRTC Android app
 
@@ -304,14 +314,42 @@ Before initialization of webRTCClient you need to:
 
 * Set your Data Channel observer in the WebRTCClient object like this:
 
-  ```webRTCClient.setDataChannelObserver(this);```
+```java
+    webRTCClient.setDataChannelObserver(this);
+```
 
 * Enable data channel communication by putting following key-value pair to your Intent before initialization of WebRTCClient with it:
 
-  ```this.getIntent().putExtra(EXTRA_DATA_CHANNEL_ENABLED, true);```
+```java
+    this.getIntent().putExtra(EXTRA_DATA_CHANNEL_ENABLED, true);
+```
 
   Then your Activity is ready to send and receive data.
 
 * To send data, call `sendMessageViaDataChannel` method of WebRTCClient and pass the raw data like this:
 
-  ```webRTCClient.sendMessageViaDataChannel(buf);```
+```java
+    webRTCClient.sendMessageViaDataChannel(buf);
+```
+
+## How to use Conference Room
+
+Ant Media Server also supports ConferenceRoom feature. You need to initialize `ConferenceManager`.
+
+```java
+    private ConferenceManager conferenceManager;
+
+    conferenceManager = new ConferenceManager(
+                this,
+                this,
+                getIntent(),
+                MainActivity.SERVER_URL,
+                roomId,
+                publishViewRenderer,
+                playViewRenderers,
+                streamId,
+                this
+     );
+```
+
+> Check also -> https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-Conference-Call
