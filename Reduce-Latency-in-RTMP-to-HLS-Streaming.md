@@ -1,0 +1,1 @@
+In order to tune latency in RTMP streaming, please follow the instructions here.
