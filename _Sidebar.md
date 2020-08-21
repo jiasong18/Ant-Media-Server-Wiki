@@ -62,6 +62,7 @@
 ## Draft 
 * [Data Channel](Data-Channel)
 * [Playlist](Playlist)
+* [Quality Filter - FPS, Resolution, Bitrate](Quality-Filter---FPS,-Resolution,-Bitrate)
 
 ## Proposals
 * [Update WebRTC Android SDK](WebRTC-Android-SDK-Guide)
