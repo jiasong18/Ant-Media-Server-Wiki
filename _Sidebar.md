@@ -63,6 +63,7 @@
 * [Data Channel](Data-Channel)
 * [Playlist](Playlist)
 * [Quality Filter - FPS, Resolution, Bitrate](Quality-Filter---FPS,-Resolution,-Bitrate)
+* [HTTP Forwarding](HTTP-Forwarding)
 
 ## Proposals
 * [Update WebRTC Android SDK](WebRTC-Android-SDK-Guide)
