@@ -16,7 +16,9 @@ Client was getting only what server has sent to it. Now client side can force th
 To achieve that:
 * We need to have some adaptive bitrate resolutions.
 * Assuming that you created WebRTCadaptor, you need to call following method to get stream info.
-`webRTCAdaptor.getStreamInfo("{your_stream_Id}");` This code needs to be added after publish_started command received. So when you receive the publish started command, this code segment should also needs to be called. You need to add this line of code under play_started callback.
+`webRTCAdaptor.getStreamInfo("{your_stream_Id}");` 
+
+This code needs to be added after publish_started command received. So when you receive the publish started command, this code segment should also needs to be called. You need to add this line of code under play_started callback.
 
 `else if (info == "play_started") {`
 
