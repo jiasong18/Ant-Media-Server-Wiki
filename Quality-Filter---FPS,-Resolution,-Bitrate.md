@@ -31,14 +31,14 @@ To achieve that:
 `webRTCAdaptor.getStreamInfo(streamId);`
 
 * After getting stream info, you can call the following function to force the video quality you want to watch. `webRTCAdaptor.forceStreamQuality("{your_stream_Id}",  {the_resolution_to_be_forced});`
-You need the change the line where webRTCAdaptor.forceStreamQuality(stream1,dropdownSelectedItem);
+
+You need the change the this line from `webRTCAdaptor.forceStreamQuality(stream1,dropdownSelectedItem)`;
 
 to
 
-webRTCAdaptor.forceStreamQuality(streamId,dropdownSelectedItem);
+`webRTCAdaptor.forceStreamQuality(streamId,dropdownSelectedItem);`
 
 Now you can get the stream info from the server and force the quality you want.
-
 
 As you can see from the screenshots below, you can select the resolution.
 ![240p is selected](https://user-images.githubusercontent.com/54481799/91039162-b514e000-e614-11ea-80ce-f009e6006a19.png)
@@ -50,7 +50,3 @@ Currently 240p is selected and as you can see bitrate is 500000. Now the followi
 After selecting the 1080p, bitrate went up from 500000 to 2000000.
 
 If you are still having issues, please let us know that. contact@antmedia.io
-
-
-
-
