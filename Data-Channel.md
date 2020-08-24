@@ -125,3 +125,16 @@ After restarting, your url is called with data channel messages.
 Ant Media Server will hook to your website using a POST request with "multipart/form-data" as the body. Some example responses are:
    
 * <strong>data:  </strong>message in the broadcast
+
+### Data Channel REST Service
+
+You can also send Data Channel message with REST API. Here is the usage:
+
+```
+curl -X POST
+http://localhost:5080/WebRTCAppEE/rest/v2/broadcasts/{STREAM_ID}/data
+-H 'content-type: application/json'
+-d '{parameter: "parameterDetail"}'
+```
+
+For the more detail, please visit our [REST API Guide](REST-Guide) 
