@@ -41,11 +41,11 @@ Now you can get the stream info from the server and force the quality you want.
 
 
 As you can see from the screenshots below, you can select the resolution.
-![240p is selected](https://user-images.githubusercontent.com/54481799/91037675-19827000-e612-11ea-9652-9dd65fbca6f4.png)
+![240p is selected](https://user-images.githubusercontent.com/54481799/91039162-b514e000-e614-11ea-80ce-f009e6006a19.png)
 
 Currently 240p is selected and as you can see bitrate is 500000. Now the following screenshot is 1080p.
 
-![1080p is selected](https://user-images.githubusercontent.com/54481799/91037303-72053d80-e611-11ea-94f6-320c69653353.png)
+![1080p is selected](https://user-images.githubusercontent.com/54481799/91039211-cf4ebe00-e614-11ea-89f7-b750ee9d37af.png)
 
 After selecting the 1080p, bitrate went up from 500000 to 2000000.
 
