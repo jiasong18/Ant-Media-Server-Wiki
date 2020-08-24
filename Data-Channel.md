@@ -134,7 +134,7 @@ You can also send Data Channel message with REST API. Here is the usage:
 curl -X POST
 http://localhost:5080/WebRTCAppEE/rest/v2/broadcasts/{STREAM_ID}/data
 -H 'content-type: application/json'
--d '{parameter: "parameterDetail"}'
+-d '{message: ""}'
 ```
 
 > Important Note: Please keep in mind that the REST interface only responds to the calls that are made from 127.0.0.1 by default. If you call from any other IP Address, it does not return. For allowing more IP Address, take a look at the  Security section later in this post.
