@@ -74,5 +74,6 @@
 * Quality Filter - FPS, Resolution, Bitrate
 * JavaScript -  bitrateMeasurement 
 * Edit FAQ
+* CUDA Update for new FFmpeg version
 * Git Branching
 * UML Diagrams
