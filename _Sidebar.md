@@ -72,7 +72,6 @@
 * Turn Server Cluster Configuration - DB Support
 * HTTP Forwarding
 * Quality Filter - FPS, Resolution, Bitrate
-* JavaScript -  bitrateMeasurement 
 * Edit FAQ
 * CUDA Update for new FFmpeg version
 * Git Branching
