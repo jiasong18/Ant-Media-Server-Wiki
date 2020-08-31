@@ -36,6 +36,6 @@ You can build your online TV channel with Ant Media Server. You just need mp4 fi
 
 You can play the playlist in HLS and WebRTC.
 
-Here is WebRTC player documentation -> https://github.com/ant-media/Ant-Media-Server/wiki/HLS-Playing
+Here is HLS player documentation -> https://github.com/ant-media/Ant-Media-Server/wiki/HLS-Playing
 
-Here is HLS play documentation -> https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-Playing
+Here is WebRTC play documentation -> https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-Playing
