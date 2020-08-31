@@ -8,7 +8,9 @@ As an example, if i do like the following, `settings.httpforwarding.extension=mp
 
 After that baseUrl needs to be set like following. `settings.httpforwarding.baseURL=https://{yourdomainhere}.com/{streamId.mp4}`. 
 
-This link can be anything you need. As an example of a s3 bucket: `https://{s3BucketName}.s3.{awsLocation}.amazonaws.com/streams/{streamId.mp4}`.
+This link can be anything you need. As an example of a s3 bucket: 
+
+`https://{s3BucketName}.s3.{awsLocation}.amazonaws.com/streams/{streamId.mp4}`.
 
 So, structure depends on your requirement.
 
@@ -18,6 +20,8 @@ After that, Ant Media Server needs to be restarted which can be done with the fo
 
 `sudo service antmedia restart`
 
-After that making these changes, when user requests the following link:`https://serverDomain:5443/{streamApp}/streams/{streamId}.mp4`
+After that making these changes, when user requests the following link:
+
+`https://serverDomain:5443/{streamApp}/streams/{streamId}.mp4`
 
 It will be forwarded to here:`https://{yourdomainhere}.com/{streamId.mp4}`
