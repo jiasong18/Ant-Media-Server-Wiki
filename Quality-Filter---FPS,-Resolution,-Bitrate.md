@@ -20,17 +20,19 @@ To achieve that:
 
 This code needs to be added after publish_started command received. So when you receive the publish started command, this code segment should also needs to be called. You need to add this line of code under play_started callback.
 
-`else if (info == "play_started") {`
+```
+else if (info == "play_started") {
 
-`//joined the stream`
+//joined the stream
 
-`console.log("play started");`
+console.log("play started");
 
-`start_play_button.disabled = true;`
+start_play_button.disabled = true;
 
-`stop_play_button.disabled = false;`
+stop_play_button.disabled = false;
 
-`webRTCAdaptor.getStreamInfo(streamId);`
+webRTCAdaptor.getStreamInfo(streamId);
+```
 
 * After getting stream info, you can call the following function to force the video quality you want to watch. `webRTCAdaptor.forceStreamQuality("{your_stream_Id}",  {the_resolution_to_be_forced});`
 
