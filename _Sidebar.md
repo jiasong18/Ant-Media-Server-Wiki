@@ -71,7 +71,6 @@
 * [Developer Quick Start](Developer-Quick-Start)
 * Update Conference call doc for the latest update
 * Turn Server Cluster Configuration - DB Support
-* Edit FAQ
 * CUDA Update for new FFmpeg version
 * Git Branching
 * UML Diagrams
