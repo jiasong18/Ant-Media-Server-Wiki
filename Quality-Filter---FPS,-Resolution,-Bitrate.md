@@ -1,4 +1,4 @@
-Quality selection was one of the most requested feature and now it is implemented here.  We will see how to use it.
+Quality selection was one of the most requested feature and now it is implemented and ready.  Let's see how to use it.
 
 Ant Media Server measures the viewers internet speed and sends the best quality according to the internet speed of the viewer.
 
