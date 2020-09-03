@@ -32,6 +32,47 @@ Just type the Playlist name and Playlist URL into the fields and click “Create
 
 You can build your online TV channel with Ant Media Server. You just need mp4 files for the streams. Furthermore, there is no need to store those mp4 files on your server. Ant Media Server can pull the mp4 files from any place that is stored.
 
+## How can I use Playlist API?
+
+You can call playlist with REST API. Here are the sample code snippets:
+```json
+{
+"playlistId":"testSelim",
+"currentPlayIndex":0,
+"playlistName":"playlistName",
+"broadcastItemList":[{
+	"streamId":"testSelim",
+	"hlsViewerCount":0,
+	"webRTCViewerCount":0,
+	"rtmpViewerCount":0,
+	"mp4Enabled":0,
+	"name":"sdfsdf",
+	"streamUrl":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+	"type":"VoD"},
+	{
+	"streamId":"testSelim",
+	"hlsViewerCount":0,
+	"webRTCViewerCount":0,
+	"rtmpViewerCount":0,
+	"mp4Enabled":0,
+	"name":"sdfsdf2222",
+	"streamUrl":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+	"type":"VoD"},
+	{
+	"streamId":"testSelim",
+	"hlsViewerCount":0,
+	"webRTCViewerCount":0,
+	"rtmpViewerCount":0,
+	"mp4Enabled":0,
+	"name":"sdfsdf2222",
+	"streamUrl":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
+	"type":"VoD"}
+	],
+"creationDate":111,
+"duration":1111
+}
+```
+
 ## How to play Linear Live Streaming?
 
 You can play the playlist in HLS and WebRTC.
