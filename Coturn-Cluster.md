@@ -24,7 +24,7 @@ This "How to" guide has been tested on a real lab environment so you have to set
 
 ### DNS Configuration
 
-Assuming this is a fully-registered domain, we would add the following in the DNS settings. I add two A records for the subdomain turn.antmedia.io and point them to the turn server servers IP address.
+Assuming this is a fully-registered domain, we would add the following in the DNS settings. We add two A records for the subdomain turn.antmedia.io and point them to the turn server servers IP address.
 
 Example DNS Record as follows.
 ```
@@ -107,6 +107,10 @@ mysql-userdb="host=192.168.1.200 dbname=coturn user=coturn password=coturn123 po
 syslog
 ```
 Make sure you're doing this step on Coturn1 and Coturn2 server.
+
+The syslog output of all servers is as follows.
+
+![](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/coturn-2.png)
 
 Import SQL schema to the database server.
 
