@@ -34,7 +34,7 @@ stop_play_button.disabled = false;
 webRTCAdaptor.getStreamInfo(streamId);
 ```
 
-* After getting stream info, you can call the following function to force the video quality you want to watch. `webRTCAdaptor.forceStreamQuality("{your_stream_Id}",  {the_resolution_to_be_forced});`
+After getting stream info, you can call the following function to force the video quality you want to watch. `webRTCAdaptor.forceStreamQuality("{your_stream_Id}",  {the_resolution_to_be_forced});`
 
 You need the change the this line from `webRTCAdaptor.forceStreamQuality(stream1,dropdownSelectedItem)`;
 
