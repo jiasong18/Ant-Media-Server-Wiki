@@ -1,4 +1,4 @@
-This guide explains Data Channel technical details in Ant Media Server. Briefly, Data Channel features are;
+This guide explains Data Channel technical details in Ant Media Server. Content of this guide is as follows;
 * [What is Data Channel?](#what-is-data-channel)
 * [Data Channel Usage](#data-channel-usage)
 * [Data Channel Hooks](#data-channel-web-hooks)
@@ -6,11 +6,11 @@ This guide explains Data Channel technical details in Ant Media Server. Briefly,
 ## What is Data Channel?
 Data channel is another channel in WebRTC other than video and audio. In data channel, you can send any kind of information to the other clients. Data Channels can be utilized in various use cases including chatting, control messages, file sharing, etc. Ant Media Server provides a generic data channel infrastructure that can be used in all use cases.
 
-### How to enable Data Channel in Management Panel
+### How to Enable Data Channel in Management Panel
 
 ![Ant Media Server Management Panel Data Channel](https://antmedia.io/wp-content/uploads/2020/05/Data-Channel-1.png)
 
-Just enable data channel support in Ant Media Server Management Console `/applications/applicationName` settings tab. After enabling data channel support, you can have some options for data delivery. Here are the options you can choose
+Just enable data channel support in Ant Media Server Management Console `/applications/applicationName` settings tab. After enabling data channel support, you can have some options for data delivery. Here are the options you can choose:
 
 * **Publisher & All Player**:
 Players' and Publisher's messages are delivered to publisher and all other players who are watching the stream and publisher.
@@ -130,7 +130,7 @@ In order to add default URL,  just follow the steps below
 
 * Open your apps `red5-web.properties` which is under `webapps/<app_name>/WEB-INF` 
 * Add `settings.dataChannelWebHook` property and assign your web hook url
-* Save the file and sestart the server
+* Save the file and restart the server
 ```
 sudo service antmedia restart
 ```
