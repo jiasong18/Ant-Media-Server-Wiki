@@ -20,7 +20,7 @@ MariaDB: 192.168.1.200
 Coturn1: 192.168.1.201
 Coturn2: 192.168.1.202
 ```
-This "How to" guide has been tested on a real lab environment so you have to set up the configuration according to your own build.
+This "How to" guide has been tested in a real lab environment so you have to set up the configuration according to your own build.
 
 ### DNS Configuration
 
@@ -31,7 +31,7 @@ Example DNS Record as follows.
 turn.antmedia.io	IN		A		192.168.1.201
 turn.antmedia.io	IN		A		192.168.1.202
 ```
-In this way, when we make a request to turn.antmedia.io, it will distribute every request in the round-robin structure to the ip addresses we have stated above.
+In this way, when we request to turn.antmedia.io, it will distribute every request in the round-robin structure to the ip addresses we have stated above.
 
 ### Database Configuration
 
