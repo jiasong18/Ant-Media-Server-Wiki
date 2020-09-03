@@ -1,5 +1,7 @@
 In this how-to article, I will tell you how to do a load balancer using Turn Server (Mysql support) as DNS Round Robin.
 
+![](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/turn_dns_round_robin.png)
+
 ### What is Round Robin DNS?
 Round Robin DNS is a fast, simple and cost-effective way to load balance or distribute traffic evenly over multiple servers or devices.
 
@@ -76,7 +78,7 @@ quit;
 
 In this section, we will install and configure Coturn on Coturn1 and Coturn2 server.
 
-#Update the repository and install CoTurn with the following command
+Update the repository and install CoTurn with the following command
 
 `apt-get update && apt-get install coturn -y`
 
@@ -96,7 +98,7 @@ Create the following file with the editor
 
 `vim /etc/turnserver.conf`
 
-#Add below lines then save and exit (dont forget to change database credentials)
+Add below lines then save and exit (don't forget to change database credentials)
 ```
 fingerprint
 lt-cred-mech
@@ -106,7 +108,7 @@ syslog
 ```
 Make sure you're doing this step on Coturn1 and Coturn2 server.
 
-Import sql schema to database server.
+Import SQL schema to the database server.
 
 The file /usr/share/coturn/schema.sql in one of the turn servers is uploaded to the database server and scheme.sql is imported.
 
@@ -128,12 +130,15 @@ Let's check if the configurations are working correctly.
 
 `turnutils_uclient -v -t -T -u antmedia -w 123456 -p 3478 turn.antmedia.io`
 
-
 If everything is fine, your output will be as follows.
-coturn3image
+
+![](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/coturn-output.png)
+
 
 ### Troubleshooting
 
 You can use the following command to check that DNS Round-Robin is working correctly.
 
 `nslookup turn.antmedia.io`
+
+![](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/coturn-nslookup.png)
