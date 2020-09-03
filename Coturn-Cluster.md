@@ -1,60 +1,60 @@
 In this how-to article, I will tell you how to do a load balancer using Turn Server (Mysql support) as DNS Round Robin.
 
-What is Round Robin DNS?
+### What is Round Robin DNS?
 Round Robin DNS is a fast, simple and cost-effective way to load balance or distribute traffic evenly over multiple servers or devices.
 
-How does Round Robin work?
+### How does Round Robin work?
 By using Round Robin DNS, when one user accesses the home page, the request will be sent to the first IP address. The second user who accesses the home page will be sent to the next IP address, and the third user will be sent to the third IP address. In a nutshell, Round Robin network load balancing rotates connection requests among web servers in the order that requests are received.
 
-System Requirements
-
+### System Requirements
+```
 2 x Turn Server
 1 x MySQL/MariaDB server
 1 x DNS Access
-
+```
+```
 DNS    : 192.168.1.199
 MariaDB: 192.168.1.200
 Coturn1: 192.168.1.201
 Coturn2: 192.168.1.202
+```
+This "How to" guide has been tested on a real lab environment so you have to set up the configuration according to your own build.
 
-In this How-to article, you should set up the configuration according to your own structure since a real lab environment is established.
-
-DNS Configuration
+### DNS Configuration
 
 Assuming this is a fully-registered domain, we would add the following in the DNS settings. I add two A records for the subdomain turn.antmedia.io and point them to the turn server servers IP address.
 
 Example DNS Record as follows.
-
+```
 turn.antmedia.io	IN		A		192.168.1.201
 turn.antmedia.io	IN		A		192.168.1.202
-
+```
 In this way, when we make a request to turn.antmedia.io, it will distribute every request in the round-robin structure to the ip addresses we have stated above.
 
-
-Database Configuration
+### Database Configuration
 
 We always prefer to install the Database Server on a separate server and we choose MariaDB. We use long-term authentication in this structure and we authenticate to the turn server with the users that we created.
 
 #Update the repository and install MariaDB with the following command
-apt-get update && apt-get install mariadb-server -y
+`apt-get update && apt-get install mariadb-server -y`
 
 Edit the following file with your favorite editor 
-vim /etc/mysql/mariadb.conf.d/50-server.cnf
+`vim /etc/mysql/mariadb.conf.d/50-server.cnf`
 
 Please add the following lines then save and exit.
-
+```
 bind-address            = 0.0.0.0
 innodb_file_format=Barracuda
 innodb_file_per_table=1
 innodb_large_prefix=1
-
+```
 #Restart the MariaDB Server.
-systemctl restart mysqld
+`systemctl restart mysqld`
 
 #Create database and user credentials
 
-mysql -uroot -p 
-
+`mysql -uroot -p `
+```
 SET SESSION innodb_strict_mode=ON;
 SET GLOBAL innodb_default_row_format='dynamic';
 
@@ -66,54 +66,54 @@ GRANT ALL PRIVILEGES ON coturn.* TO 'coturn'@'192.168.1.201';
 GRANT ALL PRIVILEGES ON coturn.* TO 'coturn'@'192.168.1.202';
 flush privileges;
 quit;
-
-#Install TURN Server
+```
+### Install TURN Server
 
 In this section, we will install and configure Coturn on Coturn1 and Coturn2 server.
 
 #Update the repository and install CoTurn with the following command
-apt-get update && apt-get install coturn -y
+`apt-get update && apt-get install coturn -y`
 
 #Enable TURN server as follows.
-sed -i 's/#TURNSERVER_ENABLED.*/TURNSERVER_ENABLED=1/g' /etc/default/coturn
+`sed -i 's/#TURNSERVER_ENABLED.*/TURNSERVER_ENABLED=1/g' /etc/default/coturn`
 
 #Next, add CoTurn to start at boot time
-systemctl enable coturn
+`systemctl enable coturn`
 
 #backup original conf file.
-mv /etc/turnserver.conf{,_bck}
+`mv /etc/turnserver.conf{,_bck}`
 
 Create the following file with editor
 
-vim /etc/turnserver.conf
+`vim /etc/turnserver.conf`
 
 #Add below lines then save and exit (dont forget to change database credentials)
-
+```
 fingerprint
 lt-cred-mech
 realm=turn.antmedia.io
 mysql-userdb="host=192.168.1.200 dbname=coturn user=coturn password=coturn123 port=3306 connect_timeout=60 read_timeout=60"
 syslog
-
+```
 Make sure you're doing this step on Coturn1 and Coturn2 server.
 
 #Import sql schema to database server.
 
-Turn severlarin herhangi bir tanesinin icinde bulunan /usr/share/coturn/schema.sql dosyasi database sunucusuna upload edilir ve dosya import edilir.
+The file /usr/share/coturn/schema.sql in one of the turn servers is uploaded to the database server and scheme.sql is imported.
 
-scp -r /usr/share/coturn/schema.sql root@192.168.1.200:
+`scp -r /usr/share/coturn/schema.sql root@192.168.1.200:`
 
 Run the following command to import the SQL file.
-mysql -uroot -p coturn < schema.sql
+`mysql -uroot -p coturn < schema.sql`
 
 Restart the service on both nodes
-systemctl restart coturn
+`systemctl restart coturn`
 
 To create a username and password, run the following command on the turn1 or turn2 server.
-turnadmin -a --mysql-userdb="host=192.168.1.200 dbname=coturn user=coturn password=coturn123" -u antmedia -p 123456 -r turn.antmedia.io
+`turnadmin -a --mysql-userdb="host=192.168.1.200 dbname=coturn user=coturn password=coturn123" -u antmedia -p 123456 -r turn.antmedia.io`
 
 Let's check if the configurations are working correctly.
-turnutils_uclient -v -t -T -u antmedia -w 123456 -p 3478 turn.antmedia.io
+`turnutils_uclient -v -t -T -u antmedia -w 123456 -p 3478 turn.antmedia.io`
 
 
 If everything is fine, your output will be as follows.
