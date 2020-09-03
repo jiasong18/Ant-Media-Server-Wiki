@@ -37,34 +37,34 @@ You can build your online TV channel with Ant Media Server. You just need mp4 fi
 You can call playlist with REST API. Here are the sample code snippets:
 ```json
 {
-"playlistId":"testSelim",
+"playlistId":"testPlaylistId",
 "currentPlayIndex":0,
 "playlistName":"playlistName",
 "broadcastItemList":[{
-	"streamId":"testSelim",
+	"streamId":"testStreamID",
 	"hlsViewerCount":0,
 	"webRTCViewerCount":0,
 	"rtmpViewerCount":0,
 	"mp4Enabled":0,
-	"name":"sdfsdf",
+	"name":"testPlaylistName",
 	"streamUrl":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
 	"type":"VoD"},
 	{
-	"streamId":"testSelim",
+	"streamId":"testStreamID",
 	"hlsViewerCount":0,
 	"webRTCViewerCount":0,
 	"rtmpViewerCount":0,
 	"mp4Enabled":0,
-	"name":"sdfsdf2222",
+	"name":"testPlaylistName",
 	"streamUrl":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
 	"type":"VoD"},
 	{
-	"streamId":"testSelim",
+	"streamId":"testStreamID",
 	"hlsViewerCount":0,
 	"webRTCViewerCount":0,
 	"rtmpViewerCount":0,
 	"mp4Enabled":0,
-	"name":"sdfsdf2222",
+	"name":"testPlaylistName",
 	"streamUrl":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
 	"type":"VoD"}
 	],
