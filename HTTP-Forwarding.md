@@ -1,6 +1,7 @@
 Http forwarding is when user wants to store files in other storage or wants to lower the strain on the server side.
 
-Http forwarding is possible  with a few changes on the `AMS-DIR / webapps / {application}(LiveApp or WebRTCAppEE) / WEB-INF / red5-web.properties`. 
+Http forwarding is possible  with a few changes on the following file:
+`AMS-DIR / webapps / {application}(LiveApp or WebRTCAppEE) / WEB-INF / red5-web.properties`. 
 
 Add `settings.httpforwarding.extension` to the red5-web.properties file. But you need to specify what you want to forward. 
 
