@@ -1,13 +1,14 @@
 Http forwarding is when user wants to store files in other storage or wants to lower the strain on the server side.
 
 Http forwarding is possible  with a few changes on the following file:
+
 `AMS-DIR / webapps / {application}(LiveApp or WebRTCAppEE) / WEB-INF / red5-web.properties`. 
 
 Add `settings.httpforwarding.extension` to the red5-web.properties file. But you need to specify what you want to forward. 
 
 As an example, if i do like the following, `settings.httpforwarding.extension=mp4,png` it will forward mp4 and png files.
 
-After that baseUrl needs to be set like following. `settings.httpforwarding.baseURL=https://{yourdomainhere}`. 
+After that baseUrl needs to be set like following: `settings.httpforwarding.baseURL=https://{yourdomainhere}`. 
 
 If your domain is antmedia.io it will be like:`settings.httpforwarding.baseURL=https://antmedia.io`.
 
