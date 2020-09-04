@@ -36,7 +36,9 @@ Enterprise Edition can be purchased [on antmedia.io](https://antmedia.io)
 | Secure Streaming  | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
 | iOS & Android WebRTC SDK  | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
 | iOS & Android RTMP SDK  | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
+| JavaScript SDK  | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
 | RTMP, RTSP, MP4 and HLS Support  | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
+| VP8 and H.265 Support  | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
 | WebRTC to RTMP Adapter  | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
 | 360 Degree Live & VoD Streams  | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
 | Web Management Dashboard  | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
@@ -45,6 +47,7 @@ Enterprise Edition can be purchased [on antmedia.io](https://antmedia.io)
 | Open Source | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
 | Simulcasting to Periscope | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
 | Simulcast to Facebook & Youtube | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
+| Simulcast to all Social Media via RTMP | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
 | Support |  Community |  E-mail, On-site  |
 | Price |  Free |  Paid  |
 
