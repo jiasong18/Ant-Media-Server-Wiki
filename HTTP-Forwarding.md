@@ -31,5 +31,7 @@ After that making these changes, when user requests the following link:
 
 Ex:`https://antmedia.io:5443/WebRTCAppEE/streams/stream123`
 
-It will be forwarded to here:`https://vod-docs-123456789012.s3-accesspoint.us-west-2.amazonaws.com/streams/stream123.mp4`
+It will be forwarded to here:
+
+`https://vod-docs-123456789012.s3-accesspoint.us-west-2.amazonaws.com/streams/stream123.mp4`
 
