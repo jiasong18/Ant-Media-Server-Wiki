@@ -34,7 +34,11 @@ You can build your online TV channel with Ant Media Server. You just need mp4 fi
 
 ## How can I use Playlist API?
 
-You can call playlist with REST API. Here are the sample code snippets:
+You can call playlist with REST API. We have [REST APIs](https://antmedia.io/rest/#/Playlist%20Rest%20Service) with CRUD processes.
+
+
+
+ Here are the sample code snippets:
 ```json
 {
 "playlistId":"testPlaylistId",
