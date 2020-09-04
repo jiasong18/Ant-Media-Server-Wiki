@@ -70,58 +70,54 @@ style="font-size: 14px; display: none" style="display: none">Publishing</span>
 <script>
 ...
 
-var webRTCAdaptor = 
-      new WebRTCAdaptor(
-        {
-	  websocket_url : websocketURL,
-    	  mediaConstraints : mediaConstraints,
-	  peerconnection_config : pc_config,
-	  sdp_constraints : sdpConstraints,
-	  localVideoId : "localVideo",
-	  debug : true,
-	  callback : function(info, obj) {
-	    if (info == "initialized") {
-		//called by JavaScript SDK when WebSocket is connected. 				
-	    } else if (info == "joinedTheRoom") {
-		//called when this client is joined the room
-	        //obj contains streamId field which is the stream id 
-                //that this client can use to publish to the room.
-        
-                //obj also contains streams array which is the list of streams in the room
-                //so that you can play these streams in here
-                 	
- 	    } else if (info == "streamJoined") {
-                //called when a new stream is joined to the room
-                //obj.streamId field contains the stream id				
-                //you can request to play the stream. 
-		
-	    } else if (info == "newStreamAvailable") {
-               //called after stream is requested to play and it's available to play right now
-               
-	    } else if (info == "streamLeaved") {
-	       //called when a stream is leaved from the room					
-	    } 
-            else if (info == "publish_started") {
-	       //called when stream publishing is started for this client					
-	    } 
-            else if (info == "publish_finished") {
-		//called when stream publishing has finished for this client				
-	    } 
-            else if (info == "leavedFromRoom") {
-               //called when this client is leaved from the room  
-	    } 
-            else if (info == "closed") {
-		//called when websocket connection is closed				
-	    } 
-            else if (info == "play_finished") {
-	        //called when a stream has finished playing			
-	    } 
-            else if (info == "streamInformation") {
-		//called when a stream information is received from the server				
-	    }
-	  },
-	  callbackError : function(error, message) {
-			//some of the possible errors, NotFoundError, SecurityError,PermissionDeniedError
+var webRTCAdaptor = new WebRTCAdaptor(
+		{
+			websocket_url : websocketURL,
+			mediaConstraints : mediaConstraints,
+			peerconnection_config : pc_config,
+			sdp_constraints : sdpConstraints,
+			localVideoId : "localVideo",
+			isPlayMode : playOnly,
+			debug : true,
+			callback : function(info, obj) {
+				if (info == "initialized") {
+				    //called by JavaScript SDK when WebSocket is connected. 
+				} else if (info == "joinedTheRoom") {
+			            //called when this client is joined the room
+	                            //obj contains streamId field which is the stream id 
+                                    //that this client can use to publish to the room.
+                                    //obj also contains streams array which is the list of streams in the room
+                                    //so that you can play these streams in here
+                                    //periodically calls getRoominfo to checks for any new stream joined to the room
+				} else if (info == "newStreamAvailable") {
+                                    //called when server gets a new stream while checking periodically for new streams.
+                                    //if there is a new stream, plays it.
+				} else if (info == "publish_started") {
+				    //called when stream publishing is started for this client		
+				} else if (info == "publish_finished") {
+				    //called when stream publishing has finished for this client
+				} else if (info == "leavedFromRoom") {
+			            //called when this client is leaved from the room  	
+				} else if (info == "closed") {
+				    //called when websocket connection is closed	
+				} else if (info == "play_finished") {
+				    //called when a stream has finished playing	
+				} else if (info == "streamInformation") {
+				    //called when a stream information is received from the server		
+				} else if (info == "roomInformation") {
+				    //gets from the room information from the server when getRoomInfo is called.
+                                    //returns the array of streams.
+				}
+				else if (info == "data_channel_opened") {
+				    //called when data channel is opened
+				} else if (info == "data_channel_closed") {
+				    // called when data channel is closed
+				} else if(info == "data_received") {
+                                   //called when data is received through data channel
+				}
+			},
+			callbackError : function(error, message) {
+		//some of the possible errors, NotFoundError, SecurityError,PermissionDeniedError
 	  }
 });
 ...
