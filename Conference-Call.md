@@ -93,7 +93,7 @@ var webRTCAdaptor = new WebRTCAdaptor(
 			  //called when this client is joined the room
 	                  //obj contains streamId field which is the stream id
                           //that this client can use to publish to the room.
-                          //after sending joinedTheRoom command, server replies back with the streams in the room.
+                          //after sending joinedTheRoom command, server replies back the streams in the room.
                           //so that you can play these streams in here
                           //periodically calls getRoominfo to checks for any new stream joined to the room
 			} else if (info == "newStreamAvailable") {
