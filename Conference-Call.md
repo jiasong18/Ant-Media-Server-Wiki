@@ -42,7 +42,7 @@ a file with `conference_call.html`.
 <div class="jumbotron">
 <div id="players">
 <div class="col-sm-3">
-<video id="localVideo" autoplay muted></video>
+<video id="localVideo" autoplay muted controls playsinline></video>
 </div>
 </div>
 
@@ -56,8 +56,15 @@ a file with `conference_call.html`.
 <button onclick="leaveRoom()" class="btn btn-info" disabled id="stop_publish_button">Leave Room</button>
 </p>
 
-<span class="label label-success" id="broadcastingInfo"
-style="font-size: 14px; display: none" style="display: none">Publishing</span>
+<div style="padding:10px">
+<button id="turn_off_camera_button" onclick="turnOffLocalCamera()" class="btn btn-default"  >Turn off Camera</button>
+<button id="turn_on_camera_button" disabled onclick="turnOnLocalCamera()" class="btn btn-default"  >Turn on Camera</button>
+
+<button id="mute_mic_button" onclick="muteLocalMic()" class="btn btn-default"  >Mute Local Mic</button>
+<button id="unmute_mic_button" disabled onclick="unmuteLocalMic()" class="btn btn-default"  >Unmute Local Mic</button>
+</div>
+<span class="label label-success" id="broadcastingInfo" style="font-size: 14px; display: none" style="display: none">Publishing</span>
+</div>
 </div>
 </div>
 ...
@@ -84,9 +91,9 @@ var webRTCAdaptor = new WebRTCAdaptor(
 				    //called by JavaScript SDK when WebSocket is connected. 
 				} else if (info == "joinedTheRoom") {
 			            //called when this client is joined the room
-	                            //obj contains streamId field which is the stream id 
+	                            //obj contains streamId field which is the stream id
                                     //that this client can use to publish to the room.
-                                    //obj also contains streams array which is the list of streams in the room
+                                    //after client sending joinedTheRoom command, server replies back with the streams in the room.
                                     //so that you can play these streams in here
                                     //periodically calls getRoominfo to checks for any new stream joined to the room
 				} else if (info == "newStreamAvailable") {
@@ -107,8 +114,8 @@ var webRTCAdaptor = new WebRTCAdaptor(
 				} else if (info == "roomInformation") {
 				    //gets from the room information from the server when getRoomInfo is called.
                                     //returns the array of streams.
-				}
-				else if (info == "data_channel_opened") {
+				
+				}else if (info == "data_channel_opened") {
 				    //called when data channel is opened
 				} else if (info == "data_channel_closed") {
 				    // called when data channel is closed
