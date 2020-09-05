@@ -90,12 +90,12 @@ var webRTCAdaptor = new WebRTCAdaptor(
 				if (info == "initialized") {
 				    //called by JavaScript SDK when WebSocket is connected. 
 				} else if (info == "joinedTheRoom") {
-			            //called when this client is joined the room
-	                            //obj contains streamId field which is the stream id
-                                    //that this client can use to publish to the room.
-                                    //after client sending joinedTheRoom command, server replies back with the streams in the room.
-                                    //so that you can play these streams in here
-                                    //periodically calls getRoominfo to checks for any new stream joined to the room
+			          //called when this client is joined the room
+	                          //obj contains streamId field which is the stream id
+                                  //that this client can use to publish to the room.
+                                  //after client sending joinedTheRoom command, server replies back with the streams in the room.
+                                  //so that you can play these streams in here
+                                  //periodically calls getRoominfo to checks for any new stream joined to the room
 				} else if (info == "newStreamAvailable") {
                                     //called when server gets a new stream while checking periodically for new streams.
                                     //if there is a new stream, plays it.
