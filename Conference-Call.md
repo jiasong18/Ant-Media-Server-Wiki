@@ -153,7 +153,7 @@ webRTCAdaptor.publish(streamId, token);
 
 ### 4. Play Stream in a Room
 
-Call the play method. In conference call the correct place to call method is when `joinedTheRoom` and `streamJoined` notifications are received. 
+Call the play method. In conference call the correct place to call method is when `joinedTheRoom` and `roomInformation` notifications are received. 
 ```
 webRTCAdaptor.play(streamId, token);
 ```
@@ -165,7 +165,6 @@ webRTCAdaptor.play(streamId, token);
 ### 5. Server Notifications 
 Here are the conference related notifications that callback is invoked for. Please check the [conference.html](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/conference.html) for proper usage. 
 * `joinedTheRoom`: Called when WebSocket is connected. It has parameter that contains stream id for publishing and streams array in order to play the stream.   
-* `streamJoined`:  Called when a new stream is joined to the room. It has parameter about the stream id for playing. 
 * `newStreamAvailable`: Called when a previously joined stream is ready to play. 
-* `streamLeaved`: Called when a stream is leaved from the room. 
+* `roomInformation`: Called when getroomInfo is sent by client. It returns the active streams in the room.
 * `leavedFromRoom`: Called when this client is leaved from the room. 
