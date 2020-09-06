@@ -3,6 +3,7 @@ This guide explains Data Channel technical details in Ant Media Server. Content 
 * [Data Channel Usage](#data-channel-usage)
   * [Usage in Javascript](#usage-in-javascript)
   * [Usage in Android SDK](#usage-in-android-sdk)
+  * [Usage in iOS SDK](#usage-in-ios-sdk)
   * [Usage in REST API Service](#usage-in-rest-api-service)
 * [Data Channel Hooks](#data-channel-web-hooks)
 
@@ -107,6 +108,27 @@ Before initialization of WebRTCClient you need to:
 
   ```webRTCClient.sendMessageViaDataChannel(buf);```
 
+### Usage in iOS SDK
+
+Ant Media Server and WebRTC iOS SDK can use data channels in WebRTC. In order to use Data Channel, make sure that it’s enabled both server-side and mobile. In order to enable it for server-side, you can just set the `enableDataChannel` parameter to true in `setOptions` method.
+
+```
+webRTCClient.setOptions(url: "ws://your_server_url:5080/WebRTCAppEE/websocket", streamId: "stream123", token: "", mode: .play, enableDataChannel: true)
+```
+
+After that, you can send data with the following method of `AntMediaClient`
+
+```
+func sendData(data: Data, binary: Bool = false)
+```
+
+When a new message is received, the delegate’s following method is called.
+
+```
+func dataReceivedFromDataChannel(streamId: String, data: Data, binary: Bool)
+```
+
+There is also data channel usage example exist in the Sample project.
 
 ### Usage in REST API Service
 
