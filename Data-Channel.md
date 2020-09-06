@@ -130,9 +130,11 @@ func dataReceivedFromDataChannel(streamId: String, data: Data, binary: Bool)
 
 There is also data channel usage example exist in the Sample project.
 
+For more detail, please visit our [iOS SDK Guide](REST-Guide) 
+
 ### Usage in REST API Service
 
-You can also send Data Channel message with REST API. Here is the usage:
+You can also send a Data Channel message with REST API. Here is the usage:
 
 ```
 curl -X POST
@@ -145,7 +147,7 @@ This REST Service is generic. So, you can add your parameters for your requireme
 
 > Important Note: Please keep in mind that the REST interface only responds to the calls that are made from 127.0.0.1 by default. If you call from any other IP Address, it does not return. For allowing more IP Address, take a look at the  Security section later in this post.
 
-For the more detail, please visit our [REST API Guide](REST-Guide) 
+For more detail, please visit our [REST API Guide](REST-Guide) 
 
 ## Data Channel Web Hooks
 In order to integrate Data Channel to your application, you can use web hooks. All data channel messages are delivered to these hooks as well. 
