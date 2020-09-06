@@ -108,6 +108,10 @@ Before initialization of WebRTCClient you need to:
 
   ```webRTCClient.sendMessageViaDataChannel(buf);```
 
+There is also data channel usage example exist in the Sample project.
+
+For more detail, please visit our [Android SDK Guide](WebRTC-Android-SDK-Documentation) 
+
 ### Usage in iOS SDK
 
 Ant Media Server and WebRTC iOS SDK can use data channels in WebRTC. In order to use Data Channel, make sure that it’s enabled both server-side and mobile. In order to enable it for server-side, you can just set the `enableDataChannel` parameter to true in `setOptions` method.
@@ -130,7 +134,7 @@ func dataReceivedFromDataChannel(streamId: String, data: Data, binary: Bool)
 
 There is also data channel usage example exist in the Sample project.
 
-For more detail, please visit our [iOS SDK Guide](REST-Guide) 
+For more detail, please visit our [iOS SDK Guide](WebRTC-iOS-SDK-Guide) 
 
 ### Usage in REST API Service
 
