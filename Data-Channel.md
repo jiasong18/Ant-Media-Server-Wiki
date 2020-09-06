@@ -1,6 +1,7 @@
 This guide explains Data Channel technical details in Ant Media Server. Content of this guide is as follows;
 * [What is Data Channel?](#what-is-data-channel)
 * [Data Channel Usage](#data-channel-usage)
+  * [Data Channel Usage](#data-channel-usage)
 * [Data Channel Hooks](#data-channel-web-hooks)
 
 ## What is Data Channel?
