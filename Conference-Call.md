@@ -159,10 +159,34 @@ webRTCAdaptor.play(streamId, token);
 ```
 `play` method gets two parameters:
 *`streamId`:(Mandatory) Stream id of the stream.
-* `token`: It's required only when one-time token is enabled. 
+* `token`: It's required only when one-time token is enabled.
 
+### 5. Turn on/off Camera
 
-### 5. Server Notifications 
+To turn off the camera, call the turnOffLocalCamera method.
+```
+webRTCAdaptor.turnOffLocalCamera();
+```
+This method takes no parameter.
+
+If your camera is turned off, call turnOnLocalCamera to turn it on.
+```
+webRTCAdaptor.turnOffLocalCamera();
+```
+
+### 6. Mute/Unmute Microphone.
+
+Call muteLocalMic to mute the microphone.
+```
+webRTCAdaptor.muteLocalMic();
+```
+To unmute, call unmuteLocalMic.
+```
+webRTCAdaptor.unmuteLocalMic();
+```
+These methods take no parameters.
+
+### 7. Server Notifications 
 Here are the conference related notifications that callback is invoked for. Please check the [conference.html](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/conference.html) for proper usage. 
 * `joinedTheRoom`: Called when WebSocket is connected. It has parameter that contains stream id for publishing and streams array in order to play the stream.   
 * `newStreamAvailable`: Called when a previously joined stream is ready to play. 
