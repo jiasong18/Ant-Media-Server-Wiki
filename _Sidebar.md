@@ -64,7 +64,7 @@
 * [Playlist](Playlist)
 * [Quality Filter - FPS, Resolution, Bitrate](Quality-Filter---FPS,-Resolution,-Bitrate)
 * [HTTP Forwarding](HTTP-Forwarding)
-* [Coturn Clustering](Coturn-Cluster)
+* [TURN Server Cluster](Coturn-Cluster)
 * [Conference Call Doc Update](Conference-Call)
 
 ## Proposals
