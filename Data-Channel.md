@@ -90,6 +90,18 @@ public interface IDataChannelObserver {
 }
 ```
 
+**Send Text Message with Data Channel**
+
+In Android, we send text messages using sendTextMessage method. It first gets the text from the user input as below.
+
+```
+public void sendTextMessage() { 
+    String messageToSend = messageInput.getText().toString(); String messageToSendJson = Message.createJsonTextMessage(computeMessageId(), 
+    new Date(), messageToSend); final ByteBuffer buffer = ByteBuffer.wrap(messageToSendJson.getBytes(Charset.defaultCharset())); 
+    DataChannel.Buffer buf= new DataChannel.Buffer(buffer,false); webRTCClient.sendMessageViaDataChannel(buf); 
+}
+```
+
 When a data channel message is received, `onMessage` method will be called, where you decide how to handle the received data.
 Similarly, `onMessageSent` method is called when a message is successfully sent or a sending attempt failed.
 
@@ -107,6 +119,75 @@ Before initialization of WebRTCClient you need to:
 * To send data, call `sendMessageViaDataChannel` method of WebRTCClient and pass the raw data like this:
 
   ```webRTCClient.sendMessageViaDataChannel(buf);```
+
+**Receiving and Displaying Images with Data Channel**
+
+BinaryDataReceiver receives the data chunk by chunk, parses the header information from the chunks and merges them.
+
+In Android, onMessage is called for each chunk but this time received data is binary. We use BinaryDataReceiver object to merge the chunks like this:
+
+```java
+if (buffer.binary) {
+  binaryDataReceiver.receiveDataChunk(buffer.data);
+  if(binaryDataReceiver.isAllDataReceived()) {
+    Bitmap bmp=BitmapFactory.decodeByteArray(binaryDataReceiver .receivedData.array(),0,binaryDataReceiver.receivedData.capacity());
+    final ImageMessage message = new ImageMessage();
+    message.parseJson(binaryDataReceiver.header.text);
+    message.setImageBitmap(bmp);
+    messageAdapter.add(message);
+    // scroll the ListView to the last added element
+    messagesView.setSelection(messagesView.getCount() - 1);
+    binaryDataReceiver.clear();
+  }
+}
+```
+
+When all the data is received, we decode the image using a BitmapFactory and create a ImageMessage which will be added to our ListView in the MessageAdapter mentioned in the section above:
+
+```java
+ImageMessage imageMessage = (ImageMessage) message;
+ImageView imageBody;
+if (message.isBelongsToCurrentUser()) {
+  convertView = messageInflater.inflate(R.layout.my_image_message, null);
+  // this message was sent by us
+  imageBody = convertView.findViewById(R.id.image_body_my);
+  messageDate = convertView.findViewById(R.id.message_date);
+  messageDate.setText(imageMessage.getMessageDate());
+  imageBody.setImageBitmap(imageMessage.getImageBitmap());
+} else {
+  // this message was sent by someone else
+  convertView = messageInflater.inflate(R.layout.their_image_message, null);
+  ...
+}
+```
+
+We create an ImageView for each bitmap and dependent on if the image sent by us or received, we display the image differently using a different layout for each case.
+
+In the Web side at present, we have again some browser differences. The default expected type for binary data is Blob in the WebRTC standard. Firefox supports it currently but Chrome does not support it and sets the type of received data internally to ArrayBuffer for binary messages. To overcome these differences we handled both cases in our code and converted Blobs to more generic type ArrayBuffer whenever possible.
+
+In the Javascript using our BinaryDataReceiver object we handle received image data chunks like this:
+
+```java
+function handleImageData(data) {
+  binaryDataReceiver.receiveDataChunk(data);
+  if (binaryDataReceiver.isAllDataReceived()) {
+    var jsonHeader = JSON.parse(binaryDataReceiver.headerText);
+    var date = new Date(jsonHeader.messageDate);
+    var bytes = new Uint8Array(binaryDataReceiver.receivedData);
+    var blob = new Blob([bytes.buffer]);
+    // create image URL
+    var urlCreator = window.URL || window.webkitURL;
+    var imageUrl = urlCreator.createObjectURL(blob);
+
+    createImageMessage(imageUrl, false);
+    imageReceiver.clear();
+  }
+}
+```
+
+When all of the image data chunks are received, we parse metadata about the image from the header and then create a Object URL from it. Finally, we display it using <img/> HTML tag in our chat window.
+
+![](https://antmedia.io/wp-content/uploads/2020/04/webImageScreenshot2.png)
 
 There is also data channel usage example exist in the Sample project.
 
