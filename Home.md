@@ -45,8 +45,6 @@ Enterprise Edition can be purchased [on antmedia.io](https://antmedia.io)
 | IP Camera Support  | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
 | Re-stream Remote Streams | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
 | Open Source | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
-| Simulcasting to Periscope | ![true](images/true-icon.png)  |  ![true](images/true-icon.png)  |
-| Simulcast to Facebook & Youtube | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
 | Simulcast to all Social Media via RTMP | ![false](images/false-icon.png)  |  ![true](images/true-icon.png)  |
 | Support |  Community |  E-mail, On-site  |
 | Price |  Free |  Paid  |
