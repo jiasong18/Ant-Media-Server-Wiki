@@ -30,22 +30,36 @@ Client side can force the resolutions which are in the adaptive bitrates. Please
   {
   ...
   ```
+### How To Get The {the_resolution_to_be_forced} From The getStreamINFO?
 
+Calling getStreamInfo methods makes server to send streamInformation callback which returns stream information such as adaptive resolutions, audio bitrate, video bitrate etc. 
+* When server sends the `streamInformation`, you can get stream details like following:
 
+  ```
+  else if (info == "streamInformation") {
+
+       var streamResolutions = new Array();
+
+       obj["streamInfo"].forEach(function(entry) {
+	      //It's needs to both of VP8 and H264. So it can be duplicate
+	      if(!streamResolutions.includes(entry["streamHeight"])){
+	         streamResolutions.push(entry["streamHeight"]);	
+
+	      }// Got resolutions from server response and added to an array.
+
+        });
+        
+  }// After getting stream information, forceStreamQuality can be used with the information we got.
+  else if (info == "ice_connection_state_changed"){
+  ...
+  ```
 * After getting stream info, you can call the following function to force the video quality you want to watch:
-### HOW TO GET THE {the_resolution_to_be_forced} from the getStreamINFO
   ```
   webRTCAdaptor.forceStreamQuality("{your_stream_Id}",  {the_resolution_to_be_forced});
   ```
 
-There is a working sample in `player.html` as shown below. When you choose a different resolution, it'll force the quality.
-As you can see from the screenshots below, you can select the resolution.
-![240p is selected](https://user-images.githubusercontent.com/54481799/91039162-b514e000-e614-11ea-80ce-f009e6006a19.png)
+* There is a working sample in `player.html` as shown below. When you choose resolution, it'll force the quality.
+As you can see from the screenshot below, you can select the resolution.
+![240p](https://user-images.githubusercontent.com/54481799/92497488-14bcdf00-f202-11ea-9790-b9afcbe0f456.png)
 
-Currently `240p` is selected and as you can see bitrate is `500000`. Now the following screenshot is `1080p`.
-
-![1080p is selected](https://user-images.githubusercontent.com/54481799/91039211-cf4ebe00-e614-11ea-89f7-b750ee9d37af.png)
-
-After selecting the `1080p`, bitrate went up from `500000` to `2000000`.
-
-If you are still having issues, please let us know that. contact@antmedia.io
+Currently `240p` is selected and as you can see bitrate is `500000`.
