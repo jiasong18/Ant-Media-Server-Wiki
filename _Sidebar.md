@@ -63,7 +63,7 @@
 ## Draft 
 * [Data Channel](Data-Channel)
 * [Playlist](Playlist)
-* [Quality Filter - FPS, Resolution, Bitrate](Quality-Filter---FPS,-Resolution,-Bitrate)
+* [Force Stream Quality Selection](Force-Stream-Quality-Selection)
 * [TURN Server Cluster](Coturn-Cluster)
 * [Real Quality Filter Document](Quality-Filter-Doc)
 
