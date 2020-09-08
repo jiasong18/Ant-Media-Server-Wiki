@@ -1,10 +1,3 @@
-<!-- > Add below subtitles
-> 1. How to join room
-> 2. How to publish room
-> 3. How to play streams in the room
->   * Server notifications about new stream joined/leaved
--->
-
 In this documentation, we're going to explain simply how to implement WebRTC Video Conference call with JavaScript SDK. There is already a working demo for this. You can try it in the following url. Please remember that _WebRTC Video Conference is available in Enterprise Edition._
 ````
 https://domain-name.com:5443/LiveApp/conference.html
