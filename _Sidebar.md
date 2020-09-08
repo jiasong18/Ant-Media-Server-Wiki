@@ -40,7 +40,7 @@
   * [Web Hooks](Webhook-Integration)
   * [AWS S3](Amazon-(AWS)-S3-Integration)
   * [User-defined Scripts](User-defined-Scripts)
-  * HTTP Forwarding](HTTP-Forwarding)
+  * [HTTP Forwarding](HTTP-Forwarding)
 * [Advanced](Advanced)
   * [GPU Usage](GPU) 
   * [Server Configuration](Server-Configuration-Documentation) 
