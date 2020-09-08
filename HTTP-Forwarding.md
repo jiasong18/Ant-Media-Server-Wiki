@@ -1,39 +1,8 @@
-Http forwarding is when user wants to store files in other storage or wants to lower the strain on the server side.
+HTTP forwarding is implemented to forward incoming HTTP requests to any other place. It's generally used for forwarding incoming request to a storage like S3. Let us tell how HTTP Forwarding works step by step
 
-Http forwarding is possible  with a few changes on the following file:
+* Open the file `{AMS-DIR} / webapps / {APPLICATION} / WEB-INF / red5-web.properties`
+* Add comma separated file extensions like this `settings.httpforwarding.extension=mp4,png` to the file. 
+* Add the base URL with `settings.httpforwarding.baseURL=https://{YOUR_DOMAIN_HERE}` for forwarding. Please replace `{YOUR_DOMAIN_HERE}` with your own URL. Please pay attention that there is no leading or trailing white spaces.
+* Save the file and restart the Ant Media Server with `sudo service antmedia restart`
 
-`AMS-DIR / webapps / {application}(LiveApp or WebRTCAppEE) / WEB-INF / red5-web.properties`. 
-
-Add `settings.httpforwarding.extension` to the red5-web.properties file. But you need to specify what you want to forward. 
-
-As an example, if i do like the following, `settings.httpforwarding.extension=mp4,png` it will forward mp4 and png files.
-
-After that baseUrl needs to be set like following: `settings.httpforwarding.baseURL=https://{yourdomainhere}`. 
-
-If your domain is antmedia.io it will be like:`settings.httpforwarding.baseURL=https://antmedia.io`.
-
-This link can be anything you need. As an example of a s3 bucket: 
-
-`https://{s3BucketName}.s3.{awsLocation}.amazonaws.com`.
-
-To exemplify:
-`https://vod-docs-123456789012.s3-accesspoint.us-west-2.amazonaws.com`
-
-So, structure depends on your requirement.
-
-Note: Don't add any leading, trailing white spaces.
-
-After that, Ant Media Server needs to be restarted which can be done with the following in the terminal:
-
-`sudo service antmedia restart`
-
-After that making these changes, when user requests the following link:
-
-`https://{serverDomain}:5443/{streamApp}/streams/{streamId}.mp4`
-
-Ex:`https://antmedia.io:5443/WebRTCAppEE/streams/stream123`
-
-It will be forwarded to here:
-
-`https://vod-docs-123456789012.s3-accesspoint.us-west-2.amazonaws.com/streams/stream123.mp4`
-
+If it's configured properly, your incoming MP4 requests such as `https://{SERVER_DOMAIN}:5443/{APPLICATION_NAME}/streams/vod.mp4` will be forwarded to `https://{YOUR_DOMAIN_HERE}/streams/vod.mp4`
