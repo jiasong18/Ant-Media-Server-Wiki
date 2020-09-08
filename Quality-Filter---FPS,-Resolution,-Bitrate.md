@@ -16,7 +16,7 @@ Client was getting only what server has sent to it. Now client side can force th
 To achieve that:
 * We need to have some adaptive bitrate resolutions.
 * Assuming that you created WebRTCadaptor, you need to call following method to get stream info.
-`webRTCAdaptor.getStreamInfo("{your_stream_Id}");` 
+  * `webRTCAdaptor.getStreamInfo({your_stream_Id});` 
 
 This code needs to be added after publish_started command received. So when you receive the publish started command, this code segment should also needs to be called. You need to add this line of code under play_started callback.
 
@@ -32,15 +32,19 @@ start_play_button.disabled = true;
 stop_play_button.disabled = false;
 
 webRTCAdaptor.getStreamInfo(streamId);
+
+}
 ```
 
-After getting stream info, you can call the following function to force the video quality you want to watch. `webRTCAdaptor.forceStreamQuality("{your_stream_Id}",  {the_resolution_to_be_forced});`
+After getting stream info, you can call the following function to force the video quality you want to watch:
 
-You need the change the this line from `webRTCAdaptor.forceStreamQuality(stream1,dropdownSelectedItem)`;
+* `webRTCAdaptor.forceStreamQuality("{your_stream_Id}",  {the_resolution_to_be_forced});`
+
+You need the change the this line from `webRTCAdaptor.forceStreamQuality(stream1,dropdownSelectedItem)`:
 
 to
 
-`webRTCAdaptor.forceStreamQuality(streamId,dropdownSelectedItem);`
+* `webRTCAdaptor.forceStreamQuality(streamId,dropdownSelectedItem);`
 
 Now you can get the stream info from the server and force the quality you want.
 
