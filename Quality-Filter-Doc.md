@@ -4,9 +4,9 @@ If stream does not meet the qualifications, it won't be published. This is usual
 Let's see how quality filtering can be setup:
 * Open the file `{AMS-DIR} / webapps / {APPLICATION} / WEB-INF / red5-web.properties`
 * Adding all of the commands are not mandatory, just add which criteria you want to filter.
-  * settings.maxFpsAccept={value}
-  * settings.maxResolutionAccept={value}
-  * settings.maxBitrateAccept={value}
+  * `settings.maxFpsAccept={value}`
+  * `settings.maxResolutionAccept={value}`
+  * `settings.maxBitrateAccept={value}`
 * Please don't forget to set set value according to your needs. Multiple criterias can be added.
 
-If you are configured properly and assume that you set settings.maxFpsAccept=15, streams that have higher than 15 fps will be disregarded and won't be published.
+If you are configured properly and assume that you set `settings.maxFpsAccept=15`, streams that have higher than 15 fps will be disregarded and won't be published.
