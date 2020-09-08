@@ -4,7 +4,7 @@ Ant Media Server measures the viewers internet speed and sends the best quality 
 
 As an example:
 * Assume that there are two bitrates on the server
-  * First one is 360p and 800kbps
+  * First one is 360p and 800kbps.
   * Second one is 480p and 1500kbps.
 
 * if Viewer internet speed
