@@ -1,5 +1,6 @@
-Quality selection was one of the most requested feature and now it is implemented and ready.  Let's see how to use it.
+Quality selection was one of the most requested features and it is implemented and ready.  Let's see how to use it. 
 
+## How Adaptive Bitrate Works?
 Ant Media Server measures the viewers internet speed and sends the best quality according to the internet speed of the viewer.
 
 As an example:
@@ -11,43 +12,33 @@ As an example:
   * is above 1500kbps, then the resolution with 480p is sent.
   * is between 800kbps and 1500kbps or less than 800kbps, then the resolution with 360p is sent.
 
-Client was getting only what server has sent to it. Now client side can force the resolutions which are included in the adaptive resolutions.
+Client was getting only what server has sent to. 
 
-To achieve that:
-* We need to have some adaptive bitrate resolutions.
-* Assuming that you created WebRTCAdaptor, you need to call following method to get stream info from the server.
-  * `webRTCAdaptor.getStreamInfo({your_stream_Id});` 
+## How to Force Specific Quality? 
+Client side can force the resolutions which are in the adaptive bitrates. Please keep in mind that if you request a quality whose bitrate is higher than the client's bitrate. You may see some packet drops, pixelations, async etc. Anyway, let us tell how to use that.
 
-This code needs to be added after publish_started command received. So when you receive the publish started command, this code segment should also needs to be called. You need to add this line of code under play_started callback.
 
-```
-else if (info == "play_started") {
+* While you play the stream, after you receive `play_started` notification in `WebRTCAdaptor`. Call `getStreamInfo` with `webRTCAdaptor.getStreamInfo({your_stream_Id});`  
 
-//joined the stream
+  ```javascript
+  else if (info == "play_started") 
+  {
+    console.log("play started");
+    webRTCAdaptor.getStreamInfo(streamId);
+  } 
+  else if (info == "play_finished") 
+  {
+  ...
+  ```
 
-console.log("play started");
 
-start_play_button.disabled = true;
+* After getting stream info, you can call the following function to force the video quality you want to watch:
+### HOW TO GET THE {the_resolution_to_be_forced} from the getStreamINFO
+  ```
+  webRTCAdaptor.forceStreamQuality("{your_stream_Id}",  {the_resolution_to_be_forced});
+  ```
 
-stop_play_button.disabled = false;
-
-webRTCAdaptor.getStreamInfo(streamId);
-
-} else if (info == "play_finished") {...
-```
-
-After getting stream info, you can call the following function to force the video quality you want to watch:
-
-* `webRTCAdaptor.forceStreamQuality("{your_stream_Id}",  {the_resolution_to_be_forced});`
-
-You need the change the this line from `webRTCAdaptor.forceStreamQuality(stream1,dropdownSelectedItem)`:
-
-to
-
-* `webRTCAdaptor.forceStreamQuality(streamId,dropdownSelectedItem);`
-
-Now you can get the stream info from the server and force the quality you want.
-
+There is a working sample in `player.html` as shown below. When you choose a different resolution, it'll force the quality.
 As you can see from the screenshots below, you can select the resolution.
 ![240p is selected](https://user-images.githubusercontent.com/54481799/91039162-b514e000-e614-11ea-80ce-f009e6006a19.png)
 
