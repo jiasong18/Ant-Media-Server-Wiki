@@ -65,7 +65,6 @@
 * [Playlist](Playlist)
 * [Quality Filter - FPS, Resolution, Bitrate](Quality-Filter---FPS,-Resolution,-Bitrate)
 * [TURN Server Cluster](Coturn-Cluster)
-* [Conference Call Doc Update](Conference-Call)
 
 ## Proposals
 * [Update WebRTC Android SDK](WebRTC-Android-SDK-Guide)
