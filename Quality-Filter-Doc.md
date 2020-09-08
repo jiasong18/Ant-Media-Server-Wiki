@@ -7,6 +7,6 @@ Let's see how quality filtering can be setup:
   * settings.maxFpsAccept={value}
   * settings.maxResolutionAccept={value}
   * settings.maxBitrateAccept={value}
-* Please don't forget to set set value according to your needs.
+* Please don't forget to set set value according to your needs. Multiple criterias can be added.
 
 If you are configured properly and assume that you set settings.maxFpsAccept=15, streams that have higher than 15 fps will be disregarded and won't be published.
