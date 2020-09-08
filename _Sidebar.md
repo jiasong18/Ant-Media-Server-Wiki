@@ -46,6 +46,7 @@
   * [App Configuration](Application-Configuration-Documentation)
   * [Create New Application](Create-New-Application)
   * [WebRTC Codecs - H.264 & VP8](WebRTC-Codecs)
+  * [HTTP Forwarding](HTTP-Forwarding)
   * [Build from Source](Build-From-Source)
 * [WebRTC Load Testing](Load-Testing)
 * [Turn Server Installation](Turn-Server-Installation)
@@ -63,7 +64,6 @@
 * [Data Channel](Data-Channel)
 * [Playlist](Playlist)
 * [Quality Filter - FPS, Resolution, Bitrate](Quality-Filter---FPS,-Resolution,-Bitrate)
-* [HTTP Forwarding](HTTP-Forwarding)
 * [TURN Server Cluster](Coturn-Cluster)
 * [Conference Call Doc Update](Conference-Call)
 
