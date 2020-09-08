@@ -5,13 +5,11 @@
 >   * Server notifications about new stream joined/leaved
 -->
 
-In this documentation, we're going to explain simply how to implement WebRTC Video Conference call with JavaScript SDK. There is already a working demo for this. You can check it out in advance.
+In this documentation, we're going to explain simply how to implement WebRTC Video Conference call with JavaScript SDK. There is already a working demo for this. You can try it in the following url. Please remember that _WebRTC Video Conference is available in Enterprise Edition._
 ````
 https://domain-name.com:5443/LiveApp/conference.html
 ````
-File is located `/usr/local/antmedia/webapps/LiveApp/conference.html`
-
-> WebRTC Video Conference is available in Enterprise Edition. 
+`conference.html` is located under `/usr/local/antmedia/webapps/LiveApp/` directory.
  
 Let’s proceed step by step about how to implement Conference Call. Before starting implementation, make sure that you've installed SSL to your Ant Media Server Enterprise Edition. If you haven’t got any domain for your Ant Media Server, you can get a free domain in [Freenom](https://www.freenom.com/).
 
@@ -87,38 +85,61 @@ var webRTCAdaptor = new WebRTCAdaptor(
 		isPlayMode : playOnly,
 		debug : true,
 		callback : function(info, obj) {
-			if (info == "initialized") {
+			if (info == "initialized") 
+                        {
 		           //called by JavaScript SDK when WebSocket is connected. 
-			} else if (info == "joinedTheRoom") {
+			} 
+                        else if (info == "joinedTheRoom") 
+                        {
 			  //called when this client is joined the room
-	                  //obj contains streamId field which is the stream id
-                          //that this client can use to publish to the room.
-                          //after sending joinedTheRoom command, server replies back the streams in the room.
-                          //so that you can play these streams in here
-                          //periodically calls getRoominfo to checks for any new stream joined to the room
-			} else if (info == "newStreamAvailable") {
-                          //called when server gets a new stream while checking periodically for new streams.
-                          //if there is a new stream, plays it.
-			} else if (info == "publish_started") {
+	                  //obj contains streamId field which this client can use to publish to the room.
+                          //obj contains also the active streams in the room so that you can play them directly.
+                          //In order to get the streams in the room periodically call `getRoominfo`
+			} 
+                        else if (info == "newStreamAvailable") 
+                        {
+                          //called when client is ready to play WebRTC stream.
+			} 
+                        else if (info == "publish_started") 
+                        {
 			  //called when stream publishing is started for this client		
-			} else if (info == "publish_finished") {
+			} 
+                        else if (info == "publish_finished") 
+                        {
 			  //called when stream publishing has finished for this client
-			} else if (info == "leavedFromRoom") {
+			} 
+                        else if (info == "leavedFromRoom") 
+                        {
 			  //called when this client is leaved from the room  	
-			} else if (info == "closed") {
+			} 
+                        else if (info == "closed") 
+                        {
 			  //called when websocket connection is closed	
-			} else if (info == "play_finished") {
+			} 
+                        else if (info == "play_finished") 
+                        {
 			  //called when a stream has finished playing	
-			} else if (info == "streamInformation") {
-		          //called when a stream information is received from the server		
-			} else if (info == "roomInformation") {
-		          //gets from the room information from the server when getRoomInfo is called.
-                          //returns the array of streams.
-			}else if (info == "data_channel_opened") {
+			} 
+                        else if (info == "streamInformation") 
+                        {
+		          //called when a stream information is received from the server. 
+                          //This is the response of `getStreamInfo` method		
+			} 
+                        else if (info == "roomInformation") 
+                        {
+		          //Called by response of `getRoomInfo` when a room information is received from the server.
+                          //It contains the array of the streams in the room.
+			}
+                        else if (info == "data_channel_opened") 
+                        {
 			  //called when data channel is opened
-			} else if (info == "data_channel_closed") {
+			} 
+                        else if (info == "data_channel_closed") 
+                        {
 			  // called when data channel is closed
-			} else if(info == "data_received") {
+			} 
+                        else if(info == "data_received") 
+                        {
                           //called when data is received through data channel
 			}
 			},
@@ -153,7 +174,7 @@ webRTCAdaptor.publish(streamId, token);
 
 ### 4. Play Stream in a Room
 
-Call the play method. In conference call the correct place to call method is when `joinedTheRoom` and `roomInformation` notifications are received. 
+Call the play method. In conference call, the correct place to call method is when `joinedTheRoom` and `roomInformation` notifications are received. 
 ```
 webRTCAdaptor.play(streamId, token);
 ```
@@ -163,24 +184,24 @@ webRTCAdaptor.play(streamId, token);
 
 ### 5. Turn on/off Camera
 
-To turn off the camera, call the turnOffLocalCamera method.
+To turn off the camera, call the `turnOffLocalCamera` method.
 ```
 webRTCAdaptor.turnOffLocalCamera();
 ```
 This method takes no parameter.
 
-If your camera is turned off, call turnOnLocalCamera to turn it on.
+If your camera is turned off, call `turnOnLocalCamera` to turn it on.
 ```
 webRTCAdaptor.turnOffLocalCamera();
 ```
 
 ### 6. Mute/Unmute Microphone.
 
-Call muteLocalMic to mute the microphone.
+Call `muteLocalMic` to mute the microphone.
 ```
 webRTCAdaptor.muteLocalMic();
 ```
-To unmute, call unmuteLocalMic.
+To unmute, call `unmuteLocalMic`.
 ```
 webRTCAdaptor.unmuteLocalMic();
 ```
@@ -190,5 +211,5 @@ These methods take no parameters.
 Here are the conference related notifications that callback is invoked for. Please check the [conference.html](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/conference.html) for proper usage. 
 * `joinedTheRoom`: Called when WebSocket is connected. It has parameter that contains stream id for publishing and streams array in order to play the stream.   
 * `newStreamAvailable`: Called when a previously joined stream is ready to play. 
-* `roomInformation`: Called when getroomInfo is sent by client. It returns the active streams in the room.
+* `roomInformation`: Called when `getRoomInfo` is sent by client. It returns the active streams in the room.
 * `leavedFromRoom`: Called when this client is leaved from the room. 
