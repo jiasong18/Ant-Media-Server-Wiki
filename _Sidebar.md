@@ -47,6 +47,7 @@
   * [App Configuration](Application-Configuration-Documentation)
   * [Create New Application](Create-New-Application)
   * [WebRTC Codecs - H.264 & VP8](WebRTC-Codecs)
+  * [Quality Filter: FPS, Resolution, Bitrate](Quality-Filter)
   * [Build from Source](Build-From-Source)
 * [WebRTC Load Testing](Load-Testing)
 * [Turn Server Installation](Turn-Server-Installation)
