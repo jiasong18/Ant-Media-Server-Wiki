@@ -65,7 +65,6 @@
 ## Draft 
 * [Data Channel](Data-Channel)
 * [Playlist](Playlist)
-* [Force Stream Quality Selection](Force-Stream-Quality-Selection)
 * [TURN Server Cluster](Coturn-Cluster)
 
 ## Proposals
