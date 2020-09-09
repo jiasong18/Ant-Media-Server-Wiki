@@ -10,6 +10,7 @@
   * [Re-streaming Sources & IP Cameras](Re-streaming)
 * [Playing Live Streams](Playing-Live-Streams)
   * [WebRTC Playing](WebRTC-Playing)
+    * [Force Quality](Force-Stream-Quality)
   * [HLS Playing](HLS-Playing)
   * [Embedded Web Player](Embedded-Web-Player)
 * [Conference Call](WebRTC-Conference-Call)
