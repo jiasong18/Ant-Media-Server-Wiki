@@ -66,7 +66,6 @@
 * [Playlist](Playlist)
 * [Force Stream Quality Selection](Force-Stream-Quality-Selection)
 * [TURN Server Cluster](Coturn-Cluster)
-* [Quality Filter Fps, Resolution, Bitrate](Quality-Filter-FPS,-Resolution,-Bitrate)
 
 ## Proposals
 * [Update WebRTC Android SDK](WebRTC-Android-SDK-Guide)
