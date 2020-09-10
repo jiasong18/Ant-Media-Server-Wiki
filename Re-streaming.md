@@ -1,5 +1,3 @@
-# Restreaming
-
 ## IP Cameras
 In addition to developing promising features in Ant Media Server, we have added IP Camera support to it with the 1.3.0+ release. With this feature,  users can pull IP Camera streams easily on management panel. In other words, you don’t need to write any commands or use terminal.
 
