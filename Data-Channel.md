@@ -207,13 +207,13 @@ After that, you can send data with the following method of `AntMediaClient`
 func sendData(data: Data, binary: Bool = false)
 ```
 
-When a new message is received, the delegate’s following method is called.
+When a new message is received, the delegate’s following method is called:
 
 ```
 func dataReceivedFromDataChannel(streamId: String, data: Data, binary: Bool)
 ```
 
-There is also data channel usage example exist in the Sample project.
+There is also data channel usage example in the Sample project.
 
 For more detail, please visit our [iOS SDK Guide](WebRTC-iOS-SDK-Guide) 
 
