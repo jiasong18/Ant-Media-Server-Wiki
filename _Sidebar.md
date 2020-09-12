@@ -77,3 +77,4 @@
 * CUDA Update for new FFmpeg version
 * Git Branching
 * UML Diagrams
+* REST API Curl Samples
