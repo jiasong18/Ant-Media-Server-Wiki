@@ -1,12 +1,15 @@
 In this guide, we're going to explain how to create a load balancer using Turn Server (MySQL support) as DNS Round Robin.
-
-![](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/turn_dns_round_robin.png)
-
 #### What is Round Robin DNS?
 Round Robin DNS is a fast, simple and cost-effective way to load balance or distribute traffic evenly over multiple servers or devices.
 
 #### How does Round Robin work?
 By using Round Robin DNS, when a user accesses the home page, the request will be sent to the first IP address. The second user who accesses the home page will be sent to the next IP address, and the third user will be sent to the third IP address. In a nutshell, Round Robin network load balancing rotates connection requests among web servers in the order that requests are received.
+
+#### Block Diagram of the Installation
+![](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/turn_dns_round_robin.png)
+1. Clients try to access the turn server via a domain name such `turn.antmedia.io`
+2. DNS resolves the `turn.antmedia.io` to the backends `Turn Server - 1` and `Turn Server - 2` by using Round Robin algorithm.
+3. Turn Servers access to the same Database for authentication and serves the client.  
 
 #### System Requirements
 ```
