@@ -1,6 +1,7 @@
-* GPU
-  * [Driver Installation](GPU-Driver-Installation)
-  * [Docker GPU Installation](Docker-GPU-Installation)
-* [Server Configuration](Server-Configuration-Documentation)
-* [App Configuration](Application-Configuration-Documentation)
-* [Build from Source](Build-From-Source)
+  * [GPU Usage](GPU) 
+  * [Server Configuration](Server-Configuration-Documentation) 
+  * [App Configuration](Application-Configuration-Documentation)
+  * [Create New Application](Create-New-Application)
+  * [WebRTC Codecs - H.264 & VP8](WebRTC-Codecs)
+  * [Quality Filter: FPS, Resolution, Bitrate](Quality-Filter)
+  * [Build from Source](Build-From-Source)
