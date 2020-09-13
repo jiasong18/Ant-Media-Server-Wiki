@@ -51,7 +51,9 @@
   * [Quality Filter: FPS, Resolution, Bitrate](Quality-Filter)
   * [Build from Source](Build-From-Source)
 * [WebRTC Load Testing](Load-Testing)
-* [Turn Server Installation](Turn-Server-Installation)
+* [TURN Servers] 
+  * [Simple TURN Server Installation](Turn-Server-Installation)
+  * [TURN Server Cluster](Coturn-Cluster)
 
 ## Reference
 * [REST API Reference](https://antmedia.io/rest)
@@ -65,7 +67,7 @@
 ## Draft 
 * [Data Channel](Data-Channel)
 * [Playlist](Playlist)
-* [TURN Server Cluster](Coturn-Cluster)
+
 
 ## Proposals
 * [Update WebRTC Android SDK](WebRTC-Android-SDK-Guide)
