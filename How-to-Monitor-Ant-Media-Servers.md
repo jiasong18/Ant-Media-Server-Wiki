@@ -8,29 +8,29 @@ In this document, you'll learn how to monitor Ant Media Servers with Apache Kafk
 
 Kafka is useful for building real-time streaming data pipelines to get data between the systems or applications.
 
-1. Install Java because Apache Kafka requires Java.
+**1.** Install Java because Apache Kafka requires Java.
 
    ```
    apt-get update && apt-get install openjdk-8-jdk -y
    ```
 
-2. Download the Apache Kafka and then extract the archive file
+**2.** Download the Apache Kafka and then extract the archive file
 
    ```
    wget -qO- https://archive.apache.org/dist/kafka/2.2.0/kafka_2.12-2.2.0.tgz | tar -zxvf- -C /opt/ && mv /opt/kafka* /opt/kafka
    ```
 
-3. Edit **server.properties** ` vim /opt/kafka/config/server.properties` file as below.
+**3.** Edit **server.properties** ` vim /opt/kafka/config/server.properties` file as below.
    ```
    listeners=PLAINTEXT://your_server_ip:9092
    ```
-4. Start Apache Kafka
+**4.** Start Apache Kafka
    ```
    /opt/kafka/bin/zookeeper-server-start.sh /opt/kafka/config/zookeeper.properties &
    /opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties &
    ```
    Firstly, we've started ZooKeeper because Kafka needs ZooKeeper and then we've started Kafka
-5. Check if it's working. Run the command below
+**5.** Check if it's working. Run the command below
 
    ```
    netstat -tpln | egrep "9092|2181"
@@ -152,7 +152,7 @@ If you want to monitor Ant Media Server, you need to set the IP address of your 
 
 ### Instal Elasticseach
 
-1. Import GPG key and Repo 
+**1.** Import GPG key and Repo 
 
    ```
    wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
@@ -160,13 +160,13 @@ If you want to monitor Ant Media Server, you need to set the IP address of your 
    echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
    ```
 
-2. Update package lists and install elastic search
+**2.** Update package lists and install elastic search
 
    ```
    apt-get update && apt-get install elasticsearch
    ```
 
-3. Enable and start elasticsearch service
+**3.** Enable and start elasticsearch service
    ```
    systemctl enable elasticsearch.service
    systemctl start elasticsearch.service
@@ -175,15 +175,15 @@ If you want to monitor Ant Media Server, you need to set the IP address of your 
 
 Logstash is a server‑side data processing pipeline that ingests data from multiple sources simultaneously, transforms it and then sends it to a “stash” like Elasticsearch
 
-1. Update your package lists, then install `logstash` with the following command
+**1.** Update your package lists, then install `logstash` with the following command
    ```
    apt-get update && apt-get install logstash
    ```
-2. Enable logstash service
+**2.** Enable logstash service
    ```
    systemctl enable logstash.service
    ```
-3. Configure logstash. Create **/etc/logstash/conf.d/logstash.conf** file and add below content. Please don't forget to replace `kafka_server_ip` and make sure `elasticsearch_ip` is correct.
+**3.** Configure logstash. Create **/etc/logstash/conf.d/logstash.conf** file and add below content. Please don't forget to replace `kafka_server_ip` and make sure `elasticsearch_ip` is correct.
    ```
    #kafka
    input {
@@ -208,7 +208,7 @@ Logstash is a server‑side data processing pipeline that ingests data from mult
      stdout { codec => rubydebug }
    }
    ```
-4. Save and close the file, then restart `logstash` service
+**4.** Save and close the file, then restart `logstash` service
    ```
    systemctl restart logstash
    ```
@@ -227,29 +227,29 @@ yellow open   logstash-log-2020.03.23 mf-ffIHBSNO4s7_YoUr_Rw   1   1       1300 
 
 Grafana is an open source metric analytics & visualization suite.
 
-1. In order to install Grafana Server, run the following commands.
+**1.** In order to install Grafana Server, run the following commands.
    ```
    sudo apt-get install -y software-properties-common wget apt-transport-https
    wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
    sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
    sudo apt-get update && sudo apt-get install grafana
    ```
-2. Enable and start grafana server 
+**2.** Enable and start grafana server 
    ```
    systemctl enable grafana-server
    systemctl start grafana-server
    ```
 ### Configure Grafana 
 
-1. Login to Web panel(`http://your_ip_address:3000/login`) through your web browser. Default username and password is `admin/admin`
+**1.** Login to Web panel(`http://your_ip_address:3000/login`) through your web browser. Default username and password is `admin/admin`
 
-2. Click `Add data source`
+**2.** Click `Add data source`
 ![Grafana1](images/grafana1.png)
 
-3. Select Elasticsearch
+**3.** Select Elasticsearch
 ![Grafana2](images/grafana2.png)
 
-4. Set setting as below
+**4.** Set setting as below
    ```
    URL : http://127.0.0.1:9200
    Index name: logstash-
@@ -260,18 +260,18 @@ Grafana is an open source metric analytics & visualization suite.
    ![Grafana3_1](images/grafana3_1.png)
    ![Grafana3](images/grafana3.png)
 
-5. Click `New dashboard`
+**5.** Click `New dashboard`
    ![Grafana4](images/grafana4.png)
 
-6. Click `Add Query`
+**6.** Click `Add Query`
    ![Grafana5](images/grafana5.png)
 
-7. Choose whatever you want to monitor.
+**7.** Choose whatever you want to monitor.
 
    `Query: ElasticSearch`
    ![Grafana6](images/grafana6.png)
 
-8. Ant Media Example Dashboard
+**8.** Ant Media Example Dashboard
    ![Grafana7](images/grafana7.png)
 
 > If you would like to use the same dashboard, you can download it from the below link.
@@ -281,7 +281,7 @@ Grafana is an open source metric analytics & visualization suite.
 ### Create Telegram Alert
 You can define an alert in Grafana and it can notify when specific events happen
 
-1. Create a New Bot
+**1.** Create a New Bot
      * Open Telegram and search for @BotFather user and send the following command.
        ```
        /newbot
@@ -292,7 +292,7 @@ You can define an alert in Grafana and it can notify when specific events happen
        1254341629:AAHYHhJK8TgsUXa7jqBK7wU1bJ8hzWhUFzs
        Keep your token secure and store it safely, it can be used by anyone to control your bot.
        ```
-2. Create a Channel and retrieve the channel's chat ID. 
+**2.** Create a Channel and retrieve the channel's chat ID. 
    * Create a channel in telegram and Invite your bot as an admin
    * Send a test message and Get the Chat ID
    * Use cURL or just visit the url below with your browser. Don't forget to replace the access token
@@ -311,15 +311,15 @@ You can define an alert in Grafana and it can notify when specific events happen
 #### Configure Grafana Notification
 We have configured the chatbot aboe. Now let's start to configure Grafana Notification.
 
-1. Login to Grafana web panel via `http://your_grafana_server:3000`
+**1.** Login to Grafana web panel via `http://your_grafana_server:3000`
 
-2. Click Alerting / Notification Channel
+**2.** Click Alerting / Notification Channel
    ![Grafana_telegram](images/grafana_telegram_1.png)
 
-3. Add New Channel
+**3.** Add New Channel
    ![Grafana_telegram](images/grafana_telegram_2.png)
 
-4. Configure it as shown in the below screenshot
+**4.** Configure it as shown in the below screenshot
    ![Grafana_telegram](images/grafana_telegram_3.png)
 
    ```
@@ -334,6 +334,76 @@ We have configured the chatbot aboe. Now let's start to configure Grafana Notifi
 
    Now you've set up notifications as you wish.
 
+# Performance Tuning
+
+The performance will be affected by system resources and network status.
+
+**1.** Heap size has to be less than 4Gb and not more than 8Gb.  Set the minimum (Xms) and maximum (Xmx) heap allocation size to the same value to prevent the heap size from being resized.
+
+For example, 4GB / 4GB is set for a total of 8Gb memory.
+
+Open the following file then change Xms and Xmx values ​​according to your total memory.
+
+`vim /etc/logstash/jvm.options`
+```
+-Xms4g
+-Xmx4g
+```
+**2.** The pipeline.workers setting determines how many threads to run for filter and output processing. This defaults to the number of the host's CPU cores.
+
+Edit the following file then change pipeline.workes according to your CPU cores.
+
+`vim /etc/logstash/logstash.yml`
+
+`pipeline.workers: 4`
+
+**3.** Ensure that the consumer_threads parameter matches the number of partitions that are specified in the Apache Kafka configuration. If you specify fewer partitions than consumer threads, some threads remain idle while they wait for an available partition.
+
+`/etc/logstash/conf.d/logstash.conf`
+```
+input {
+  kafka {
+    bootstrap_servers => "kafka_ip:9092"
+    client_id => "logstash"
+    group_id => "logstash"
+    **consumer_threads => 4**
+```
+You can find out how many partitions Kafka has by following the command below. And you can equate the number of consumer_threads to the number of partitions.
+
+`./kafka-topics.sh --describe --zookeeper 127.0.0.1:2181 --topic ams-instance-stats`
+
+If you want to increase the partition number in Kafka, you can use the following command.
+
+`./kafka-topics.sh --zookeeper 127.0.0.1:2181 --alter --topic ams-instance-stats --partitions 4`
+
+**4.** Comment the setting for syslog logging `stdout { codec => rubydebug }` from /etc/logstash/conf.d/logstash.conf file.
+```
+input {
+  kafka {
+    bootstrap_servers => "kafka_ip:9092"
+    client_id => "logstash"
+    group_id => "logstash"
+    consumer_threads => 4
+    topics => ["ams"]
+    codec => "json"
+    tags => ["log", "kafka_source"]
+    type => "log"
+  }
+}
+
+#elasticsearch
+output {
+  elasticsearch {
+     hosts => ["127.0.0.1:9200"] #elasticsearch_ip
+     index => "logstash-%{[type]}-%{+YYYY.MM.dd}"
+  }
+#  stdout { codec => rubydebug }
+}
+```
+
+Finally, restart logstash and kafka service.
+
+`systemctl restart logstash && systemctl restart kafka`
 
 This is the whole setup of monitoring Ant Media Servers. 
 If you have any questions, please just drop a line to contact (at) antmedia.io
