@@ -366,7 +366,7 @@ input {
     bootstrap_servers => "kafka_ip:9092"
     client_id => "logstash"
     group_id => "logstash"
-    **consumer_threads => 4**
+    consumer_threads => 4
 ```
 You can find out how many partitions Kafka has by following the command below. And you can equate the number of consumer_threads to the number of partitions.
 
