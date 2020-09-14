@@ -165,4 +165,25 @@ The last edited version of the file will look like the following.
 ```
 Now, You can use the IP filter.
 
+## How to use Self-Signed Certificate on Ant Media Server?
+**1.** Install openssl package. 
 
+`apt-get update && apt-get install openssl -y`
+
+**2.** Create self-signed certificate as follows.
+
+`openssl req -newkey rsa:4096 -x509 -sha256 -days 3650 -nodes -out domain.crt -keyout domain.key`
+
+**3.** Submit the requested information and press the Enter button.
+```
+Country Name (2 letter code) [AU]:UK
+State or Province Name (full name) [Some-State]:London
+Locality Name (eg, city) []:London
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:Ant Media
+Organizational Unit Name (eg, section) []:Support
+Common Name (e.g. server FQDN or YOUR name) []:domain.com
+Email Address []: contact@antmedia.io
+```
+**4.** The certificate and private key will be created at the specified location. Then run the enable_ssl.sh script as below.
+
+`/usr/local/antmedia/enable_ssl.sh -f domain.crt -p domain.key -d domain.com`
