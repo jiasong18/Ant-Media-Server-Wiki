@@ -26,7 +26,7 @@ We're assuming that your Ant Media Server accepts all streams. (There is no any 
 ![](https://00941014915502880116.googlegroups.com/attach/6d0318c46c45e/Screenshot%20from%202020-06-22%2018-14-18.png?part=0.1&view=1&vt=ANaJVrFXnyqBuYIzn9dG1oI6PE3zVgUE7z29T-6tbRj_rXr-K91CKOWBWC9ouLl1bK-2eUiALFZwNvGcPIqxLD6fPdi4VVyNzsBYW2k8cop6vDIU1Sdc-mU)
 
 #### Tune for Ultra Low Latency Streaming
-OBS by default is not optimized for ultra low latency streaming. If you push RTMP stream with OBS and play with WebRTC, please open `Settings > Output` and make the rate control `CBR(Constant Bitrate)` and Tune for `zerolatency`.  Secondly, you can configure the bitrate according to your quality and internet bandwidth requirements. Also key frame interval should be adjusted to one.
+OBS by default is not optimized for ultra low latency streaming. If you push RTMP stream with OBS and play with WebRTC, please open `Settings > Output` and make the rate control `CBR(Constant Bitrate)` and Tune for `zerolatency`.  Secondly, you can configure the bitrate according to your quality and internet bandwidth requirements. Also keyframe interval should be adjusted to one.
 
 ![OBS (Open Broadcaster Software) Tune For ZeroLatency](images/tune_for_ultra_low_latency.png)
 
