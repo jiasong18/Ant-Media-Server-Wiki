@@ -1,15 +1,15 @@
 Ant Media's WebRTC Android SDK lets you build your own Android application that can publish and play WebRTC broadcasts with just a few lines of code.   
 In this doc, we're going to cover the following topics. 
-* Run the Sample WebRTC Android app
-  * Publish Stream from your Android
-  * Play Stream on your Android
-  * P2P Communication with your Android
-  * Join Conference Room with your Android
-* Develop a WebRTC Android app
-  * How to Publish
-  * How to Play
-  * How to use DataChannel
-  * How to use Conference Room
+* [Run the Sample WebRTC Android app](#run-the-sample-webrtc-android-app)
+  * [Publish Stream from your Android](#publish-stream-from-your-android)
+  * [Play Stream on your Android](#play-stream-from-your-android)
+  * [P2P Communication with your Android](#p2p-communication-with-your-android)
+  * [Join Conference Room with your Android](#join-conference-room-with-your-android)
+* [Develop a WebRTC Android app](#develop-a-webrtc-android-app)
+  * [How to Publish](#how-to-publish)
+  * [How to Play](#how-to-play)
+  * [How to use Data Channel](#how-to-use-data-channel)
+  * [How to use Conference Room](#how-to-use-data-channel)
 
 # Run the Sample WebRTC Android app
 
