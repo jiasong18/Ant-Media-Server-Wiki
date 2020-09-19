@@ -11,7 +11,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 
 2. Client sends publish JSON command to the server with stream name parameter. (Remove token parameter if token control is not enabled) 
 
-```json
+```yml
 {
     command : "publish",
     streamId : "stream1",
@@ -20,7 +20,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 ```
 
 3. If Server accepts the stream, it replies back with start command
-```json
+```yml
 {
     command : "start",
     streamId : "stream1",
@@ -29,7 +29,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 
 4. Client inits peer connections, creates offer sdp and send the sdp configuration 
 to the server with takeConfiguration command
-```json
+```yml
 {
    command : "takeConfiguration",
    streamId : "stream1",
@@ -39,7 +39,7 @@ to the server with takeConfiguration command
 ```
 
 5. Server creates answer sdp and send the sdp configuration to the client with takeConfiguration command
-```json
+```yml
 {
    command : "takeConfiguration",
    streamId : "stream1",
@@ -48,7 +48,7 @@ to the server with takeConfiguration command
 }
 ```
 6. Client and Server get ice candidates several times and sends to each other with takeCandidate command
-```json
+```yml
 {
     command : "takeCandidate",
     streamId : "stream1",
@@ -60,7 +60,7 @@ to the server with takeConfiguration command
 ```
 
 7. Clients sends stop JSON command to stop publishing
-```json
+```yml
 {
     command : "stop",
     streamId: "stream1"
@@ -77,7 +77,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 
 2. Client sends play JSON command to the server with stream name parameter. (Remove token parameter if token control is not enabled) 
 
-```json
+```yml
 {
     command : "play",
     streamId : "stream1",
@@ -87,7 +87,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 ```
 
 3. If Server accepts the stream, it replies back with offer command
-```json
+```yml
 {
    command : "takeConfiguration",
    streamId : "stream1",
@@ -97,7 +97,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 ```
 
 5. Client creates answer sdp and send the sdp configuration to the server with takeConfiguration command
-```json
+```yml
 {
    command : "takeConfiguration",
    streamId : "stream1",
@@ -106,7 +106,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 }
 ```
 6. Client and Server get ice candidates several times and sends to each other with takeCandidate command
-```json
+```yml
 {
     command : "takeCandidate",
     streamId : "stream1",
@@ -118,7 +118,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 ```
 
 7. Clients sends stop JSON command to stop playing
-```json
+```yml
 {
     command : "stop",
     streamId: "stream1",
@@ -136,7 +136,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 
 2. Client sends join JSON command to the server with stream name parameter. 
 
-```json
+```yml
 {
     command : "join",
     streamId : "stream1",
@@ -147,7 +147,7 @@ If there is only one peer in the stream1, server waits for the other peer to joi
 
 3. When second peer joins the stream, server sends start JSON command to the first peer 
 
-```json
+```yml
 {
     command : "start",
     streamId : "stream1",
@@ -156,7 +156,7 @@ If there is only one peer in the stream1, server waits for the other peer to joi
 
 4. First peer create offer sdp and send to the server with takeConfiguration command, 
 
-```json
+```yml
 {
    command : "takeConfiguration",
    streamId : "stream1",
@@ -167,7 +167,7 @@ If there is only one peer in the stream1, server waits for the other peer to joi
 Server relays the offer sdp to the second peer
 
 5. Second peer creates answer sdp and sends to the server with takeConfiguration command
-```json
+```yml
 {
    command : "takeConfiguration",
    streamId : "stream1",
@@ -178,7 +178,7 @@ Server relays the offer sdp to the second peer
 Server relays the answer sdp to the first peer
 
 6. Each peers get ice candidates several times and sends to each other with takeCandidate command through server
-```json
+```yml
 {
     command : "takeCandidate",
     streamId : "stream1",
@@ -190,7 +190,7 @@ Server relays the answer sdp to the first peer
 ```
 
 7. Clients sends leave JSON command to leave the room
-```json
+```yml
 {
     command : "leave",
     streamId: "stream1"
@@ -207,7 +207,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 
 2. Client sends join JSON command to the server with room name parameter. `streamId` field is optional in case `streamId` should be specified in advance. If `streamId` is not sent, server returns with a random `streamId` in the second message.
 
-```json
+```yml
 {
     command : "joinRoom",
     room : "room_id_for_your_conference",
@@ -215,7 +215,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 }
 ```
 3. Server notifies the client with available streams in the room
-```json
+```yml
 {
     command : "notification",
     definition : "joinedTheRoom",
@@ -231,7 +231,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 ```streams``` is the json array which client can play via WebRTC. Client can play each stream by play method above. This streams array can be empty if there is no stream in the room.
 
 4. Web app should pull the server periodically for the room info as follows, 
-```json
+```yml
 {
     command : "getRoomInfo",
     room : "room_id_for_your_conference",
@@ -240,7 +240,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 ```
 5. Server returns the active streams in the room as follows. Application should synchronize the players in their side.
 
-```json
+```yml
 {
    command:"roomInformation",
    room: "room_id_for_your_conference",
@@ -253,7 +253,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 ```
 
 6. Any user can leave the room by sending below message
-```json
+```yml
 {
     command : "leaveFromRoom",
     room: "roomName"
@@ -263,14 +263,14 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 
   * `noStreamNameSpecified`: it is sent when stream id is not specified in the message.
 
-```json
+```yml
 {
     command : "error",
     definition : "noStreamNameSpecified",
 }
 ```
   * `not_allowed_unregistered_streams`: This is sent back to the user if the publisher wants to send a stream with an unregistered id and server is configured not to allow this kind of streams
-```json
+```yml
 {
     command : "error",
     definition: "not_allowed_unregistered_streams",
@@ -278,7 +278,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 ```
 
   * `no_room_specified`: This is sent back to the user when there is no room specified in  joining the video conference.
-```json
+```yml
 {
     command : "error",
     definition : "no_room_specified",
@@ -286,7 +286,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 ```
 
   * `unauthorized_access`:This is sent back to the user when the token is not validated
-```json
+```yml
 {
     command : "error",
     definition : "unauthorized_access",
@@ -294,7 +294,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 ```
 
   * `no_encoder_settings`:This is sent back to the user when there are no encoder settings available in publishing the stream.
-```json
+```yml
 {
     command : "error",
     definition : "no_encoder_settings",
@@ -302,35 +302,35 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 ```
 
   * `no_peer_associated_before`: This is peer to peer connection error definition.It is sent back to the user when there is no peer associated with the stream.
-```json
+```yml
 {
     command : "error",
     definition : "no_peer_associated_before",
 }
 ```
   * `notSetLocalDescription`: It is sent when local description is not set successfully
-```json
+```yml
 {
     command : "error",
     definition : "notSetLocalDescription",
 }
 ```
   * `highResourceUsage`: It is sent when server is overloaded. Server overload means over CPU usage or over RAM usage. Over CPU usage means CPU load is more than the `server.cpu_limit` value  in `conf/red5.properties`. Its default value is %85. Over RAM usage means available memory in the system is less than `server.min_free_ram` value in `conf/red5.properties`. Its unit is MB and default value is 10.
-  ```json
+  ```yml
   {
     command : "error",
     definition : "highResourceUsage",
   }
   ```
   * `streamIdInUse`: The server sends this message if it detects that there is already an active stream(preparing or publishing state) with that same stream id when a user tries to publish a stream. One may get this error if s/he tries to re-publish a stream with the same stream id without closing the previous WebRTC connection. 
-  ```json
+  ```yml
   {
     command : "error",
     definition : "streamIdInUse",
   }
   ```
   * `publishTimeoutError`: The server sends this message if WebRTC publishing is not started in a specified time period. This value is configurable via `settings.webrtc.client.start.timeoutMs` property in App Configuration. Its default value is 5000 milliseconds   
-  ```json
+  ```yml
   {
     command : "error",
     definition : "publishTimeoutError",
@@ -341,27 +341,27 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 * `ping` & `pong` 
   Whenever you send a ping command to the server, it will respond you with pong command. 
   Ping Command
-  ```json
+  ```yml
   {
     command : "ping",
   }
   ```
 
   Pong Response from Server
-  ```json
+  ```yml
   {
     command : "pong",
   }
   ```
 * `getStreamInfo`: Get Stream Information from Server. You may use this method to learn more about stream status and bitrates. Client should send the following message.
-  ```json
+  ```yml
   {
      command: "getStreamInfo",
      streamId: "stream_id_that_you_want_to_get_info"
   } 
   ```
   Server returns in two ways. It may return stream information as follows
-  ```json
+  ```yml
   {
      command: "streamInformation",
      streamId: "stream_id_of_the_stream_information",
@@ -378,7 +378,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
   ```
 
   If stream is not active, it will return `no_stream_exist`
-  ```json
+  ```yml
   {
     command : "error",
     definition : "no_stream_exist",
@@ -386,7 +386,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
   }
   ```
 * `getRoomInfo`: Get Room Information from server that returns the whole active streams in the room. Client should send the following message to get the response from the server.
-  ```json
+  ```yml
   {
      command: "getRoomInfo",
      room: "room_id_that_you_want_to_get_info",
@@ -394,7 +394,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
   } 
   ```
   Server responds in following format
-  ```json
+  ```yml
   {
      command: "roomInformation",
      room: "room_id_that_this_information_belongs_to",
@@ -402,7 +402,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
   }
   ```
 * `bitrateMeasurement`: Server periodically sends this information to the WebRTC viewers. It lets develop show a message to the user if it's internet bandwidth is not good enough. If the `targetBitrate` is bigger than the sum of `videoBitrate` and `audioBitrate`, it means internet bandwidth is good enough to play the video. If the `targetBitrate`  is less than the sum of `videoBitrate` and `audioBitrate`, it means some playback issues(pixelating, packet drop, etc.) may happen and it disturbs the user experience. 
-  ```json
+  ```yml
   {
     command : "notification",
     definition : "bitrateMeasurement",
@@ -410,5 +410,13 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
     targetBitrate: measured_bandwidth_of_the_client,
     videoBitrate: video_bitrate_of_the_current_playing_video,
     audioBitrate: "audio_bitrate_of_the_current_playing_audio
+  }
+  ```
+* `forceStreamQuality`: If there are adaptive-bitrates(multi-bitrate) for that stream, you can get bitrates with `getStreamInfo` method and then you can make the Ant Media Server force to send you a specific resolution. 
+  ```yml
+  {
+    command: "forceStreamQuality",
+    streamId: "write_the_stream_id",
+    streamHeight: write_the_height_of_the_resolution_you_want_to_force
   }
   ```
