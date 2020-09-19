@@ -1,5 +1,7 @@
 Kubernetes as known is the open source container orchestration tool that is widely used in all over the world. Ant Media Server even supports running in Docker container, it has some kind of incompatibility issues when it's running in Kubernetes. With the version 2.2.0+, Ant Media Server is fully compatible with Kubernetes. Let us share how to use Ant Media Server with Kubernetes.
 
+![](images/kubernetes.png)  
+
 Running Ant Media Server is fully about clustering. If you are not familiar with Ant Media Server Clustering & Scaling, please read the [Cluster & Scaling documentation](Clustering-&-Scaling)
 
 Btw, the scope of this document is giving you the basics about how to run Ant Media Server Kubernetes Cluster. If you're not familiar with Kubernetes then you can get started with [Kubernetes](https://kubernetes.io/docs/home/) and follow [interactive tutorials](https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-intro/).
