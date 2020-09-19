@@ -4,7 +4,7 @@ Running Ant Media Server is fully about clustering. If you are not familiar with
 
 Btw, the scope of this document is giving you the basics about how to run Ant Media Server Kubernetes Cluster. If you're not familiar with Kubernetes then you can get started with [Kubernetes](https://kubernetes.io/docs/home/) and follow [interactive tutorials](https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-intro/).
 
-After these notes, just before proceeding we assume that you've installed kubernetes in your test environment or in a cloud service like AWS. The scenario below is generally running the Kubernetes with Minikube. It's also tested in AWS EKS as well.
+After these notes, just before proceeding we assume that you've installed kubernetes in your test environment or in a cloud service like AWS. The scenario below is generally running the Kubernetes with Minikube. It's also tested in AWS EKS as well. If you use minikube, we start the it with `sudo minikube start --driver=none` in VPS and need to use `sudo` command in `docker` and `kubectl`. On the other hand, you don't need to use `sudo` in `kubectl` commands if you're running in AWS. 
 
 ## 1. Create Image for Container
 First things first. We need to create a docker image to run our pods in kubernetes.
