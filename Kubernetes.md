@@ -11,15 +11,16 @@ First things first. We need to create a docker image to run our pods in kubernet
 
 * Get the Dockerfile. Dockerfile is available in Ant Media Server's Scripts repository that is actively used in CI pipeline. Anyway, you can get it with the below command. 
   ```
-  wget https://raw.githubusercontent.com/ant-media/Scripts/master/docker/Dockerfile_Process -O Dockerfile_Process
+  wget https://raw.githubusercontent.com/ant-media/Scripts/master/docker/Dockerfile_Process \
+  -O Dockerfile_Process
   ``` 
 * Download or Copy Ant Media Server Enterprise Edition ZIP file into the same directory that you download Dockerfile above. 
 
 * Create the docker image. Before running the command below, please pay attention that you should replace `{CHANGE_YOUR_ANT_MEDIA_SERVER_ZIP_FILE}` in the command below with your exact Ant Media Server ZIP file name.
 
   ```
-  sudo docker build --network=host --file=Dockerfile_Process -t ant-media-server-enterprise-k8s:test 
-   --build-arg AntMediaServer={CHANGE_YOUR_ANT_MEDIA_SERVER_ZIP_FILE} .
+  sudo docker build --network=host --file=Dockerfile_Process -t ant-media-server-enterprise-k8s:test \
+  --build-arg AntMediaServer={CHANGE_YOUR_ANT_MEDIA_SERVER_ZIP_FILE} .
   ```
 
   The second thing we should point out is the image name and tag. The command above use the `ant-media-server-enterprise-k8s:test` as image name and tag. The image name is compatible with deployment file. I mean you can absolutely change the image name and tag, just make it compatible with deployment file we'll mention soon. 
@@ -81,6 +82,11 @@ If everything is OK, your image is available in your environment. If you're goin
   ```
   sudo kubectl get deployments
   ```
+  Then you should see something like below.
+  ```
+  NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+  ant-media-server   1/1     1            1           12s
+  ```
 
 ## 3. Run Ant Media Server K8s Service
 Running Ant Media Server K8s Service is the easiest part in pipeline.
@@ -92,6 +98,17 @@ Running Ant Media Server K8s Service is the easiest part in pipeline.
   ```
   sudo kubectl create -f ams-k8s-service.yaml
   ```
+  Check the service if it's working.
+  ```
+  sudo kubectl get services
+  ```
+  If it's running, you should see something similar like this.
+  ```
+  NAME               TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+  ant-media-server   LoadBalancer   10.105.169.89   <pending>     5080:30240/TCP   6s
+  kubernetes         ClusterIP      10.96.0.1       <none>        443/TCP          6m50s
+  ```
 
+  If you're running with minikube, you can directly connect to your platform with your host ip address in the browser and the port name above. Let's assume your host IP address is `xxx.yy.yy.zz`, then you can connect to Ant Media Server web panel via `http://xxx.yy.yy.zz:30240`. If you're running this service in AWS or any other place, please read their documentation about Load Balancer in Kubernetes. 
 
  
