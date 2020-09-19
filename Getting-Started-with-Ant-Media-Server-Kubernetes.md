@@ -11,6 +11,8 @@ After these notes, just before proceeding we assume that you've installed kubern
 ## 1. Create Image for Container
 First things first. We need to create a docker image to run our pods in kubernetes.
 
+![](images/docker.png) 
+
 * Get the Dockerfile. Dockerfile is available in Ant Media Server's Scripts repository that is actively used in CI pipeline. Anyway, you can get it with the below command. 
   ```
   wget https://raw.githubusercontent.com/ant-media/Scripts/master/docker/Dockerfile_Process \
