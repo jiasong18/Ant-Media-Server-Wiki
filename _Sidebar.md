@@ -67,7 +67,7 @@
 ## Draft 
 * [Data Channel](Data-Channel)
 * [Playlist](Playlist)
-* [Kubernetes](Kubernetes)
+* [Kubernetes](Getting-Started-with-Ant-Media-Server-Kubernetes)
 
 
 ## Proposals
