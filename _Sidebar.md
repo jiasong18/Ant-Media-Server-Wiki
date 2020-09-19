@@ -67,6 +67,7 @@
 ## Draft 
 * [Data Channel](Data-Channel)
 * [Playlist](Playlist)
+* [Kubernetes](Kubernetes)
 
 
 ## Proposals
