@@ -412,7 +412,7 @@ ws://SERVER_NAME:5080/WebRTCAppEE/websocket
     audioBitrate: "audio_bitrate_of_the_current_playing_audio
   }
   ```
-* `forceStreamQuality`: If there are adaptive-bitrates(multi-bitrate) for that stream, you can get bitrates with `getStreamInfo` method and then you can make the Ant Media Server force to send you a specific resolution. 
+* `forceStreamQuality`: If there are adaptive-bitrates(multi-bitrate) for that stream, you can get bitrates with `getStreamInfo` method and then you can make the Ant Media Server force to send you a specific resolution. If you want to switch back to auto stream quality, you can use give `0` for `streamHeight` and send the message below.
   ```yml
   {
     command: "forceStreamQuality",
