@@ -171,7 +171,9 @@ Now, You can use the IP filter.
 `apt-get update && apt-get install openssl -y`
 
 **2.** Create self-signed certificate as follows.
+
 domain.crt = your certificate file 
+
 domain.key = your key file
 
 `openssl req -newkey rsa:4096 -x509 -sha256 -days 3650 -nodes -out domain.crt -keyout domain.key`
