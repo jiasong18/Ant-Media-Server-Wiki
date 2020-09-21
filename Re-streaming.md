@@ -10,15 +10,24 @@ Let’s have a look at how to pull stream from IP Camera.
 ### Add IP Camera
 
 * Select “LiveApp” from applications, then click “New Live Stream” and select “IP Camera”. 
+
+![](images/re-stream-add-ip-camera-1.png)
+
 * Fill camera name, camera username, and camera password. You should add ONVIF URL of IP Camera. Generally, it is in the following format `IP-ADDRESS-OF-IPCAMERA:8080`. If you don't know the ONVIF URL, tou can use “auto-discovery” feature. If IP camera and server are in the same subnet, Ant Media Server automatically can discover them. The screenshot of  auto-discovery result is shown below.
+
+![](images/re-stream-add-ip-camera-2.png)
 
 ### Watch IP Cameras
 
 If the IP cameras are reachable and configured correctly, Ant Media Server add theirs streams as live streams and starts to pull streams from them. You can see its status on the management panel. To watch the stream, just click the Play button on Actions.
 
+![](images/restream-ip-camera.png)
+
 ### Record IP Camera Streams
 
 The Ant Media Server can save IP Camera streams as MP4 format. In addition, it record streams with defined periods such one hour, ten hours interval. You can see these recorded files on VoD tab in the management panel.
+
+![](images/restreaming-record-live-streams.png)
 
 ## Restreaming External Sources
 
