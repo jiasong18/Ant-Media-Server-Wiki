@@ -57,7 +57,7 @@ ENTRYPOINT ["/usr/local/antmedia/start.sh"]
 
 * Download or save `<Ant Media Server installation zip>` file in the same directory with `Dockerfile`. Then run the docker build command.
 
-`docker build --network=host -t antmediaserver --build-arg AntMediaServer=<Replace_With_Ant_Media_Server_Zip_File>`
+`docker build --network=host -t antmediaserver --build-arg AntMediaServer=<Replace_With_Ant_Media_Server_Zip_File> .` 
 
 * Now we have a docker container with Ant Media Server. Let's run it.
 
