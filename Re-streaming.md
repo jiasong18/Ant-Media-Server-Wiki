@@ -33,6 +33,8 @@ The Ant Media Server can save IP Camera streams as MP4 format. In addition, it r
 
 Ant Media Server can operate with different streaming flows. As well as accepting and creating streaming media, it also has the capability to pull live streams from external sources. Such as; live TV streams, IP camera streams or other forms of live streams(RTSP, HLS, TS, FLV etc.). We will show how to pull live streams with Web Interface.
 
+![](images/restream-add-streamsource.png)
+
 ### Pull Live Streams with Web Interface
 
 * First, log in to the management panel. Click New Live Stream -> Stream Source. Define stream name and URL.
