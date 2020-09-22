@@ -75,7 +75,7 @@ Open your browser and type `http://SERVER_IP_ADDRESS:5080` to go to the web pane
 Download the Dockerfile file.
 
 `
-wget https://raw.githubusercontent.com/ant-media/Scripts/master/Dockerfile
+wget https://raw.githubusercontent.com/ant-media/Scripts/master/docker/Dockerfile_Service -O Dockerfile
 `
 ### 2. Build Docker Image 
 Download and save Ant Media Server ZIP file in the same directory with `Dockerfile`. Then run the docker build command from command line
