@@ -64,9 +64,8 @@ In that file, copy the following contents
 # RTMP stream configuration
 stream {
     upstream stream_backend {
-	hash least_conn;
 	server AMS_ORIGIN1_IP:1935;
-    server AMS_ORIGIN2_IP:1935;
+        server AMS_ORIGIN2_IP:1935;
     }
     
     server {
