@@ -18,7 +18,7 @@ Lowering the resolutions of videos for recorded streams is not a big deal. Howev
 ![HLS Adaptive Streaming Schema](images/HLSsegmentedvideodelivery.png)
 
 ## How WebRTC & HLS Adaptive Streaming Works
-Ant Media Server supports adaptive streaming in both WebRTC and HLS formats. On the other hand, there is a _slight difference between WebRTC and HLS adaptive streaming_. In WebRTC, Ant Media Server measures the player's bandwidth and selects the optimum quality according to the player's bandwidth. On the contrary, in HLS, player measures the its bandwidth and fetches the optimum quality from the server.    
+Ant Media Server supports adaptive streaming in both WebRTC and HLS formats. On the other hand, there is a _slight difference between WebRTC and HLS adaptive streaming_. In WebRTC, Ant Media Server measures the player's bandwidth and selects the optimum quality according to the player's bandwidth. On the contrary, in HLS, player measures its bandwidth and fetches the optimum quality from the server.    
 
 ## How to enable Adaptive Bitrate
 
