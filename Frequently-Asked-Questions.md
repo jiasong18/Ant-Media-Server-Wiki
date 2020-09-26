@@ -170,13 +170,13 @@ Now, You can use the IP filter.
 
 `apt-get update && apt-get install openssl -y`
 
-**2.** Create self-signed certificate as follows.
+**2.** Create a self-signed certificate as follows.
 
-domain.crt = your certificate file 
+ams.crt = your certificate file 
 
-domain.key = your key file
+ams.key = your key file
 
-`openssl req -newkey rsa:4096 -x509 -sha256 -days 3650 -nodes -out domain.crt -keyout domain.key`
+`openssl req -newkey rsa:4096 -x509 -sha256 -days 3650 -nodes -out ams.crt -keyout ams.key`
 
 **3.** Submit the requested information and press the Enter button.
 ```
@@ -188,6 +188,14 @@ Organizational Unit Name (eg, section) []:Support
 Common Name (e.g. server FQDN or YOUR name) []:domain.com
 Email Address []: contact@antmedia.io
 ```
-**4.** The certificate and private key will be created at the specified location. Then run the enable_ssl.sh script as below.
+**4.** The certificate and private key will be created at the specified location. Then run the `enable_ssl.sh` script as below.
 
-`/usr/local/antmedia/enable_ssl.sh -f domain.crt -p domain.key -d domain.com`
+`/usr/local/antmedia/enable_ssl.sh -f ams.crt -p ams.key -d ams_server_ip`
+
+**Note:** If you want to use domain address with your local network, you need to add below parameter in `/etc/hosts` file.
+
+`ams_server_ip domain.com`
+
+When you added domain address in your hosts file, you need run `enable_ssl.sh` script as below.
+
+`/usr/local/antmedia/enable_ssl.sh -f ams.crt -p ams.key -d domain.com`
