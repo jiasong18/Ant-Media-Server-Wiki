@@ -1,4 +1,4 @@
-Follow the instructions below to configure RTMP Load Balancer in Ant Media Server Auto Scale structure.
+Follow the instructions below to configure RTMP Load Balancer in Ant Media Server Auto Scaling structure.
 
 **1.** Click on Create Load Balancer and create a new Load Balancer. (EC2 > Load Balancers > Create Load Balancer )
 ![](images/aws-rtmp-2.png)
