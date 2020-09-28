@@ -27,7 +27,7 @@ Follow the instructions below to configure RTMP Load Balancer in Ant Media Serve
 13. In this window, add the Classic Load Balancer you have added to the Choose A Load Balancer section and click the Update button.
 ![](images/aws-rtmp-15.png)
 14. If everything is fine, you should see the origin instance when you click the Instance tab from Load Balancing> Load Balancers> Antmedia-RTMP-LB.
-![](images/aws-rtmp-16.png)
+![](images/aws-rtmp-16-1.png)
 
 Since a new load balancer has been installed, your RTMP URL will be the Load Balancer URL.
 
