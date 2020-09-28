@@ -3,6 +3,7 @@ Follow the instructions below to configure RTMP Load Balancer in Ant Media Serve
 **1.** Click on Create Load Balancer and create a new Load Balancer. (EC2 > Load Balancers > Create Load Balancer )
 ![](images/aws-rtmp-2.png)
 
+
 **2.** Create a Classic Load Balancer.
 ![](images/aws-rtmp-3.png)
 **3.** Adjust the settings as in the red rectangles.
