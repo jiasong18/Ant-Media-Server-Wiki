@@ -4,7 +4,7 @@ Follow the instructions below to configure RTMP Load Balancer in Ant Media Serve
 ![](images/aws-rtmp-2.png)
 2. Create a Classic Load Balancer.
 ![](images/aws-rtmp-3.png)
-3. Make settings as in the red rectangle.
+3. Adjust the settings as in the red rectangle.
 ![](images/aws-rtmp-4.png)
 4. In this section, select Create a New Security Group and adjust the settings as in the Red rectangle.
 ![](images/aws-rtmp-5.png)
