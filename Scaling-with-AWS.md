@@ -199,9 +199,7 @@ Lastly, choose eu-central-1a and eu-central-1b for availability zones. Then Clic
 
 Right now Everything is ok. Just let me give a brief information about the difference between publish and play. In our load balancer configuration, we forward HTTP(80) and HTTPS(443) to Origin Group and we forward HTTP(5080) and HTTPS(5443) to Edge Group. It means that we should connect 80 or 443 ports to publish and connect 5080 or 5443 to play streams. Otherwise, play requests goes to origin group and publish request goes to edge group and it’s likely create some performance issues according to your configurations.
 
-## How to RTMP Load Balancer in AWS ?
-
-**Reference Link:** [https://github.com/ant-media/Ant-Media-Server/wiki/How-to-RTMP-Load-Balancer-in-AWS](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-RTMP-Load-Balancer-in-AWS)
+> Quick Link: [How to configure RTMP Load Balancer in AWS ?](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-configure-RTMP-Load-Balancer-in-AWS) 
 
 ## Logging in Web Panel
 
