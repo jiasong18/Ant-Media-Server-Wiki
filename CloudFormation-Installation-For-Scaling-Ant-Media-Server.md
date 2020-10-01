@@ -1,36 +1,34 @@
-CloudFormation Installation For Scaling Ant Media Server
-
 Now let's start on to the CloudFormation setup and continue step by step.
 
-1. Firstly, let's subscribe to the Ant Media Server on the Amazon Marketplace. Open the link: https://aws.amazon.com/marketplace/pp/B07569Y9SJ/ then please proceed by clicking “Continue to Subscribe” button.
+**1.** Firstly, let's subscribe to the Ant Media Server on the Amazon Marketplace. Open the link: https://aws.amazon.com/marketplace/pp/B07569Y9SJ/ then please proceed by clicking “Continue to Subscribe” button.
 
 ![cloudformation](images/cloudformation/cloudformation-marketplace-1.png)
 
-2. Please proceed by clicking “Accept Terms” button
+**2.** Please proceed by clicking “Accept Terms” button
 
 ![cloudformation](images/cloudformation/cloudformation-marketplace-2.png)
 
-3. if everything goes well, you will see the screenshot below.
+**3.** if everything goes well, you will see the screenshot below.
 
 ![cloudformation](images/cloudformation/cloudformation-marketplace-3.png)
 
-4. Now, download the CloudFormation template from the below link to your computer.
+**4.** Now, download the CloudFormation template from the below link to your computer.
 
-Link: https://raw.githubusercontent.com/ant-media/Scripts/master/antmedia-aws-autoscale-template.yml
+Link: [https://raw.githubusercontent.com/ant-media/Scripts/master/antmedia-aws-autoscale-template.yml](https://raw.githubusercontent.com/ant-media/Scripts/master/antmedia-aws-autoscale-template.yml)
 
-5. Log in to the AWS Dashboard and find CloudFormation in the search box.
+**5.** Log in to the AWS Dashboard and find CloudFormation in the search box.
 
 ![cloudformation](images/cloudformation/AntMedia-CloudFormation-1.png)
 
-6. Click on "Create Stack" from the menu.
+**6.** Click on "Create Stack" from the menu.
 
 ![cloudformation](images/cloudformation/AntMedia-CloudFormation-2.png)
 
-7. Select "Upload a Template File" and upload the downloaded file.
+**7.** Select "Upload a Template File" and upload the downloaded file.
 
 ![cloudformation](images/cloudformation/AntMedia-CloudFormation-3.png)
 
-8. The menu that below is where we will adjust all our settings.
+**8.** The menu that below is where we will adjust all our settings.
 
 ![cloudformation](images/cloudformation/AntMedia-CloudFormation-4.png)
 
@@ -55,11 +53,11 @@ Link: https://raw.githubusercontent.com/ant-media/Scripts/master/antmedia-aws-au
 - VpcCidrBlock: Associates a CIDR block with your VPC. It should be the same as the VPC Network.
 - VpcId: VpcId of your existing Virtual Private Cloud (VPC). The VpcId must be the same as the subnets you choose.
 
-9. Please proceed by clicking “Next” button
+**9.** Please proceed by clicking “Next” button
 
 ![cloudformation](images/cloudformation/AntMedia-CloudFormation-5.png)
 
-10. In this section, you can view and check the summary of the parameters you have entered and you can edit it here as below.
+**10.** In this section, you can view and check the summary of the parameters you have entered and you can edit it here as below.
 
 ![cloudformation](images/cloudformation/AntMedia-CloudFormation-6.png)
 
@@ -67,15 +65,15 @@ We are using AWS Lambda, so IAM permissions are needed to get our latest image.
 
 ![cloudformation](images/cloudformation/AntMedia-CloudFormation-6-1.png)
 
-11. If the template has been installed successfully, it says "Create Complete" in the red rectangle.
+**11.** If the template has been installed successfully, it says "Create Complete" in the red rectangle.
 
 ![cloudformation](images/cloudformation/AntMedia-CloudFormation-7.png)
 
-12. You can access the URL addresses for LoadBalancer HTTP and HTTPS in the Outputs tab. If you define the CNAME record for the domain you have defined on Certificate Manager to the Load Balancer address below, you can access Ant Media Server without a certificate error on the domain you have defined.
+**12.** You can access the URL addresses for LoadBalancer HTTP and HTTPS in the Outputs tab. If you define the CNAME record for the domain you have defined on Certificate Manager to the Load Balancer address below, you can access Ant Media Server without a certificate error on the domain you have defined.
 
 ![cloudformation](images/cloudformation/AntMedia-CloudFormation-8.png)
 
-13. When you type the URL of the Loadbalancer, Ant Media Dashboard will be opened as below
+**13.** When you type the URL of the Loadbalancer, Ant Media Dashboard will be opened as below
 
 ![cloudformation](images/cloudformation/login.png)
 
@@ -83,7 +81,7 @@ When you click on the Cluster tab, you can see the servers in Cluster.
 
 ![cloudformation](images/cloudformation/AntMedia-CloudFormation-9.png)
 
-14. When you delete a stack, the AWS CloudFormation deletes all resources in that stack.
+**14.** When you delete a stack, the AWS CloudFormation deletes all resources in that stack.
 
 ![cloudformation](images/cloudformation/AntMedia-CloudFormation-10.png)
 
