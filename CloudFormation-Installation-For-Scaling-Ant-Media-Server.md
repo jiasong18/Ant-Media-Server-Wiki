@@ -4,15 +4,15 @@ Now let's start on to the CloudFormation setup and continue step by step.
 
 1. Firstly, let's subscribe to the Ant Media Server on the Amazon Marketplace. Open the link: https://aws.amazon.com/marketplace/pp/B07569Y9SJ/ then please proceed by clicking “Continue to Subscribe” button.
 
-![cloudformation](images/cloudformation-marketplace-1.png)
+![cloudformation](images/cloudformation/cloudformation-marketplace-1.png)
 
 2. Please proceed by clicking “Accept Terms” button
 
-![cloudformation](images/cloudformation-marketplace-2.png)
+![cloudformation](images/cloudformation/cloudformation-marketplace-2.png)
 
 3. if everything goes well, you will see the screenshot below.
 
-![cloudformation](images/cloudformation-marketplace-3.png)
+![cloudformation](images/cloudformation/cloudformation-marketplace-3.png)
 
 4. Now, download the CloudFormation template from the below link to your computer.
 
@@ -20,19 +20,19 @@ Link: https://raw.githubusercontent.com/ant-media/Scripts/master/antmedia-aws-au
 
 5. Log in to the AWS Dashboard and find CloudFormation in the search box.
 
-![cloudformation](images/AntMedia-CloudFormation-1.png)
+![cloudformation](images/cloudformation/AntMedia-CloudFormation-1.png)
 
 6. Click on "Create Stack" from the menu.
 
-![cloudformation](images/AntMedia-CloudFormation-2.png)
+![cloudformation](images/cloudformation/AntMedia-CloudFormation-2.png)
 
 7. Select "Upload a Template File" and upload the downloaded file.
 
-![cloudformation](images/AntMedia-CloudFormation-3.png)
+![cloudformation](images/cloudformation/AntMedia-CloudFormation-3.png)
 
 8. The menu that below is where we will adjust all our settings.
 
-![cloudformation](images/AntMedia-CloudFormation-4.png)
+![cloudformation](images/cloudformation/AntMedia-CloudFormation-4.png)
 
 - Stack Name: it will describe your stacks, it will be like a skeleton
 - AntMediaEdgeCapacity: How many Edge servers will be created.
@@ -42,7 +42,7 @@ Link: https://raw.githubusercontent.com/ant-media/Scripts/master/antmedia-aws-au
 - CPUPolicyTargetValue: Average CPU utilization of the Auto Scaling group. When the server reaches %60 CPU utilization average, new servers will be added
 - EdgeInstanceType: Edge Instance Type
 
-![cloudformation](images/AntMedia-CloudFormation-4-1.png)
+![cloudformation](images/cloudformation/AntMedia-CloudFormation-4-1.png)
 
 - Email: Subscription Email
 - KeyName: An Amazon EC2 key pair name.If there is no value here, you must create an ssh key (EC2 > Key Pairs).
@@ -57,35 +57,35 @@ Link: https://raw.githubusercontent.com/ant-media/Scripts/master/antmedia-aws-au
 
 9. Please proceed by clicking “Next” button
 
-![cloudformation](images/AntMedia-CloudFormation-5.png)
+![cloudformation](images/cloudformation/AntMedia-CloudFormation-5.png)
 
 10. In this section, you can view and check the summary of the parameters you have entered and you can edit it here as below.
 
-![cloudformation](images/AntMedia-CloudFormation-6.png)
+![cloudformation](images/cloudformation/AntMedia-CloudFormation-6.png)
 
 We are using AWS Lambda, so IAM permissions are needed to get our latest image.
 
-![cloudformation](images/AntMedia-CloudFormation-6-1.png)
+![cloudformation](images/cloudformation/AntMedia-CloudFormation-6-1.png)
 
 11. If the template has been installed successfully, it says "Create Complete" in the red rectangle.
 
-![cloudformation](images/AntMedia-CloudFormation-7.png)
+![cloudformation](images/cloudformation/AntMedia-CloudFormation-7.png)
 
 12. You can access the URL addresses for LoadBalancer HTTP and HTTPS in the Outputs tab. If you define the CNAME record for the domain you have defined on Certificate Manager to the Load Balancer address below, you can access Ant Media Server without a certificate error on the domain you have defined.
 
-![cloudformation](images/AntMedia-CloudFormation-8.png)
+![cloudformation](images/cloudformation/AntMedia-CloudFormation-8.png)
 
 13. When you type the URL of the Loadbalancer, Ant Media Dashboard will be opened as below
 
-![cloudformation](images/login.png)
+![cloudformation](images/cloudformation/login.png)
 
 When you click on the Cluster tab, you can see the servers in Cluster.
 
-![cloudformation](images/AntMedia-CloudFormation-9.png)
+![cloudformation](images/cloudformation/AntMedia-CloudFormation-9.png)
 
 14. When you delete a stack, the AWS CloudFormation deletes all resources in that stack.
 
-![cloudformation](images/AntMedia-CloudFormation-10.png)
+![cloudformation](images/cloudformation/AntMedia-CloudFormation-10.png)
 
 I have covered most of the topics around Cloud Formation. Coming to the question of what we have gained by using CloudFormation and Ant Media Server template, the following steps will take place while sipping your coffee.
 
