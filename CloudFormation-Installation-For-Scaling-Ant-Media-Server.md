@@ -14,7 +14,7 @@ Now let's start on to the CloudFormation setup and continue step by step.
 
 **4.** Now, download the CloudFormation template from the below link to your computer.
 
-Link: [https://raw.githubusercontent.com/ant-media/Scripts/master/antmedia-aws-autoscale-template.yml](https://raw.githubusercontent.com/ant-media/Scripts/master/antmedia-aws-autoscale-template.yml)
+[https://raw.githubusercontent.com/ant-media/Scripts/master/antmedia-aws-autoscale-template.yml](https://raw.githubusercontent.com/ant-media/Scripts/master/antmedia-aws-autoscale-template.yml)
 
 **5.** Log in to the AWS Dashboard and find CloudFormation in the search box.
 
