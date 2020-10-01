@@ -32,26 +32,26 @@ Now let's start on to the CloudFormation setup and continue step by step.
 
 ![cloudformation](images/cloudformation/AntMedia-CloudFormation-4.png)
 
-- Stack Name: it will describe your stacks, it will be like a skeleton
-- AntMediaEdgeCapacity: How many Edge servers will be created.
-- AntMediaEdgeCapacityMax: Edge Server where Auto Scale will reach maximum
-- AntMediaOriginCapacity: How many Origin servers will be created.
-- AntMediaOriginCapacityMax: Origin Server where Auto Scale will reach maximum
-- CPUPolicyTargetValue: Average CPU utilization of the Auto Scaling group. When the server reaches %60 CPU utilization average, new servers will be added
-- EdgeInstanceType: Edge Instance Type
+- **Stack Name:** it will describe your stacks, it will be like a skeleton
+- **AntMediaEdgeCapacity:** How many Edge servers will be created.
+- **AntMediaEdgeCapacityMax:** Edge Server where Auto Scale will reach maximum
+- **AntMediaOriginCapacity:** How many Origin servers will be created.
+- **AntMediaOriginCapacityMax:** Origin Server where Auto Scale will reach maximum
+- **CPUPolicyTargetValue:** Average CPU utilization of the Auto Scaling group. When the server reaches %60 CPU utilization average, new servers will be added
+- **EdgeInstanceType:** Edge Instance Type
 
 ![cloudformation](images/cloudformation/AntMedia-CloudFormation-4-1.png)
 
-- Email: Subscription Email
-- KeyName: An Amazon EC2 key pair name.If there is no value here, you must create an ssh key (EC2 > Key Pairs).
-- LoadBalancerCertificateArn: Amazon Resource Name (ARN) of the certificate to associate with the load balancer. Please check this guide: https://antmedia.io/ssl-from-aws-certificate-manager-for-domain-name/
-- MongoDBInstanceType: MongoDB Instance Type
-- OriginInstanceType: Origin Server Instance Type
-- RTMP: If you want to install RTMP Load balancer, please select True
-- SSHLocation: The IP address range that can be used to SSH to the EC2 instances
-- Subnets: The list of SubnetIDs in your Virtual Private Cloud (VPC). You must choose at least 2 subnets from the same VPC network.
-- VpcCidrBlock: Associates a CIDR block with your VPC. It should be the same as the VPC Network.
-- VpcId: VpcId of your existing Virtual Private Cloud (VPC). The VpcId must be the same as the subnets you choose.
+- **Email:** Subscription Email
+- **KeyName:** An Amazon EC2 key pair name.If there is no value here, you must create an ssh key (EC2 > Key Pairs).
+- **LoadBalancerCertificateArn:** Amazon Resource Name (ARN) of the certificate to associate with the load balancer. Please check this guide: https://antmedia.io/ssl-from-aws-certificate-manager-for-domain-name/
+- **MongoDBInstanceType:** MongoDB Instance Type
+- **OriginInstanceType:** Origin Server Instance Type
+- **RTMP:** If you want to install RTMP Load balancer, please select True
+- **SSHLocation:** The IP address range that can be used to SSH to the EC2 instances
+- **Subnets:** The list of SubnetIDs in your Virtual Private Cloud (VPC). You must choose at least 2 subnets from the same VPC network.
+- **VpcCidrBlock:** Associates a CIDR block with your VPC. It should be the same as the VPC Network.
+- **VpcId:** VpcId of your existing Virtual Private Cloud (VPC). The VpcId must be the same as the subnets you choose.
 
 **9.** Please proceed by clicking “Next” button
 
