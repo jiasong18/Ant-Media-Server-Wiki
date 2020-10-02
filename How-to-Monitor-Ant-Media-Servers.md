@@ -349,6 +349,7 @@ import an official Nginx signing key
 
 ```curl -fsSL https://nginx.org/keys/nginx_signing.key | sudo apt-key add -```
 
+run the following commands to install nginx
 ```
 apt update 
 apt install nginx certbot python-certbot-nginx -y
@@ -374,7 +375,7 @@ Create a new file called `grafana.conf` and edit and save the following lines ac
 ```
 server {
 	listen 443 SSL;
-        server_name monitor.antmedia.io;
+        server_name yourdomain.com;
 	ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
         ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
         ssl_session_cache shared:le_nginx_SSL:1m;
