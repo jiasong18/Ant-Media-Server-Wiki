@@ -334,6 +334,72 @@ We have configured the chatbot aboe. Now let's start to configure Grafana Notifi
 
    Now you've set up notifications as you wish.
 
+# How to Enable SSL
+
+We prefer to use SSL termination.
+
+Run the following commands to install Nginx and certbot
+
+```sudo apt install curl ca-certificates lsb-release -y```
+```
+echo "deb http://nginx.org/packages/`lsb_release -d | awk '{print $2}' | tr '[:upper:]' '[:lower:]'` `lsb_release -cs` nginx" \
+    | sudo tee /etc/apt/sources.list.d/nginx.list
+```
+import an official Nginx signing key
+
+```curl -fsSL https://nginx.org/keys/nginx_signing.key | sudo apt-key add -```
+
+```
+apt update 
+apt install nginx certbot python-certbot-nginx -y
+```
+run the following commands to create certificate
+```
+certbot --nginx -d yourdomain.com -d www.yourdomain.com
+```
+edit crontab file `crontab -e`
+
+add below line to renew certificate each 80 days. 
+
+`0 0 */80 * * root certbot -q renew --nginx`
+
+Backup default Nginx configuration
+
+`mv /etc/nginx/conf.d/default.conf{,_bck}`
+
+Create a new file called `grafana.conf` and edit and save the following lines according to you.
+
+`vim /etc/nginx/conf.d/grafana.conf`
+
+```
+server {
+	listen 443 SSL;
+        server_name monitor.antmedia.io;
+	ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
+        ssl_session_cache shared:le_nginx_SSL:1m;
+	ssl_session_timeout 1440m;
+	ssl_protocols TLSv1.2;
+	ssl_prefer_server_ciphers on;
+	ssl_ciphers "EECDH+ECDSA+AESGCM EECDH+aRSA+AESGCM EECDH+ECDSA+SHA384 EECDH+ECDSA+SHA256 EECDH+aRSA+SHA384 EECDH+aRSA+SHA256 EECDH+aRSA+RC4 EECDH EDH+aRSA HIGH !RC4 !aNULL !eNULL !LOW !3DES !MD5 !EXP !PSK !SRP !DSS";
+       ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+       add_header X-Frame-Options "SAMEORIGIN";
+       add_header X-XSS-Protection "1; mode=block";
+       location / {
+                proxy_set_header HOST $host;
+                proxy_set_header X-Forwarded-Proto $scheme;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_pass http://127.0.0.1:3000;
+            }
+}
+
+```
+
+You can reach Grafana as follows.
+
+`https://yourdomain.com/`
+
 # Performance Tuning
 
 The performance will be affected by system resources and network status.
