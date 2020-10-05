@@ -18,3 +18,5 @@ Let's continue with the PUT Methods. Put methods aims to change data in the data
 * Following method changes the proporties of broadcast. As an example of changing the name of the broadcast.
   * curl -X PUT -H "Content-Type: application/json" "https://{domain:port}/{application}/rest/v2/broadcasts/{streamid}" -d '{"name":"{streamname}"}'
     * On  Windows Command Prompt, body part would be like the following : -d "{""name"":""{streamname}""}". So, two double quotation for the body variables.
+
+Post Methods are to used to create an request on database like creating conference room or used for validation because post methods are not cached nor remained in the history in the browser.
