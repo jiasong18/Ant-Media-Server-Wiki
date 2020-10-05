@@ -26,10 +26,18 @@ Post Methods are to used to create an request on database like creating conferen
 
 * Following method creates a broadcast.
   * `curl -X POST -H "Content-Type: application/json" "https://{domain:port}/{application}/rest/v2/broadcasts/create"`
-    * You can set the stream id if you don't want it to be random. So,  body part would be like the following: -d '{"streamId":"{stream id}"}'
+    * You can set the stream id if you don't want it to be random. So,  body part would be like the following: `-d '{"streamId":"{stream id}"}'`
 * This method is to send messages through data-channel.
   * `curl -X POST -H "Content-Type: application/json" "https://{domain:port}/{application}/rest/v2/broadcasts/{streamId}/data" -d "{yourmessage}"`
 * Following method is start external sources (IP Cameras and Stream Sources) again if it is added and stopped before.
   * `curl -X POST -H "Content-Type: application/json" "https://{domain:port}/{application}/rest/v2/broadcasts/{streamId}/start"`
 * And this one is stops the added stream.
   * `curl -X POST -H "Content-Type: application/json" "https://{domain:port}/{application}/rest/v2/broadcasts/{streamId}/stop"`
+### DELETE
+Delete requests are straight-forward which means these methods are aim to delete from database.
+* Following method deletes the mentioned conference-room.
+  * `curl -X DELETE https://{domain:port}/{application}/rest/v2/broadcasts/conference-rooms/{room_id}`
+* This method deletes that broadcast.
+  * `curl -X DELETE https://{domain:port}/{application}/rest/v2/broadcasts/{streamId}`
+
+You can find all the rest methods in the [https://antmedia.io/rest/](https://antmedia.io/rest/)
