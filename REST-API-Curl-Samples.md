@@ -19,9 +19,9 @@ Let's start with some of the GET Methods. Get methods are for getting data from 
   * `curl -X GET "https://{domain:port}/{application}/rest/v2/vods/list/{number}/{number}?streamId={streamId}"`
 
 ### PUT
-* Let's continue with the PUT Methods. Put methods aims to change data in the database.
-  * Following method starts the recording of mentioned stream.
-    * `curl -X PUT "https://{domain:port}/{application}/rest/v2/broadcasts/{streamid}/recording/{true or false}"`
+Let's continue with the PUT Methods. Put methods aims to change data in the database.
+* Following method starts the recording of mentioned stream.
+  * `curl -X PUT "https://{domain:port}/{application}/rest/v2/broadcasts/{streamid}/recording/{true or false}"`
 
 * Following method changes the proporties of broadcast. As an example of changing the name of the broadcast.
   * `curl -X PUT -H "Content-Type: application/json" "https://{domain:port}/{application}/rest/v2/broadcasts/{streamid}" -d '{"name":"{streamname}"}'`
