@@ -3,9 +3,8 @@
 Assuming you have installed the vMix in your personal computer.
 
 ### 1. Provide Sources
-Click to the add input button and add some input for the broadcast. As an example i will be adding an display input.
+Click to the add input button and add some input for the broadcast. As an example i will be adding a display input.
 
-You can check https://www.vmix.com/support/training-videos.aspx to get better in vMix.
 ![image](https://user-images.githubusercontent.com/54481799/95338115-41285180-08bb-11eb-8e61-d8a63e564cf5.png)
 
 As you can see my input has been added successfully and its preview can be seen.
@@ -30,3 +29,4 @@ After configuring according to your needs and setting the server address, you ca
 As you can see from the following screenshot, it started to streaming.
 ![image](https://user-images.githubusercontent.com/54481799/95346239-476efb80-08c4-11eb-9eb9-a408cd47fd43.png)
 And you are publishing with `vMix!`
+You can check https://www.vmix.com/support/training-videos.aspx to get better in vMix.
