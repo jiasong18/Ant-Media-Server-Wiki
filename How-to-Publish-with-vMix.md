@@ -1,4 +1,4 @@
-vMix is a software vision mixer available for the Windows operating system. The software is developed by StudioCoast PTY LTD. Like most vision mixing software, it allows users to switch inputs, mix audio, record outputs, and live stream cameras, videos files, audio, and more, in resolutions of up to 4K.
+vMix is a software vision mixer available for the Windows operating system. The software is developed by StudioCoast PTY LTD. Like most vision mixing software, it allows users to switch inputs, mix audio, record outputs, and live stream cameras, videos files, audio, and more, in resolutions of up to 4K. It can stream more than one destination by adding more inputs to it. 
 Assuming you have installed the vMix in your personal computer.
 
 ### 1. Provide Sources
@@ -13,6 +13,8 @@ As you can see my input has been added successfully and its preview can be seen.
 ### 2. Configure vMix
 * Click to the gear icon near the stream button on the bottom
 * Choose custom RTMP Server in destination.
-* 
+* In the URL box, type your RTMP URL without stream id. It's like rtmp://your_server_domain_name/LiveApp/
+* In the Stream key, you can write any stream id because we assume that no security option is enabled.
+  * If token is enabled you need to add?token={yourtokenhere}
 
 
