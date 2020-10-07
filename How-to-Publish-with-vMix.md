@@ -19,4 +19,5 @@ As you can see my input has been added successfully and its preview can be seen.
   * If token is enabled you need to add?token={yourtokenhere}
 ![image](https://user-images.githubusercontent.com/54481799/95340429-d3c9f000-08bd-11eb-9c93-b10bc97b1e7b.png)
 
+### 3. Tuning
 
