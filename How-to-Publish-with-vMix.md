@@ -1,4 +1,5 @@
-vMix is a software vision mixer available for the Windows operating system. The software is developed by StudioCoast PTY LTD. Like most vision mixing software, it allows users to switch inputs, mix audio, record outputs, and live stream cameras, videos files, audio, and more, in resolutions of up to 4K. It can stream more than one destination by adding more inputs to it. 
+vMix is a software vision mixer available for the Windows operating system. The software is developed by StudioCoast PTY LTD. Like most vision mixing software, it allows users to switch inputs, mix audio, record outputs, and live stream cameras, videos files, audio, and more, in resolutions of up to 4K. It can stream up to three destination at one time.
+
 Assuming you have installed the vMix in your personal computer.
 
 ### 1. Provide Sources
