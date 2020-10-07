@@ -16,7 +16,7 @@ As you can see my input has been added successfully and its preview can be seen.
 * Choose custom RTMP Server in destination.
 * In the URL box, type your RTMP URL without stream id. It's like rtmp://your_server_domain_name/LiveApp/
 * In the Stream key, you can write any stream id because we assume that no security option is enabled.
-  * If token is enabled you need to add?token={yourtokenhere}
+  * If token is enabled you need to add ?token={yourtokenhere}. So it would be like {streamid}?token={yourtokenhere}
 ![image](https://user-images.githubusercontent.com/54481799/95340429-d3c9f000-08bd-11eb-9c93-b10bc97b1e7b.png)
 
 ### 3. Tuning
