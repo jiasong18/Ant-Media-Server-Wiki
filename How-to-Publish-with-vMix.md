@@ -29,4 +29,5 @@ After configuring according to your needs and setting the server address, you ca
 As you can see from the following screenshot, it started to streaming.
 ![image](https://user-images.githubusercontent.com/54481799/95346239-476efb80-08c4-11eb-9eb9-a408cd47fd43.png)
 And you are publishing with `vMix!`
+
 You can check https://www.vmix.com/support/training-videos.aspx to get better in vMix.
