@@ -30,5 +30,5 @@ You can use predefined settings but if you click to the gear button next to the 
 After configuring according to your needs and setting the server address, you can start the streaming by clicking to stream button at the bottom of the dashboard.
 ![image](https://user-images.githubusercontent.com/54481799/95345483-6faa2a80-08c3-11eb-80e7-33d1aa7122c9.png)
 As you can see from the following screenshot, it started to streaming.
-![image](https://user-images.githubusercontent.com/54481799/95345717-b39d2f80-08c3-11eb-96a7-7a3fdfc93cd4.png)
+![image](https://user-images.githubusercontent.com/54481799/95346239-476efb80-08c4-11eb-9eb9-a408cd47fd43.png)
 And you are publishing with `vMix!`
