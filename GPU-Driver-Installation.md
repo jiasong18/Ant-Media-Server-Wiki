@@ -28,6 +28,10 @@ Import CUDA Public GPG Key
 
 `wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.2.89-1_amd64.deb`
 
+Install repository meta-data
+
+`dpkg -i cuda-repo-ubuntu1804_10.2.89-1_amd64.deb`
+
 Import CUDA Public GPG Key
 
 `sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub`
