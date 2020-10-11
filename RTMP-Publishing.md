@@ -1,4 +1,4 @@
-* [Publish with OBS)](https://github.com/ant-media/Ant-Media-Server/wiki/Open-Broadcaster-Software-Publishing)
+* [Publish with OBS](https://github.com/ant-media/Ant-Media-Server/wiki/Open-Broadcaster-Software-Publishing)
 * [Publish with Wirecast](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-Publish-with-Wirecast)
 * [Publish with vMix](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-Publish-with-vMix)
 * [Publish with a Hardware Encoder (Teradek, Tricaster, Gosolo)](https://github.com/ant-media/Ant-Media-Server/wiki/Teradek-Publishing)
