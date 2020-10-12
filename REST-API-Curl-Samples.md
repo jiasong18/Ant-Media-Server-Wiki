@@ -21,6 +21,11 @@ curl -X GET "https://{domain:port}/{application}/rest/v2/broadcasts/{streamid}"
 ```
 curl -X GET "https://{domain:port}/{application}/rest/v2/broadcasts/{streamid}/broadcast-statistics"
 ```
+
+* Following method gets a token from the server for its type {play or publish} and expireDate for a specific stream.
+```
+curl -X GET "https://{domain:port}/{application}/rest/v2/broadcasts/{streamid}/token?expireDate={unix timestamp}&type={play or publish}"
+```
 * As a last example of GET calls, it would be good to see a call with query parameters. So this time it will be getting vod list from database:
 ```
 curl -X GET "https://{domain:port}/{application}/rest/v2/vods/list/{number}/{number}?streamId={streamId}"
