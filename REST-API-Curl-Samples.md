@@ -2,7 +2,9 @@ This document is to ease your understanding of how rest api curl  calls can be m
 
 This guide assumes that you included your IP in the ip-filter in the `Ant Media Server dashboard`. So that you can do rest api calls. Otherwise it won't work.
 
-Note: You need to fill curly braces according to your api calls. Like if your stream id is `stream123` then you need to fill `/{streamid}` as `stream123`. If the `{application}` is `LiveApp`, you need to set, `/LiveApp/`. Also you need to use http or https according to your setup.
+Note: You need to fill curly braces according to your api calls. Like if your stream id is `stream123` then you need to fill `/{streamid}` as `stream123`. If the `{application}` is `LiveApp`, you need to set, `/LiveApp/`. 
+
+Also you need to use http or https according to your setup.
 
 
 ## Methods
