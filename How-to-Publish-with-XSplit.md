@@ -8,7 +8,7 @@ Step by step guide;
 Download Open Broadcaster Software from [xsplit.com](https://www.xsplit.com) and Install it. It is only available in Windows 7 or newer.
 
 ### 2. Provide Sources
-When you open the XSplit, it will ask the canvas option for different purposes. They are easy to manipulate with drag and drop. It has some useful features for streaming, for further information you can google about [XSplit tutorial](https://www.google.com/search?q=XSplit+tutorial)
+When you open the XSplit, it will ask the canvas option for different purposes. They are easy to manipulate with drag and drop. It has some useful features for streaming, for further information you can google about [XSplit tutorial](https://www.google.com/search?q=XSplit+tutorial).
  
 ![image](https://user-images.githubusercontent.com/32591015/95835582-13be2680-0d47-11eb-93f9-42834de37f95.jpg)
 
