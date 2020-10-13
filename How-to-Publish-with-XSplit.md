@@ -17,7 +17,8 @@ We're assuming that your Ant Media Server accepts all streams. (There is no any 
 
 * Click `Broadcast` in the XSplit Window and then click ‘Set up a new output’ 
 * Choose `Custom RTMP` in the `Set up a new output` dropdown menu.
- 
+![Adsız4](https://user-images.githubusercontent.com/32591015/95836553-3ef54580-0d48-11eb-8110-b28cf5e4087c.jpg) 
+
 * You can write any name and description you want.
 * In the RTMP URL box, type your RTMP URL without stream id. It's like `rtmp://your_server_domain_name/LiveApp`
 PS: Your 1935 port should be open and your server should be reachable. 
