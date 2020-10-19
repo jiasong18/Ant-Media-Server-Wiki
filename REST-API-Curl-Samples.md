@@ -13,9 +13,9 @@ Also you need to use http or https according to your setup.
 Let's start with some of the GET Methods. Get methods are for getting data from the server.
 
 * Following method gets the broadcast information:
-```
-curl -X GET "https://{domain:port}/{application}/rest/v2/broadcasts/{streamid}"
-```
+  ```
+  curl -X GET "https://{domain:port}/{application}/rest/v2/broadcasts/{streamid}"
+  ```
 
 * If you want to get current viewer count, you can use the following method:
 ```
