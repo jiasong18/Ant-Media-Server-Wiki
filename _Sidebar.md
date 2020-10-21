@@ -77,7 +77,6 @@
 * Recording HLS, MP4 and how to recover
 * Previews
 * Re-streaming update
-* CUDA Update for new FFmpeg version
 * Git Branching
 * UML Diagrams
 * [REST API Curl Samples](REST-API-Curl-Samples)
