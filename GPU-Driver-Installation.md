@@ -13,51 +13,67 @@ After you are sure that your GPU contains hardware-based encoder, the only thing
 # Installation on Ubuntu 16.04 and Ubuntu 18.04
 
 ### Ubuntu 16.04
+* Get Repo
+  ```
+  wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_10.2.89-1_amd64.deb
+  ```
 
-`wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_10.2.89-1_amd64.deb`
+* Install repository meta-data
+  ```
+  dpkg -i cuda-repo-ubuntu1604_10.2.89-1_amd64.deb
+  ```
 
-Install repository meta-data
-
-`dpkg -i cuda-repo-ubuntu1604_10.2.89-1_amd64.deb`
-
-Import CUDA Public GPG Key
-
-`sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub`
+* Import CUDA Public GPG Key
+  ```
+  sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
+  ```
 
 ### Ubuntu 18.04
+* Get Repo
+  ```
+  wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.2.89-1_amd64.deb
+  ```
 
-`wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.2.89-1_amd64.deb`
+* Install repository meta-data
+  ```
+  dpkg -i cuda-repo-ubuntu1804_10.2.89-1_amd64.deb
+  ```
 
-Install repository meta-data
-
-`dpkg -i cuda-repo-ubuntu1804_10.2.89-1_amd64.deb`
-
-Import CUDA Public GPG Key
-
-`sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub`
+* Import CUDA Public GPG Key
+  ```
+  sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+  ```
 
 ### Ubuntu 16.04 and Ubuntu 18.04
 
-Update repository cache
+* Update repository cache
 
-`sudo apt-get update`
+  ``` 
+  sudo apt-get update 
+  ```
 
-Install CUDA Runtime 10.0
+* Install CUDA Runtime 11.0 . For versions earlier than 2.2, please install CUDA Runtime 10.0
 
-`sudo apt-get install cuda-runtime-10-0`
+  ``` 
+  sudo apt-get install cuda-runtime-11-0
+  ```
 
-If you've installed latest version of CUDA runtime(such 10.1) and it does not work, you can install following packets for compatibility
-```
-sudo apt-get install cuda-cudart-10-0
-sudo apt-get install cuda-compat-10-0
-```
-If everthing is ok, you can run the command below to see the status of your GPU
+  If you've installed latest version of CUDA runtime(such 11.2) and it does not work, you can install following packets for compatibility
+  ```
+  sudo apt-get install cuda-cudart-11-0
+  sudo apt-get install cuda-compat-11-0
+  ```
 
-`nvidia-smi`
+* If everthing is ok, you can run the command below to see the status of your GPU
+  ```
+  nvidia-smi
+  ```
 
-You can install Ant Media Server with its usual way or if you already install it, you can restart the Ant Media Server.
+* You can install Ant Media Server with its usual way or if you already install it, you can restart the Ant Media Server.
 
-`sudo service antmedia restart`
+  ```
+  sudo service antmedia restart
+  ```
 
 # Using NVIDIA Hardware-based Encoder
 
