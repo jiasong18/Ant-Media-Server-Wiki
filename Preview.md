@@ -1,4 +1,5 @@
 * First, at least 1 adaptive bitrate must be created to create a preview. You can add in the Dashboard `Application > Your App > Settings > Add New Bitrate`
+
 ![](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/preview_1.png)
 * Preview image URL will be available in this URL template `http://<SERVER_NAME>:5080/<APP_NAME>/previews/<STREAM_ID>.png`
 * Preview image stores in this folder `<ANT_MEDIA_SERVER_DIR>/webapps/<APP_NAME>/previews/<STREAM_ID>.png`
