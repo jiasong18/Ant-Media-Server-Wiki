@@ -1,4 +1,4 @@
-* First, at least 1 adaptive bitrate must be created to create a preview.
+* First, at least 1 adaptive bitrate must be created to create a preview. You can add in the Dashboard `Application > Your App > Settings > Add New Bitrate`
 ![](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/preview_1.png)
 * Preview image URL will be available in this URL template `http://<SERVER_NAME>:5080/<APP_NAME>/previews/<STREAM_ID>.png`
 * Preview image stores in this folder `<ANT_MEDIA_SERVER_DIR>/webapps/<APP_NAME>/previews/<STREAM_ID>.png`
@@ -24,7 +24,7 @@ For example, If you change it as below it will store every second.
 
     `settings.addDateTimeToMp4FileName=false`
 
-or you can enable in the `Application > Your App > Settings > Add Date-Time to Record File names`
+or you can enable in the Dashboard `Application > Your App > Settings > Add Date-Time to Record File names`
 ![](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/preview_2.png)
 
 * `settings.previewGenerate`: Default value is true. If false, Preview images will not generate.
