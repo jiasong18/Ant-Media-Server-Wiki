@@ -1,3 +1,5 @@
+Ant Media Server can generate periodic previews(snapshots) of the incoming streams on the fly. This guide will help you learn the configuration parameters for generating and using previews   
+
 * First, at least 1 adaptive bitrate must be created to create a preview. You can add in the Dashboard `Application > Your App > Settings > Add New Bitrate`
 
 ![](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/preview_1.png)
