@@ -13,6 +13,7 @@
     * [Force Quality](Force-Stream-Quality)
   * [HLS Playing](HLS-Playing)
   * [Embedded Web Player](Embedded-Web-Player)
+  * [Preview Guide](Preview-Guide)
 * [Conference Call](WebRTC-Conference-Call)
 * [Peer to Peer Call](WebRTC-Peer-to-Peer-Communication)
 * [Adaptive Bitrate(Multi-Bitrate) Streaming](Adaptive-Bitrate-Streaming)
@@ -75,7 +76,6 @@
     * [Reference](WebRTC-Android-SDK-Reference)
 * [Developer Quick Start](Developer-Quick-Start)
 * Recording HLS, MP4 and how to recover
-* Previews
 * Re-streaming update
 * Git Branching
 * UML Diagrams
