@@ -10,8 +10,6 @@ Introduction to clustering with AntMedia Server could be found here.
 
 Step 1: Create a Resource Group
 
-![](images/azure/create-resource-1.png?raw=true)
-
 [![Image](images/azure/create-resource-1.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/create-resource-1.png)
 
 
