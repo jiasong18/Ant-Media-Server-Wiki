@@ -12,6 +12,5 @@ Step 1: Create a Resource Group
 
 ![](images/azure/create-resource-1.png?raw=true)
 
-<img src="images/azure/create-resource-1.png" width="100" height="100" >
+<img src="images/azure/create-resource-1.png" width="1745" height="950" >
 
-<img src="images/azure/create-resource-1.png" >
