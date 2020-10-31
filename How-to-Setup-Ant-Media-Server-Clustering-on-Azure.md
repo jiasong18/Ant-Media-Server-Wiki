@@ -8,8 +8,10 @@ To set up media server, Having an Azure account and a ready AntMedia Server Imag
 The architecture of the cluster setup could be found here.
 Introduction to clustering with AntMedia Server could be found here.
 
-Step 1: Create a Resource Group
+### Step 1: Create a Resource Group
 
 [![Image](images/azure/create-resource-1.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/create-resource-1.png)
 
+[![Image](images/azure/create-resource-2.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/create-resource-2.png)
 
+[![Image](images/azure/create-resource-3.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/create-resource-3.png)
