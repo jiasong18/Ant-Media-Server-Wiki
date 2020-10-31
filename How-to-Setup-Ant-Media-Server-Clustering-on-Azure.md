@@ -12,5 +12,6 @@ Step 1: Create a Resource Group
 
 ![](images/azure/create-resource-1.png?raw=true)
 
-<img src="images/azure/create-resource-1.png" width="1745" height="950" >
+[![Image](images/azure/create-resource-1.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/create-resource-1.png)
+
 
