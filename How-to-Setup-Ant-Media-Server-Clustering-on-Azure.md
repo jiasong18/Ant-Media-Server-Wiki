@@ -213,7 +213,12 @@ Son olarak scale setleriniz asagidaki gibi gozukecektir.
 
 [![Image](images/azure/virtual-machine-10.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-10.png)
 
-Her seyi dogru yaptiysaniz HTTP://application-gateway-ip giris yaptiginiz da asagidaik gibi ekran sizi karsilayacaktir.
+### Troubleshoot
+
+Asagidaki sayfalar cevap veriyorsa edge/origin yonlendirmeleriniz dogru calisiyor demektir.
+
+Edge icin login https://application-gateway-ip:5443
+Origin icin login https://application-gateway-ip
 
 [![Image](images/azure/antmedia-login.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/antmedia-login.png)
 
