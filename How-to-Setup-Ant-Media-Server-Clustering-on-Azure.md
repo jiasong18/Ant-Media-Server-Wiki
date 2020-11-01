@@ -228,7 +228,7 @@ Finally, your scale sets will look like the following.
 
 [![Image](images/azure/virtual-machine-10.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-10.png)
 
-### Troubleshoot
+### Test
 
 If the following pages are responding then your edge / origin redirects are working correctly.
 
