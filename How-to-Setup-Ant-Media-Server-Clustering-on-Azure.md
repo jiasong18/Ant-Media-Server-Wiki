@@ -55,7 +55,7 @@ The process is completed by clicking on the "**Create**" button.
 
 ### Step 3: Create a MongoDB Virtual Machine
 
-Click Virtual Machines on the left bar and then click **+Add**
+Click Virtual Machines on the left bar and then click "**+Add**"
 
 [![Image](images/azure/mongodb-1.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/mongodb-1.png)
 
@@ -74,15 +74,16 @@ Select the Virtual Network that you created, click "**Advanced**" from "**Nic ne
 
 [![Image](images/azure/mongodb-4.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/mongodb-4.png)
 
-Acilan pencerede Add an inbound Rule tiklayin ve asagidaki gibi inbound security rule ekleyin.
+Click "**Add an inbound rule**" in the window that appears and "**Add inbound security rule**" as below.
 
 [![Image](images/azure/mongodb-6.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/mongodb-6.png)
 
-Enter the following values and click next:
+Enter the following values and click "**Next: Advanced**"
 
 [![Image](images/azure/mongodb-7.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/mongodb-7.png)
 
-Custom data alanina asagidaki satirlari ekleyin ve "Review + Create" butonuna tiklayip MongoDB instnacesini olusturun.
+Add the following lines to the "**Custom data**" area and click the "**Review + Create**" button to create a MongoDB instance.
+
 ```
 #!/bin/bash
 wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
@@ -94,32 +95,33 @@ systemctl restart mongod
 ```
 [![Image](images/azure/mongodb-8.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/mongodb-8.png)
 
+The process is completed by clicking on the "**Create**" button.
 
 [![Image](images/azure/mongodb-9.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/mongodb-9.png)
 
 ### Step 4: Create Application Gateway
 
-Click Create a Resource in the portal which is on the upper left. Enter Application Gateway in the Search the Marketplace box at the top of the New pane that appears. Click Application Gateway when it appears in the search results.
+Click Create a Resource in the portal which is on the upper left. Enter Application Gateway in the Search the Marketplace box at the top of the New pane that appears. Click the "**Application Gateway**" when it appears in the search results.
 
 [![Image](images/azure/application-gateway-1.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-1.png)
 
-Select Classic in the Select a deployment model box in the Application Gateway pane that appears, then click Create.
+Proceed by clicking "**Create**" button
 
 [![Image](images/azure/application-gateway-2.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-2.png)
 
-Resource Group, Application Gateway Name, Region ve Virtual Network ayarlarini asagidaki gibi giriniz ve "Next: Frontends" e tiklayin.
+Enter the Resource Group, Application Gateway Name, Region, and Virtual Network settings as follows and click "**Next: Frontends**"
 
 [![Image](images/azure/application-gateway-3.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-3.png)
 
-Add New butonuna tiklayip asagidaki gibi girin ve "Next: Backends" 'e tiklayin.
+Click on the "**Add new**" button and enter the public IP name then click "**Next: Backends**"
 
 [![Image](images/azure/application-gateway-5.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-5.png)
 
-Add a Backend pool 'a tiklayip ekram goruntusundeki gibi hem origin hem de Edge icin poollar olusturun ve "Next: Configuration" 'a tiklayin.
+Click on "**Add a backend pool**", create pools for both origin and edge as shown in the screenshot, and click "**Next: Configuration**".
 
 [![Image](images/azure/application-gateway-7.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-7.png)
 
-Add a routing rule 'e atiklayin.
+Click on "**Add a routing rule**" in the window that appears.
 
 [![Image](images/azure/application-gateway-8.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-8.png)
 
