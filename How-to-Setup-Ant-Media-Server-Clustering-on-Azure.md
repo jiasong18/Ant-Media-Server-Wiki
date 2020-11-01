@@ -195,7 +195,7 @@ Enter the following values and click "Next: Networking"
 
 [![Image](images/azure/virtual-machine-4.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-4.png)
 
-Bu ekranda Virtual Network olarak onceden olusturmus oldugumuz antmedia-cluster-virtual-network 'u secin. Network interface olarak origin subnetini secin ve Use a load Balancer Yes tiklayin. Onceden olusturmus oldugumuz application gateway 'i secin ve Backend Pool olarak origin i secin ve "Next: Scaling" 'i tiklayin.
+Select the antmedia-cluster-virtual-network that we created before as Virtual Network in this screen. Select the origin subnet as Network interface and click “Yes” for Use a load balancer choice. Select the application gateway that we created before and select origin as Backend pool then click the “Next: Scaling”.
 
 [![Image](images/azure/virtual-machine-5.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-5.png)
 
