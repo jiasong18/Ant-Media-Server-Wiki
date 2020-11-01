@@ -2,7 +2,8 @@ In this guide, I will explain how to setup Ant Media Server Clustering on Azure.
 
 For streaming applications, you will need a clustering solution when you have high numbers of publishers and viewers. Especially when you require ultra-low latency and adaptive bitrate because they need more processing power. Ultra-low latency is achieved by WebRTC and it is a CPU intensive protocol. Adaptive bitrating is downgrading video quality in bad networks if needed. It is also CPU intensive because there is video conversion. Luckily, Ant Media Server Enterprise Edition supports clustering, so that you can handle the high load in your streaming applications.
 
-Requirements:
+**Requirements:**
+
 To set up media server, Having an Azure account and a ready AntMedia Server Image are needed.
 
 The architecture of the cluster setup could be found here.
@@ -10,56 +11,66 @@ Introduction to clustering with AntMedia Server could be found here.
 
 ### Step 1: Create a Resource Group
 
+Each resource created must be in the same resource group. For this, we will first create a resource group. Named **antmedia-cluster**
+
+Click Resource groups in the portal which is on the left side then click **+Add**
+
 [![Image](images/azure/create-resource-1.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/create-resource-1.png)
 
+Enter "**Resource group**" then choose your zone.
+
 [![Image](images/azure/create-resource-2.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/create-resource-2.png)
+
+Proceed by clicking "**Create**" button
 
 [![Image](images/azure/create-resource-3.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/create-resource-3.png)
 
 ### Step 2: Create a Virtual Network
 
-We need to create a virtual network named antmedia-cluster-virtual-network, and then we will add gateway-subnet, origin-subnet and edge-subnet as described in this doc.
+We need to create a virtual network named antmedia-cluster-virtual-network, and then we will add gateway-subnet, origin-subnet and edge-subnet
 
-Click Create a Resource in the portal which is on the upper left.
-Enter Virtual network in the Search the Marketplace box at the top of the New pane that appears. Click Virtual network when it appears in the search results.
+Click Create a Resource in the portal which is on the upper left. Enter Virtual network in the Search the Marketplace box at the top of the New pane that appears. Click Virtual network when it appears in the search results.
 
 [![Image](images/azure/virtual-network-1.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-network-1.png)
 
-Select Classic in the Select a deployment model box in the Virtual Network pane that appears, then click Create.
+click "**Create**"
 
 [![Image](images/azure/virtual-network-2.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-network-2.png)
 
-Daha once olusturdugumuz resource grubu secip, name alanina antmedia-clustur-virtual-network yazip "Next: IP Address" butonuna tiklayin.
+Select the resource group that we created before, enter **antmedia-cluster-virtual-network** in the name field and click on the "**Next: IP Address**" button.
 
 [![Image](images/azure/virtual-network-3.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-network-3.png)
 
-Add subnet butonuna tiklayip antmedia-origin-subnet, antmedia-edge-subnet ve antmedia-gw-subnet lerini asagidaki sekildeki gibi olusturun.
+Click on the Add subnet button and create the antmedia-origin-subnet, antmedia-edge-subnet and antmedia-gw-subnet as shown in the figure below.
 
 [![Image](images/azure/virtual-network-4.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-network-4.png)
 
-Olusturdugunuz subnet asagidaki gibi gozukecektir. Her sey tamamsa "Review + create" butonuna tiklayip Virtual Networkunuzu olusturun.
+The subnets that you created will look like the following. If everything is ok, click the "Review + create" button and create your Virtual Network.
 
 [![Image](images/azure/virtual-network-5.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-network-5.png)
 
-Create butonuna tiklanayarak islem tamamlanir.
+The process is completed by clicking on the "**Create**" button.
 
 [![Image](images/azure/virtual-network-6.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-network-6.png)
 
 ### Step 3: Create a MongoDB Virtual Machine
 
-Click Virtual Machines on the left bar and then click +Add:
+Click Virtual Machines on the left bar and then click **+Add**
 
 [![Image](images/azure/mongodb-1.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/mongodb-1.png)
 
-Enter the following values and click next:
-
+Enter the following values and click "**Next: Disks**"
+```
+Resource group "antmedia-cluster"
+Image "Ubuntu 18.04 LTS"
+```
 [![Image](images/azure/mongodb-2.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/mongodb-2.png)
 
-Enter the following values and click next:
+Enter the following values and click "**Next: Networking**"
 
 [![Image](images/azure/mongodb-3.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/mongodb-3.png)
 
-Virtual Network kismindan olusturdugumuz Virtual Networku secin, Nic network security Group 'dan Advanced 'i secin ve Create New e tiklayin.
+Select the Virtual Network that you created, click "**Advanced**" from "**Nic network security group**" and click "**Create new**"
 
 [![Image](images/azure/mongodb-4.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/mongodb-4.png)
 
