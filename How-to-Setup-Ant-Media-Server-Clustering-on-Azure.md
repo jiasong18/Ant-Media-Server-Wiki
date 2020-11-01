@@ -18,7 +18,7 @@ Introduction to clustering with AntMedia Server could be found here.
 
 ### Step 2: Create a Virtual Network
 
-We need to create a virtual network named antmedia-cluster-virtual-network, and then we will add origin-subnet and edge-subnet as described in this doc.
+We need to create a virtual network named antmedia-cluster-virtual-network, and then we will add gateway-subnet, origin-subnet and edge-subnet as described in this doc.
 
 Click Create a Resource in the portal which is on the upper left.
 Enter Virtual network in the Search the Marketplace box at the top of the New pane that appears. Click Virtual network when it appears in the search results.
@@ -29,29 +29,60 @@ Select Classic in the Select a deployment model box in the Virtual Network pane 
 
 [![Image](images/azure/virtual-network-2.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-network-2.png)
 
+Daha once olusturdugumuz resource grubu secip, name alanina antmedia-clustur-virtual-network yazip "Next: IP Address" butonuna tiklayin.
+
 [![Image](images/azure/virtual-network-3.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-network-3.png)
+
+Add subnet butonuna tiklayip antmedia-origin-subnet, antmedia-edge-subnet ve antmedia-gw-subnet lerini asagidaki sekildeki gibi olusturun.
 
 [![Image](images/azure/virtual-network-4.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-network-4.png)
 
+Olusturdugunuz subnet asagidaki gibi gozukecektir. Her sey tamamsa "Review + create" butonuna tiklayip Virtual Networkunuzu olusturun.
+
 [![Image](images/azure/virtual-network-5.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-network-5.png)
+
+Create butonuna tiklanayarak islem tamamlanir.
 
 [![Image](images/azure/virtual-network-6.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-network-6.png)
 
 ### Step 3: Create a MongoDB Virtual Machine
 
+Click Virtual Machines on the left bar and then click +Add:
+
 [![Image](images/azure/mongodb-1.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/mongodb-1.png)
+
+Enter the following values and click next:
 
 [![Image](images/azure/mongodb-2.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/mongodb-2.png)
 
+Enter the following values and click next:
+
 [![Image](images/azure/mongodb-3.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/mongodb-3.png)
+
+Virtual Network kismindan olusturdugumuz Virtual Networku secin, Nic network security Group 'dan Advanced 'i secin ve Create New e tiklayin.
 
 [![Image](images/azure/mongodb-4.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/mongodb-4.png)
 
+Acilan pencerede Add an inbound Rule tiklayin ve asagidaki gibi inbound security rule ekleyin.
+
 [![Image](images/azure/mongodb-6.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/mongodb-6.png)
+
+Enter the following values and click next:
 
 [![Image](images/azure/mongodb-7.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/mongodb-7.png)
 
+Custom data alanina asagidaki satirlari ekleyin ve "Review + Create" butonuna tiklayip MongoDB instnacesini olusturun.
+```
+#!/bin/bash
+wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
+echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu `lsb_release -cs`/mongodb-org/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org
+sed -i 's/bindIp:.*/bindIp: 0.0.0.0/g' /etc/mongod.conf
+systemctl restart mongod
+```
 [![Image](images/azure/mongodb-8.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/mongodb-8.png)
+
 
 [![Image](images/azure/mongodb-9.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/mongodb-9.png)
 
