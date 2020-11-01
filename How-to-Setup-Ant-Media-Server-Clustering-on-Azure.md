@@ -212,3 +212,6 @@ Tekrar yeni bir adet Scale Set olusturun yukaridaki adimlari tekrarlayin. Sonra 
 Son olarak scale setleriniz asagidaki gibi gozukecektir.
 
 [![Image](images/azure/virtual-machine-10.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-10.png)
+
+Her seyi dogru yaptiysaniz HTTP://application-gateway-ip giris yaptiginiz da asagidaik gibi ekran sizi karsilayacaktir.
+
