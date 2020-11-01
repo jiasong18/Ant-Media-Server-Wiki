@@ -215,3 +215,8 @@ Son olarak scale setleriniz asagidaki gibi gozukecektir.
 
 Her seyi dogru yaptiysaniz HTTP://application-gateway-ip giris yaptiginiz da asagidaik gibi ekran sizi karsilayacaktir.
 
+[![Image](images/azure/antmedia-login.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/antmedia-login.png)
+
+Cluster Menusune geldiginizde de asagidaki gibi join olmus nodelari gorebilirsiniz.
+
+[![Image](images/azure/antmedia-cluster.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/antmedia-cluster.png)
