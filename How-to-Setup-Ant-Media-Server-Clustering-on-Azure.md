@@ -232,8 +232,9 @@ Finally, your scale sets will look like the following.
 
 If the following pages are responding then your edge / origin redirects are working correctly.
 
-Edge login https://application-gateway-ip:5443
-Origin login https://application-gateway-ip
+Edge URL Address https://application-gateway-ip:5443
+
+Origin URL Address: https://application-gateway-ip
 
 [![Image](images/azure/antmedia-login.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/antmedia-login.png)
 
