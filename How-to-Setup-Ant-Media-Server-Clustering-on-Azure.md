@@ -18,7 +18,14 @@ Introduction to clustering with AntMedia Server could be found here.
 
 ### Step 2: Create a Virtual Network
 
+We need to create a virtual network named antmedia-cluster-virtual-network, and then we will add origin-subnet and edge-subnet as described in this doc.
+
+Click Create a Resource in the portal which is on the upper left.
+Enter Virtual network in the Search the Marketplace box at the top of the New pane that appears. Click Virtual network when it appears in the search results.
+
 [![Image](images/azure/virtual-network-1.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-network-1.png)
+
+Select Classic in the Select a deployment model box in the Virtual Network pane that appears, then click Create.
 
 [![Image](images/azure/virtual-network-2.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-network-2.png)
 
