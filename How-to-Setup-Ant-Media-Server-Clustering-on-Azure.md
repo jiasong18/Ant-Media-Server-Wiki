@@ -162,24 +162,53 @@ Son olarak "Create" basarak kurulumu tamamlayin.
 
 ### Step 4: Create Edge/Origin Scale Sets
 
+We need to setup scale sets. Click Create a Resource in the portal which is on the upper left. Enter Application Gateway in the Search the Marketplace box at the top of the New pane that appears. Click Application Gateway when it appears in the search results.
+
 [![Image](images/azure/virtual-machine-1.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-1.png)
+
+Select Classic in the Select a deployment model box in the "Virtual Machine Scale Set" pane that appears, then clicks Create.
 
 [![Image](images/azure/virtual-machine-2.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-2.png)
 
+Ilk olarak Origin Scale Set'i olusturacagiz. Resource Groupu secin Virtual Machine scale set name Region ayarlarini asagidaki gibi yapin. Browse all public and private images 'e tiklayin.
+
 [![Image](images/azure/virtual-machine-3.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-3.png)
+
+Acilan pencerede Ant Media Server diye aratip "Ant Media Server Enterprise 2.1.0" surumu secin.
 
 [![Image](images/azure/virtual-machine-3_1.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-3_1.png)
 
+Disk secimini yaptiktan sonra "Next: Networking" 'i secin.
+
 [![Image](images/azure/virtual-machine-4.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-4.png)
+
+Bu ekranda Virtual Network olarak onceden olusturmus oldugumuz antmedia-cluster-virtual-network 'u secin. Network interface olarak origin subnetini secin ve Use a load Balancer Yes tiklayin. Onceden olusturmus oldugumuz application gateway 'i secin ve Backend Pool olarak origin i secin ve "Next: Scaling" 'i tiklayin.
 
 [![Image](images/azure/virtual-machine-5.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-5.png)
 
+Bu ekranda Custom'i secin ve Cpu threshold %60 'a getirin. Diger ayarlari kendinize gore yapabilirsiniz.
+
 [![Image](images/azure/virtual-machine-6.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-6.png)
+
+Management ve Health sekmelerinde direk next diyerek devam edin ve Advanced kisminda Custom data alanina asagidaki satirlari ekleyin.
+
+```
+#!/bin/bash
+cd /usr/local/antmedia/
+./change_server_mode.sh cluster 10.0.2.4
+```
+10.0.2.4 IP adresi daha once kurmus oldugum MongoDB instanceinin private IP adresidir. Kendinize gore duzenleyiniz.
 
 [![Image](images/azure/virtual-machine-7.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-7.png)
 
+Create butonuna tiklayarak Origin icin Scale Set'ini olusturun. 
+
 [![Image](images/azure/virtual-machine-8.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-8.png)
 
+Tekrar yeni bir adet Scale Set olusturun yukaridaki adimlari tekrarlayin. Sonra Networking kismini da asagidaki gibi duzenleyin. Network Interface olarak Edge Subnetu olacak ve Application Gateway Backend pool icin de Edge secili olacaktir.
+
 [![Image](images/azure/virtual-machine-9.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-9.png)
+
+Son olarak scale setleriniz asagidaki gibi gozukecektir.
 
 [![Image](images/azure/virtual-machine-10.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-10.png)
