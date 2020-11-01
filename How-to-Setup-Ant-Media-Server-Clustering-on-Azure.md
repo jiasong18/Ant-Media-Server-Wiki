@@ -74,7 +74,7 @@ Select the Virtual Network that you created, click "**Advanced**" from "**Nic ne
 
 [![Image](images/azure/mongodb-4.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/mongodb-4.png)
 
-Click "**Add an inbound rule**" in the window that appears and "**Add inbound security rule**" as below.
+Click the "**Add an inbound rule**" button in the windows that appears and click the "**Add inbound security rule**" button
 
 [![Image](images/azure/mongodb-6.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/mongodb-6.png)
 
@@ -125,15 +125,15 @@ Click on "**Add a routing rule**" in the window that appears.
 
 [![Image](images/azure/application-gateway-8.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-8.png)
 
-Ekran goruntundeki gibi alanlari doldurup "Backend targets" 'i tiklayin.
+Enter the following values for Edge sides then click "**Add**" button.
 
 [![Image](images/azure/application-gateway-9.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-9.png)
 
-Backend target "Edge" poolunu secin ve HTTP settings icon Add new 'e tiklayin.
+Select the "**Edge**" pool as the backend target and click "**Add new**" for HTTP settings.
 
 [![Image](images/azure/application-gateway-10.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-10.png)
 
-Asagidaki gibi doldurun. Bu ayar hem origin hem de origin icin olacaktir. 
+Enter the following values. These values will be for both origin and edge.
 
 [![Image](images/azure/application-gateway-11.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-11.png)
 
@@ -141,57 +141,57 @@ Ayarlariniz asagidaki gibiyse HTTP istekler icin Edge yapilandirilmasi bitmistir
 
 [![Image](images/azure/application-gateway-12.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-12.png)
 
-Tekrar "Add a routing rule" 'e tiklayip Origin icin HTTP ayarlarini yapalim. Asagidaki gibi ayarlari yapip "Backend target" tiklayin.
+Click on "**Add a routing rule**" again and set the HTTP settings for Origin. Make the settings as below and click "**Backend target**".
 
 [![Image](images/azure/application-gateway-13.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-13.png)
 
-Backend target olarak Origin poolunu secin ve HTTP settings olarakta onceden olusturdugumuz "BackendHttpSettings" i secin.
+Select the Origin pool as the backend target and select the "BackendHttpSettings" that we created before as HTTP settings.
 
 [![Image](images/azure/application-gateway-14.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-14.png)
 
-Simdi sirada Origin icin HTTPS isteklerini yonlendirmeye geldi. Bunun icin asagidaki gibi ayarlari yapin. cluster.antmedia.io.pfx sertifikasi icin bu linki kullanabilirsiniz.
+Now it's time to forward HTTPS requests to Origin. For this, make the settings as follows. You can use [this link](https://antmedia.io/ssl-for-azure-app-gateway-for-scaling-azure-ant-media/) for a certificate.
 
 [![Image](images/azure/application-gateway-15.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-15.png)
 
-Backend target olarak Origin ve HTTP Settings olarak "BackendHttpSetting" secin.
+Select "**BackendHttpSetting**" as HTTP Settings and  Select "**Origin**" as Backend target.
 
 [![Image](images/azure/application-gateway-16.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-16.png)
 
-Ayni sekilde Edge icin 5443 icin yapilandirmayi asagidaki gibi yapin.
+Likewise, configure port 5443 for Edge as follows.
 
 [![Image](images/azure/application-gateway-17.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-17.png)
 
-Backend target olarak Edge ve HTTP Settings olarak "BackendHttpSetting" secin.
+Select "**BackendHttpSetting**" as HTTP Settings and  Select "**Edge**" as Backend target.
 
 [![Image](images/azure/application-gateway-18.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-18.png)
 
-Tam olarak application-gateway ayarlari asagidaki gibi gozukecektir. Her sey yolundaysa "Next:Tags" tiklayin.
+Completely, application-gateway settings will look like the following. If everything is ok, click "**Next: Tags**"
 
 [![Image](images/azure/application-gateway-19.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-19.png)
 
-Son olarak "Create" basarak kurulumu tamamlayin.
+The process is completed by clicking on the "Create" button.
 
 [![Image](images/azure/application-gateway-20.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-20.png)
 
 ### Step 4: Create Edge/Origin Scale Sets
 
-We need to setup scale sets. Click Create a Resource in the portal which is on the upper left. Enter Application Gateway in the Search the Marketplace box at the top of the New pane that appears. Click Application Gateway when it appears in the search results.
+We need to setup scale sets. Click Create a Resource in the portal which is on the upper left. Enter "**Virtual Machine Scale Set**" in the Search the Marketplace box at the top of the New pane that appears. Click "**Virtual Machine Scale Set**" when it appears in the search results.
 
 [![Image](images/azure/virtual-machine-1.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-1.png)
 
-Select Classic in the Select a deployment model box in the "Virtual Machine Scale Set" pane that appears, then clicks Create.
+Proceed by clicking "**Create**" button
 
 [![Image](images/azure/virtual-machine-2.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-2.png)
 
-Ilk olarak Origin Scale Set'i olusturacagiz. Resource Groupu secin Virtual Machine scale set name Region ayarlarini asagidaki gibi yapin. Browse all public and private images 'e tiklayin.
+First, we will create the Origin Scale Set. Select the Resource Group, enter Virtual Machine scale set name, choose Region settings as follows. Then click on "**Browse all public and private images**"
 
 [![Image](images/azure/virtual-machine-3.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-3.png)
 
-Acilan pencerede Ant Media Server diye aratip "Ant Media Server Enterprise 2.1.0" surumu secin.
+In the window that appears, search for Ant Media Server and select the "**Ant Media Server Enterprise 2.1.0**" version.
 
 [![Image](images/azure/virtual-machine-3_1.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-3_1.png)
 
-Disk secimini yaptiktan sonra "Next: Networking" 'i secin.
+Enter the following values and click "Next: Networking"
 
 [![Image](images/azure/virtual-machine-4.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-4.png)
 
@@ -199,42 +199,44 @@ Bu ekranda Virtual Network olarak onceden olusturmus oldugumuz antmedia-cluster-
 
 [![Image](images/azure/virtual-machine-5.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-5.png)
 
-Bu ekranda Custom'i secin ve Cpu threshold %60 'a getirin. Diger ayarlari kendinize gore yapabilirsiniz.
+Select Custom and set the Cpu threshold to 60%. You can set other settings according to yourself.
 
 [![Image](images/azure/virtual-machine-6.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-6.png)
 
-Management ve Health sekmelerinde direk next diyerek devam edin ve Advanced kisminda Custom data alanina asagidaki satirlari ekleyin.
+Continue by clicking directly next to the "**Management**" and "**Health**" tabs and add the following lines to the "**Custom data**" area in the **Advanced section**.
 
 ```
 #!/bin/bash
 cd /usr/local/antmedia/
 ./change_server_mode.sh cluster 10.0.2.4
 ```
-10.0.2.4 IP adresi daha once kurmus oldugum MongoDB instanceinin private IP adresidir. Kendinize gore duzenleyiniz.
+**10.0.2.4** IP address is the private IP address of the MongoDB instance I have set up before. Change according to your own MongoDB instance.
 
 [![Image](images/azure/virtual-machine-7.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-7.png)
 
-Create butonuna tiklayarak Origin icin Scale Set'ini olusturun. 
+Click the "**Create**" button to create the Scale Set for the Origin.
 
 [![Image](images/azure/virtual-machine-8.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-8.png)
 
-Tekrar yeni bir adet Scale Set olusturun yukaridaki adimlari tekrarlayin. Sonra Networking kismini da asagidaki gibi duzenleyin. Network Interface olarak Edge Subnetu olacak ve Application Gateway Backend pool icin de Edge secili olacaktir.
+### Edge
+
+Create a new Scale Set again and repeat the above steps. Then edit the Network interface part as follows. There will be Edge Subnet as the Network Interface and Edge will be selected for the Application Gateway Backend pool.
 
 [![Image](images/azure/virtual-machine-9.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-9.png)
 
-Son olarak scale setleriniz asagidaki gibi gozukecektir.
+Finally, your scale sets will look like the following.
 
 [![Image](images/azure/virtual-machine-10.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-10.png)
 
 ### Troubleshoot
 
-Asagidaki sayfalar cevap veriyorsa edge/origin yonlendirmeleriniz dogru calisiyor demektir.
+If the following pages are responding then your edge / origin redirects are working correctly.
 
-Edge icin login https://application-gateway-ip:5443
-Origin icin login https://application-gateway-ip
+Edge login https://application-gateway-ip:5443
+Origin login https://application-gateway-ip
 
 [![Image](images/azure/antmedia-login.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/antmedia-login.png)
 
-Cluster Menusune geldiginizde de asagidaki gibi join olmus nodelari gorebilirsiniz.
+When you go to the Cluster Menu, you can see the joined nodes as below.
 
 [![Image](images/azure/antmedia-cluster.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/antmedia-cluster.png)
