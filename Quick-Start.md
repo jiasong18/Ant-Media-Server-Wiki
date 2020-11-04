@@ -3,7 +3,7 @@ The installation procedure for Ant Media Server Community and Enterprise Edition
 
 ## Get Started
 There are 2 options to start an Ant Media Server (AMS).
-1. Install to your local ubuntu box(localhost)
+1. Install to your local ubuntu 18.04 box(localhost)
 2. Install to a remote server with Public IP Address
 
 > Quick launch in [AWS](https://aws.amazon.com/marketplace/search/results?x=0&y=0&searchTerms=Ant+Media+Server&page=1&ref_=nav_search_box) or [Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Ant%20Media%20Server&page=1) or [DigitalOcean](https://marketplace.digitalocean.com/apps/ant-media-server-enterprise-edition)
