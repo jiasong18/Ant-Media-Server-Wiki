@@ -8,6 +8,11 @@ I will do this installation on Ubuntu 20.04, but it is similar in other Linux ba
 
 - Ubuntu 18.04 or Ubuntu 20.04
 - Minimum 4GB RAM
+- Ant Media Servers
+
+Graylog Server: 192.168.1.250
+Ant Media Server 1: 192.168.1.251
+Ant Media Server 2: 192.168.1.252
 
 ### Prerequisites
 
@@ -235,8 +240,25 @@ or
 ```
 https://yourdomain.com
 ```
+## Step 5: Ant Media Server log settings for Graylog
 
-## Step 5: Configuration Graylog
+Login to your servers where Ant Media is installed with ssh and create **/etc/rsyslog.d/25-antmedia.conf** file then add below lines.
+
+```
+$ModLoad imfile
+$InputFileName /usr/local/antmedia/log/ant-media-server.log
+$InputFileTag antmedia
+$InputFileStateFile stat-antmedia
+$InputFileFacility local3
+$InputRunFileMonitor
+*.* @192.168.1.250:5144;RSYSLOG_SyslogProtocol23Format
+```
+save and exit the file then restart rsyslog service.
+```
+sytemctl restart rsyslog
+```
+
+## Step 6: Configuration Graylog
 
 Open the dashboard and log in.
 
@@ -261,4 +283,3 @@ If you have made the correct log settings on Ant Media servers, the logs as belo
 
 
 
-## Step 6: Ant Media Server log settings for Graylog
