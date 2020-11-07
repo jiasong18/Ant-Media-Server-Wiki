@@ -149,7 +149,7 @@ If you don't want to use reverse proxy with SSL termination, uncomment the follo
 to
 `http_bind_address = your_server_public_ip:9000`
 
-If you want to use the reverse proxy with SSL termination, please go to this step.
+If you want to use the reverse proxy with SSL termination, please go to [this step](https://github.com/ant-media/Ant-Media-Server/wiki/Graylog#optional-configuring-nginx-reverse-proxy-with-ssl-termination).
 
 save and exit the file.
 
@@ -237,6 +237,27 @@ https://yourdomain.com
 ```
 
 ## Step 5: Configuration Graylog
+
+Open the dashboard and log in.
+
+![graylog-1.png](https://github.com/ant-media/Ant-Media-Server/wiki/images/graylog-1.png)
+
+Click on **Systems/Inputs** and select **Syslog UDP** and click on **Launch New Input**.
+![graylog-2.png](https://github.com/ant-media/Ant-Media-Server/wiki/images/graylog-2.png)
+
+Set the settings as in the screenshot and click **Save**.
+![graylog-3.png](https://github.com/ant-media/Ant-Media-Server/wiki/images/graylog-3.png)
+
+Your input will appear as below.
+
+![graylog-4.png](https://github.com/ant-media/Ant-Media-Server/wiki/images/graylog-4.png)
+
+If you have made the correct log settings on Ant Media servers, the logs as below will start to appear.
+
+![graylog-5.png](https://github.com/ant-media/Ant-Media-Server/wiki/images/graylog-5.png)
+
+
+
 
 
 
