@@ -262,25 +262,22 @@ sytemctl restart rsyslog
 
 Open the dashboard and log in.
 
-![graylog-1.png](images/graylog-1.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/graylog-1.png)
+[![graylog-1.png](images/graylog-1.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/graylog-1.png)
 
 Click on **Systems/Inputs** and select **Syslog UDP** and click on **Launch New Input**.
 
-![graylog-2.png](images/graylog-2.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/graylog-2.png)
+[![graylog-2.png](images/graylog-2.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/graylog-2.png)
 
 Set the settings as in the screenshot and click **Save**.
 
-![graylog-3.png](images/graylog-3.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/graylog-3.png)
+[![graylog-3.png](images/graylog-3.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/graylog-3.png)
 
 Your input will appear as below.
 
-![graylog-4.png](images/graylog-4.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/graylog-4.png)
+[![graylog-4.png](images/graylog-4.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/graylog-4.png)
 
 If you have made the correct log settings on Ant Media servers, the logs as below will start to appear.
 
-![graylog-5.png](images/graylog-5.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/graylog-5.png)
-
-
-
+[![graylog-5.png](images/graylog-5.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/graylog-5.png)
 
 
