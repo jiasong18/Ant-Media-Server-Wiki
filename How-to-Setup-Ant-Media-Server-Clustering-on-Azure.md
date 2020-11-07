@@ -187,7 +187,7 @@ First, we will create the Origin Scale Set. Select the Resource Group, enter Vir
 
 [![Image](images/azure/virtual-machine-3.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-3.png)
 
-In the window that appears, search for Ant Media Server and select the "**Ant Media Server Enterprise 2.1.0**" version.
+In the window that appears, search for Ant Media Server and select the "**Ant Media Server Enterprise 2.2.1**" version.
 
 [![Image](images/azure/virtual-machine-3_1.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/virtual-machine-3_1.png)
 
