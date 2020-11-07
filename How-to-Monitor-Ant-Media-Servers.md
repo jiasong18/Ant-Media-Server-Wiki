@@ -351,8 +351,8 @@ import an official Nginx signing key
 
 run the following commands to install nginx
 ```
-apt update 
-apt install nginx certbot python-certbot-nginx -y
+sudo apt update 
+sudo apt install nginx certbot python-certbot-nginx -y
 ```
 run the following commands to create certificate
 ```
