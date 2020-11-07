@@ -137,7 +137,7 @@ Enter the following values. These values will be for both origin and edge.
 
 [![Image](images/azure/application-gateway-11.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-11.png)
 
-Ayarlariniz asagidaki gibiyse HTTP istekler icin Edge yapilandirilmasi bitmistir.
+If your settings are as follows, Edge configuration is finished.
 
 [![Image](images/azure/application-gateway-12.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-12.png)
 
@@ -165,7 +165,7 @@ Select "**BackendHttpSetting**" as HTTP Settings and  Select "**Edge**" as Backe
 
 [![Image](images/azure/application-gateway-18.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-18.png)
 
-Completely, application-gateway settings will look like the following. If everything is ok, click "**Next: Tags**"
+Application-gateway settings will look like the following. If everything is ok, click "**Next: Tags**"
 
 [![Image](images/azure/application-gateway-19.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/azure/application-gateway-19.png)
 
