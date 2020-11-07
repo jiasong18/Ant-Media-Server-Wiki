@@ -9,11 +9,11 @@ I will do this installation on Ubuntu 20.04, but it is similar in other Linux ba
 - Ubuntu 18.04 or Ubuntu 20.04
 - Minimum 4GB RAM
 - Ant Media Servers
-
+```
 Graylog Server: 192.168.1.250
 Ant Media Server 1: 192.168.1.251
 Ant Media Server 2: 192.168.1.252
-
+```
 ### Prerequisites
 
 In order to run Elasticsearch, you must install Java. Run the following commands to install.
