@@ -374,7 +374,7 @@ Create a new file called `grafana.conf` and edit and save the following lines ac
 
 ```
 server {
-	listen 443 SSL;
+	listen 443 ssl;
         server_name yourdomain.com;
 	ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
         ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
