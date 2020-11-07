@@ -140,10 +140,14 @@ To create your root_password_sha2 run the following command. You will need this 
 ```
 echo -n "Enter Password: " && head -1 </dev/stdin | tr -d '\n' | sha256sum | cut -d" " -f1
 ```
+Output: `8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92`
+
 you will need to generate a secret to secure the user passwords. To generate the password_secret, you can use the pwgen tool to do.
 ```
 pwgen -N 1 -s 96
 ```
+Output: `jyOQ188lAq1ssEMvCndsj2ImEOuWkC4v3aL4AQg9Dj4wvavkk3BAkSzMXFyH8aN8GiMoIJl2xmT4T5aGwS1r06Cz38SMsgDK`
+
 Edit the **/etc/graylog/server/server.conf** file then add **root_password_sha2** and **password_secret** outputs. 
 ```
 password_secret = jyOQ188lAq1ssEMvCndsj2ImEOuWkC4v3aL4AQg9Dj4wvavkk3BAkSzMXFyH8aN8GiMoIJl2xmT4T5aGwS1r06Cz38SMsgDK
