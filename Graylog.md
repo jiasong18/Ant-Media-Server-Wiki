@@ -150,11 +150,14 @@ password_secret = jyOQ188lAq1ssEMvCndsj2ImEOuWkC4v3aL4AQg9Dj4wvavkk3BAkSzMXFyH8a
 root_password_sha2 = 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
 ```
 If you don't want to use reverse proxy with SSL termination, uncomment the following line then change according to your server ip address.
-`http_bind_address = 127.0.0.1:9000`
+```
+http_bind_address = 127.0.0.1:9000`
+```
 to
-`http_bind_address = your_server_public_ip:9000`
-
-If you want to use the reverse proxy with SSL termination, please go to [this step](https://github.com/ant-media/Ant-Media-Server/wiki/Graylog#optional-configuring-nginx-reverse-proxy-with-ssl-termination).
+```
+http_bind_address = your_server_public_ip:9000
+```
+> If you want to use the reverse proxy with SSL termination, please go to [this step](https://github.com/ant-media/Ant-Media-Server/wiki/Graylog#optional-configuring-nginx-reverse-proxy-with-ssl-termination).
 
 save and exit the file.
 
