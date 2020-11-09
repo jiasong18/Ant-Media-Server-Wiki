@@ -40,7 +40,7 @@ Enable and restart MongoDB service by running the commands below.
 ```
 sudo systemctl enable mongod.service & sudo systemctl restart mongod.service
 ```
-Make sure the service is running.
+Make sure the service is running:
 ```
 sudo systemctl status mongod.service
 ```
@@ -57,7 +57,7 @@ sudo apt-get update && sudo apt-get install elasticsearch-oss
 ```
 Once the installation of Elasticsearch 6.x  is complete, set cluster name for Graylog.
 
-Edit the following file. 
+Edit the following file: 
 ```
 vim /etc/elasticsearch/elasticsearch.yml
 ```
@@ -69,7 +69,7 @@ action.auto_create_index: false
 ```
 Save the file and exit.
 
-Enable and restart Elasticsearch service by running the commands below.
+Enable and restart Elasticsearch service by running the commands below:
 ```
 sudo systemctl enable elasticsearch.service
 sudo systemctl restart elasticsearch.service
@@ -78,7 +78,7 @@ Make sure the service is running. To check the status of Elasticsearch, run the 
 ```
 sudo systemctl status elasticsearch.service
 ```
-Make sure everything is correct by running the following commands.
+Make sure everything is correct by running the following commands:
 ```
 curl -X GET http://localhost:9200
 ```
@@ -133,7 +133,7 @@ curl -XGET 'http://localhost:9200/_cluster/health?pretty=true'
 
 Graylog is a log parser. It collects the logs from various inputs. Now that we have installed MongoDB and Elasticsearch, it is time to install Graylog.
 
-Install Graylog using the following commands.
+Install Graylog using the following commands:
 ```
 wget https://packages.graylog2.org/repo/packages/graylog-3.3-repository_latest.deb
 sudo dpkg -i graylog-3.3-repository_latest.deb
@@ -145,7 +145,7 @@ echo -n "Enter Password: " && head -1 </dev/stdin | tr -d '\n' | sha256sum | cut
 ```
 Output: `8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92`
 
-you will need to generate a secret to secure the user passwords. To generate the password_secret, you can use the pwgen tool to do.
+You will need to generate a secret to secure the user passwords. To generate the password_secret, you can use the pwgen tool to do.
 ```
 pwgen -N 1 -s 96
 ```
@@ -179,7 +179,7 @@ sudo systemctl status graylog-server.service
 ```
 ### Optional: Configuring Nginx Reverse Proxy with SSL Termination
 
-Run the following commands to install Nginx and certbot
+Run the following commands to install Nginx and certbot:
 
 ```
 sudo apt install curl ca-certificates lsb-release -y
@@ -189,13 +189,13 @@ curl -fsSL https://nginx.org/keys/nginx_signing.key | sudo apt-key add -
 sudo apt-get update 
 sudo apt-get install nginx certbot python-certbot-nginx -y
 ```
-Run the following commands to create a certificate.
+Run the following commands to create a certificate:
 ```
 certbot --nginx -d yourdomain.com -d www.yourdomain.com
 ```
 
 Edit crontab file crontab -e
-add below line to renew certificate each 80 days.
+add below line to renew certificate each 80 days:
 ```
 0 0 */80 * * root certbot -q renew --nginx
 ```
@@ -230,7 +230,7 @@ server {
             }
 }
 ```
-save and exit the file then restart nginx service as follows.
+Save and exit the file then restart nginx service as follows:
 ```
 systemctl restart nginx
 ```
@@ -252,7 +252,7 @@ https://yourdomain.com
 ```
 ## Step 5: Ant Media Server log settings for Graylog
 
-Login to your servers where Ant Media is installed with ssh and create **/etc/rsyslog.d/25-antmedia.conf** file then add below lines.
+Login to your servers where Ant Media is installed with ssh and create **/etc/rsyslog.d/25-antmedia.conf** file then add below lines:
 
 ```
 $ModLoad imfile
@@ -262,7 +262,7 @@ $InputFileStateFile stat-antmedia
 $InputRunFileMonitor
 *.* @192.168.1.250:5144;RSYSLOG_SyslogProtocol23Format
 ```
-save and exit the file then restart rsyslog service.
+Save and exit the file then restart rsyslog service.
 ```
 sytemctl restart rsyslog
 ```
