@@ -1,4 +1,4 @@
-It is an open source centeralized log collection and analysis software which uses elastic-search and MongoDB in its architecture. This howto will be about Graylog setup, configuration and how to send Ant Media Server logs to it.
+Graylog is an open source centeralized log collection and analysis software which uses elastic-search and MongoDB in its architecture. This guide will be about Graylog setup, configuration and how to send Ant Media Server logs to it.
 
 If you are using the cluster structure and want to keep track of all logs from one place, this article is for you.
 
