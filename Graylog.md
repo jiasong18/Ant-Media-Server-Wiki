@@ -9,6 +9,9 @@ I will do this installation on Ubuntu 20.04, but it is similar in other Linux ba
 - Ubuntu 18.04 or Ubuntu 20.04
 - Minimum 4GB RAM
 - Ant Media Servers
+
+**Test Environment**
+
 ```
 Graylog Server: 192.168.1.250
 Ant Media Server 1: 192.168.1.251
