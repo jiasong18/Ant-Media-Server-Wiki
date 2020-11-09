@@ -1,5 +1,6 @@
 * [Generic Installation](https://github.com/ant-media/Ant-Media-Server/wiki/Scaling-and-Load-Balancing)
 * [Installation in AWS](https://github.com/ant-media/Ant-Media-Server/wiki/Scaling-with-AWS)
 * [Installation in Azure](https://github.com/ant-media/Ant-Media-Server/wiki/Scaling-with-Azure)
+* [Clustering in Azure](https://github.com/ant-media/Ant-Media-Server/wiki/How-to-Setup-Ant-Media-Server-Clustering-on-Azure)
 * [Nginx Load Balancer](https://github.com/ant-media/Ant-Media-Server/wiki/Nginx-Load-Balancer)
 * [HAProxy Load Balancer](Load-Balancer-with-HAProxy-SSL-Termination)
