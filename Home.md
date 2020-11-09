@@ -65,7 +65,7 @@ Enterprise Cluster License is almost same as the Enterprise License. Enterprise 
 
 If you're planning to have a large deployment for your Enterprise Cluster, please contact with Sales in order to  have some discounts. 
 
-#### Free Enterprise License for Education, Tech Communities and Startups
+#### Free Enterprise License for Education and Tech Communities
 Ant Media provides *free Enterprise Licenses** for the *students, academics and communities. To get advantage of this opportunity, just send an email (from your institution or community e-mail address) to contact@antmedia.io
 
 ## Architectural Overview
