@@ -287,9 +287,10 @@ If you have made the correct log settings on Ant Media servers, the logs as belo
 [![graylog-5.png](images/graylog-5.png)](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/graylog-5.png)
 
 ### Search Query Examples
-
+```
 "stream1"
 (stream1 OR stream2)
 "stream1" AND NOT source:192.168.1.251
 source:192.168.1.252
 "stream*" NOT source:192.168.1.2
+```
