@@ -256,7 +256,6 @@ $ModLoad imfile
 $InputFileName /usr/local/antmedia/log/ant-media-server.log
 $InputFileTag antmedia
 $InputFileStateFile stat-antmedia
-$InputFileFacility local3
 $InputRunFileMonitor
 *.* @192.168.1.250:5144;RSYSLOG_SyslogProtocol23Format
 ```
