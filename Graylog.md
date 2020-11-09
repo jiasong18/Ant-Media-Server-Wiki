@@ -22,7 +22,7 @@ sudo apt-get update
 sudo apt-get install apt-transport-https openjdk-11-jre openjdk-11-jre-headless uuid-runtime pwgen
 ```
 
-## Step 1: MongoDB
+## Step 1: Install MongoDB
 
 MongoDB stores the configurations and meta information. 
 
@@ -41,7 +41,7 @@ Make sure the service is running.
 ```
 sudo systemctl status mongod.service
 ```
-## Step 2: Elasticsearch
+## Step 2: Install Elasticsearch
 
 Graylog can be used with Elasticsearch 6.x, please follow the below instructions to install the open-source version of Elasticsearch. Elasticsearch is software that acts as a search server, requiring Graylog to work.
 
@@ -126,7 +126,7 @@ curl -XGET 'http://localhost:9200/_cluster/health?pretty=true'
 }
 ```
 
-## Step 3: Graylog
+## Step 3: Install Graylog
 
 Graylog is a log parser. It collects the logs from various inputs. Now that we have installed MongoDB and Elasticsearch, it is time to install Graylog.
 
