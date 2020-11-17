@@ -73,7 +73,11 @@ We are using AWS Lambda, so IAM permissions are needed to get our latest image.
 
 ![cloudformation](images/cloudformation/AntMedia-CloudFormation-8.png)
 
-**13.** You can login to web panel via the https://your-domain-name/ and login with “JamesBond” and the first instances  instance-id in your origin group. If you don’t know the instance-id, please ssh to your mongodb instance and write the below commands via terminal
+**13.** When you type the URL of the Loadbalancer, Ant Media Dashboard will be opened as below
+
+![cloudformation](images/cloudformation/login.png)
+
+You can login with “JamesBond” and the first instances  instance-id in your origin group. If you don’t know the instance-id, please ssh to your mongodb instance and write the below commands via terminal
 
 ```
 $ mongo
@@ -86,10 +90,6 @@ It gives you an output like this
 `{ "_id" : ObjectId("5d31612a4c79142df7c71914"), "className" : "io.antmedia.rest.model.User", "email" : "JamesBond", "password" : "i-1234567890abcdef0", "userType" : "ADMIN" }`
 
 Your password is the one in “password” field in the format “i-xxxxxxxx”
-
-**13.** When you type the URL of the Loadbalancer, Ant Media Dashboard will be opened as below
-
-![cloudformation](images/cloudformation/login.png)
 
 When you click on the Cluster tab, you can see the servers in Cluster.
 
