@@ -26,6 +26,7 @@
   * [Clustering in Azure](How-to-Setup-Ant-Media-Server-Clustering-on-Azure)
   * [Nginx Load Balancer](Nginx-Load-Balancer)
   * [HAProxy Load Balancer](Load-Balancer-with-HAProxy-SSL-Termination)
+  * [CloudFormation Installation For Scaling Ant Media Server](CloudFormation-Installation-For-Scaling-Ant-Media-Server)
 * [Monitor Ant Media Servers with Apache Kafka and Grafana](How-to-Monitor-Ant-Media-Servers)
 * [WebRTC SDKs](WebRTC-SDKs)
   * [JavaScript SDK](WebRTC-JavaScript-SDK-Guide)
