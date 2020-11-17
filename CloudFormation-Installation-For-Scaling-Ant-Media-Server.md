@@ -73,9 +73,7 @@ We are using AWS Lambda, so IAM permissions are needed to get our latest image.
 
 ![cloudformation](images/cloudformation/AntMedia-CloudFormation-8.png)
 
-**13.** Logging in Web Panel
-
-You can login to web panel via the https://your-domain-name/ and login with “JamesBond” and the first instances  instance-id in your origin group. If you don’t know the instance-id, please ssh to your mongodb instance and write the below commands via terminal
+**13.** You can login to web panel via the https://your-domain-name/ and login with “JamesBond” and the first instances  instance-id in your origin group. If you don’t know the instance-id, please ssh to your mongodb instance and write the below commands via terminal
 
 ```
 $ mongo
