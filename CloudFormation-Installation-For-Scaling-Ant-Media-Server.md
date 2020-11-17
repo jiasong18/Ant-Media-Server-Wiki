@@ -91,11 +91,11 @@ It gives you an output like this
 
 Your password is the one in “password” field in the format “i-xxxxxxxx”
 
-When you click on the Cluster tab, you can see the servers in Cluster.
+**14.** When you click on the Cluster tab, you can see the servers in Cluster.
 
 ![cloudformation](images/cloudformation/AntMedia-CloudFormation-9.png)
 
-**14.** When you delete a stack, the AWS CloudFormation deletes all resources in that stack.
+**15.** When you delete a stack, the AWS CloudFormation deletes all resources in that stack.
 
 ![cloudformation](images/cloudformation/AntMedia-CloudFormation-10.png)
 
