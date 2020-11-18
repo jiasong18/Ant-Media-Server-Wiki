@@ -50,7 +50,7 @@
   * [Server Configuration](Server-Configuration-Documentation) 
   * [App Configuration](Application-Configuration-Documentation)
   * [Create New Application](Create-New-Application)
-  * [How to Collect Ant Media Logs to Central Log Server](How-to-Collect-Ant-Media-Logs-to-Central-Log-Server)
+  * [Collect Logs in Cluster](Collect-Logs-in-Cluster)
   * [WebRTC Codecs - H.264 & VP8](WebRTC-Codecs)
   * [Quality Filter: FPS, Resolution, Bitrate](Quality-Filter)
   * [Build from Source](Build-From-Source)
