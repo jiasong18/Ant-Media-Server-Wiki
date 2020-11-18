@@ -21,7 +21,7 @@
 * [Simulcasting to Social Media Channels](Simulcasting-to-Social-Media-Channels)
 * [Clustering & Scaling](Clustering-&-Scaling)
   * [Generic Installation](Scaling-and-Load-Balancing)
-  * [Installation in AWS](Scaling-with-AWS)
+  * [Clustering in AWS](Scaling-with-AWS)
   * [Clustering in Azure](How-to-Setup-Ant-Media-Server-Clustering-on-Azure)
   * [Nginx Load Balancer](Nginx-Load-Balancer)
   * [HAProxy Load Balancer](Load-Balancer-with-HAProxy-SSL-Termination)
