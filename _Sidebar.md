@@ -17,6 +17,7 @@
 * [Conference Call](WebRTC-Conference-Call)
 * [Peer to Peer Call](WebRTC-Peer-to-Peer-Communication)
 * [Adaptive Bitrate(Multi-Bitrate) Streaming](Adaptive-Bitrate-Streaming)
+* [Data Channel](Data-Channel)
 * [Video on Demand Streaming](Play-Live-and-VoD-Streams-and-Previews)
 * [Simulcasting to Social Media Channels](Simulcasting-to-Social-Media-Channels)
 * [Clustering & Scaling](Clustering-&-Scaling)
@@ -69,7 +70,6 @@
 * [Frequently Asked Questions](Frequently-Asked-Questions)
 
 ## Draft 
-* [Data Channel](Data-Channel)
 * [Playlist](Playlist)
 * [Kubernetes](Getting-Started-with-Ant-Media-Server-Kubernetes)
 
