@@ -1,53 +1,30 @@
-This guide explains Data Channel technical details in Ant Media Server. Content of this guide is as follows;
-* [What is Data Channel?](#what-is-data-channel)
-* [Data Channel Usage](#data-channel-usage)
-  * [Usage in Javascript](#usage-in-javascript)
-  * [Usage in Android SDK](#usage-in-android-sdk)
-  * [Usage in iOS SDK](#usage-in-ios-sdk)
-  * [Usage in REST API Service](#usage-in-rest-api-service)
-* [Data Channel Hooks](#data-channel-web-hooks)
-
-## What is Data Channel?
 Data channel is another channel in WebRTC other than video and audio. In data channel, you can send any kind of information to the other clients. Data Channels can be utilized in various use cases including chatting, control messages, file sharing, etc. Ant Media Server provides a generic data channel infrastructure that can be used in all use cases.
 
-### How to Enable Data Channel in Management Panel
-
+# Enable Data Channel
+You can easily enable data channel in Dashboard.  
 ![Ant Media Server Management Panel Data Channel](https://antmedia.io/wp-content/uploads/2020/05/Data-Channel-1.png)
 
-Just enable data channel support in Ant Media Server Management Console `/applications/applicationName` settings tab. After enabling data channel support, you can have some options for data delivery. Here are the options you can choose:
+There are some data delivery options for data channel you can choose
 
 * **Publisher & All Player**:
 Players' and Publisher's messages are delivered to publisher and all other players who are watching the stream and publisher.
-
 * **Only Publisher**:
 Player messages are only delivered to the publisher. Publisher messages are delivered to all players.
-
 * **Nobody**:
 Only publisher can send messages to the players and players cannot send messages.
 
-## Data Channel Usage
-### Usage in JavaScript
-![Data Channel in Web](https://antmedia.io/wp-content/uploads/2020/04/webMessageScreenshot-1024x545.png)
+# Send & Receive Messages with JavaScript
 
 Sending and receiving messages via data channels can be implemented using Ant Media Server Javascript SDK with less than 10 lines of code.
-When initializing WebRTCAdaptor you need to give a callback function.
-
-`sendData = function(streamId, message)` function in webrtc_adaptor.js is used to send messages like the following code:
+`sendData = function(streamId, message)` function in `webrtc_adaptor.js` is used to send messages like the following code:
 
 ```javascript
 webRTCAdaptor.sendData("stream1", "Hi!");
 ```
 
-For communication between different clients, it is always better to send the text messages in a structured data format like XML or JSON. Here is a simple example JSON TextMessage object representing our text messages:
+![WebRTC Publishing, Sending & Receiving Messages](https://antmedia.io/wp-content/uploads/2020/05/ams-dashboard-data-channel-publisher.png)
 
-```javascript
-{ 
-messageId:"uniqueId1", // unique id for each message
-messageDate: 23414123235, // time and date as long unix time stamp
-messageBody: "Hi" // actual text message typed by the user
-} 
-``` 
-#### JavaScript Callbacks
+In order to receive messages just add the following callback for WebRTCAdaptor
 
 ```javascript
 callback : function(info, description) {
@@ -73,125 +50,84 @@ callback : function(info, description) {
      console.log("Data channel closed " );
  }
 ```
+![WebRTC Playing, Sending & Receiving Messages](https://antmedia.io/wp-content/uploads/2020/05/ams-dashboard-data-channel-player.png)
+
+Basic sample for sending and receiving messages through data channel in available in WebRTC Publishing and Playing pages as shown above. 
 
 
-### Usage in Android SDK
+# Send & Receive Data Messages with Android SDK 
 
-![Data Channel in Android](https://antmedia.io/wp-content/uploads/2020/04/androidMessageScreenshot-600x577.png)
+Exchanging data through WebRTC Data Channels is equally straightforward with Ant Media Server Android WebRTC SDK. Your Activity should implement `IDataChannelObserver` interface as shown below:
 
-Exchanging data through WebRTC Data Channels is equally straightforward with Ant Media Server Android WebRTC SDK. Your Activity should implement IDataChannelObserver interface as shown below:
-
-```
+```java
 public interface IDataChannelObserver {
+
+    /**
+     * Called by SDK when the buffered amount has been changed
+     */
     void onBufferedAmountChange(long previousAmount, String dataChannelLabel);
+
+    /**
+     * Called when the state of the data channel has been changed
+     */
     void onStateChange(DataChannel.State state, String dataChannelLabel);
+
+    /**
+     * Called by SDK when a new message is received
+     */ 
     void onMessage(DataChannel.Buffer buffer, String dataChannelLabel);
+
+    /**
+     * Called by SDK when the message is sent successfully
+     */ 
     void onMessageSent(DataChannel.Buffer buffer, boolean successful);
 }
 ```
 
-**Send Text Message with Data Channel**
-
-In Android, we send text messages using sendTextMessage method. It first gets the text from the user input as below.
-
-```
-public void sendTextMessage() { 
-    String messageToSend = messageInput.getText().toString(); String messageToSendJson = Message.createJsonTextMessage(computeMessageId(), 
-    new Date(), messageToSend); final ByteBuffer buffer = ByteBuffer.wrap(messageToSendJson.getBytes(Charset.defaultCharset())); 
-    DataChannel.Buffer buf= new DataChannel.Buffer(buffer,false); webRTCClient.sendMessageViaDataChannel(buf); 
-}
-```
-
-When a data channel message is received, `onMessage` method will be called, where you decide how to handle the received data.
-Similarly, `onMessageSent` method is called when a message is successfully sent or a sending attempt failed.
-
-Before initialization of WebRTCClient you need to:
-* Set your Data Channel observer in the WebRTCClient object like this:
-
-  ```webRTCClient.setDataChannelObserver(this);```
-
-* Enable data channel communication by putting following key-value pair to your Intent before initialization of WebRTCClient with it:
-
-  ```this.getIntent().putExtra(EXTRA_DATA_CHANNEL_ENABLED, true);```
-
-  Then your Activity is ready to send and receive data.
-
-* To send data, call `sendMessageViaDataChannel` method of WebRTCClient and pass the raw data like this:
-
-  ```webRTCClient.sendMessageViaDataChannel(buf);```
-
-**Receiving and Displaying Images with Data Channel**
-
-BinaryDataReceiver receives the data chunk by chunk, parses the header information from the chunks and merges them.
-
-In Android, onMessage is called for each chunk but this time received data is binary. We use BinaryDataReceiver object to merge the chunks like this:
+### Initialization
+`MainActivity.java` sample code in Android SDK implements the `IDataChannelObserver` and has the required initialization codes. Because base data channel functionality is in the `WebRTCClient.java`, `MainActivity` is just a sample code to show how to use. Anyway, let us tell how to init, send and receive data messages in Android SDK. In order to init the WebRTCClient
+Before initialization of WebRTCClient you also need to add the following codes in `onCreate` method of the Activity
 
 ```java
-if (buffer.binary) {
-  binaryDataReceiver.receiveDataChunk(buffer.data);
-  if(binaryDataReceiver.isAllDataReceived()) {
-    Bitmap bmp=BitmapFactory.decodeByteArray(binaryDataReceiver .receivedData.array(),0,binaryDataReceiver.receivedData.capacity());
-    final ImageMessage message = new ImageMessage();
-    message.parseJson(binaryDataReceiver.header.text);
-    message.setImageBitmap(bmp);
-    messageAdapter.add(message);
-    // scroll the ListView to the last added element
-    messagesView.setSelection(messagesView.getCount() - 1);
-    binaryDataReceiver.clear();
-  }
-}
+//Enable data channel communication by putting following key-value pair to your Intent before initialization of WebRTCClient
+this.getIntent().putExtra(EXTRA_DATA_CHANNEL_ENABLED, true);
+
+//Set your Data Channel observer in the WebRTCClient 
+webRTCClient.setDataChannelObserver(this);
+
+//Init the WebRTCClient
+webRTCClient.init(SERVER_URL, streamId, webRTCMode, tokenId, this.getIntent());
 ```
 
-When all the data is received, we decode the image using a BitmapFactory and create a ImageMessage which will be added to our ListView in the MessageAdapter mentioned in the section above:
+Don't worry about the order or some other stuff. WebRTC Android SDK has the full source code for the running Data channel sample
+
+### Sending
+
+WebRTClient has `sendMessageViaDataChannel(DataChannel.Buffer)` method to send messages. It has also been called in MainActivity as follows
 
 ```java
-ImageMessage imageMessage = (ImageMessage) message;
-ImageView imageBody;
-if (message.isBelongsToCurrentUser()) {
-  convertView = messageInflater.inflate(R.layout.my_image_message, null);
-  // this message was sent by us
-  imageBody = convertView.findViewById(R.id.image_body_my);
-  messageDate = convertView.findViewById(R.id.message_date);
-  messageDate.setText(imageMessage.getMessageDate());
-  imageBody.setImageBitmap(imageMessage.getImageBitmap());
-} else {
-  // this message was sent by someone else
-  convertView = messageInflater.inflate(R.layout.their_image_message, null);
-  ...
-}
+public void sendTextMessage(String messageToSend) 
+{
+  final ByteBuffer buffer = ByteBuffer.wrap(messageToSend.getBytes(StandardCharsets.UTF_8));
+  DataChannel.Buffer buf = new DataChannel.Buffer(buffer, false);
+  webRTCClient.sendMessageViaDataChannel(buf);
+} 
 ```
 
-We create an ImageView for each bitmap and dependent on if the image sent by us or received, we display the image differently using a different layout for each case.
-
-In the Web side at present, we have again some browser differences. The default expected type for binary data is Blob in the WebRTC standard. Firefox supports it currently but Chrome does not support it and sets the type of received data internally to ArrayBuffer for binary messages. To overcome these differences we handled both cases in our code and converted Blobs to more generic type ArrayBuffer whenever possible.
-
-In the Javascript using our BinaryDataReceiver object we handle received image data chunks like this:
+### Receiving
+When a data channel message is received, `onMessage` method of the `IDataChannelObserver` is called. You can handle the received data in `onMessage` method as shown below. 
 
 ```java
-function handleImageData(data) {
-  binaryDataReceiver.receiveDataChunk(data);
-  if (binaryDataReceiver.isAllDataReceived()) {
-    var jsonHeader = JSON.parse(binaryDataReceiver.headerText);
-    var date = new Date(jsonHeader.messageDate);
-    var bytes = new Uint8Array(binaryDataReceiver.receivedData);
-    var blob = new Blob([bytes.buffer]);
-    // create image URL
-    var urlCreator = window.URL || window.webkitURL;
-    var imageUrl = urlCreator.createObjectURL(blob);
-
-    createImageMessage(imageUrl, false);
-    imageReceiver.clear();
-  }
+public void onMessage(DataChannel.Buffer buffer, String dataChannelLabel) 
+{
+  ByteBuffer data = buffer.data;
+  String messageText = new String(data.array(), StandardCharsets.UTF_8);
+  Toast.makeText(this, "New Message: " + messageText, Toast.LENGTH_LONG).show();
 }
 ```
 
-When all of the image data chunks are received, we parse metadata about the image from the header and then create a Object URL from it. Finally, we display it using <img/> HTML tag in our chat window.
+We just show the incoming text in Toast message. 
 
-![](https://antmedia.io/wp-content/uploads/2020/04/webImageScreenshot2.png)
-
-There is also data channel usage example exist in the Sample project.
-
-For more detail, please visit our [Android SDK Guide](WebRTC-Android-SDK-Documentation) 
 
 ### Usage in iOS SDK
 
