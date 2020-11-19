@@ -40,6 +40,7 @@
   * [Web Panel IP Filtering](Web-Panel-IP-Filtering)
 * [Integration with your Project](Integration-with-your-Project)
   * [REST Guide](REST-Guide)
+    * [cURL Samples](REST-API-cURL-Samples)
   * [Web Hooks](Webhook-Integration)
   * [AWS S3](Amazon-(AWS)-S3-Integration)
   * [User-defined Scripts](User-defined-Scripts)
