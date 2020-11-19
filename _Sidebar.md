@@ -82,4 +82,3 @@
 * Re-streaming update
 * Git Branching
 * UML Diagrams
-* [REST API Curl Samples](REST-API-Curl-Samples)
