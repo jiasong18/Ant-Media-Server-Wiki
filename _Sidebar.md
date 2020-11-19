@@ -5,7 +5,7 @@
 * [Installation](Installation)
 * [Publishing Live Streams](Publishing-Live-Streams)
   * [WebRTC Publishing](WebRTC-Publishing)
-  * [Screen Share without Plugin](WebRTC-Screen-Sharing-without-Plugin)
+    * [Screen Sharing](WebRTC-Screen-Sharing-without-Plugin)
   * [RTMP Publishing](RTMP-Publishing)
   * [Re-streaming Sources & IP Cameras](Re-streaming)
 * [Playing Live Streams](Playing-Live-Streams)
