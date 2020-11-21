@@ -131,4 +131,15 @@ You only need to call `webRTCAdaptor.switchDesktopCaptureWithCamera(streamId);` 
 Switch back to camera, just again call to `webRTCAdaptor.switchVideoCapture(streamId);` function.
 > `webRTCAdaptor.switchVideoCapture(streamId);`
 
+### Share desktop audio with chrome's screen share with audio option
+Click on the chrome's share audio option while sharing screen, adaptor will start sharing the audio muting the microphone. If you want to mix the desktop and microphone voice;
+* Go to webrtc_adaptor.js , find `captureScreenSound(stream, micStream,streamId)`
+* Under the method adjust the gains which are;
+
+`desktopSoundGainNode.gain.value = (Some value between 0 and 1);`
+
+`micGainNode.gain.value = (Some value between 0 and 1);`
+
+
+
 Please take a look at the Sample pages code at [index.html](https://github.com/ant-media/StreamApp/blob/master/src/main/webapp/index.html).
