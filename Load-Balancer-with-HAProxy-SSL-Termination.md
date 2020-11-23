@@ -115,8 +115,7 @@ sudo apt-get install haproxy=2.0.\*
 	mode tcp
 	bind :443 ssl crt /etc/haproxy/ssl.pem # Your cert file.
 	server rtmp 172.30.0.42:1935
-        server rtmp 172.30.0.48:1935
-
+    server rtmp 172.30.0.48:1935
   ```
 
   * HTTP Load Balancing
