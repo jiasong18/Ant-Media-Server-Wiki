@@ -74,6 +74,14 @@ stream {
         proxy_timeout 3s;
         proxy_connect_timeout 1s;
     }
+
+# If you want to use RTMPS, uncomment the lines below.
+#    server {
+#        listen 1936 ssl;
+#        proxy_pass backend;
+#        ssl_certificate /etc/letsencrypt/live/yourdomain/fullchain.pem;
+#        ssl_certificate_key /etc/letsencrypt/live/yourdomain/privkey.pem;
+#    }
     
 }
 
