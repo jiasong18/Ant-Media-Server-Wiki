@@ -109,6 +109,16 @@ sudo apt-get install haproxy=2.0.\*
       server ams2 172.30.0.48:1935 check  # Ant Media Server instance 2
       # you can add more instances 
   ```
+* RTMPS Load Balancing
+  ```
+  listen rtmps
+	mode tcp
+	bind :443 ssl crt /etc/haproxy/ssl.pem # Your cert file.
+	server rtmp 172.30.0.42:1935
+        server rtmp 172.30.0.48:1935
+
+  ```
+
   * HTTP Load Balancing
   ```
   frontend http_lb
