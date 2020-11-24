@@ -72,3 +72,16 @@ Open the following link and fill in the blanks then `Add Server`
 
 Then click `Gather Candidates`. If everything is fine, you will get the output as in the below image.
 ![](https://raw.githubusercontent.com/wiki/ant-media/Ant-Media-Server/images/turn3.png)
+
+## How to add Turn Server to Ant Media sample pages
+
+Go to the codes of index.html, play.html or player.html and change the pc_config like;
+
+	`var pc_config = {`
+			`'iceServers' : [ {`
+				`'urls' : 'turn:<turn_server_address>:<port_number>'`
+                                 'username': "username"
+                                 'credentials': "password"
+			`} ]`
+		`};`
+
