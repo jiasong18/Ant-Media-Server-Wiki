@@ -81,7 +81,7 @@ Go to the codes of index.html, play.html or player.html and change the pc_config
 			'iceServers' : [ {
 				'urls' : 'turn:<turn_server_address>:<port_number>'
                                  'username': "username"
-                                 'credentials': "password"
+                                 'credential': "password"
 			} ]
 		};
 
