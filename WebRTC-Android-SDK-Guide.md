@@ -62,11 +62,13 @@ Select your project's `build.gradle` file path and Click to the OK button.
 
 ## Join Conference Room with your Android
 
-  WebRTC Android SDK also supports Conference Room feature. You just need to start ConferenceActivity.java activity.
+  WebRTC Android SDK also supports Conference Room feature. You just need to change the launcher activity to ConferenceActivity.java activity:
 
-  <img src="https://antmedia.io/wp-content/uploads/2020/08/android-webrtc-sdk-conference-room.jpeg" width=360 />
+  <img src="images/android_conference.png" width=720 />
 
   When there are other streams are connected to the same stream id via Android, iOS or Web, then Conference Room will be established and you can talk to each other. You can quickly connect to the same stream id via `https://your_domain:5443/WebRTCAppEE/conference.html`
+
+<img src="https://antmedia.io/wp-content/uploads/2020/08/android-webrtc-sdk-conference-room.jpeg" width=360 />
 
 # Develop a WebRTC Android app
 
