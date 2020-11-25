@@ -79,11 +79,11 @@ We highly recommend using the sample project to get started your application. Ne
 ### Open Android Studio and Create a New Android Project
 Just Click **`File > New > New Project`** . Choose Empty Activity in the next window:
 
-<img alt="Choose Empty Activity" src="images/setup_new_1.png" width="720" />
+<img src="images/setup_new_1.png" width="720" />
 
 Click Next button and a window should open as shown below for the project details. Fill the form:
 
-<img alt="Choose Empty Activity" src="images/setup_new_2.png" width="720" />
+<img src="images/setup_new_2.png" width="720" />
 
 Click Finish and complete creating the project.
 
@@ -99,15 +99,16 @@ If module is not included in the project, add the module name into `settings.gra
 ### Add dependency to Android Project App Module
 
 Right-click `app`, choose `Open Module Settings`and click the `Dependencies` tab. Then a window should appear as below. Click the `+` button at the bottom and choose `Module Dependency``
-<img alt="Add Module Dependency WebRTC Android SDK" src="https://antmedia.io/wp-content/uploads/2018/07/Screen-Shot-2018-07-27-at-09.34.56.png" width="800px" />
+
+<img src="images/android_module_dependency.png" width="720" />
 
 Choose WebRTC Native Android SDK and click OK button
 
-<img alt="Native WebRTC Android SDK" src="https://antmedia.io/wp-content/uploads/2018/07/Screen-Shot-2018-07-27-at-08.21.06.png" width="800px" />
+<img src="images/android_choose_native_sdk.png" width="720" />
 
-#### **CRITICAL thing about that** You need import Module as an **API** as shown in the image below. You can change it from **Implementation** to **API** in the drop-down list
+#### **CRITICAL thing about that** You need import Module as an **API** as shown in the image above.It will look like as in the image below after adding the dependency:
 
-<img alt="Choose API in drop down list" src="https://antmedia.io/wp-content/uploads/2018/07/Screen-Shot-2018-07-27-at-09.39.27.png" width="800px" />
+<img src="images/android_after_adding_native_sdk.png" width="720" />
 
 ## Prepare the App for Streaming
 
