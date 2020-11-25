@@ -32,7 +32,7 @@ Select your project's `build.gradle` file path and Click to the OK button.
 
 ## Publish Stream from your Android
 
-  * In MainActivity.java, you need to set `webRTCMode` parameter to `IWebRTCClient.MODE-PUBLISH`
+  * In `MainActivity.java`, you need to set `webRTCMode` parameter to `IWebRTCClient.MODE-PUBLISH`
 
   * Set the stream id to anything else then `stream1` and Tap `Start Publishing` button on the main screen. After the click `Start Publishing`, stream will be published on Ant Media Server.
 
