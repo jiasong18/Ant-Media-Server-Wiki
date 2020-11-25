@@ -18,7 +18,7 @@ In this doc, we're going to cover the following topics.
 
 * ### Open and Run the Project in Android
 
-Just Click Open an Existing Android Studio Project. A window should open as shown below for the project path.
+  Just Click Open an Existing Android Studio Project. A window should open as shown below for the project path.
 
 ![Android Project Path](images/android-open-project-path.png)
 
