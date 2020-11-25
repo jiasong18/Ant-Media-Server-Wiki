@@ -316,11 +316,13 @@ Before initialization of webRTCClient you need to:
 
   Then your Activity is ready to send and receive data.
 
-* To send data, call `sendMessageViaDataChannel` method of WebRTCClient and pass the raw data like this:
+* To send data, call `sendMessageViaDataChannel` method of WebRTCClient and pass the raw data like this on click of a button:
 
 ```java
     webRTCClient.sendMessageViaDataChannel(buf);
 ```
+
+<img src="images/android_data_channel.png" width="720" />
 
 ## How to use Conference Room
 
