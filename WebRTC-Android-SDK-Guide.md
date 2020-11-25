@@ -286,15 +286,6 @@ We need to change some codes in onCreate. As a result, following code snippets j
     private String webRTCMode = IWebRTCClient.MODE_PUBLISH;
 ```
 
-  * It's now to write some code. Initialize `webRTCClient` in `MainActivity.java`.
-
-```java
-    private WebRTCClient webRTCClient;
-
-    webRTCClient.setVideoRenderers(pipViewRenderer, cameraViewRenderer);
-    webRTCClient.init(SERVER_URL, streamId, webRTCMode, tokenId, this.getIntent());`
-```
-
 ## How to Play
 
 Playing a Stream is almost the same with Publishing. We just need to change some codes in onCreate. As a result, following code snippets just plays the stream on your server with `streamId`: 'stream1'. Make sure that, before you try to play, you need to publish a stream to your server with having stream id 'stream1'
@@ -303,15 +294,6 @@ Playing a Stream is almost the same with Publishing. We just need to change some
 
 ```java
     private String webRTCMode = IWebRTCClient.MODE_PLAY;
-```
-
-  * It's now to write some code. Initialize `webRTCClient` in `MainActivity.java`.
-
-```java
-    private WebRTCClient webRTCClient;
-
-    webRTCClient.setVideoRenderers(pipViewRenderer, cameraViewRenderer);
-    webRTCClient.init(SERVER_URL, streamId, webRTCMode, tokenId, this.getIntent());`
 ```
 
 ## How to use Data Channel
