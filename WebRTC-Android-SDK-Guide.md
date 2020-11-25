@@ -22,7 +22,7 @@ In this doc, we're going to cover the following topics.
 
 ![Android Project Path](images/android-open-project-path.png)
 
-Select your project in a path and Click to the OK button.
+Select your project's `build.gradle` file path and Click to the OK button.
 
 <img src="images/android-project-path-apply.png" width=720 />
 
