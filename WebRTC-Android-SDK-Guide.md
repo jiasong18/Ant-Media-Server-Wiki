@@ -38,7 +38,7 @@ Select your project's `build.gradle` file path and Click to the OK button.
 
 <img src="images/streamId.png" width=720 />
 
-  * Tap `Start Publishing` button on the main screen. After the click `Start Publishing`, stream will be published on Ant Media Server.
+  * Tap `Start Publishing` button on the main screen. After the clicking `Start Publishing`, stream will be published on Ant Media Server.
 
     <img src="https://antmedia.io/wp-content/uploads/2020/08/android-webrtc-sdk-publish-screen.jpg" width=360 />
 
