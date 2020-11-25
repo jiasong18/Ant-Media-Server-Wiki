@@ -77,16 +77,15 @@ We highly recommend using the sample project to get started your application. Ne
 ## Creating Android Project
  
 ### Open Android Studio and Create a New Android Project
-Just Click **`File > New > New Project`** . A window should open as shown below for the project details. Fill the form according to your Organization and Project Name
-<img alt="Create Android Studio Project For WebRTC Native Android SDK" src="https://antmedia.io/wp-content/uploads/2018/07/Screen-Shot-2018-07-27-at-08.05.59.png" width="800px" />
+Just Click **`File > New > New Project`** . Choose Empty Activity in the next window:
 
-Click Next button and Choose **`Phone and Tablet`** as below. 
-<img alt="WebRTC Native Android App" src="https://antmedia.io/wp-content/uploads/2018/07/Screen-Shot-2018-07-27-at-08.06.08.png" />
+<img alt="Choose Empty Activity" src="images/setup_new_1.png" width="720" />
 
-Lastly Choose **`Empty Activity`** in the next window
-<img alt="Choose Empty Activity" src="https://antmedia.io/wp-content/uploads/2018/07/Screen-Shot-2018-07-27-at-09.19.11.png" width="800px" />
+Click Next button and a window should open as shown below for the project details. Fill the form:
 
-Let the default settings for activity name and layout. Click Next and finish creating the project.
+<img alt="Choose Empty Activity" src="images/setup_new_2.png" width="720" />
+
+Click Finish and complete creating the project.
 
 ### Import WebRTC SDK as Module to Android Project 
 
