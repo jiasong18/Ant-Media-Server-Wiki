@@ -26,7 +26,9 @@ Select your project's `build.gradle` file path and Click to the OK button.
 
 <img src="images/android-project-path-apply.png" width=720 />
 
-> PS: You need to set `SERVER_ADDRESS` parameter in MainActivity.java
+> PS: You need to set `SERVER_ADDRESS` parameter in MainActivity.java:
+
+<img src="images/server_address.png" width=720 />
 
 ## Publish Stream from your Android
 
