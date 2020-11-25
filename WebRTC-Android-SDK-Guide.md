@@ -24,7 +24,7 @@ In this doc, we're going to cover the following topics.
 
 Select your project in a path and Click to the OK button.
 
-<img src="images/android-project-path-apply.png" width=640 />
+<img src="images/android-project-path-apply.png" width=680 />
 
 > PS: You need to set `SERVER_ADDRESS` parameter in MainActivity.java
 
