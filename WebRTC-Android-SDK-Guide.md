@@ -34,7 +34,7 @@ Select your project's `build.gradle` file path and Click to the OK button.
 
   * In `MainActivity.java`, you need to set `webRTCMode` parameter to `IWebRTCClient.MODE-PUBLISH`
 
-  * In `MainActivity.java`, set the stream id to anything else then `stream1:
+  * In `MainActivity.java`, set the stream id to anything else then `stream1` i.e `streamTest1`:
 
 <img src="images/streamId.png" width=720 />
 
@@ -46,9 +46,9 @@ Select your project's `build.gradle` file path and Click to the OK button.
 
 ## Play Stream from your Android
 
-  * Firtsly, you need to set `webRTCMode` parameter in `IWebRTCClient.MODE_PLAY`.
+  * Firstly, you need to set `webRTCMode` parameter to `IWebRTCClient.MODE_PLAY` in `MainActivity.java`.
 
-  * Playing stream on your Android is almost the same as Publishing. Before playing, make sure that there is a stream is already publishing to the server with same stream id in your `streamId` parameter (You can quickly publish to the Ant Media Server via `https://your_domain:5443/WebRTCAppEE`). For our sample, stream id is still "stream1" in the image below. Then you just need to tap `Start Playing` button.
+  * Playing stream on your Android is almost the same as Publishing. Before playing, make sure that there is a stream that is already publishing to the server with same stream id in your `streamId` parameter (You can quickly publish to the Ant Media Server via `https://your_domain:5443/WebRTCAppEE`). For our sample, stream id is still "streamTest1" in the image below. Then you just need to tap `Start Playing` button.
 
     <img src="https://antmedia.io/wp-content/uploads/2020/08/android-webrtc-sdk-play-screen.jpg" width=360 />
 
