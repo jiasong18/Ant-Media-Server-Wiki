@@ -20,7 +20,7 @@ After you are sure that your GPU contains hardware-based encoder, the only thing
 
 * Install repository meta-data
   ```
-  dpkg -i cuda-repo-ubuntu1604_10.2.89-1_amd64.deb
+  sudo dpkg -i cuda-repo-ubuntu1604_10.2.89-1_amd64.deb
   ```
 
 * Import CUDA Public GPG Key
@@ -36,7 +36,7 @@ After you are sure that your GPU contains hardware-based encoder, the only thing
 
 * Install repository meta-data
   ```
-  dpkg -i cuda-repo-ubuntu1804_10.2.89-1_amd64.deb
+  sudo dpkg -i cuda-repo-ubuntu1804_10.2.89-1_amd64.deb
   ```
 
 * Import CUDA Public GPG Key
