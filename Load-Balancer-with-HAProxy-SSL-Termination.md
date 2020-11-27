@@ -138,13 +138,13 @@ sudo apt-get install haproxy=2.0.\*
     # you can add more instances 
   ```
 
-If you want to encrypt your RTMP traffic, follow the instructions below.
+* If you want to encrypt your RTMP traffic, follow the instructions below.
 
 Append KEY and CRT to ssl.pem
-
+```
 cat ssl.key ssl.crt >> /etc/haproxy/ssl.pem
-
-Add the following lines in haproxy.conf
+```
+Add the following lines in **haproxy.conf**
 
   ```
   listen rtmps
