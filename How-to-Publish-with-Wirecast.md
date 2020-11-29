@@ -27,6 +27,10 @@ Fill the settings using the Stream Id that you noted in previous steps as in the
 
 ![](images/wirecast/image1.png?raw=true)
 
+**Tune for Ultra Low Latency Streaming**
+Wirecast by default is not optimized for ultra low latency streaming. If you push RTMP stream with Wirecast and play with WebRTC, please open Output Settings > Edit Encoding configuration and make **Baseline** for Profile. Secondly, you can configure the bitrate according to your quality and internet bandwidth requirements.
+
+![](images/wirecast-encoding-settings.png?raw=true)
 
 Click the right arrow to select the source of video stream as in the screenshot:
 
