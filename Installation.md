@@ -27,9 +27,9 @@ wget https://raw.githubusercontent.com/ant-media/Scripts/master/install_ant-medi
 
   #### Update over Older Version
  
-  You need to add "true" to the end of the command line if you want to keep your settings from previous installation.
+  You need to add "-r true" to the end of the command line if you want to keep your settings from previous installation.
   ```
-  sudo ./install_ant-media-server.sh [ANT_MEDIA_SERVER_INSTALLATION_FILE] true
+  sudo ./install_ant-media-server.sh -i [ANT_MEDIA_SERVER_INSTALLATION_FILE] -r true
   ```
 
   #### Fresh Installation
