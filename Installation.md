@@ -36,7 +36,7 @@ wget https://raw.githubusercontent.com/ant-media/Scripts/master/install_ant-medi
 
   For a clean new installation:
   ```
-  sudo ./install_ant-media-server.sh [ANT_MEDIA_SERVER_INSTALLATION_FILE] 
+  sudo ./install_ant-media-server.sh -i [ANT_MEDIA_SERVER_INSTALLATION_FILE] 
   ```
 
 ### 5. Control the Service
