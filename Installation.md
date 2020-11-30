@@ -38,7 +38,7 @@ wget https://raw.githubusercontent.com/ant-media/Scripts/master/install_ant-medi
   ```
   sudo ./install_ant-media-server.sh -i [ANT_MEDIA_SERVER_INSTALLATION_FILE] 
   ```
-> you can use `sudo ./install_ant-media-server.sh -h` for other usage options
+> For more utilization options you can use `sudo ./install_ant-media-server.sh -h`
 
 ### 5. Control the Service
 
