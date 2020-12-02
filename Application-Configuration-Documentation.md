@@ -69,3 +69,4 @@ The table below summarises the available settings. Some settings don’t have to
 	 * It supports comma separated extensions. Like mp4,m3u8
 	 * Don't add any leading, trailing white spaces
 * **`settings.httpforwarding.baseURL`**: Forward the incoming http request to this base url
+* **`settings.audioBitrateSFU`**: It's the bitrate that is used transcoding the audio in AAC and Opus. In next version(2.3), we directly forward incoming audio to the viewers without transcoding.  
