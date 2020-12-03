@@ -7,17 +7,17 @@ Ant Media Server is a software that can stream live and VoD streams. It supports
 Here are the fundamental features of Ant Media Server:
 
 * Ultra Low Latency Adaptive One to Many WebRTC Live Streaming in Enterprise Edition.
-* Adaptive Bitrate for Live Streams (WebRTC, MP4, HLS) in Enterprise Edition.
+* Adaptive Bitrate for Live Streams (WebRTC, MP4, HLS, CMAF) in Enterprise Edition.
 * SFU in One to Many WebRTC Streams in Enterprise Edition.
 * Live Stream Publishing with RTMP and WebRTC.
 * WebRTC to RTMP Adapter.
 * IP Camera Support.
 * Recording Live Streams (MP4 and HLS).
-* Restream to Social Media Simultaneously(Facebook and Youtube in Enterprise Edition).
+* Restream to Social Media Simultaneously (Facebook and Youtube in Enterprise Edition).
 * One-Time Token Control in Enterprise Edition.
 * Object Detection in Enterprise Edition.
 * H.264,H.265 and VP8 
-* WebRTC Data Channels
+* WebRTC Data Channels Support.
 
 #### _This doc includes information both for Community and Enterprise Editions. If somethings are not working according to this doc, you may be using Community Edition and you try to use a feature of Enterprise. Check the Community vs. Enterprise below_
 
@@ -74,7 +74,7 @@ Ant Media provides *free Enterprise Licenses** for the *students, academics and 
 
 ## Supported Environments
 Ant Media Server runs on **Linux(Ubuntu)** and **MacOS**.  it supports only x64 architecture. 
-Ubuntu 16.04 is officially supported and auxiliary scripts are provided for Ubuntu 16.04. In addition, It's known that Ant Media Server is used on Centos, SUSE, Debian distributions as well.
+Ubuntu 18.04 is officially supported and auxiliary scripts are provided for Ubuntu 20.04 and CentOS 8. In addition, It's known that Ant Media Server is used on SUSE, Debian, RHLE distributions as well.
 
 ## Extensions
 ### Object Recognition with TensorFlow
