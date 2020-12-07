@@ -6,7 +6,7 @@ Ant Media Server can be scaled in different physical locations. You can set the 
 Lets clarify the the case with an example scenario. 
 ![](images/multilevelcluster.png)
 
-* Publisher starts a stream and it is assigned to the Origin1 in the **Region1**.
+* _Publisher_ starts a stream and it is assigned to the Origin1 in the **Region1**.
 * Lets say, _Player1_ who is closed to **Region1** requests to play the stream.
 * _Player1_ is assigned to **Edge11** in **Region1**.
 * Since the **Origin1** is the origin of the stream, **Edge11** will pull stream from **Origin1**.
