@@ -1,9 +1,12 @@
 # What is Multi-Level Cluster?
-Ant Media Server can be scaled in different physical locations. You can set the region parameter of the servers to create sub clusters. Still you can make all nodes be in the same region by setting all region parameters with the same value or simply leaving it default. But separating the nodes into groups has some advantages in performance. Because each region will have their own origin node and the edges in a region will pull the stream from the origin of their region.
+Ant Media Server can be scaled in different physical locations. You can set the node group parameter of the servers to create regions. Still you can make all nodes be in the same region by setting all node group parameters with the same value or using it with default. But separating the nodes into regions has some advantages in performance. Because each region will have their own origin node for a stream and the edges in a region will pull the stream from the origin of their region.
 
 # How does it work?
 
 Lets clarify the the case with an example scenario. 
+
+
+
 * Publisher starts a stream and it is assigned to the Origin1 in the **Region1**.
 * Lets say, _Player1_ who is closed to **Region1** requests to play the stream.
 * _Player1_ is assigned to **Edge11** in **Region1**.
