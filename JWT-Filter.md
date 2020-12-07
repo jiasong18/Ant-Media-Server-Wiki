@@ -4,7 +4,7 @@ In this section, we're going to explain simply how to use JWT REST API Filter in
 2. [JWT Filter Usages](#2-jwt-filter-usages)
 
 ### 1. JWT Filter Instructions / Technical details
-We are using [JJWT Library](https://github.com/jwtk/jjwt) for Ant Media Server REST API security. If you want to enable this filter, you just need to enable JWT Filter and type the Secret key. Secret key encrypts with 'hmacShaKeyFor' in JWT Filter. 
+We are using [JJWT Library](https://github.com/jwtk/jjwt) for Ant Media Server REST API security. If you want to enable this filter, you just need to enable JWT Filter and type the Secret key. Secret key encrypts with `hmacShaKeyFor` in JWT Filter. 
 
 <img src="images/jwt-filter-enable.png?raw=true" alt="">
 
