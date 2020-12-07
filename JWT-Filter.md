@@ -10,5 +10,6 @@ We are using [JJWT Library](https://github.com/jwtk/jjwt) for Ant Media Server R
 
 ### 2. JWT Filter Usages
 If you want to use JWT Filter with REST API, you just need to add `Authorization` header with JWT Token. 
-
-`curl -X POST -H "Content-Type: application/json, Authorization: '{JWTToken}'" "https://{domain:port}/{application}/rest/v2/broadcasts/create -d '{"name":" {streamName}"}'"`
+  ```
+curl -X POST -H "Content-Type: application/json, Authorization: '{JWTToken}'" "https://{domain:port}/{application}/rest/v2/broadcasts/create -d '{"name":" {streamName}"}'"
+  ```
