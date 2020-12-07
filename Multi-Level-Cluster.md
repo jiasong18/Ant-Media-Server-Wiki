@@ -21,7 +21,7 @@ Lets clarify the the case with an example scenario.
 # How to configure?
 You can set the node group (or region) of a server in 2 ways:
 ### Configuration file (offline)
-You can set it as `modeGroup=GROUP_NAME` in `conf/red5.properties` file.
+You can set it as `nodeGroup=GROUP_NAME` in `conf/red5.properties` file.
 ### REST API (online)
 You can set it by calling POST Method `AMS_URL/rest/changeServerSettings` and passing node group in JSON format as follows.
 `{"nodeGroup":"GROUP_NAME"}`
