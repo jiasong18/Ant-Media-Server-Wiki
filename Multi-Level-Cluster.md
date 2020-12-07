@@ -4,8 +4,7 @@ Ant Media Server can be scaled in different physical locations. You can set the 
 # How does it work?
 
 Lets clarify the the case with an example scenario. 
-
-
+![](images/multilayercluster.png)
 
 * Publisher starts a stream and it is assigned to the Origin1 in the **Region1**.
 * Lets say, _Player1_ who is closed to **Region1** requests to play the stream.
