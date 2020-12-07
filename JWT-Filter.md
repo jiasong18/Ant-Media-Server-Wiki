@@ -10,4 +10,4 @@ We are using [JJWT Library](https://github.com/jwtk/jjwt) for Ant Media Server R
 
 ### 2. JWT Filter Usages
 
-curl -X POST -H "Content-Type: application/json, Authorization: 'test' " "https://{domain:port}/{application}/rest/v2/broadcasts/create"
+`curl -X POST -H "Content-Type: application/json, Authorization: '{JWTToken}'" "https://{domain:port}/{application}/rest/v2/broadcasts/create -d '{"name":" {streamName}"}'"`
