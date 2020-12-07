@@ -13,3 +13,6 @@ If you want to use JWT Filter with REST API, you just need to add `Authorization
   ```
 curl -X POST -H "Content-Type: application/json, Authorization: '{JWTToken}'" "https://{domain:port}/{application}/rest/v2/broadcasts/create -d '{"name":" {streamName}"}'"
   ```
+
+***This feature is available in Ant Media Server 2.3+ versions.**
+
