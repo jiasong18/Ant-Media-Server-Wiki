@@ -24,7 +24,7 @@ You can set the node group (or region) of a server in 2 ways:
 You can set it as `modeGroup=GROUP_NAME` in `conf/red5.properties` file.
 ### REST API (online)
 You can set it by calling POST Method `AMS_URL/rest/changeServerSettings` and passing node group in JSON format as follows.
-_{"nodeGroup":"GROUP_NAME"}_
+`{"nodeGroup":"GROUP_NAME"}`
 
 You should configure the Load Balancer to forward Publish and Play requests to the best region. If you have a global cluster in different geolocations,you should have a Load Balancer like Route53.
 
