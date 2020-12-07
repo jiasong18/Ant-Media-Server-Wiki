@@ -78,6 +78,7 @@
 * [Update WebRTC Android SDK](WebRTC-Android-SDK-Guide)
     * [Reference](WebRTC-Android-SDK-Reference)
 * [Developer Quick Start](Developer-Quick-Start)
+* [JWT Filter](JWT-Filter)
 * Recording HLS, MP4 and how to recover
 * Re-streaming update
 * Git Branching
