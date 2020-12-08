@@ -252,7 +252,7 @@ Grafana is an open source metric analytics & visualization suite.
 **4.** Set setting as below
    ```
    URL : http://127.0.0.1:9200
-   Index name: logstash-
+   Index name: logstash-*
    Time filed name: @timestamp
    Version: 7.0+
    ```
