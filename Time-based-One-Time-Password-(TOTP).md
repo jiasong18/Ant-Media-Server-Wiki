@@ -7,24 +7,23 @@ You can enable TOTP using Management Panel or in configuration file as
 You can also set TOTP period in seconds in configuration file as
 `settings.timeTokenPeriod=60`
 
-## Subscriber Creation
+## Subscriber Operations
 You should create subscribers and assign them a base 32 secret to each subscriber. A secret should be in length of multiple of 8 characters.
 You can create, delete, list subscribers using REST API as follows:
 ### Create Subscriber
-```curl -X POST -H "Accept: Application/json" -H "Content-Type: application/json" http://localhost:5080/WebRTCAppEE/rest/v2/broadcasts/stream1/subscribers -d '{"subscriberId":"publisherA", "b32Secret":"mysecret", "type":"publish"}'```
+`curl -X POST -H "Accept: Application/json" -H "Content-Type: application/json" http://localhost:5080/WebRTCAppEE/rest/v2/broadcasts/stream1/subscribers -d '{"subscriberId":"publisherA", "b32Secret":"mysecret", "type":"publish"}'`
 or
-```curl -X POST -H "Accept: Application/json" -H "Content-Type: application/json" http://localhost:5080/WebRTCAppEE/rest/v2/broadcasts/stream1/subscribers -d '{"subscriberId":"playerB", "b32Secret":"mysecret", "type":"play"}'```
+`curl -X POST -H "Accept: Application/json" -H "Content-Type: application/json" http://localhost:5080/WebRTCAppEE/rest/v2/broadcasts/stream1/subscribers -d '{"subscriberId":"playerB", "b32Secret":"mysecret", "type":"play"}'`
 
 ### Delete subscriber
-```curl -X DELETE -H "Accept: Application/json" -H "Content-Type: application/json"
-http://localhost:5080/WebRTCAppEE/rest/v2/broadcasts/stream1/subscribers/publisherA```
+`curl -X DELETE -H "Accept: Application/json" -H "Content-Type: application/json"
+http://localhost:5080/WebRTCAppEE/rest/v2/broadcasts/stream1/subscribers/publisherA`
 
 ### Delete all subscribers
-```curl -X DELETE -H "Accept: Application/json" -H "Content-Type: application/json" http://localhost:5080/WebRTCAppEE/rest/v2/broadcasts/stream1/subscribers```
-
+`curl -X DELETE -H "Accept: Application/json" -H "Content-Type: application/json" http://localhost:5080/WebRTCAppEE/rest/v2/broadcasts/stream1/subscribers`
 ### List All Subscribers
-```curl -i -H "Accept: Application/json" -X GET
-"http://localhost:5080/WebRTCAppEE/rest/v2/broadcasts/stream1/subscribers/list/0/5"```
+`curl -i -H "Accept: Application/json" -X GET
+"http://localhost:5080/WebRTCAppEE/rest/v2/broadcasts/stream1/subscribers/list/0/5"`
 
 ## Publish Play Stream
 A subscriber (publisher or player) should pass subscriber id and generated TOTP to publish or play.
