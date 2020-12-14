@@ -1,6 +1,5 @@
 The Time-based One-time Password algorithm (TOTP) is an extension of the HMAC-based One-time Password algorithm (HOTP) that generates a one-time password (OTP) by instead taking uniqueness from the current time
 
-# Usage:
 ## Enabling and Setting
 You can enable TOTP using Management Panel or in configuration file as
 `settings.timeTokenSubscriberOnly=true`
