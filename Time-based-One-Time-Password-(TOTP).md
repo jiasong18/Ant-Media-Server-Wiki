@@ -12,7 +12,9 @@ You should create subscribers and assign them a base 32 secret to each subscribe
 You can create, delete, list subscribers using REST API as follows:
 ### Create Subscriber
 `curl -X POST -H "Accept: Application/json" -H "Content-Type: application/json" http://localhost:5080/WebRTCAppEE/rest/v2/broadcasts/stream1/subscribers -d '{"subscriberId":"publisherA", "b32Secret":"mysecret", "type":"publish"}'`
+
 or
+
 `curl -X POST -H "Accept: Application/json" -H "Content-Type: application/json" http://localhost:5080/WebRTCAppEE/rest/v2/broadcasts/stream1/subscribers -d '{"subscriberId":"playerB", "b32Secret":"mysecret", "type":"play"}'`
 
 ### Delete subscriber
@@ -35,5 +37,6 @@ A subscriber (publisher or player) should pass subscriber id and generated TOTP 
 
 ## Subscriber Statistics
 You can get the stats for each subscriber with the following REST method.
+
 `curl -i -H "Accept: Application/json" -X GET "http://localhost:5080/WebRTCAppEE/rest/v2/broadcasts/stream1/subscriber-stats/list/0/5"`
 
