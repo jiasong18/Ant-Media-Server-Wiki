@@ -26,11 +26,13 @@ As shown above, the expiration time of the token is Mar 20, 2021 14:17:02 GMT+3.
 
 
 ## Use Token for Accessing REST Filter API
-### JWT Filter Usages for REST APIs
-If you want to use JWT Filter with REST API, you just need to add `Authorization` header with JWT Token. 
+Using JWT token is so simple just add `Authorization` header with JWT Token as shown below.  
   ```
-curl -X POST -H "Content-Type: application/json, Authorization: '{JWTToken}'" "https://{domain:port}/{application}/rest/v2/broadcasts/create -d '{"name":" {streamName}"}'"
+  curl -X POST -H "Content-Type: application/json, Authorization: '{JWTToken}'" "https://{domain:port}/{application}/rest/v2/broadcasts/create -d '{"name":" {streamName}"}'"
   ```
+
+You can also use Postman as in the image below
+<img src="images/use_jwt_token_with_postman.png?raw=true" alt="">
 
 ***This feature is available in Ant Media Server 2.3+ versions.**
 
