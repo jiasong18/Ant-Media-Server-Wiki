@@ -38,6 +38,7 @@
   * [Stream Security](Stream-Security-Documentation)
   * [SSL Setup for Ant Media Server](SSL-Setup)
   * [REST API Security](REST-API-Security-Documentation)
+    * [JWT REST API Filter](JWT-REST-API-Filter)
   * [Web Panel IP Filtering](Web-Panel-IP-Filtering)
 * [Integration with your Project](Integration-with-your-Project)
   * [REST Guide](REST-Guide)
@@ -79,7 +80,6 @@
 * [Update WebRTC Android SDK](WebRTC-Android-SDK-Guide)
     * [Reference](WebRTC-Android-SDK-Reference)
 * [Developer Quick Start](Developer-Quick-Start)
-* [JWT Filter](JWT-Filter)
 * Recording HLS, MP4 and how to recover
 * Re-streaming update
 * Git Branching
