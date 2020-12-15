@@ -12,8 +12,17 @@ Let's assume that our secret key is `zautXStXM9iW3aD3FuyPH0TdK4GHPmHq` so that w
 
 <img src="images/generate_jwt_token.png?raw=true" alt="">
 
-As shown above, we use `HS256` as algorithm and use our secret key `zautXStXM9iW3aD3FuyPH0TdK4GHPmHq` to generate the token. So that our JWT token to access the REST API is `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b2tlbiIsImlhdCI6MTUxNjIzOTAyMn0.OESIxgNsnD_JwByKTXcrw9Ov4GaOUZw66QxMfmudhKQ`
+As shown above, we use `HS256` as algorithm and use our secret key `zautXStXM9iW3aD3FuyPH0TdK4GHPmHq` to generate the token. So that our JWT token to access the REST API is 
+```
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b2tlbiIsImlhdCI6MTUxNjIzOTAyMn0.OESIxgNsnD_JwByKTXcrw9Ov4GaOUZw66QxMfmudhKQ
+```
 
+### Generate JWT Token with Expiration Time
+Even if it's not necessary to have the payload, there are really useful options that can be used. For instance you can use **exp**(expiration time) for JWT token. In order to get more information for the structure, please visit to [Introduction to JWT](https://jwt.io/introduction).  Anyway, let me give an example about JWT Token with Expiration Time.
+
+<img src="images/generate-jwt-expire-time.png?raw=true" alt="">
+
+As shown above, the expiration time of the token is Mar 20, 2021 14:17:02 GMT+3. It means that you can use the generated token until the expiration time. The unit of expiration time is [unix timestamp](https://www.unixtimestamp.com/).  When it expires, the JWT token becomes invalid. 
 
 
 ## Use Token for Accessing REST Filter API
