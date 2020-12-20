@@ -1,5 +1,11 @@
 # Publish with a Hardware Encoder - Teradek Vidiu Pro
-Teradek Vidiu Pro is fully compatible with Ant Media Server.  Let’s have a look at step by step how to use Teradek Vidiu Pro for streaming, firstly start by powering the Teradek Vidiu Pro
+Teradek Vidiu Pro is fully compatible with Ant Media Server. Before starting, you need to create a live stream in Ant Media Server web panel. You can create stream in LiveApp or WebRTCAppEE. There is no difference between them. However, your RTMP url changes depending on which one choose. When you create a live stream, your RTMP url will be in the following format:
+
+`rtmp://YOUR_SERVER_IP_OR_URL/LiveApp/YOUR_STREAM_ID` or `rtmp://YOUR_SERVER_IP_OR_URL/WebRTCAppEE/YOUR_STREAM_ID` 
+
+depending on which app you use. You will use parts of these urls in Teradek's settings.
+
+Let’s have a look at step by step how to use Teradek Vidiu Pro for streaming, firstly start by powering the Teradek Vidiu Pro
 
 ### 1. Connect to Teradek Vidiu Pro WiFi Network. 
 It creates a WiFi network with name VidiU−XXXXX. Connect that network with your computer and go to the 172.16.1.1 on your browser.
