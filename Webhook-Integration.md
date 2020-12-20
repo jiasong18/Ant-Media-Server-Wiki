@@ -4,29 +4,10 @@ Ant Media Server provides webhooks for making your system/app know when certain 
 <h2>Register Your Webhook URL</h2>
 You can add default webhook URL to your streaming app on Ant Media Server. In addition, it lets you add custom specific webhook URL's in creating broadcast.
 <h3>Add default Webhook URL</h3>
-In order to add default URL,  just follow the steps below
-<ul>
- 	<li>Open your apps <em>red5-web.properties</em>  and add <em>settings.listenerHookURL</em> property to that file. <em>red5-web.properties </em>file is under <em>webapps/&lt;app_name&gt;/WEB-INF</em>  folder
-<pre>...
-settings.listenerHookURL=http://www.example.com/webhook/
-...</pre>
-</li>
- 	<li>Open your apps <em>red5-web.xml</em> file and add <em>settings.listenerHookURL</em> to the <em>app.settings</em> bean.
-<pre class="p1"><span class="s1">...
-&lt;</span><span class="s2">bean</span><span class="s3"> </span><span class="s4">id</span><span class="s3">=</span>"app.settings"<span class="s3"> </span><span class="s4">class</span><span class="s3">=</span>"io.antmedia.AppSettings"<span class="s1">&gt;
-...</span>
+In order to add default Webhook URL, you just need to add/change your app settings as below:
 
+<img src="images/ant-media-server-webhook-configuration.png?raw=true" alt="">
 
-<span class="s1">  &lt;</span><span class="s2">property</span><span class="s3"> </span><span class="s4">name</span><span class="s3">=</span>"listenerHookURL"<span class="s3"> </span><span class="s4">value</span><span class="s3">=</span>"${settings.listenerHookURL}"<span class="s3"> </span><span class="s1">/&gt;
-</span>...
-<span class="s1">&lt;/</span>bean&gt;
-...</pre>
-> **Attention:** Please ensure that the the "io.antmedia.AppSettings" bean does not exist elsewhere within this file. 
-</li>
- 	<li>Restart the server on command line
-<pre>sudo service antmedia restart</pre>
-</li>
-</ul>
 Your Ant Media Server now has a default hook which is called when certain events happen (see below) 
 <h3>Add Custom Webhook for Streams</h3>
 Ant Media Server provides creating streams through rest service. Therefore, If you want to specify the webhook URL for each stream, you can use <em>createBroadcast</em> method in <a href="https://github.com/ant-media/Ant-Media-Server/blob/master/src/main/java/io/antmedia/rest/BroadcastRestService.java">rest service.</a>  <em>createBroadcast</em> method has <a href="https://github.com/ant-media/Ant-Media-Server-Common/blob/master/src/main/java/io/antmedia/datastore/db/types/Broadcast.java">Broadcast</a> object parameter which has <em>listenerHookURL </em>field<em> . </em>
