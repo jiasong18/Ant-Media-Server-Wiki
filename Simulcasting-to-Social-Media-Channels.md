@@ -1,9 +1,9 @@
 This guide describes how to live streaming in Social Media on Ant Media Server. This tutorial assumes that you have any Ant Media Server types.
 
-1. How to Publish Live Stream on Facebook?
-2. How to Publish Live Stream on Youtube?
-3. How to Publish Live Stream on Periscope?
-4. How to Add/Remove RTMP Endpoint with Ant Media Stream?
+1. [How to Publish Live Stream on Facebook?](#how-to-publish-live-stream-on-facebook)
+2. [How to Publish Live Stream on Youtube?](#how-to-publish-live-stream-on-youtube)
+3. [How to Publish Live Stream on Periscope?](how-to-publish-live-stream-on-periscope)
+4. [How to Add/Remove RTMP Endpoint with Ant Media Stream?](#how-to-addremove-rtmp-endpoint-with-ant-media-stream)
 
 ## How to Publish Live Stream on Facebook?
 
@@ -57,7 +57,7 @@ You just need to add your Youtube RTMP Endpoint URL to the Ant Media Server stre
 
 So, you can start broadcasting now!
 
-## How to Publish Live Stream on Youtube?
+## How to Publish Live Stream on Periscope?
 
 You can <span>publish live stream</span>s on your periscope account. Just click the <strong>Profile</strong> button and select <strong>Producer.</strong>
 
@@ -95,21 +95,53 @@ This option is for general users. You just need to click the <strong>broadcast p
 This option is for advanced users. You just need to request rtmp-endpoint REST API.
 
 <strong>Here is Add RTMP Endpoint Javascript XHR example:</strong>
-{% gist 1091ae93a58d8b62255c5a41803260f0 %}
+```
+var data = JSON.stringify({
+"rtmpUrl":"rtmps://live-api-s.facebook.com:443/rtmp/sdasdasd=ddfsdfsdf"
+});
 
-<script src="https://gist.github.com/SelimEmre/1091ae93a58d8b62255c5a41803260f0.js"></script>
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function() {
+  if(this.readyState === 4) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("POST", "http://<server-domain>:5080/LiveApp/rest/v2/broadcasts/streamID/rtmp-endpoint");
+xhr.setRequestHeader("Content-Type", "application/json");
+
+xhr.send(data);
+```
 
 You can get more info in the <a href="https://antmedia.io/rest/#/BroadcastRestService/addEndpointV3" target="_blank" >REST API</a>.
 
 <strong>Here is Remove RTMP Endpoint Javascript XHR example:</strong>
-{% gist 6aa2fd90de535f3cd56bf33cbdddfb51 %}
+```
+var data = JSON.stringify({
+"rtmpUrl":"rtmps://live-api-s.facebook.com:443/rtmp/sdasdasd=ddfsdfsdf"
+});
 
-You can get more info in <a href="https://antmedia.io/rest/#/BroadcastRestService/removeEndpointV2" target="_blank" rel="noopener noreferrer">REST API</a>.
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
 
-Click for more detail about <a href="https://github.com/ant-media/Ant-Media-Server/wiki/REST-Guide" target="_blank" rel="noopener noreferrer">REST API Guide</a>.
+xhr.addEventListener("readystatechange", function() {
+  if(this.readyState === 4) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("DELETE", "http://<server-domain>:5080/LiveApp/rest/v2/broadcasts/streamID/rtmp-endpoint");
+xhr.setRequestHeader("Content-Type", "application/json");
+
+xhr.send(data);
+```
+
+You can get more info in <a href="https://antmedia.io/rest/#/BroadcastRestService/removeEndpointV2" target="_blank">REST API</a>.
+
+Click for more detail about <a href="https://github.com/ant-media/Ant-Media-Server/wiki/REST-Guide" target="_blank">REST API Guide</a>.
 
 <strong>PS:</strong> Please be sure to add your IP Address to the <strong>Use IP Filtering for RESTful API</strong> option on Application Settings.
 <h5>Conclusion</h5>
-After adding RTMP Endpoint, you need to publish a live stream. Here is our guide for <a href="https://github.com/ant-media/Ant-Media-Server/wiki/Publishing-Live-Streams" target="_blank" rel="noopener noreferrer">publishing live stream</a>. Finally check the social media account to see the live stream.
-
-Please let us know if you have any question by sending an e-mail to contact@antmedia.io
+After adding RTMP Endpoint, you need to publish a live stream. Here is our guide for <a href="https://github.com/ant-media/Ant-Media-Server/wiki/Publishing-Live-Streams" target="_blank">publishing live stream</a>. Finally check the social media account to see the live stream.
