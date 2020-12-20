@@ -2,7 +2,7 @@ This guide describes how to live streaming in Social Media on Ant Media Server. 
 
 1. [How to Publish Live Stream on Facebook?](#how-to-publish-live-stream-on-facebook)
 2. [How to Publish Live Stream on Youtube?](#how-to-publish-live-stream-on-youtube)
-3. [How to Publish Live Stream on Periscope?](how-to-publish-live-stream-on-periscope)
+3. [How to Publish Live Stream on Periscope?](#how-to-publish-live-stream-on-periscope)
 4. [How to Add/Remove RTMP Endpoint with Ant Media Stream?](#how-to-addremove-rtmp-endpoint-with-ant-media-stream)
 
 ## How to Publish Live Stream on Facebook?
