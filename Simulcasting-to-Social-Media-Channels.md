@@ -1,4 +1,4 @@
-This guide describes how to live streaming in Social Media on Ant Media Server. This tutorial assumes that you have any Ant Media Server types.
+This guide describes how to live streaming in Social Media on Ant Media Server.
 
 1. [How to Publish Live Stream on Facebook?](#how-to-publish-live-stream-on-facebook)
 2. [How to Publish Live Stream on Youtube?](#how-to-publish-live-stream-on-youtube)
