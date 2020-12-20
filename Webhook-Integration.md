@@ -4,7 +4,7 @@ Ant Media Server provides webhooks for making your system/app know when certain 
 <h2>Register Your Webhook URL</h2>
 You can add default webhook URL to your streaming app on Ant Media Server. In addition, it lets you add custom specific webhook URL's in creating broadcast.
 <h3>Add default Webhook URL</h3>
-In order to add default Webhook URL, you just need to add/change your app settings as below:
+In order to add default Webhook URL, you just need to add/change Webhook URL your app settings as below:
 
 <img src="images/ant-media-server-webhook-configuration.png?raw=true" alt="Ant Media Server Webhook Configuration">
 
