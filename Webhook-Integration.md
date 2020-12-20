@@ -6,7 +6,7 @@ You can add default webhook URL to your streaming app on Ant Media Server. In ad
 <h3>Add default Webhook URL</h3>
 In order to add default Webhook URL, you just need to add/change your app settings as below:
 
-<img src="images/ant-media-server-webhook-configuration.png?raw=true" alt="">
+<img src="images/ant-media-server-webhook-configuration.png?raw=true" alt="Ant Media Server Webhook Configuration">
 
 Your Ant Media Server now has a default hook which is called when certain events happen (see below) 
 <h3>Add Custom Webhook for Streams</h3>
