@@ -4,18 +4,11 @@ Ant Media Server provides webhooks for making your system/app know when certain 
 <h2>Register Your Webhook URL</h2>
 You can add default webhook URL to your streaming app on Ant Media Server. In addition, it lets you add custom specific webhook URL's in creating broadcast.
 <h3>Add default Webhook URL</h3>
-In order to add default URL,  just follow the steps below
-<ul>
- 	<li>Open your apps <em>red5-web.properties</em>  and add <em>settings.listenerHookURL</em> property to that file. <em>red5-web.properties </em>file is under <em>webapps/&lt;app_name&gt;/WEB-INF</em>  folder
-<pre>...
-settings.listenerHookURL=http://www.example.com/webhook/
-...</pre>
-</li>
- 	<li>Restart the server on command line
-<pre>sudo service antmedia restart</pre>
-</li>
-</ul>
-Right now, there is a default webhook URL for your app.
+In order to add default Webhook URL, you just need to add/change Webhook URL your app settings as below:
+
+<img src="images/ant-media-server-webhook-configuration.png?raw=true" alt="Ant Media Server Webhook Configuration">
+
+Your Ant Media Server now has a default hook which is called when certain events happen (see below) 
 <h3>Add Custom Webhook for Streams</h3>
 Ant Media Server provides creating streams through rest service. Therefore, If you want to specify the webhook URL for each stream, you can use <em>createBroadcast</em> method in <a href="https://github.com/ant-media/Ant-Media-Server/blob/master/src/main/java/io/antmedia/rest/BroadcastRestService.java">rest service.</a>  <em>createBroadcast</em> method has <a href="https://github.com/ant-media/Ant-Media-Server-Common/blob/master/src/main/java/io/antmedia/datastore/db/types/Broadcast.java">Broadcast</a> object parameter which has <em>listenerHookURL </em>field<em> . </em>
 
