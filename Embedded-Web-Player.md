@@ -5,10 +5,10 @@ You can use `play.html` page on your website with IFrame. `play.html` page is in
 * **`id`** : The stream id to play. It is mandatory.
 * **`token`** : The token to play the stream. It's mandatory if token security is enabled on the server-side.
 * **`autoplay`** : To start playing automatically if streams are available. Optional. The default value is true.
-* **`mute`** : To start playing with mute if streams is available. Optional. Default value is true.
-* **`playOrder`** : The order which technologies is used in playing. Optional. Default value is `webrtc,hls`. Possible values are `hls,webrtc`,`webrtc,hls`
-* **`playType`** : The order which play type is used in playing. Optional. Default value is "mp4,webm". Possible values are "webm,mp4"","mp4","webm".
-* **`targetLatency`** : To define target latency for the DASH player. Optional. Default value is 3.
+* **`mute`** : To start playing with mute if stream is available. Optional. Default value is true.
+* **`playOrder`** : The order which technologies is used in playing. Optional. Default value is `webrtc,hls`. Possible values are `hls,webrtc`,`webrtc`,`hls`,`vod`,`dash`
+* **`playType`** : The order which play type is used in playing. Optional. Default value is `mp4,webm`. Possible values are `webm,mp4`,`mp4`,`webm`.
+* **`targetLatency`** : To define target latency for the DASH player. Optional. Default value is `3`.
 
 **You can use `play.html` in IFrame as below:**
 
