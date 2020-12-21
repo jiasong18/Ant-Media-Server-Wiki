@@ -34,3 +34,17 @@ Assume that HLS Muxing is enabled and there is a stream publishing to Ant Media 
 * HLS URL is in this format: `http://<SERVER_NAME>:5080/LiveApp/streams/<STREAM_ID>.m3u8` 
 
 * If there are an adaptive streams enabled in Enterprise Edition, HLS Master URL is in this format: `http://<SERVER_NAME>:5080/LiveApp/streams/<STREAM_ID>_adaptive.m3u8`
+
+### Save HLS Records
+
+HLS streaming is a more cost-effective and secure method instead of VOD streaming. You can record your HLS streams. You just need to change your application HLS settings as below:
+
+- Open your apps `red5-web.properties` and change `settings.hlsPlayListType` property to that file. `red5-web.properties` file is under `webapps`/`<app_name>`/`WEB-INF` folder. You can change `settings.hlsPlayListType`  `event` or `vod`.
+
+- Restart the server on the command line.
+
+`sudo service antmedia restart`
+
+Now, your HLS streams will record. 
+
+> Quick Link: [App Configuration](Application-Configuration-Documentation)
