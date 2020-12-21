@@ -41,7 +41,7 @@ Congrats. You're publishing Live Stream with OBS.
 
 > Quick Link: [Learn How to Play Live Streams](Playing-Live-Streams)
 
-### Troubleshooting OBS Guide
+### Troubleshooting
 
 If you want to stream smoothly, you need to check some parameters in OBS Settings. These parameters tell you for your errors. 
 
