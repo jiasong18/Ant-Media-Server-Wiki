@@ -41,10 +41,21 @@ HLS streaming is a more cost-effective and secure method instead of VOD streamin
 
 - Open your apps `red5-web.properties` and change `settings.hlsPlayListType` property to that file. `red5-web.properties` file is under `webapps`/`<app_name>`/`WEB-INF` folder. You can change `settings.hlsPlayListType`  `event` or `vod`.
 
+```
+settings.hlsPlayListType=vod
+```
+
+or
+
+```
+settings.hlsPlayListType=event
+```
+
 - Restart the server on the command line.
 
 `sudo service antmedia restart`
 
 Now, your HLS streams will record. 
 
-> Quick Link: [App Configuration](Application-Configuration-Documentation)
+> Quick Link: [App Configurations](Application-Configuration-Documentation)
+> Quick Link: [FFmpeg Configurations](https://ffmpeg.org/ffmpeg-formats.html#toc-Options-6)
