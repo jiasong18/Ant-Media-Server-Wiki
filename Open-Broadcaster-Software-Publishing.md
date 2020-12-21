@@ -40,3 +40,21 @@ Close `Settings` window and just click the “Start Streaming” button in the m
 Congrats. You're publishing Live Stream with OBS. 
 
 > Quick Link: [Learn How to Play Live Streams](Playing-Live-Streams)
+
+### Troubleshooting OBS Guide
+
+If you want to stream smoothly, you need to check some parameters in OBS Settings. These parameters tell you for your errors. 
+
+**Stream Health**
+Stream health parameters are located at the bottom right. You need to check `Dropped Frames`, `CPU` and `Stream health color`.
+
+`Dropped Frames`: This parameter should 0. If you have an issue with Dropped Frames, you can decrease your FPS or Bitrate parameters.
+`CPU`: CPU parameter is important for streaming. We recommend that it not exceed 75%.
+`Stream health color`: This color should green. If this color is not green, you can realize something wrong in settings.
+
+![OBS Stream Health](images/obs-broadcast-health.png)
+
+**OBS Encoding Overloaded**
+It means your settings are too high for your PC to handle. Different hardware and software combinations result in different thresholds for "how high" you can go. You can drop their resolution, bitrate, and use some of the fastest presets.
+
+![OBS Encoding Overloaded Error](images/obs-encoding-overloaded.png)
