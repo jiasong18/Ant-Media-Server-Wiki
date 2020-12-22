@@ -61,9 +61,9 @@ Ant Media Server has basically two types of licenses.
 2. Ant Media Server Enterprise Edition has a paid license per instance. Paid license options are hourly, monthly, annually and perpetual. You can get licenses from [antmedia.io](https://antmedia.io) or you can use hourly licenses from Marketplaces in [AWS Marketplace](https://aws.amazon.com/marketplace/search/results?x=0&y=0&searchTerms=Ant+Media+Server&page=1&ref_=nav_search_box), [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Ant%20Media%20Server&page=1). 
 
 #### Enterprise Cluster License
-Enterprise Cluster License is almost same as the Enterprise License. Enterprise Cluster License supports many instances run simultaneously with the same license key. On the other hand, Enterprise License key only supports one instance at a time. 
+Enterprise Cluster License is similar features with the Enterprise License. Only difference is that Enterprise Cluster License supports many instances run simultaneously with the same license key. On the other hand, Enterprise License key only supports one instance at a time. 
 
-If you're planning to have a large deployment for your Enterprise Cluster, please contact with Sales in order to  have some discounts. 
+If you're planning to have a large deployment for your Enterprise Cluster, please contact with Sales at contact@antmedia.io in order to  have some discounts. 
 
 #### Free Enterprise License for Education and Tech Communities
 Ant Media provides *free Enterprise Licenses** for the *students, academics and communities. To get advantage of this opportunity, just send an email (from your institution or community e-mail address) to contact@antmedia.io
