@@ -43,33 +43,32 @@ Congrats. You're publishing Live Stream with OBS.
 
 ### Troubleshooting
 
-If you want to stream smoothly, you need to check some parameters in OBS Settings. These parameters tell you for your errors. 
+If you have have problems with stream quality, you should check the following indicators in OBS.
 
 **Stream Health**
 
-Stream health parameters are located at the bottom right. You need to check `Dropped Frames`, `CPU` and `Stream health color`.
+Stream health parameters are located at the bottom right. There are 3 stream health parameters: `Dropped Frames`, `CPU` and `Stream health color`.
 
-* **Dropped Frames**: This parameter should 0. If you have an issue with Dropped Frames, you can decrease your FPS or Bitrate parameters. Default parameter: `0 (0.0%)`
-* **CPU**: CPU parameter is important for streaming. We recommend that it not exceed 70%.
-* **Stream health color**: This color should green. If this color is not green, you can realize something wrong in settings. Default parameter: `Green`
-
+* **Dropped Frames**: This value should be 0. If it is increasing, you may decrease your FPS or Bitrate parameters in OBS settings.
+* **CPU**: CPU value is important for streaming quality. We recommend that it shouldn't exceed 70%.
+* **Stream health color**: This color should be green. If it has a color between yellow and red you may have problems in your stream quality.
 ![OBS Stream Health](images/obs-broadcast-health.png)
 
-**OBS Encoding Overloaded**
+**OBS Encoding Overloaded Warning**
 
-It means your settings are too high for your PC to handle. Different hardware and software combinations result in different thresholds for "how high" you can go. You can drop their resolution, bitrate, and use some of the fastest presets.
+This warning appears in bottom left when your settings are too high for your PC to handle. Because OBS makes transcoding and this consumes CPU power. According to the hardware and software combinations, stream parameters are limited. If your PC cannot handle the stream with parameters you set, this warning appears. You may drop the resolution, bitrate, or change encoder preset value to one with high speed and low quality.
 
 > Quick Link: [OBS Encoding Overloaded](https://obsproject.com/wiki/General-Performance-and-Encoding-Issues)
 
 ![OBS Encoding Overloaded Error](images/obs-encoding-overloaded.png)
 
-**Recorded VOD Files Stream**
+**Recorded VoD Files Stream**
 
-If you want to stream your VOD files, please consider your VOD encoder settings as below:
+If you want to stream your VoD files, please consider your VoD encoder settings as below:
 
 * **Profile**: `Baseline`
 * **Tune**: `Zerolatency`
 
-You can change your VOD encoder settings as below FFmpeg command:
+You can change your VoD encoder settings as below:
 
 `ffmpeg -i input.mp4 -profile baseline -tune zerolatency output.mp4`
