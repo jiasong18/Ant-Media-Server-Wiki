@@ -21,7 +21,7 @@
 * [Video on Demand Streaming](Play-Live-and-VoD-Streams-and-Previews)
 * [Simulcasting to Social Media Channels](Simulcasting-to-Social-Media-Channels)
 * [Clustering & Scaling](Clustering-&-Scaling)
-  * [Generic Clustering]()
+  * [Generic Clustering](#)
     * [Cluster and Load Balancer Installation](Scaling-and-Load-Balancing)
     * [Nginx Load Balancer](Nginx-Load-Balancer)
     * [HAProxy Load Balancer](Load-Balancer-with-HAProxy-SSL-Termination)
