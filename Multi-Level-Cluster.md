@@ -2,9 +2,12 @@
 A cluster which has different regions is called Multi-Level Cluster where each region has its own origin for a stream. Ant Media Server can be scaled in different physical locations. You can set the node group parameter of the servers to create regions. Still you can make all nodes be in the same region by setting all node group parameters with the same value or using it with default. But separating the nodes into regions has some advantages in performance. Because each region will have their own origin node for a stream and the edges in a region will pull the stream from the origin of their region.
 
 ## How does it work?
+Let's clarify the the case with an example scenario. 
+We have two scenarios 
+1. Publisher & Players in the same cluster
+2. Publisher & Players in the different clusters
 
-Lets clarify the the case with an example scenario. 
-![](images/multilevelcluster.png)
+Let's remember the traditional scenario
 
 ### Publisher & Players in the same cluster
 1. `Publisher` starts a stream and it is assigned to the `Origin1` instance in the `Region1`
@@ -12,16 +15,18 @@ Lets clarify the the case with an example scenario.
 3. `Player1` is assigned to `Edge11` instance to receive the stream in `Region1`
 4. Since the `Origin1` is the origin of the stream, `Edge11` will pull stream from `Origin1`.
 
-### Publisher & Players are in the different clusters
+![](images/multilevelcluster.png)
+
+### Publisher & Players in the different clusters
 1. `Player2` who is close to `Region2` requests to play the stream.
 2. `Player2` is assigned to `Edge21` instance in `Region2`
 3. `Edge21` checks the origin of the stream. 
-  * Since there is no origin instance in `Region2` to play the stream. It assigns itself as the secondary origin for that stream in `Region2`. 
-  * `Edge21` pulls the stream from the `Origin1` (main origin) in `Region1`. 
-  * `Edge21` sends the stream to `Player2`.
-4.`Player3` who is close to `Region2` requests to play the stream.
-5.`Player3` is assigned to `Edge22` in `Region2`.
-6 `Edge22` checks the origin of the stream. Since `Edge21` is a secondary origin for the stream in the `Region2`, it pulls the stream from `Edge21` and serves to `Player3`.
+    - Since there is no origin instance in `Region2` to play the stream. It assigns itself as the secondary origin for that stream in `Region2`. 
+    - `Edge21` pulls the stream from the `Origin1` (main origin) in `Region1`. 
+    - `Edge21` sends the stream to `Player2`.
+4. `Player3` who is close to `Region2` requests to play the stream.
+5. `Player3` is assigned to `Edge22` in `Region2`.
+6. `Edge22` checks the origin of the stream. Since `Edge21` is a secondary origin for the stream in the `Region2`, it pulls the stream from `Edge21` and serves to `Player3`.
 
 ## How to configure?
 You can set the node group (or region) of a server in 2 ways:
