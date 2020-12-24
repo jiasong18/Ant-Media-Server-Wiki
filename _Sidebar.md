@@ -25,7 +25,7 @@
     * [Cluster and Load Balancer Installation](Scaling-and-Load-Balancing)
     * [Nginx Load Balancer](Nginx-Load-Balancer)
     * [HAProxy Load Balancer](Load-Balancer-with-HAProxy-SSL-Termination)
-  * [Clustering in AWS]()
+  * [Clustering in AWS](#)
     * [Clustering in AWS](Scaling-with-AWS)
     * [CloudFormation Installation For Scaling Ant Media Server](CloudFormation-Installation-For-Scaling-Ant-Media-Server)
   * [Clustering in Azure](How-to-Setup-Ant-Media-Server-Clustering-on-Azure)
