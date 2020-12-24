@@ -1,7 +1,7 @@
-# What is Multi-Level Cluster?
+## What is Multi-Level Cluster?
 A cluster which has different regions is called Multi-Level Cluster where each region has its own origin for a stream. Ant Media Server can be scaled in different physical locations. You can set the node group parameter of the servers to create regions. Still you can make all nodes be in the same region by setting all node group parameters with the same value or using it with default. But separating the nodes into regions has some advantages in performance. Because each region will have their own origin node for a stream and the edges in a region will pull the stream from the origin of their region.
 
-# How does it work?
+## How does it work?
 
 Lets clarify the the case with an example scenario. 
 ![](images/multilevelcluster.png)
@@ -18,7 +18,7 @@ Lets clarify the the case with an example scenario.
 * _Player3_ is assigned to **Edge22** in **Region2**.
 * **Edge22** checks the origin of the stream. Since **Edge21** is a secondary origin for the stream, it pulls the stream from **Edge21** and serves to _Player3_.
 
-# How to configure?
+## How to configure?
 You can set the node group (or region) of a server in 2 ways:
 ### Configuration file (offline)
 You can set it as `nodeGroup=GROUP_NAME` in `conf/red5.properties` file.
