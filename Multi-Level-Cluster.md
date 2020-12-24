@@ -6,17 +6,22 @@ A cluster which has different regions is called Multi-Level Cluster where each r
 Lets clarify the the case with an example scenario. 
 ![](images/multilevelcluster.png)
 
-* _Publisher_ starts a stream and it is assigned to the Origin1 in the **Region1**.
-* Lets say, _Player1_ who is closed to **Region1** requests to play the stream.
-* _Player1_ is assigned to **Edge11** in **Region1**.
-* Since the **Origin1** is the origin of the stream, **Edge11** will pull stream from **Origin1**.
-* Until now, the scenario is one region cluster.
-* Lets say, _Player2_ who is closed to **Region2** requests to play the stream.
-* _Player2_ is assigned to **Edge21** in **Region2**.
-* **Edge21** checks the origin of the stream. Since it is not in its own region (**Region2**) it is assigned as the secondary origin for that stream in **Region2**. It pulls the stream from the **Origin1** (main origin) in **Region1**. Also it is still an edge server so it servers the stream to _Player2_.
-* Lets say, _Player3_ who is closed to **Region2** requests to play the stream.
-* _Player3_ is assigned to **Edge22** in **Region2**.
-* **Edge22** checks the origin of the stream. Since **Edge21** is a secondary origin for the stream, it pulls the stream from **Edge21** and serves to _Player3_.
+### Publisher & Players in the same cluster
+1. `Publisher` starts a stream and it is assigned to the `Origin1` instance in the `Region1`
+2. `Player1` who is close to `Region1` instance requests to play the stream.
+3. `Player1` is assigned to `Edge11` instance to receive the stream in `Region1`
+4. Since the `Origin1` is the origin of the stream, `Edge11` will pull stream from `Origin1`.
+
+### Publisher & Players are in the different clusters
+1. `Player2` who is close to `Region2` requests to play the stream.
+2. `Player2` is assigned to `Edge21` instance in `Region2`
+3. `Edge21` checks the origin of the stream. 
+  * Since there is no origin instance in `Region2` to play the stream. It assigns itself as the secondary origin for that stream in `Region2`. 
+  * `Edge21` pulls the stream from the `Origin1` (main origin) in `Region1`. 
+  * `Edge21` sends the stream to `Player2`.
+4.`Player3` who is close to `Region2` requests to play the stream.
+5.`Player3` is assigned to `Edge22` in `Region2`.
+6 `Edge22` checks the origin of the stream. Since `Edge21` is a secondary origin for the stream in the `Region2`, it pulls the stream from `Edge21` and serves to `Player3`.
 
 ## How to configure?
 You can set the node group (or region) of a server in 2 ways:
