@@ -33,8 +33,9 @@
 * [Monitor Ant Media Servers with Apache Kafka and Grafana](How-to-Monitor-Ant-Media-Servers)
 * [WebRTC SDKs](WebRTC-SDKs)
   * [JavaScript SDK](WebRTC-JavaScript-SDK-Guide)
-  * [Android SDK](WebRTC-Android-SDK-Documentation)
-  * [iOS SDK Guide](WebRTC-iOS-SDK-Guide)
+  * [WebRTC Android SDK](WebRTC-Android-SDK-Guide)
+    * [Reference](WebRTC-Android-SDK-Reference)
+  * [WebRTC iOS SDK](WebRTC-iOS-SDK-Guide)
     * [Reference](WebRTC-iOS-SDK-Reference)
   * [Embedded SDK](WebRTC-Embedded-SDK-Documentation)
 * [Security](Security-Documentation)
@@ -80,8 +81,6 @@
 
 
 ## Proposals
-* [Update WebRTC Android SDK](WebRTC-Android-SDK-Guide)
-    * [Reference](WebRTC-Android-SDK-Reference)
 * [Developer Quick Start](Developer-Quick-Start)
 * Recording HLS, MP4 and how to recover
 * Re-streaming update
