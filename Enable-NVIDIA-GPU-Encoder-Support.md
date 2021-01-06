@@ -60,15 +60,15 @@ sudo apt install cuda-cudart-10-0
 sudo apt install cuda-compat-10-0 
 ```
 
-If everthing is ok, you can run the command below to see the status of your GPU
-```
-nvidia-smi
-```
-
 You can install Ant Media Server with its usual way or if you already install it, you can restart the Ant Media Server.
 ```
 sudo service antmedia restart
 ```
+If everthing is ok, you can run the command below to see the status of your GPU
+```
+nvidia-smi
+```
+If Ant Media Server is listed as a process, this means you successfully configured GPU.
 
 ## Using NVIDIA Hardware-based Encoder
 Ant Media Server will check and log at startup if there is a hardware-based GPU encoder in the system and it will use it automatically. No need to do anything.
