@@ -1,4 +1,4 @@
-This feature running automatically defined script after MP4 Muxing process is finished in Ant Media Server. Let’s have a look at that step by step.
+User defined scripts are run automatically by the Ant Media Server after MP4 Muxing process (recording) finishes. Let’s have a look at that step by step.
 
 1. [Define run script location in App Settings](#1--define-run-script-location-in-app-settings)
 2. [Script running instructions](#2--script-usage-instructions)
