@@ -68,10 +68,15 @@ If everthing is ok, you can run the command below to see the status of your GPU
 ```
 nvidia-smi
 ```
-If Ant Media Server is listed as a process, this means you successfully configured GPU.
 
 ## Using NVIDIA Hardware-based Encoder
 Ant Media Server will check and log at startup if there is a hardware-based GPU encoder in the system and it will use it automatically. No need to do anything.
+
+To check if Ant Media Server uses GPU;
+- Enable h.264 encoding
+- Enable adaptive streaming bu adding at least one adaptive resolution
+- Run `nvidia-smi` command and check the output. If Ant Media Server is listed as a process as in the picture below, this means you successfully configured GPU.
+![GPU usage](images/gpu_use.png)
 
 ## Using NVIDIA Hardware-based Encoder on Docker
 
