@@ -1,6 +1,6 @@
 Before starting with the development, please read all the relevant user guides for publishing and playing WebRTC, RMTP and HLS streams with Ant Media Server and for building the projects.  
 ## Requirements
-* Ubuntu 16.04 or 18.04
+* Ubuntu 18.04
 * Latest update of Java JDK 11.
 * Apache Maven 3
 ## Recommended Folder Structure and Projects:
