@@ -14,7 +14,7 @@ ARG MongoDBUsername=
 ARG MongoDBPassword=
 
 #Running update and install makes the builder not to use cache which resolves some updates
-RUN apt-get update && apt-get install -y curl libcap2 wget net-tools 
+RUN apt-get update && apt-get install -y curl libcap2 wget net-tools openjdk-8-jdk
 
 ADD ./${AntMediaServer} /home
 
