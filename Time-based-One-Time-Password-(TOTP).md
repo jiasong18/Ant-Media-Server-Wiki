@@ -1,4 +1,6 @@
-The Time-based One-time Password algorithm (TOTP) is an extension of the HMAC-based One-time Password algorithm (HOTP) that generates a one-time password (OTP) by instead taking uniqueness from the current time
+The Time-based One-time Password algorithm (TOTP) is an extension of the HMAC-based One-time Password algorithm (HOTP) that generates a one-time password (OTP) by instead taking uniqueness from the current time.
+
+We define a publisher or player as a subscriber. If time based token enabled, a subscriber should be created for the stream to able to publish or play. Each subscriber has an ID and a code. When a subscriber requests to publish or play a stream, he should provide his ID and time based token generated for his code. Otherwise server doesn't accept the publish or play request.
 
 ## Enabling and Setting
 You can enable TOTP using Management Panel or in configuration file as
