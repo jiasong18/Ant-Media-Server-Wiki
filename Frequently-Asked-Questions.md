@@ -99,6 +99,9 @@ Ant Media Server measures the client's bandwidth and chooses the best quality in
 ## How to set up an auto-scaling cluster with Ant Media Server?
 [Check this out](https://github.com/ant-media/Ant-Media-Server/wiki/Clustering-&-Scaling)
 
+## What is the difference between LiveApp and WebRTCAppEE
+There are no difference between them fundamentally. Users can have different options and configurations in the same server with using different applications ( such as enabling H.264 in one app and enabling VP8 in the other ).
+
 ## How to improve WebRTC bit rate?
 You can set the `bandwidth` property to any value you want to use in `WebRTCAdaptor` in JS SDK. This is the maximum bitrate value that WebRTC can use. Its default value is 900 and its unit is kbps
 
