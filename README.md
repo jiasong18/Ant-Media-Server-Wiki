@@ -66,7 +66,7 @@
   * [TURN Server Cluster](Coturn-Cluster.md)
 
 ## Reference
-* [REST API Reference](https://antmedia.io/rest.md)
+* [REST API Reference](https://antmedia.io/rest)
 * [WebRTC - WebSocket Messaging Reference](WebRTC-WebSocket-Messaging-Reference.md)
 
 
